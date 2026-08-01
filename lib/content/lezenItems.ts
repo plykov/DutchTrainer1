@@ -1,11 +1,13 @@
 import { McItem } from "../types";
 
-// §7 — Staatsexamen NT2 P1 Lezen: 110 min / 6 texts / ~36 MC items [VERIFY].
-// Original short passages modelled on the public blueprint, not
-// reproductions of secure material. This is a 46-item mechanism demo
-// (single pass, countdown, no feedback until the run ends via ExamRunner) —
-// larger than the real ~36-question run for extra practice volume, with
-// question order shuffled per run on top of each item's MC option order.
+// §7 — Staatsexamen NT2 P1 Lezen: 110 min / 6 texts / 36 MC items, per
+// staatsexamensnt2.nl (checked August 2026: "Bij de 6 teksten moet u 36
+// vragen beantwoorden"). Original short passages modelled on the public
+// blueprint, not reproductions of secure material. This is a 46-item
+// mechanism demo (single pass, countdown, no feedback until the run ends
+// via ExamRunner) — larger than the real 36-question run for extra
+// practice volume, with question order shuffled per run on top of each
+// item's MC option order.
 function lezenItem(overrides: Omit<McItem, keyof ReturnType<typeof base>> & Partial<ReturnType<typeof base>>): McItem {
   return { ...base(), ...overrides } as McItem;
 }

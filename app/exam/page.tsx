@@ -18,7 +18,7 @@ const STAATSEXAMEN_P1 = [
   {
     skill: "Lezen",
     constraint:
-      "110 мин, 6 текстов, 35 или 36 вопросов MC (число варьируется от экзамена к экзамену) [VERIFY]. Разрешён Van Dale Pocketwoordenboek NT2.",
+      "110 мин, 6 текстов, 36 вопросов MC. Разрешён только Van Dale Pocketwoordenboek Nederlands als tweede taal (NT2) — любое издание этого конкретного словаря, другие словари и электронные переводчики не допускаются.",
   },
   {
     skill: "Luisteren",
@@ -67,7 +67,7 @@ export default function ExamPage() {
         <ExamRunner
           items={KNM_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 31 вопроса. Настоящий KNM: 40 вопросов, порог 28/40, 45 минут [VERIFY]."
+          passNote="Демо из 31 вопроса. Настоящий KNM: 45 вопросов, порог 27/45 (60%), 45 минут."
         />
       </div>
     );
@@ -79,7 +79,7 @@ export default function ExamPage() {
         <ExamRunner
           items={LEZEN_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 46 вопросов — больше, чем в реальном Lezen (35 или 36, 110 минут, 6 текстов) [VERIFY], для дополнительной тренировки."
+          passNote="Демо из 46 вопросов — больше, чем в реальном Lezen (36 вопросов, 110 минут, 6 текстов), для дополнительной тренировки."
         />
       </div>
     );
@@ -196,8 +196,8 @@ export default function ExamPage() {
       <div className="rounded-md border border-amber-300 bg-amber-50 dark:bg-amber-950 dark:border-amber-800 p-4 text-sm">
         <p className="font-medium mb-1">Важно про KNM</p>
         <p>
-          Модуль KNM пересобран с 1 июля 2025 года: 40 вопросов, 45 минут, порог — 28/40, обновлённые eindtermen
-          (усилен акцент на самоопределении женщин и знаниях о Холокосте). Старые материалы KNM больше не
+          Модуль KNM пересобран с 1 июля 2025 года: 45 вопросов, 45 минут, порог — 27/45 (60%), обновлённые
+          eindtermen (усилен акцент на самоопределении женщин и знаниях о Холокосте). Старые материалы KNM больше не
           соответствуют экзамену.
         </p>
       </div>
@@ -217,9 +217,11 @@ export default function ExamPage() {
           ))}
         </div>
         <p className="text-xs text-zinc-400 mt-2">
-          Количество вопросов, длительность и структура заданий выше подтверждены по staatsexamensnt2.nl и связанным
-          источникам (август 2026). Остаётся [VERIFY] только точное число вопросов Lezen (35 или 36 — варьируется по
-          версии экзамена) и конкретное издание словаря Van Dale — уточните перед публикацией боевого контента.
+          Количество вопросов, длительность и структура заданий выше подтверждены по staatsexamensnt2.nl (Lezen: 36
+          вопросов, 6 текстов, подтверждено дословно — &laquo;Bij de 6 teksten moet u 36 vragen beantwoorden&raquo;) и по
+          inburgeren.nl (KNM: 45 вопросов, 45 минут, порог 27/45). Van Dale Pocketwoordenboek NT2 разрешён в любом
+          издании — других словарей и электронных переводчиков нет. Проверено в августе 2026; заново уточните перед
+          публикацией боевого контента, если эти страницы обновятся.
         </p>
       </section>
 

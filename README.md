@@ -120,6 +120,15 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   shuffles their combined order. All five keep their real-exam structure (KNM/Lezen/Luisteren show every
   item in the (now larger) bank; Schrijven/Spreken still run at the real 8+2+2 / 8+8 counts) — only which
   items appear and in what order varies per run.
+- **Resolved the remaining `/exam`-page `[VERIFY]` flags** — fetched staatsexamensnt2.nl and inburgeren.nl
+  directly (August 2026) and confirmed: Lezen is exactly 36 questions (staatsexamensnt2.nl states "Bij de
+  6 teksten moet u 36 vragen beantwoorden" — not the "35 or 36" the copy hedged on before); Van Dale
+  Pocketwoordenboek NT2 has no edition restriction, only other dictionaries/translators are banned;
+  Schrijven's 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken structure is confirmed as-is; and
+  Luisteren's "~40 questions" was already the official phrasing ("ongeveer 40 opdrachten"), not something
+  to resolve further. The one real correction: KNM is **45** questions / 45 minutes / pass 27-45 (60%)
+  per inburgeren.nl, not the 40/45/28-40 the app had been showing — that stale figure predated this
+  session's research and is now fixed everywhere it appeared (`/exam` copy, `knmItems.ts` comment).
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

@@ -99,7 +99,8 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
           {correctCount} / {items.length}
         </p>
         <p className="text-sm text-zinc-500">
-          Демо из {items.length} вопросов. Настоящий Luisteren: ~40 вопросов, 90 минут [VERIFY].
+          Демо из {items.length} вопросов. Настоящий Luisteren: около 40 вопросов (5+ фрагментов), 90 минут —
+          staatsexamensnt2.nl сам формулирует это как &laquo;ongeveer 40 opdrachten&raquo;.
         </p>
         <div className="space-y-2">
           {items.map((it, i) => (

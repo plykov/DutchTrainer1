@@ -4,9 +4,10 @@ import { McItem } from "../types";
 // eindtermen with added emphasis on women's self-determination and
 // Holocaust knowledge. These are original demo items modelled on the public
 // blueprint, not reproductions of secure Cito material — a real KNM run is
-// 40 items / 45 minutes / pass 28-40 [VERIFY]; this is a 31-item mechanism
-// demo, not a full-length practice test. Question order is shuffled per run
-// by ExamRunner, on top of each item's shuffled MC option order.
+// 45 items / 45 minutes / pass 27-45 (60%), per inburgeren.nl (checked
+// August 2026); this is a 31-item mechanism demo, not a full-length
+// practice test. Question order is shuffled per run by ExamRunner, on top
+// of each item's shuffled MC option order.
 function knmItem(overrides: Omit<McItem, keyof ReturnType<typeof base>> & Partial<ReturnType<typeof base>>): McItem {
   return { ...base(), ...overrides } as McItem;
 }

@@ -3,7 +3,8 @@ import { ShortWriteItem } from "../types";
 // §7 — Schrijven exam demo: original short-write tasks, distinct from the
 // single practice task in items.ts, for the timed exam-mode demo with a
 // task picker. Real Schrijven: 100 min, 8 zinstaken + 2 deelschrijftaken +
-// 2 korte schrijftaken [VERIFY] — these are korte-schrijftaak-style demos.
+// 2 korte schrijftaken, confirmed against staatsexamensnt2.nl (checked
+// August 2026) — these are korte-schrijftaak-style demos.
 function writingItem(overrides: Partial<ShortWriteItem> & Pick<ShortWriteItem, "id" | "topic" | "taskPrompt" | "requirements" | "modelAnswer">): ShortWriteItem {
   return {
     examTrack: "staatsexamen_p1",
