@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_ITEMS } from "@/lib/content/listeningItems";
+import { shuffleOptions } from "@/lib/shuffle";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -13,6 +14,17 @@ const WORDS_PER_SECOND_FLASH = 2.1; // reading-aloud pace for the no-TTS fallbac
 const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window;
 
 export default function ListeningSession() {
+  // Shuffled once per mount so the correct answer's position isn't
+  // memorizable/predictable.
+  const items = useMemo(
+    () =>
+      LISTENING_ITEMS.map((it) => ({
+        ...it,
+        question: { ...it.question, ...shuffleOptions(it.question.options, it.question.correctIndex) },
+      })),
+    []
+  );
+
   const [index, setIndex] = useState(0);
   const [stage, setStage] = useState<Stage>("preread");
   const [preReadLeft, setPreReadLeft] = useState(PRE_READ_SECONDS);
@@ -21,7 +33,7 @@ export default function ListeningSession() {
   const flashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const safetyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const item = LISTENING_ITEMS[index];
+  const item = items[index];
   const playbackMode: "tts" | "flash" | null = stage === "playing" ? (supportsTts ? "tts" : "flash") : null;
 
   useEffect(() => {
@@ -72,7 +84,7 @@ export default function ListeningSession() {
   }
 
   function next() {
-    setIndex((i) => (i + 1) % LISTENING_ITEMS.length);
+    setIndex((i) => (i + 1) % items.length);
     setStage("preread");
     setPreReadLeft(PRE_READ_SECONDS);
     setSelected(null);
@@ -82,7 +94,7 @@ export default function ListeningSession() {
     <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
       <div className="flex items-center justify-between text-xs text-zinc-500">
         <span>
-          {index + 1} / {LISTENING_ITEMS.length}
+          {index + 1} / {items.length}
         </span>
         <span>{item.level}</span>
       </div>

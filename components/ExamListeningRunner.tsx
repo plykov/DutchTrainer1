@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_EXAM_ITEMS } from "@/lib/content/listeningExamItems";
+import { shuffleOptions } from "@/lib/shuffle";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -11,16 +12,27 @@ const WORDS_PER_SECOND_FLASH = 2.1;
 const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window;
 
 export default function ExamListeningRunner({ onExit }: { onExit: () => void }) {
+  // Shuffled once per mount so the correct answer's position isn't
+  // memorizable/predictable.
+  const items = useMemo(
+    () =>
+      LISTENING_EXAM_ITEMS.map((it) => ({
+        ...it,
+        question: { ...it.question, ...shuffleOptions(it.question.options, it.question.correctIndex) },
+      })),
+    []
+  );
+
   const [index, setIndex] = useState(0);
   const [stage, setStage] = useState<Stage>("preread");
   const [preReadLeft, setPreReadLeft] = useState(PRE_READ_SECONDS);
-  const [answers, setAnswers] = useState<(number | null)[]>(() => LISTENING_EXAM_ITEMS.map(() => null));
+  const [answers, setAnswers] = useState<(number | null)[]>(() => items.map(() => null));
   const [selected, setSelected] = useState<number | null>(null);
 
   const flashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const safetyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const item = LISTENING_EXAM_ITEMS[index];
+  const item = items[index];
   const playbackMode: "tts" | "flash" | null = stage === "playing" ? (supportsTts ? "tts" : "flash") : null;
 
   useEffect(() => {
@@ -68,7 +80,7 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
       next[index] = selected;
       return next;
     });
-    if (index + 1 >= LISTENING_EXAM_ITEMS.length) {
+    if (index + 1 >= items.length) {
       setStage("result");
     } else {
       setIndex((i) => i + 1);
@@ -79,18 +91,18 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
   }
 
   if (stage === "result") {
-    const correctCount = answers.filter((a, i) => a === LISTENING_EXAM_ITEMS[i].question.correctIndex).length;
+    const correctCount = answers.filter((a, i) => a === items[i].question.correctIndex).length;
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
         <h3 className="text-lg font-medium">Результат симуляции Luisteren</h3>
         <p className="text-2xl font-semibold">
-          {correctCount} / {LISTENING_EXAM_ITEMS.length}
+          {correctCount} / {items.length}
         </p>
         <p className="text-sm text-zinc-500">
-          Демо из {LISTENING_EXAM_ITEMS.length} вопросов. Настоящий Luisteren: ~40 вопросов, 90 минут [VERIFY].
+          Демо из {items.length} вопросов. Настоящий Luisteren: ~40 вопросов, 90 минут [VERIFY].
         </p>
         <div className="space-y-2">
-          {LISTENING_EXAM_ITEMS.map((it, i) => (
+          {items.map((it, i) => (
             <div key={it.id} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm">
               <p className="font-medium">{it.question.prompt}</p>
               <p className={answers[i] === it.question.correctIndex ? "text-emerald-600" : "text-red-600"}>
@@ -112,7 +124,7 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
     <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
       <div className="flex items-center justify-between text-xs text-zinc-500">
         <span>
-          {index + 1} / {LISTENING_EXAM_ITEMS.length}
+          {index + 1} / {items.length}
         </span>
         <span>без возврата назад</span>
       </div>
@@ -164,7 +176,7 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
             disabled={selected === null}
             className="mt-4 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
           >
-            {index + 1 >= LISTENING_EXAM_ITEMS.length ? "Завершить" : "Далее"}
+            {index + 1 >= items.length ? "Завершить" : "Далее"}
           </button>
         </fieldset>
       )}

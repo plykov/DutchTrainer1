@@ -85,6 +85,11 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   speakers' traps, so translating it to English would remove the thing it exists to explain. A few
   session components (`WritingTask`, the Schrijven/Luisteren/Spreken exam runners, `ReadingRoom`)
   still have Russian-only chrome text — not yet wired into `lib/i18n.ts`.
+- **Randomized MC answer position** (`lib/shuffle.ts`) — multiple-choice content is authored with the
+  correct answer clustered at a predictable index, which lets a learner game position instead of
+  actually knowing the answer. `shuffleOptions()` runs a Fisher-Yates shuffle once per question (or
+  once per exam run) and is wired into every MC surface: `PracticeSession`, `ExamRunner` (KNM/Lezen
+  demos), `InteractionSession`, `ExamListeningRunner`, and `ListeningSession`.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

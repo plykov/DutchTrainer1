@@ -1,14 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useAppStore } from "@/lib/store";
 import { useT } from "@/lib/i18n";
 import { INTERACTION_ITEMS } from "@/lib/content/interactionItems";
 import { Grade } from "@/lib/fsrs";
+import { shuffleOptions } from "@/lib/shuffle";
 
 export default function InteractionSession() {
   const review = useAppStore((s) => s.review);
   const t = useT();
+
+  // Shuffled once per mount so the correct response's position isn't
+  // memorizable/predictable.
+  const items = useMemo(
+    () => INTERACTION_ITEMS.map((it) => ({ ...it, ...shuffleOptions(it.options, it.correctIndex) })),
+    []
+  );
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -17,7 +25,7 @@ export default function InteractionSession() {
   const [correctCount, setCorrectCount] = useState(0);
   const [done, setDone] = useState(false);
 
-  const item = INTERACTION_ITEMS[index];
+  const item = items[index];
   const correct = selected === item?.correctIndex;
 
   if (done) {

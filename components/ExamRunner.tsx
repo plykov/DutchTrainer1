@@ -3,12 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { McItem } from "@/lib/types";
 import { useT } from "@/lib/i18n";
+import { shuffleOptions } from "@/lib/shuffle";
 
 // §7 — exam mode disables everything: single pass, no backtracking, no
 // feedback until the run ends, hard countdown. This runs whatever MC item
 // set it's given; the caller decides what "exam" that represents.
 export default function ExamRunner({
-  items,
+  items: rawItems,
   onExit,
   passNote,
 }: {
@@ -17,6 +18,12 @@ export default function ExamRunner({
   passNote?: string;
 }) {
   const t = useT();
+  // Shuffle once per run (not per render) so the correct answer's position
+  // isn't memorizable/predictable from how the content was authored.
+  const items = useMemo(
+    () => rawItems.map((it) => ({ ...it, ...shuffleOptions(it.options, it.correctIndex) })),
+    [rawItems]
+  );
   const totalSeconds = useMemo(() => items.reduce((sum, i) => sum + (i.timeLimitS ?? 60), 0), [items]);
   const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
   const [index, setIndex] = useState(0);

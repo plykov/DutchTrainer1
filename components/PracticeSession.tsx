@@ -6,6 +6,7 @@ import { useT } from "@/lib/i18n";
 import { buildQueue, QueueEntry } from "@/lib/queue";
 import { Grade } from "@/lib/fsrs";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
+import { shuffleOptions } from "@/lib/shuffle";
 import { ClozeItem, McItem, SentenceTransformItem } from "@/lib/types";
 
 function normalize(s: string): string {
@@ -28,6 +29,11 @@ export default function PracticeSession() {
 
   const entry: QueueEntry | undefined = queue[index];
 
+  const mcShuffled = useMemo(() => {
+    const item = entry?.item;
+    return item?.taskType === "mc" ? shuffleOptions(item.options, item.correctIndex) : null;
+  }, [entry]);
+
   if (!entry || sessionDone) {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
@@ -44,7 +50,7 @@ export default function PracticeSession() {
   const stage = item.grammarTarget ? grammarProgress[item.grammarTarget]?.stage ?? "blocked" : null;
 
   function isCorrect(): boolean {
-    if (item.taskType === "mc") return selected === (item as McItem).correctIndex;
+    if (item.taskType === "mc") return selected === mcShuffled?.correctIndex;
     if (item.taskType === "cloze") {
       const c = item as ClozeItem;
       const variants = [c.answer, ...(c.acceptableVariants ?? [])].map(normalize);
@@ -96,8 +102,15 @@ export default function PracticeSession() {
         )}
       </div>
 
-      {item.taskType === "mc" && (
-        <McQuestion item={item as McItem} selected={selected} setSelected={setSelected} revealed={revealed} />
+      {item.taskType === "mc" && mcShuffled && (
+        <McQuestion
+          prompt={(item as McItem).prompt}
+          options={mcShuffled.options}
+          correctIndex={mcShuffled.correctIndex}
+          selected={selected}
+          setSelected={setSelected}
+          revealed={revealed}
+        />
       )}
       {item.taskType === "cloze" && (
         <ClozeQuestion item={item as ClozeItem} typed={typed} setTyped={setTyped} revealed={revealed} />
@@ -155,26 +168,30 @@ export default function PracticeSession() {
 }
 
 function McQuestion({
-  item,
+  prompt,
+  options,
+  correctIndex,
   selected,
   setSelected,
   revealed,
 }: {
-  item: McItem;
+  prompt: string;
+  options: string[];
+  correctIndex: number;
   selected: number | null;
   setSelected: (i: number) => void;
   revealed: boolean;
 }) {
   return (
     <fieldset>
-      <legend className="text-lg mb-4">{item.prompt}</legend>
+      <legend className="text-lg mb-4">{prompt}</legend>
       <div className="space-y-2">
-        {item.options.map((opt, i) => (
+        {options.map((opt, i) => (
           <label
             key={i}
             className={`flex items-center gap-2 rounded-md border p-3 text-sm cursor-pointer ${
               selected === i ? "border-blue-600 bg-blue-50 dark:bg-blue-950" : "border-zinc-300 dark:border-zinc-700"
-            } ${revealed && i === item.correctIndex ? "border-emerald-600" : ""}`}
+            } ${revealed && i === correctIndex ? "border-emerald-600" : ""}`}
           >
             <input type="radio" name="mc" checked={selected === i} onChange={() => setSelected(i)} disabled={revealed} />
             {opt}
