@@ -26,12 +26,12 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
 
 - **Vocab review** (`/vocab`) — a receptive FSRS flashcard flow over the noun bundles, so the app has
   real per-learner "known word" data to gate on, instead of an empty deck.
-- **Coverage-gated extensive reading** (`/reading`, `lib/coverage.ts`) — implements the scope doc's
-  own call-out as "the single most consequential content rule": text is only offered for free
-  extensive reading at ≥95% known-word coverage, ≥98% drops glossing entirely for a confidence mode,
-  and below 95% locks into intensive mode with unknown words glossed inline (§4). This is a
-  simplified stand-in for the real SUBTLEX-NL × NT2Lex × LiNT pipeline — see `lib/coverage.ts` for
-  exactly what's approximated and why.
+- **Coverage-gated extensive reading** (`/reading`, `lib/coverage.ts`, 10 seed texts across
+  gezondheid/wonen/werk/onderwijs/gemeente) — implements the scope doc's own call-out as "the single
+  most consequential content rule": text is only offered for free extensive reading at ≥95%
+  known-word coverage, ≥98% drops glossing entirely for a confidence mode, and below 95% locks into
+  intensive mode with unknown words glossed inline (§4). This is a simplified stand-in for the real
+  SUBTLEX-NL × NT2Lex × LiNT pipeline — see `lib/coverage.ts` for exactly what's approximated and why.
 - **Exam simulation mechanics** (`/exam`) — a KNM demo (6 original civic-knowledge MC items, single
   pass, countdown, no feedback until the run ends) and a timed Schrijven demo (the existing writing
   task under a hard countdown that auto-submits at zero, mirroring exam-mode's "no backtracking, no
