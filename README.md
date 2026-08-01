@@ -109,6 +109,17 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   screen (score for listening; a completion message for speaking, since its self-graded rubric isn't a
   right/wrong count), and end with the same "choose the next exercise" links as the other modules. Audited
   every other session component for the same `% length` wraparound pattern — no other instance existed.
+- **+10 items per exam module, plus question-order randomization** — every Staatsexamen demo grew by 10:
+  KNM 21→31, Lezen 36→46, Luisteren 40→50 (`lib/content/knmItems.ts`, `lezenItems.ts`,
+  `listeningExamItems.ts`); the Schrijven zinstaken bank grew 8→18 and the Spreken prompt bank grew
+  16→26 (13 short + 13 medium). `ExamRunner` and `ExamListeningRunner` now shuffle question order per
+  run (`lib/shuffle.ts`'s new `shuffleArray()`), on top of the existing per-question MC option shuffle.
+  `SchrijvenStructuredRunner` draws a random 8 zinstaken + 2 korte schrijftaken from their bigger pools
+  each run (previously the korte-schrijftaak slot was always the same fixed first 2 of 15 — a variety
+  bug fixed along the way); `ExamSpeakingRunner` draws a random 8 short + 8 medium from its pool and
+  shuffles their combined order. All five keep their real-exam structure (KNM/Lezen/Luisteren show every
+  item in the (now larger) bank; Schrijven/Spreken still run at the real 8+2+2 / 8+8 counts) — only which
+  items appear and in what order varies per run.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

@@ -2,9 +2,10 @@ import { McItem } from "../types";
 
 // §7 — Staatsexamen NT2 P1 Lezen: 110 min / 6 texts / ~36 MC items [VERIFY].
 // Original short passages modelled on the public blueprint, not
-// reproductions of secure material. This is a 15-item mechanism demo
-// (single pass, countdown, no feedback until the run ends via ExamRunner),
-// not a full-length 36-question run.
+// reproductions of secure material. This is a 46-item mechanism demo
+// (single pass, countdown, no feedback until the run ends via ExamRunner) —
+// larger than the real ~36-question run for extra practice volume, with
+// question order shuffled per run on top of each item's MC option order.
 function lezenItem(overrides: Omit<McItem, keyof ReturnType<typeof base>> & Partial<ReturnType<typeof base>>): McItem {
   return { ...base(), ...overrides } as McItem;
 }
@@ -352,5 +353,95 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Telefonisch, vóór negen uur", "Per e-mail, wanneer u wilt", "Via een app"],
     correctIndex: 0,
     explanationRu: "'telefonisch ziek bij uw leidinggevende, niet per e-mail of app' — больничный сообщают только по телефону, не письмом/приложением.",
+  }),
+  lezenItem({
+    id: "lezen-37",
+    topic: "verzekering",
+    prompt:
+      "Uw zorgverzekering dekt standaard geen fysiotherapie. Hiervoor kunt u een aanvullende verzekering afsluiten.\n\nVraag: Wat moet u doen als u fysiotherapie vergoed wilt krijgen?",
+    options: ["Een aanvullende verzekering afsluiten", "Niets, dit wordt altijd vergoed", "Contant betalen bij de gemeente"],
+    correctIndex: 0,
+    explanationRu: "Физиотерапия не входит в базовую страховку — нужна дополнительная (aanvullende) страховка.",
+  }),
+  lezenItem({
+    id: "lezen-38",
+    topic: "vervoer",
+    prompt:
+      "Bij vertraging van meer dan dertig minuten heeft u recht op een deel van uw geld terug via de website van de vervoerder.\n\nVraag: Wanneer heeft u recht op geld terug?",
+    options: ["Bij een vertraging van meer dan dertig minuten", "Bij elke vertraging", "Nooit"],
+    correctIndex: 0,
+    explanationRu: "Право на компенсацию возникает при задержке более 30 минут.",
+  }),
+  lezenItem({
+    id: "lezen-39",
+    topic: "kinderopvang",
+    prompt:
+      "Voor kinderopvangtoeslag moeten beide ouders werken of studeren, en de opvang moet geregistreerd staan bij de gemeente.\n\nVraag: Wat is een voorwaarde voor kinderopvangtoeslag?",
+    options: ["De opvang moet geregistreerd zijn bij de gemeente", "U moet minstens drie kinderen hebben", "U moet in Amsterdam wonen"],
+    correctIndex: 0,
+    explanationRu: "Одно из условий — детский сад должен быть зарегистрирован в муниципалитете.",
+  }),
+  lezenItem({
+    id: "lezen-40",
+    topic: "bibliotheek",
+    prompt:
+      "Met een bibliotheekpas kunt u gratis boeken lenen, maar bij te laat inleveren betaalt u een boete per dag.\n\nVraag: Wat gebeurt er als u een boek te laat inlevert?",
+    options: ["U betaalt een boete per dag", "U krijgt een gratis waarschuwing per e-mail", "Uw pas wordt meteen geblokkeerd"],
+    correctIndex: 0,
+    explanationRu: "За просрочку возврата книги взимается штраф за каждый день.",
+  }),
+  lezenItem({
+    id: "lezen-41",
+    topic: "sport",
+    prompt:
+      "De sportschool biedt een gratis proefles aan, maar u moet zich van tevoren online aanmelden.\n\nVraag: Wat moet u doen voor een gratis proefles?",
+    options: ["U van tevoren online aanmelden", "Gewoon binnenlopen", "Eerst een jaarabonnement kopen"],
+    correctIndex: 0,
+    explanationRu: "На бесплатное пробное занятие нужно записаться заранее онлайн.",
+  }),
+  lezenItem({
+    id: "lezen-42",
+    topic: "energie",
+    prompt:
+      "Bij een storing in uw energievoorziening belt u het storingsnummer van de netbeheerder, niet van uw energieleverancier.\n\nVraag: Wie belt u bij een storing?",
+    options: ["De netbeheerder", "De energieleverancier", "De gemeente"],
+    correctIndex: 0,
+    explanationRu: "При аварии звонят сетевому оператору (netbeheerder), а не поставщику энергии.",
+  }),
+  lezenItem({
+    id: "lezen-43",
+    topic: "bank",
+    prompt:
+      "Voor het openen van een bankrekening heeft u een geldig identiteitsbewijs en een Nederlands adres nodig.\n\nVraag: Wat heeft u nodig om een bankrekening te openen?",
+    options: ["Een identiteitsbewijs en een Nederlands adres", "Alleen een telefoonnummer", "Een werkgeversverklaring is altijd verplicht"],
+    correctIndex: 0,
+    explanationRu: "Для открытия банковского счёта нужны действительное удостоверение личности и нидерландский адрес.",
+  }),
+  lezenItem({
+    id: "lezen-44",
+    topic: "post",
+    prompt:
+      "Een aangetekende brief die u niet thuis kunt ontvangen, kunt u binnen twee weken ophalen bij het postkantoor.\n\nVraag: Hoe lang kunt u een aangetekende brief ophalen?",
+    options: ["Binnen twee weken", "Binnen één dag", "Er is geen tijdslimiet"],
+    correctIndex: 0,
+    explanationRu: "Заказное письмо можно забрать на почте в течение двух недель.",
+  }),
+  lezenItem({
+    id: "lezen-45",
+    topic: "afval",
+    prompt:
+      "Plastic, blik en drinkpakken gaan in de PBD-bak, die eens per twee weken wordt opgehaald.\n\nVraag: Hoe vaak wordt de PBD-bak opgehaald?",
+    options: ["Eens per twee weken", "Elke dag", "Eens per jaar"],
+    correctIndex: 0,
+    explanationRu: "Контейнер PBD (пластик/жесть/пакеты) вывозят раз в две недели.",
+  }),
+  lezenItem({
+    id: "lezen-46",
+    topic: "buurthuis",
+    prompt:
+      "Het buurthuis organiseert elke woensdag een gratis Nederlandse gesprekstafel voor iedereen die wil oefenen.\n\nVraag: Voor wie is de gesprekstafel bedoeld?",
+    options: ["Voor iedereen die Nederlands wil oefenen", "Alleen voor kinderen", "Alleen voor mensen die er wonen"],
+    correctIndex: 0,
+    explanationRu: "Разговорный клуб открыт для всех, кто хочет практиковать нидерландский язык.",
   }),
 ];

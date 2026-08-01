@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_EXAM_ITEMS } from "@/lib/content/listeningExamItems";
-import { shuffleOptions } from "@/lib/shuffle";
+import { shuffleArray, shuffleOptions } from "@/lib/shuffle";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -12,11 +12,11 @@ const WORDS_PER_SECOND_FLASH = 2.1;
 const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window;
 
 export default function ExamListeningRunner({ onExit }: { onExit: () => void }) {
-  // Shuffled once per mount so the correct answer's position isn't
-  // memorizable/predictable.
+  // Shuffled once per mount: item order, plus each question's MC option
+  // order, so neither position is memorizable/predictable.
   const items = useMemo(
     () =>
-      LISTENING_EXAM_ITEMS.map((it) => ({
+      shuffleArray(LISTENING_EXAM_ITEMS).map((it) => ({
         ...it,
         question: { ...it.question, ...shuffleOptions(it.question.options, it.question.correctIndex) },
       })),

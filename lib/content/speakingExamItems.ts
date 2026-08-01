@@ -8,7 +8,9 @@ export interface SpeakingExamItem {
 // §7 — Spreken exam demo: original prompts, distinct from the /speaking
 // practice pool, run beep-paced with no backtracking via
 // ExamSpeakingRunner. Real Spreken: ~25 min, 8 short (20s) + 8 medium (30s)
-// (staatsexamensnt2.nl) — matched exactly here: 8 items at 20s, 8 at 30s.
+// (staatsexamensnt2.nl). This pool is larger than one run needs (13 short +
+// 13 medium) so ExamSpeakingRunner can draw a random 8+8 each time — keeps
+// the real 8/30s structure while varying which prompts appear.
 export const SPEAKING_EXAM_ITEMS: SpeakingExamItem[] = [
   { id: "sexam-1", topic: "gezondheid", timeLimitS: 20, text: "Vertel kort waarom u vandaag naar de huisarts gaat." },
   { id: "sexam-2", topic: "gemeente", timeLimitS: 30, text: "Leg uit welke documenten u nodig heeft om u in te schrijven bij de gemeente." },
@@ -26,4 +28,14 @@ export const SPEAKING_EXAM_ITEMS: SpeakingExamItem[] = [
   { id: "sexam-14", topic: "gemeente", timeLimitS: 30, text: "Leg uit wat u zou zeggen als u een fout in een brief van de gemeente vindt." },
   { id: "sexam-15", topic: "werk", timeLimitS: 20, text: "Vertel kort waarom u geschikt bent voor een baan." },
   { id: "sexam-16", topic: "geld", timeLimitS: 30, text: "Leg uit wat u zou doen als er een fout op uw rekening staat." },
+  { id: "sexam-17", topic: "onderwijs", timeLimitS: 20, text: "Vertel kort welke cursus u nu volgt of zou willen volgen." },
+  { id: "sexam-18", topic: "gezondheid", timeLimitS: 30, text: "Leg uit wat u zou doen als u een afspraak bij de dokter wilt verzetten." },
+  { id: "sexam-19", topic: "vervoer", timeLimitS: 20, text: "Vertel kort hoe u meestal naar uw werk of school reist." },
+  { id: "sexam-20", topic: "documenten", timeLimitS: 30, text: "Beschrijf welke stappen u zou nemen om een verlopen paspoort te vernieuwen." },
+  { id: "sexam-21", topic: "vrije_tijd", timeLimitS: 20, text: "Vertel kort wat u het liefst doet in uw vrije tijd." },
+  { id: "sexam-22", topic: "buurt", timeLimitS: 30, text: "Leg uit wat u zou doen als u geluidsoverlast van de buren heeft." },
+  { id: "sexam-23", topic: "eten", timeLimitS: 20, text: "Vertel kort wat uw favoriete Nederlandse gerecht is en waarom." },
+  { id: "sexam-24", topic: "werk", timeLimitS: 30, text: "Beschrijf een normale werkdag van u, van begin tot eind." },
+  { id: "sexam-25", topic: "familie", timeLimitS: 20, text: "Vertel kort iets over uw familie." },
+  { id: "sexam-26", topic: "verzekering", timeLimitS: 30, text: "Leg uit waarom een basiszorgverzekering in Nederland verplicht is." },
 ];

@@ -4,8 +4,9 @@ import { McItem } from "../types";
 // eindtermen with added emphasis on women's self-determination and
 // Holocaust knowledge. These are original demo items modelled on the public
 // blueprint, not reproductions of secure Cito material — a real KNM run is
-// 40 items / 45 minutes / pass 28-40 [VERIFY]; this is a 21-item mechanism
-// demo, not a full-length practice test.
+// 40 items / 45 minutes / pass 28-40 [VERIFY]; this is a 31-item mechanism
+// demo, not a full-length practice test. Question order is shuffled per run
+// by ExamRunner, on top of each item's shuffled MC option order.
 function knmItem(overrides: Omit<McItem, keyof ReturnType<typeof base>> & Partial<ReturnType<typeof base>>): McItem {
   return { ...base(), ...overrides } as McItem;
 }
@@ -197,5 +198,85 @@ export const KNM_ITEMS: McItem[] = [
     options: ["Ja, demonstratievrijheid is een grondrecht", "Nee, dat is altijd verboden", "Alleen met toestemming van de koning"],
     correctIndex: 0,
     explanationRu: "Свобода мирных демонстраций — конституционное право в Нидерландах.",
+  }),
+  knmItem({
+    id: "knm-22",
+    topic: "onderwijs",
+    prompt: "Vanaf welke leeftijd is onderwijs in Nederland verplicht voor kinderen?",
+    options: ["Vanaf 5 jaar", "Vanaf 10 jaar", "Onderwijs is niet verplicht"],
+    correctIndex: 0,
+    explanationRu: "Обязательное школьное обучение (leerplicht) в Нидерландах начинается с 5 лет.",
+  }),
+  knmItem({
+    id: "knm-23",
+    topic: "gezondheidszorg",
+    prompt: "Is iedereen in Nederland verplicht een zorgverzekering te hebben?",
+    options: ["Ja, een basisverzekering is verplicht", "Nee, dat is optioneel", "Alleen voor kinderen"],
+    correctIndex: 0,
+    explanationRu: "Базовая медицинская страховка обязательна для всех жителей Нидерландов.",
+  }),
+  knmItem({
+    id: "knm-24",
+    topic: "instellingen",
+    prompt: "Waar kunt u terecht als u een uitkering wilt aanvragen?",
+    options: ["Bij het UWV of de gemeente", "Bij de politie", "Bij de kerk"],
+    correctIndex: 0,
+    explanationRu: "За пособиями обращаются в UWV (по безработице) или в муниципалитет (социальная помощь).",
+  }),
+  knmItem({
+    id: "knm-25",
+    topic: "veiligheid",
+    prompt: "Welk nummer belt u bij een levensbedreigende noodsituatie?",
+    options: ["112", "0900-8844", "14020"],
+    correctIndex: 0,
+    explanationRu: "112 — единый номер экстренных служб при угрозе жизни.",
+  }),
+  knmItem({
+    id: "knm-26",
+    topic: "geschiedenis",
+    prompt: "In welk jaar werd Nederland bevrijd van de Duitse bezetting?",
+    options: ["1945", "1918", "1989"],
+    correctIndex: 0,
+    explanationRu: "Нидерланды были освобождены от немецкой оккупации в 1945 году.",
+  }),
+  knmItem({
+    id: "knm-27",
+    topic: "vrijheid",
+    prompt: "Mag u in Nederland vrij uw eigen geloof kiezen of geen geloof hebben?",
+    options: ["Ja, godsdienstvrijheid is een grondrecht", "Nee, iedereen moet hetzelfde geloof hebben", "Alleen met toestemming van de gemeente"],
+    correctIndex: 0,
+    explanationRu: "Свобода вероисповедания — конституционное право, включая право не иметь религии.",
+  }),
+  knmItem({
+    id: "knm-28",
+    topic: "gelijkheid",
+    prompt: "Mogen twee mensen van hetzelfde geslacht in Nederland trouwen?",
+    options: ["Ja, het homohuwelijk is wettelijk toegestaan", "Nee, dat mag niet", "Alleen in sommige gemeenten"],
+    correctIndex: 0,
+    explanationRu: "Однополые браки легальны в Нидерландах с 2001 года — первая страна в мире, легализовавшая это.",
+  }),
+  knmItem({
+    id: "knm-29",
+    topic: "werk",
+    prompt: "Heeft een werknemer in Nederland recht op betaalde vakantiedagen?",
+    options: ["Ja, minimaal vier keer de wekelijkse arbeidsduur per jaar", "Nee, vakantie is onbetaald", "Alleen na tien jaar dienstverband"],
+    correctIndex: 0,
+    explanationRu: "Минимум оплачиваемого отпуска — 4 недели (в пересчёте на рабочие часы) в год.",
+  }),
+  knmItem({
+    id: "knm-30",
+    topic: "wonen",
+    prompt: "Mag een verhuurder zomaar bij u binnenkomen zonder uw toestemming?",
+    options: ["Nee, dat mag niet zonder uw toestemming", "Ja, altijd", "Alleen 's nachts"],
+    correctIndex: 0,
+    explanationRu: "Арендодатель не имеет права входить в жильё без согласия жильца, кроме экстренных случаев по закону.",
+  }),
+  knmItem({
+    id: "knm-31",
+    topic: "instellingen",
+    prompt: "Wie kiest de leden van de Tweede Kamer?",
+    options: ["De burgers, via verkiezingen", "De koning", "De burgemeesters"],
+    correctIndex: 0,
+    explanationRu: "Членов Второй палаты (Tweede Kamer) избирают граждане на всеобщих выборах.",
   }),
 ];

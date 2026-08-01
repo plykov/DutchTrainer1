@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { SPEAKING_EXAM_ITEMS } from "@/lib/content/speakingExamItems";
+import { shuffleArray } from "@/lib/shuffle";
 
 type Phase = "requesting" | "denied" | "unsupported" | "ready" | "recording" | "done";
 
@@ -11,10 +12,19 @@ const supportsRecording =
   typeof window !== "undefined" && !!navigator.mediaDevices && !!window.MediaRecorder;
 
 export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
+  // The pool has more short/medium prompts than one run needs, so draw a
+  // random 8 short + 8 medium per run — keeps the real 8/8 structure while
+  // varying which prompts appear and in what order.
+  const items = useMemo(() => {
+    const short = shuffleArray(SPEAKING_EXAM_ITEMS.filter((it) => it.timeLimitS === 20)).slice(0, 8);
+    const medium = shuffleArray(SPEAKING_EXAM_ITEMS.filter((it) => it.timeLimitS === 30)).slice(0, 8);
+    return shuffleArray([...short, ...medium]);
+  }, []);
+
   const [phase, setPhase] = useState<Phase>("requesting");
   const [index, setIndex] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(READY_SECONDS);
-  const [recordings, setRecordings] = useState<(string | null)[]>(() => SPEAKING_EXAM_ITEMS.map(() => null));
+  const [recordings, setRecordings] = useState<(string | null)[]>(() => items.map(() => null));
 
   const streamRef = useRef<MediaStream | null>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
@@ -71,7 +81,7 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
         next[finishedIndex] = url;
         return next;
       });
-      if (finishedIndex + 1 >= SPEAKING_EXAM_ITEMS.length) {
+      if (finishedIndex + 1 >= items.length) {
         setPhase("done");
       } else {
         indexRef.current = finishedIndex + 1;
@@ -82,7 +92,7 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
     };
     recorderRef.current = recorder;
     recorder.start();
-    setSecondsLeft(SPEAKING_EXAM_ITEMS[indexRef.current].timeLimitS);
+    setSecondsLeft(items[indexRef.current].timeLimitS);
     setPhase("recording");
   }
 
@@ -103,6 +113,9 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
       });
     }, 1000);
     return () => clearTimeout(t);
+    // startRecording/finishRecording close over `items`, which is fixed for
+    // the component's lifetime (useMemo with no deps) — no actual staleness.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, secondsLeft]);
 
   useEffect(() => {
@@ -133,7 +146,7 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
         <h3 className="text-lg font-medium">Результат симуляции Spreken</h3>
         <p className="text-sm text-zinc-500">
-          Демо из {SPEAKING_EXAM_ITEMS.length} заданий (8 коротких по 20с + 8 средних по 30с — как на настоящем
+          Демо из {items.length} заданий (8 коротких по 20с + 8 средних по 30с — как на настоящем
           экзамене). Без автоматической оценки произношения — прослушайте свои записи и сравните с текстом
           самостоятельно.
         </p>
@@ -150,7 +163,7 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
           <p className="mt-1">Проходной балл — 66 из 103 (без учёта обязательных условий).</p>
         </div>
         <div className="space-y-3">
-          {SPEAKING_EXAM_ITEMS.map((it, i) => (
+          {items.map((it, i) => (
             <div key={it.id} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm space-y-1">
               <p className="font-medium">{it.text}</p>
               {recordings[i] && <audio controls src={recordings[i]!} className="max-w-full" />}
@@ -164,13 +177,13 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
     );
   }
 
-  const item = SPEAKING_EXAM_ITEMS[index];
+  const item = items[index];
 
   return (
     <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
       <div className="flex items-center justify-between text-xs text-zinc-500">
         <span>
-          {index + 1} / {SPEAKING_EXAM_ITEMS.length}
+          {index + 1} / {items.length}
         </span>
         <span className="font-mono tabular-nums px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900">{secondsLeft}с</span>
       </div>

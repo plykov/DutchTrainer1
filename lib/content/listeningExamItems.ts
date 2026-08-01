@@ -14,7 +14,9 @@ export interface ListeningExamItem {
 // §7 — Luisteren exam demo: original transcripts, distinct from the
 // /listening practice pool, run under strict exam pacing (no early-start
 // button, forced pre-read, single play, no replay) via ExamListeningRunner.
-// 15-item mechanism demo, not the full ~40-question / 90-minute run.
+// 50-item mechanism demo — larger than the real ~40-question / 90-minute
+// run, for extra practice volume. ExamListeningRunner shuffles item order
+// per run, on top of each item's shuffled MC option order.
 export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
   {
     id: "lexam-1",
@@ -454,6 +456,116 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Buiten maart", "Alleen in maart", "Er is geen verschil"],
       correctIndex: 0,
       explanationRu: "'liefst buiten de drukke periode in maart' — лучше звонить не в загруженный март.",
+    },
+  },
+  {
+    id: "lexam-41",
+    transcript:
+      "Let op reizigers: de trein van 14:32 naar Utrecht vertrekt vandaag van spoor 5 in plaats van spoor 3.",
+    question: {
+      prompt: "Van welk spoor vertrekt de trein vandaag?",
+      options: ["Spoor 5", "Spoor 3", "Spoor 7"],
+      correctIndex: 0,
+      explanationRu: "'vertrekt vandaag van spoor 5 in plaats van spoor 3' — сегодня поезд отправляется с 5-й платформы вместо 3-й.",
+    },
+  },
+  {
+    id: "lexam-42",
+    transcript:
+      "Voor het aanvragen van een parkeervergunning heeft u uw kentekenbewijs en een bewijs van uw adres nodig.",
+    question: {
+      prompt: "Wat heeft u nodig voor een parkeervergunning?",
+      options: ["Kentekenbewijs en adresbewijs", "Alleen een rijbewijs", "Een werkgeversverklaring"],
+      correctIndex: 0,
+      explanationRu: "'kentekenbewijs en een bewijs van uw adres' — нужны техпаспорт машины и подтверждение адреса.",
+    },
+  },
+  {
+    id: "lexam-43",
+    transcript:
+      "De bibliotheek is vandaag eerder gesloten, om vier uur in plaats van acht uur, wegens een personeelsvergadering.",
+    question: {
+      prompt: "Hoe laat sluit de bibliotheek vandaag?",
+      options: ["Om vier uur", "Om acht uur", "Om zes uur"],
+      correctIndex: 0,
+      explanationRu: "'eerder gesloten, om vier uur' — сегодня закрывается раньше, в четыре.",
+    },
+  },
+  {
+    id: "lexam-44",
+    transcript:
+      "Uw sollicitatiegesprek is verzet naar volgende maandag om tien uur, in plaats van deze vrijdag.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek nu?",
+      options: ["Volgende maandag om tien uur", "Deze vrijdag", "Volgende week vrijdag"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar volgende maandag om tien uur' — собеседование перенесено на следующий понедельник.",
+    },
+  },
+  {
+    id: "lexam-45",
+    transcript:
+      "Bij de apotheek kunt u uw recept ophalen tussen negen en zes uur, behalve op zondag, dan is de apotheek gesloten.",
+    question: {
+      prompt: "Wanneer is de apotheek gesloten?",
+      options: ["Op zondag", "Op maandag", "Nooit"],
+      correctIndex: 0,
+      explanationRu: "'behalve op zondag, dan is de apotheek gesloten' — аптека закрыта по воскресеньям.",
+    },
+  },
+  {
+    id: "lexam-46",
+    transcript:
+      "Voor de cursus Nederlands moet u zich uiterlijk één week voor de startdatum inschrijven via de website.",
+    question: {
+      prompt: "Wanneer moet u zich uiterlijk inschrijven?",
+      options: ["Uiterlijk één week voor de startdatum", "Op de eerste cursusdag zelf", "Er is geen deadline"],
+      correctIndex: 0,
+      explanationRu: "'uiterlijk één week voor de startdatum' — записаться нужно не позднее чем за неделю до начала.",
+    },
+  },
+  {
+    id: "lexam-47",
+    transcript:
+      "Het zwembad is deze zomer geopend van tien tot acht, met een gratis zwemles voor kinderen op zaterdagochtend.",
+    question: {
+      prompt: "Wanneer is de gratis zwemles voor kinderen?",
+      options: ["Zaterdagochtend", "Zondagavond", "Elke dag"],
+      correctIndex: 0,
+      explanationRu: "'gratis zwemles voor kinderen op zaterdagochtend' — бесплатный урок плавания для детей по субботам утром.",
+    },
+  },
+  {
+    id: "lexam-48",
+    transcript:
+      "Om een paspoort te verlengen, moet u persoonlijk langskomen bij de gemeente; dit kan niet online.",
+    question: {
+      prompt: "Kunt u een paspoort online verlengen?",
+      options: ["Nee, u moet persoonlijk langskomen", "Ja, altijd online", "Alleen via de post"],
+      correctIndex: 0,
+      explanationRu: "'dit kan niet online' — продлить паспорт нельзя онлайн, нужно приходить лично.",
+    },
+  },
+  {
+    id: "lexam-49",
+    transcript:
+      "Bij een lekkage in uw woning belt u eerst de storingsdienst van de woningcorporatie, niet de brandweer.",
+    question: {
+      prompt: "Wie belt u bij een lekkage in uw woning?",
+      options: ["De storingsdienst van de woningcorporatie", "Altijd de brandweer", "De politie"],
+      correctIndex: 0,
+      explanationRu: "'belt u eerst de storingsdienst van de woningcorporatie' — при протечке сначала звонят в аварийную службу жилищной корпорации, не в пожарную.",
+    },
+  },
+  {
+    id: "lexam-50",
+    transcript:
+      "De gemeente biedt gratis taallessen aan voor nieuwkomers, elke dinsdag en donderdag in het buurthuis.",
+    question: {
+      prompt: "Waar worden de gratis taallessen gegeven?",
+      options: ["In het buurthuis", "Bij de gemeente zelf", "Online"],
+      correctIndex: 0,
+      explanationRu: "'elke dinsdag en donderdag in het buurthuis' — бесплатные языковые уроки проходят в общественном центре.",
     },
   },
 ];

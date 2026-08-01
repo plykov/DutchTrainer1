@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ZINSTAKEN_ITEMS } from "@/lib/content/zinstaken";
 import { DEELSCHRIJFTAKEN_ITEMS } from "@/lib/content/deelschrijftaken";
 import { WRITING_EXAM_ITEMS } from "@/lib/content/writingExamItems";
+import { shuffleArray } from "@/lib/shuffle";
 import WritingTask from "@/components/WritingTask";
 
 // §7 — Schrijven's real structure: 8 zinstaken + 2 deelschrijftaken + 2
@@ -11,16 +12,21 @@ import WritingTask from "@/components/WritingTask";
 // choosing their own order, under a single 100-minute clock. This runner
 // sequences the three task types (order fixed here for simplicity) under
 // one shared countdown that force-ends the session at zero, same as a real
-// exam auto-submitting.
-const KORTE_SCHRIJFTAKEN = WRITING_EXAM_ITEMS.slice(0, 2);
-const TOTAL_SECONDS = ZINSTAKEN_ITEMS.length * 60 + DEELSCHRIJFTAKEN_ITEMS.length * 300 + KORTE_SCHRIJFTAKEN.length * 480;
+// exam auto-submitting. The zinstaken and korte-schrijftaak pools are
+// bigger than one run needs, so which 8 (or 2) appear — and in what order
+// — is randomized per run instead of always showing the same fixed slice.
 
 type Stage = "zinstaken" | "deelschrijftaken" | "kort" | "result";
 
 export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => void }) {
+  const zinItems = useMemo(() => shuffleArray(ZINSTAKEN_ITEMS).slice(0, 8), []);
+  const deelItems = useMemo(() => shuffleArray(DEELSCHRIJFTAKEN_ITEMS), []);
+  const kortItems = useMemo(() => shuffleArray(WRITING_EXAM_ITEMS).slice(0, 2), []);
+  const totalSeconds = zinItems.length * 60 + deelItems.length * 300 + kortItems.length * 480;
+
   const [stage, setStage] = useState<Stage>("zinstaken");
   const [zinIndex, setZinIndex] = useState(0);
-  const [zinAnswers, setZinAnswers] = useState<string[]>(() => ZINSTAKEN_ITEMS.map(() => ""));
+  const [zinAnswers, setZinAnswers] = useState<string[]>(() => zinItems.map(() => ""));
   const [zinRevealed, setZinRevealed] = useState(false);
 
   const [deelIndex, setDeelIndex] = useState(0);
@@ -29,7 +35,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
 
   const [kortIndex, setKortIndex] = useState(0);
 
-  const [secondsLeft, setSecondsLeft] = useState(TOTAL_SECONDS);
+  const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
   const [ended, setEnded] = useState(false);
 
   useEffect(() => {
@@ -70,9 +76,9 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
     <div className="space-y-4">
       <div className="flex items-center justify-between text-sm">
         <span className="text-zinc-500">
-          {stage === "zinstaken" && `Zinstaken ${zinIndex + 1} / ${ZINSTAKEN_ITEMS.length}`}
-          {stage === "deelschrijftaken" && `Deelschrijftaak ${deelIndex + 1} / ${DEELSCHRIJFTAKEN_ITEMS.length}`}
-          {stage === "kort" && `Korte schrijftaak ${kortIndex + 1} / ${KORTE_SCHRIJFTAKEN.length}`}
+          {stage === "zinstaken" && `Zinstaken ${zinIndex + 1} / ${zinItems.length}`}
+          {stage === "deelschrijftaken" && `Deelschrijftaak ${deelIndex + 1} / ${deelItems.length}`}
+          {stage === "kort" && `Korte schrijftaak ${kortIndex + 1} / ${kortItems.length}`}
         </span>
         <span className="font-mono tabular-nums px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900">
           {minutes}:{seconds.toString().padStart(2, "0")}
@@ -81,7 +87,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
 
       {stage === "zinstaken" && (
         <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
-          <p className="text-lg">{ZINSTAKEN_ITEMS[zinIndex].prompt}</p>
+          <p className="text-lg">{zinItems[zinIndex].prompt}</p>
           <input
             value={zinAnswers[zinIndex]}
             onChange={(e) =>
@@ -97,9 +103,9 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
           {zinRevealed && (
             <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-3 text-sm space-y-1">
               <p>
-                <strong>Пример ответа:</strong> {ZINSTAKEN_ITEMS[zinIndex].sampleAnswer}
+                <strong>Пример ответа:</strong> {zinItems[zinIndex].sampleAnswer}
               </p>
-              <p className="text-zinc-500">{ZINSTAKEN_ITEMS[zinIndex].explanationRu}</p>
+              <p className="text-zinc-500">{zinItems[zinIndex].explanationRu}</p>
             </div>
           )}
           <div className="flex justify-end gap-2">
@@ -115,7 +121,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
               <button
                 onClick={() => {
                   setZinRevealed(false);
-                  if (zinIndex + 1 >= ZINSTAKEN_ITEMS.length) setStage("deelschrijftaken");
+                  if (zinIndex + 1 >= zinItems.length) setStage("deelschrijftaken");
                   else setZinIndex((i) => i + 1);
                 }}
                 className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
@@ -129,10 +135,10 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
 
       {stage === "deelschrijftaken" && (
         <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
-          <p className="text-sm text-zinc-500">{DEELSCHRIJFTAKEN_ITEMS[deelIndex].instructionRu}</p>
-          <p className="text-lg">{DEELSCHRIJFTAKEN_ITEMS[deelIndex].taskPrompt}</p>
+          <p className="text-sm text-zinc-500">{deelItems[deelIndex].instructionRu}</p>
+          <p className="text-lg">{deelItems[deelIndex].taskPrompt}</p>
           <div className="space-y-3">
-            {DEELSCHRIJFTAKEN_ITEMS[deelIndex].fields.map((f) => (
+            {deelItems[deelIndex].fields.map((f) => (
               <div key={f.id}>
                 <label className="text-sm text-zinc-500 block mb-1">{f.label}</label>
                 <input
@@ -159,7 +165,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
               <button
                 onClick={() => {
                   setDeelRevealed(false);
-                  if (deelIndex + 1 >= DEELSCHRIJFTAKEN_ITEMS.length) setStage("kort");
+                  if (deelIndex + 1 >= deelItems.length) setStage("kort");
                   else setDeelIndex((i) => i + 1);
                 }}
                 className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
@@ -173,16 +179,16 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
 
       {stage === "kort" && (
         <div className="space-y-4">
-          <WritingTask key={KORTE_SCHRIJFTAKEN[kortIndex].id} item={KORTE_SCHRIJFTAKEN[kortIndex]} />
+          <WritingTask key={kortItems[kortIndex].id} item={kortItems[kortIndex]} />
           <div className="flex justify-end">
             <button
               onClick={() => {
-                if (kortIndex + 1 >= KORTE_SCHRIJFTAKEN.length) setStage("result");
+                if (kortIndex + 1 >= kortItems.length) setStage("result");
                 else setKortIndex((i) => i + 1);
               }}
               className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
             >
-              {kortIndex + 1 >= KORTE_SCHRIJFTAKEN.length ? "Завершить Schrijven" : "Далее"}
+              {kortIndex + 1 >= kortItems.length ? "Завершить Schrijven" : "Далее"}
             </button>
           </div>
         </div>

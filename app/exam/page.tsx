@@ -9,6 +9,7 @@ import SchrijvenStructuredRunner from "@/components/SchrijvenStructuredRunner";
 import WritingTask from "@/components/WritingTask";
 import { KNM_ITEMS } from "@/lib/content/knmItems";
 import { LEZEN_ITEMS } from "@/lib/content/lezenItems";
+import { LISTENING_EXAM_ITEMS } from "@/lib/content/listeningExamItems";
 import { PRACTICE_ITEMS } from "@/lib/content/items";
 import { WRITING_EXAM_ITEMS } from "@/lib/content/writingExamItems";
 import { ShortWriteItem } from "@/lib/types";
@@ -38,6 +39,17 @@ const STAATSEXAMEN_P1 = [
 
 type ActiveSim = "none" | "knm" | "lezen" | "luisteren" | "schrijven" | "schrijven-vrij" | "spreken";
 
+// Russian noun agreement after a count: 1/21/31... -> singular, 2-4/22-24...
+// -> "few", everything else (5-20, 25-30...) -> "many".
+function ruQuestionCount(n: number): string {
+  const mod100 = n % 100;
+  const mod10 = n % 10;
+  if (mod100 >= 11 && mod100 <= 14) return `${n} вопросов`;
+  if (mod10 === 1) return `${n} вопрос`;
+  if (mod10 >= 2 && mod10 <= 4) return `${n} вопроса`;
+  return `${n} вопросов`;
+}
+
 export default function ExamPage() {
   const { ready } = useRequireProfile();
   const [active, setActive] = useState<ActiveSim>("none");
@@ -55,7 +67,7 @@ export default function ExamPage() {
         <ExamRunner
           items={KNM_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 6 вопросов. Настоящий KNM: 40 вопросов, порог 28/40, 45 минут [VERIFY]."
+          passNote="Демо из 31 вопроса. Настоящий KNM: 40 вопросов, порог 28/40, 45 минут [VERIFY]."
         />
       </div>
     );
@@ -67,7 +79,7 @@ export default function ExamPage() {
         <ExamRunner
           items={LEZEN_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 36 вопросов — совпадает с реальным Lezen по количеству (35 или 36, 110 минут, 6 текстов) [VERIFY]."
+          passNote="Демо из 46 вопросов — больше, чем в реальном Lezen (35 или 36, 110 минут, 6 текстов) [VERIFY], для дополнительной тренировки."
         />
       </div>
     );
@@ -147,19 +159,19 @@ export default function ExamPage() {
           onClick={() => setActive("knm")}
           className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция KNM (21 вопрос)
+          Демо-симуляция KNM ({ruQuestionCount(KNM_ITEMS.length)})
         </button>
         <button
           onClick={() => setActive("lezen")}
           className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция Lezen (36 вопросов)
+          Демо-симуляция Lezen ({ruQuestionCount(LEZEN_ITEMS.length)})
         </button>
         <button
           onClick={() => setActive("luisteren")}
           className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция Luisteren (40 вопросов)
+          Демо-симуляция Luisteren ({ruQuestionCount(LISTENING_EXAM_ITEMS.length)})
         </button>
         <button
           onClick={() => setActive("schrijven")}
