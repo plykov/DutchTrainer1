@@ -175,6 +175,7 @@ const DICT = {
   sp_grade_bad: { ru: "Плохо получилось", en: "Went poorly" },
   sp_grade_medium: { ru: "Средне", en: "Okay" },
   sp_grade_excellent: { ru: "Отлично", en: "Excellent" },
+  sp_all_done: { ru: "Все задания на говорение пройдены!", en: "All speaking prompts done!" },
 } as const;
 
 export type I18nKey = keyof typeof DICT;

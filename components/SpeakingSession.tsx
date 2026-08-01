@@ -5,6 +5,7 @@ import { useAppStore } from "@/lib/store";
 import { useT } from "@/lib/i18n";
 import { SPEAKING_PROMPTS } from "@/lib/content/speakingPrompts";
 import { Grade } from "@/lib/fsrs";
+import NextExercise from "@/components/NextExercise";
 
 type RecState = "idle" | "recording" | "recorded" | "denied" | "unsupported";
 
@@ -16,6 +17,7 @@ export default function SpeakingSession() {
   const [recState, setRecState] = useState<RecState>("idle");
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [startedAt, setStartedAt] = useState(() => Date.now());
+  const [done, setDone] = useState(false);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -69,7 +71,20 @@ export default function SpeakingSession() {
     setAudioUrl(null);
     setRecState("idle");
     setStartedAt(Date.now());
-    setIndex((i) => (i + 1) % SPEAKING_PROMPTS.length);
+    if (index + 1 >= SPEAKING_PROMPTS.length) {
+      setDone(true);
+    } else {
+      setIndex((i) => i + 1);
+    }
+  }
+
+  if (done) {
+    return (
+      <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
+        <p className="text-lg font-medium mb-2">{t("sp_all_done")}</p>
+        <NextExercise currentHref="/speaking" />
+      </div>
+    );
   }
 
   return (

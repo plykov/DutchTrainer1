@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_ITEMS } from "@/lib/content/listeningItems";
 import { shuffleOptions } from "@/lib/shuffle";
+import NextExercise from "@/components/NextExercise";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -29,6 +30,8 @@ export default function ListeningSession() {
   const [stage, setStage] = useState<Stage>("preread");
   const [preReadLeft, setPreReadLeft] = useState(PRE_READ_SECONDS);
   const [selected, setSelected] = useState<number | null>(null);
+  const [done, setDone] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
 
   const flashTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const safetyTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -84,10 +87,27 @@ export default function ListeningSession() {
   }
 
   function next() {
-    setIndex((i) => (i + 1) % items.length);
+    if (correct) setCorrectCount((c) => c + 1);
+    if (index + 1 >= items.length) {
+      setDone(true);
+      return;
+    }
+    setIndex((i) => i + 1);
     setStage("preread");
     setPreReadLeft(PRE_READ_SECONDS);
     setSelected(null);
+  }
+
+  if (done) {
+    return (
+      <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
+        <p className="text-lg font-medium mb-2">Сессия завершена!</p>
+        <p className="text-zinc-500">
+          Правильно: {correctCount} / {items.length}
+        </p>
+        <NextExercise currentHref="/listening" />
+      </div>
+    );
   }
 
   return (

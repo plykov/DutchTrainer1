@@ -102,6 +102,13 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   instance) now end with a row of links to every other module. Exam-runner completion screens
   (`ExamRunner`, `ExamListeningRunner`, `SchrijvenStructuredRunner`, `ExamSpeakingRunner`) already
   return to the `/exam` picker, which serves the same purpose, so they were left as-is.
+- **Fix: Luisteren/Spreken practice silently restarting instead of finishing** — `ListeningSession` and
+  `SpeakingSession` advanced through their item list with `(i + 1) % length`, so finishing the last item
+  wrapped straight back to item 1 with no completion message — reported by a tester as the session
+  "restarting back to the start." Both now stop advancing past the last item, show a proper completion
+  screen (score for listening; a completion message for speaking, since its self-graded rubric isn't a
+  right/wrong count), and end with the same "choose the next exercise" links as the other modules. Audited
+  every other session component for the same `% length` wraparound pattern — no other instance existed.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
