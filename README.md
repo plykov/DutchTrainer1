@@ -37,6 +37,15 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   task under a hard countdown that auto-submits at zero, mirroring exam-mode's "no backtracking, no
   mid-task feedback" rule, §7). These are mechanism demos, not full-length exams — the seed item bank
   is far too small for a real 36-question Lezen or 40-question KNM run.
+- **Speaking practice** (`/speaking`) — elicited imitation (§8): record yourself reading a target
+  sentence, play it back, self-compare, self-grade into FSRS. The recording is processed entirely in
+  the browser and discarded the moment you grade or leave the page — never uploaded, never stored
+  (the §9 transient-voice-processing default, taken literally since there's no ASR backend to send it
+  to anyway).
+- Grammar item bank now covers every §5 syntax/morphology error code with at least one item
+  (`ERR_CLUSTER`, `ERR_SEP_PART`, `ERR_NEG_POS`, `ERR_PLUR`, `ERR_DIM_ART`, `ERR_PREP_FIXED`,
+  `ERR_COLLOC` added), and the noun bank grew from 8 to 20 lemmas across more exam-domain topics
+  (work, housing, health, official paperwork).
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

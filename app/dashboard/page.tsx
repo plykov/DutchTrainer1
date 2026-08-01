@@ -5,6 +5,7 @@ import { useAppStore } from "@/lib/store";
 import { retentionTargetFor } from "@/lib/fsrs";
 import { PRACTICE_ITEMS } from "@/lib/content/items";
 import { NOUN_BUNDLES } from "@/lib/content/nouns";
+import { SPEAKING_PROMPTS } from "@/lib/content/speakingPrompts";
 import { knownLemmas } from "@/lib/coverage";
 import Link from "next/link";
 
@@ -82,7 +83,9 @@ export default function DashboardPage() {
         <h2 className="text-lg font-medium mb-3">Прогресс по навыкам</h2>
         <div className="grid gap-2 sm:grid-cols-2">
           {Object.entries(SKILL_LABELS).map(([skill, label]) => {
-            const total = PRACTICE_ITEMS.filter((i) => i.skill === skill).length;
+            const total =
+              PRACTICE_ITEMS.filter((i) => i.skill === skill).length +
+              (skill === "speaking" ? SPEAKING_PROMPTS.length : 0);
             return (
               <div key={skill} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex justify-between">
                 <span>{label}</span>
@@ -126,6 +129,9 @@ export default function DashboardPage() {
         </Link>
         <Link href="/reading" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
           Чтение
+        </Link>
+        <Link href="/speaking" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
+          Говорение
         </Link>
       </div>
     </div>

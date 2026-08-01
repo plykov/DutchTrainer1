@@ -10,6 +10,7 @@ const LINKS = [
   { href: "/vocab", nl: "Woordenschat", ru: "Словарь" },
   { href: "/reading", nl: "Lezen", ru: "Чтение" },
   { href: "/write", nl: "Schrijven", ru: "Письмо" },
+  { href: "/speaking", nl: "Spreken", ru: "Говорение" },
   { href: "/exam", nl: "Examensimulatie", ru: "Симуляция экзамена" },
 ];
 
