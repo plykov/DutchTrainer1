@@ -191,7 +191,11 @@ export default function ExamPage() {
       </div>
 
       <section>
-        <h2 className="text-lg font-medium mb-3">Staatsexamen NT2 Programma I</h2>
+        <h2 className="text-lg font-medium mb-3">Staatsexamen NT2 Programma I — справка по разделам</h2>
+        <p className="text-sm text-zinc-500 mb-3">
+          Это не отдельный шестой тест — здесь просто собраны ограничения по времени и формату для всего экзамена.
+          Запускаются его разделы кнопками выше (Lezen, Luisteren, Schrijven, Spreken).
+        </p>
         <div className="space-y-2 text-sm">
           {STAATSEXAMEN_P1.map((row) => (
             <div key={row.skill} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3">
@@ -201,8 +205,9 @@ export default function ExamPage() {
           ))}
         </div>
         <p className="text-xs text-zinc-400 mt-2">
-          Цифры отмечены [VERIFY] в исходном скоупе и требуют подтверждения на staatsexamensnt2.nl перед публикацией
-          боевого контента.
+          Количество вопросов, длительность и структура заданий выше подтверждены по staatsexamensnt2.nl и связанным
+          источникам (август 2026). Остаётся [VERIFY] только точное число вопросов Lezen (35 или 36 — варьируется по
+          версии экзамена) и конкретное издание словаря Van Dale — уточните перед публикацией боевого контента.
         </p>
       </section>
 
