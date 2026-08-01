@@ -3,9 +3,13 @@
 import { useState } from "react";
 import { useRequireProfile } from "@/lib/useRequireProfile";
 import ExamRunner from "@/components/ExamRunner";
+import ExamListeningRunner from "@/components/ExamListeningRunner";
+import ExamSpeakingRunner from "@/components/ExamSpeakingRunner";
 import WritingTask from "@/components/WritingTask";
 import { KNM_ITEMS } from "@/lib/content/knmItems";
+import { LEZEN_ITEMS } from "@/lib/content/lezenItems";
 import { PRACTICE_ITEMS } from "@/lib/content/items";
+import { WRITING_EXAM_ITEMS } from "@/lib/content/writingExamItems";
 import { ShortWriteItem } from "@/lib/types";
 
 const STAATSEXAMEN_P1 = [
@@ -15,15 +19,18 @@ const STAATSEXAMEN_P1 = [
   { skill: "Spreken", constraint: "~25 мин. 8 коротких (20с) + 8 средних (30с) заданий, темп по сигналу, без возврата назад." },
 ];
 
-type ActiveSim = "none" | "knm" | "schrijven";
+type ActiveSim = "none" | "knm" | "lezen" | "luisteren" | "schrijven" | "spreken";
 
 export default function ExamPage() {
   const { ready } = useRequireProfile();
   const [active, setActive] = useState<ActiveSim>("none");
+  const [schrijvenTaskId, setSchrijvenTaskId] = useState<string | null>(null);
 
   if (!ready) return null;
 
-  const writeItem = PRACTICE_ITEMS.find((i) => i.taskType === "short_write") as ShortWriteItem | undefined;
+  const baseWriteItem = PRACTICE_ITEMS.find((i) => i.taskType === "short_write") as ShortWriteItem | undefined;
+  const writeItems = baseWriteItem ? [baseWriteItem, ...WRITING_EXAM_ITEMS] : WRITING_EXAM_ITEMS;
+  const selectedWriteItem = writeItems.find((i) => i.id === schrijvenTaskId);
 
   if (active === "knm") {
     return (
@@ -37,13 +44,62 @@ export default function ExamPage() {
     );
   }
 
-  if (active === "schrijven" && writeItem) {
+  if (active === "lezen") {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <ExamRunner
+          items={LEZEN_ITEMS}
+          onExit={() => setActive("none")}
+          passNote="Демо из 15 вопросов. Настоящий Lezen: ~36 вопросов, 110 минут, 6 текстов [VERIFY]."
+        />
+      </div>
+    );
+  }
+
+  if (active === "luisteren") {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <ExamListeningRunner onExit={() => setActive("none")} />
+      </div>
+    );
+  }
+
+  if (active === "spreken") {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <ExamSpeakingRunner onExit={() => setActive("none")} />
+      </div>
+    );
+  }
+
+  if (active === "schrijven") {
     return (
       <div className="max-w-2xl mx-auto space-y-4">
-        <button onClick={() => setActive("none")} className="text-sm text-zinc-500 underline">
-          ← Выйти из симуляции
+        <button
+          onClick={() => {
+            if (selectedWriteItem) setSchrijvenTaskId(null);
+            else setActive("none");
+          }}
+          className="text-sm text-zinc-500 underline"
+        >
+          ← {selectedWriteItem ? "Выбрать другое задание" : "Выйти из симуляции"}
         </button>
-        <WritingTask item={writeItem} examMode />
+        {selectedWriteItem ? (
+          <WritingTask item={selectedWriteItem} examMode />
+        ) : (
+          <div className="space-y-2">
+            <p className="text-sm text-zinc-500">Выберите задание ({writeItems.length} доступно):</p>
+            {writeItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setSchrijvenTaskId(item.id)}
+                className="w-full text-left rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm hover:border-blue-600"
+              >
+                {item.taskPrompt}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
@@ -53,9 +109,9 @@ export default function ExamPage() {
       <div>
         <h1 className="text-2xl font-semibold mb-1">Экзаменационные ограничения</h1>
         <p className="text-zinc-500">
-          Ниже — ограничения по времени и формату из блуепринта, и две рабочие демо-симуляции механики экзамена
-          (таймер, без возврата назад, без обратной связи до конца). Это не полноразмерные экзамены — банк заданий
-          пока слишком мал для этого.
+          Ниже — ограничения по времени и формату из блуепринта, и пять рабочих демо-симуляций механики экзамена по
+          каждому разделу — KNM, Lezen, Luisteren, Schrijven, Spreken (таймер, без возврата назад, без обратной связи
+          до конца, где применимо). Это не полноразмерные экзамены — банк заданий пока слишком мал для этого.
         </p>
       </div>
 
@@ -64,16 +120,32 @@ export default function ExamPage() {
           onClick={() => setActive("knm")}
           className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция KNM (6 вопросов)
+          Демо-симуляция KNM (21 вопрос)
         </button>
-        {writeItem && (
-          <button
-            onClick={() => setActive("schrijven")}
-            className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
-          >
-            Демо-симуляция Schrijven (с таймером)
-          </button>
-        )}
+        <button
+          onClick={() => setActive("lezen")}
+          className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
+        >
+          Демо-симуляция Lezen (15 вопросов)
+        </button>
+        <button
+          onClick={() => setActive("luisteren")}
+          className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
+        >
+          Демо-симуляция Luisteren (15 вопросов)
+        </button>
+        <button
+          onClick={() => setActive("schrijven")}
+          className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
+        >
+          Демо-симуляция Schrijven ({writeItems.length} заданий, с таймером)
+        </button>
+        <button
+          onClick={() => setActive("spreken")}
+          className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
+        >
+          Демо-симуляция Spreken (15 заданий, темп по сигналу)
+        </button>
       </section>
 
       <div className="rounded-md border border-amber-300 bg-amber-50 dark:bg-amber-950 dark:border-amber-800 p-4 text-sm">

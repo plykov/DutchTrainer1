@@ -96,7 +96,7 @@ export default function ExamRunner({
       </div>
 
       <fieldset>
-        <legend className="text-lg mb-4">{item.prompt}</legend>
+        <legend className="text-lg mb-4 whitespace-pre-wrap">{item.prompt}</legend>
         <div className="space-y-2">
           {item.options.map((opt, i) => (
             <label

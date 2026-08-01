@@ -32,11 +32,20 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   known-word coverage, ≥98% drops glossing entirely for a confidence mode, and below 95% locks into
   intensive mode with unknown words glossed inline (§4). This is a simplified stand-in for the real
   SUBTLEX-NL × NT2Lex × LiNT pipeline — see `lib/coverage.ts` for exactly what's approximated and why.
-- **Exam simulation mechanics** (`/exam`) — a KNM demo (6 original civic-knowledge MC items, single
-  pass, countdown, no feedback until the run ends) and a timed Schrijven demo (the existing writing
-  task under a hard countdown that auto-submits at zero, mirroring exam-mode's "no backtracking, no
-  mid-task feedback" rule, §7). These are mechanism demos, not full-length exams — the seed item bank
-  is far too small for a real 36-question Lezen or 40-question KNM run.
+- **Exam simulation mechanics** (`/exam`) — one demo per Staatsexamen NT2 P1 component plus KNM, all
+  single-pass with no backtracking and no feedback until the run ends (§7):
+  - **KNM** (21 items) — countdown MC run.
+  - **Lezen** (15 items) — short original passages with a comprehension question each.
+  - **Luisteren** (15 items, `ExamListeningRunner`) — the real single-listen mechanic: forced 25s
+    pre-read, one playback (Web Speech API or text-flash fallback), no replay, then answer.
+  - **Schrijven** (16 tasks, picker) — pick a task, then write under a hard countdown that
+    auto-submits at zero.
+  - **Spreken** (15 items, `ExamSpeakingRunner`) — beep-paced: a 2s "get ready" cue, then a fixed
+    20s/30s recording window per item that auto-advances with no way back, ending in a
+    playback-only summary (still no ASR scoring).
+
+  These are mechanism demos, not full-length exams — the seed item bank is far too small for a real
+  36-question Lezen or 40-question KNM run.
 - **Speaking practice** (`/speaking`, 15 prompts) — elicited imitation (§8): record yourself reading a target
   sentence, play it back, self-compare, self-grade into FSRS. The recording is processed entirely in
   the browser and discarded the moment you grade or leave the page — never uploaded, never stored
