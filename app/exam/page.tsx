@@ -5,6 +5,7 @@ import { useRequireProfile } from "@/lib/useRequireProfile";
 import ExamRunner from "@/components/ExamRunner";
 import ExamListeningRunner from "@/components/ExamListeningRunner";
 import ExamSpeakingRunner from "@/components/ExamSpeakingRunner";
+import SchrijvenStructuredRunner from "@/components/SchrijvenStructuredRunner";
 import WritingTask from "@/components/WritingTask";
 import { KNM_ITEMS } from "@/lib/content/knmItems";
 import { LEZEN_ITEMS } from "@/lib/content/lezenItems";
@@ -13,13 +14,29 @@ import { WRITING_EXAM_ITEMS } from "@/lib/content/writingExamItems";
 import { ShortWriteItem } from "@/lib/types";
 
 const STAATSEXAMEN_P1 = [
-  { skill: "Lezen", constraint: "110 мин, 6 текстов, ~36 вопросов MC [VERIFY]. Разрешён Van Dale Pocketwoordenboek NT2." },
-  { skill: "Luisteren", constraint: "90 мин, ~40 вопросов, 5+ фрагментов (1–3 видео). Один прогон, без повтора. 25 сек на предварительное чтение вопроса." },
-  { skill: "Schrijven", constraint: "100 мин. 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken. Van Dale разрешён, проверка орфографии — нет." },
-  { skill: "Spreken", constraint: "~25 мин. 8 коротких (20с) + 8 средних (30с) заданий, темп по сигналу, без возврата назад." },
+  {
+    skill: "Lezen",
+    constraint:
+      "110 мин, 6 текстов, 35 или 36 вопросов MC (число варьируется от экзамена к экзамену) [VERIFY]. Разрешён Van Dale Pocketwoordenboek NT2.",
+  },
+  {
+    skill: "Luisteren",
+    constraint:
+      "90 мин, ~40 вопросов, 5+ фрагментов, по 5–10 вопросов на фрагмент. Один прогон, без повтора. 25 сек на предварительное чтение вопроса.",
+  },
+  {
+    skill: "Schrijven",
+    constraint:
+      "100 мин. 8 zinstaken (макс. 2 балла каждое) + 2 deelschrijftaken (4–8 баллов) + 2 korte schrijftaken (макс. 8 баллов). Порядок заданий выбираете сами. Van Dale разрешён, проверка орфографии — нет.",
+  },
+  {
+    skill: "Spreken",
+    constraint:
+      "~25 мин. 8 коротких (20с) + 8 средних (30с) заданий, темп по сигналу, без возврата назад. Оценка: Inhoud 39 + Woord-/zinsvorming 33 + Woordenschat 12 + Uitspraak 9 + Woordkeus 6 + Tempo 4 = 103 балла, порог 66.",
+  },
 ];
 
-type ActiveSim = "none" | "knm" | "lezen" | "luisteren" | "schrijven" | "spreken";
+type ActiveSim = "none" | "knm" | "lezen" | "luisteren" | "schrijven" | "schrijven-vrij" | "spreken";
 
 export default function ExamPage() {
   const { ready } = useRequireProfile();
@@ -50,7 +67,7 @@ export default function ExamPage() {
         <ExamRunner
           items={LEZEN_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 15 вопросов. Настоящий Lezen: ~36 вопросов, 110 минут, 6 текстов [VERIFY]."
+          passNote="Демо из 36 вопросов — совпадает с реальным Lezen по количеству (35 или 36, 110 минут, 6 текстов) [VERIFY]."
         />
       </div>
     );
@@ -73,6 +90,14 @@ export default function ExamPage() {
   }
 
   if (active === "schrijven") {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <SchrijvenStructuredRunner onExit={() => setActive("none")} />
+      </div>
+    );
+  }
+
+  if (active === "schrijven-vrij") {
     return (
       <div className="max-w-2xl mx-auto space-y-4">
         <button
@@ -109,9 +134,11 @@ export default function ExamPage() {
       <div>
         <h1 className="text-2xl font-semibold mb-1">Экзаменационные ограничения</h1>
         <p className="text-zinc-500">
-          Ниже — ограничения по времени и формату из блуепринта, и пять рабочих демо-симуляций механики экзамена по
-          каждому разделу — KNM, Lezen, Luisteren, Schrijven, Spreken (таймер, без возврата назад, без обратной связи
-          до конца, где применимо). Это не полноразмерные экзамены — банк заданий пока слишком мал для этого.
+          Ниже — ограничения по времени и формату из блуепринта (уточнены по staatsexamensnt2.nl и связанным
+          источникам), и рабочие демо-симуляции механики экзамена по каждому разделу — KNM, Lezen, Luisteren,
+          Schrijven, Spreken (таймер, без возврата назад, без обратной связи до конца, где применимо). Lezen и
+          Luisteren уже совпадают по количеству вопросов с настоящим экзаменом; Schrijven воспроизводит реальную
+          структуру заданий (8+2+2); KNM и Spreken пока остаются демо меньшего размера.
         </p>
       </div>
 
@@ -126,25 +153,31 @@ export default function ExamPage() {
           onClick={() => setActive("lezen")}
           className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция Lezen (15 вопросов)
+          Демо-симуляция Lezen (36 вопросов)
         </button>
         <button
           onClick={() => setActive("luisteren")}
           className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция Luisteren (15 вопросов)
+          Демо-симуляция Luisteren (40 вопросов)
         </button>
         <button
           onClick={() => setActive("schrijven")}
           className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция Schrijven ({writeItems.length} заданий, с таймером)
+          Демо-симуляция Schrijven (реальная структура: 8+2+2)
+        </button>
+        <button
+          onClick={() => setActive("schrijven-vrij")}
+          className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
+        >
+          Schrijven — свободная практика ({writeItems.length} заданий)
         </button>
         <button
           onClick={() => setActive("spreken")}
           className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
         >
-          Демо-симуляция Spreken (15 заданий, темп по сигналу)
+          Демо-симуляция Spreken (8 коротких + 8 средних, темп по сигналу)
         </button>
       </section>
 

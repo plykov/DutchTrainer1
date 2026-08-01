@@ -8,7 +8,7 @@ export interface SpeakingExamItem {
 // §7 — Spreken exam demo: original prompts, distinct from the /speaking
 // practice pool, run beep-paced with no backtracking via
 // ExamSpeakingRunner. Real Spreken: ~25 min, 8 short (20s) + 8 medium (30s)
-// [VERIFY] — this is a 15-item mechanism demo alternating both lengths.
+// (staatsexamensnt2.nl) — matched exactly here: 8 items at 20s, 8 at 30s.
 export const SPEAKING_EXAM_ITEMS: SpeakingExamItem[] = [
   { id: "sexam-1", topic: "gezondheid", timeLimitS: 20, text: "Vertel kort waarom u vandaag naar de huisarts gaat." },
   { id: "sexam-2", topic: "gemeente", timeLimitS: 30, text: "Leg uit welke documenten u nodig heeft om u in te schrijven bij de gemeente." },
@@ -25,4 +25,5 @@ export const SPEAKING_EXAM_ITEMS: SpeakingExamItem[] = [
   { id: "sexam-13", topic: "dagelijks_leven", timeLimitS: 20, text: "Vertel kort over uw dagelijkse routine." },
   { id: "sexam-14", topic: "gemeente", timeLimitS: 30, text: "Leg uit wat u zou zeggen als u een fout in een brief van de gemeente vindt." },
   { id: "sexam-15", topic: "werk", timeLimitS: 20, text: "Vertel kort waarom u geschikt bent voor een baan." },
+  { id: "sexam-16", topic: "geld", timeLimitS: 30, text: "Leg uit wat u zou doen als er een fout op uw rekening staat." },
 ];

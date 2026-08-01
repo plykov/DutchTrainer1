@@ -33,19 +33,23 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   intensive mode with unknown words glossed inline (§4). This is a simplified stand-in for the real
   SUBTLEX-NL × NT2Lex × LiNT pipeline — see `lib/coverage.ts` for exactly what's approximated and why.
 - **Exam simulation mechanics** (`/exam`) — one demo per Staatsexamen NT2 P1 component plus KNM, all
-  single-pass with no backtracking and no feedback until the run ends (§7):
-  - **KNM** (21 items) — countdown MC run.
-  - **Lezen** (15 items) — short original passages with a comprehension question each.
-  - **Luisteren** (15 items, `ExamListeningRunner`) — the real single-listen mechanic: forced 25s
-    pre-read, one playback (Web Speech API or text-flash fallback), no replay, then answer.
-  - **Schrijven** (16 tasks, picker) — pick a task, then write under a hard countdown that
-    auto-submits at zero.
-  - **Spreken** (15 items, `ExamSpeakingRunner`) — beep-paced: a 2s "get ready" cue, then a fixed
-    20s/30s recording window per item that auto-advances with no way back, ending in a
-    playback-only summary (still no ASR scoring).
-
-  These are mechanism demos, not full-length exams — the seed item bank is far too small for a real
-  36-question Lezen or 40-question KNM run.
+  single-pass with no backtracking and no feedback until the run ends (§7). Numbers below are sourced
+  from staatsexamensnt2.nl and related sites (see PR/commit history for links), not guessed:
+  - **Lezen** (36 items) — matches the real ~35–36 question count. Short original passages with a
+    comprehension question each.
+  - **Luisteren** (40 items, `ExamListeningRunner`) — matches the real ~40 question count, and
+    implements the actual single-listen mechanic: forced 25s pre-read, one playback (Web Speech API
+    or text-flash fallback), no replay, then answer.
+  - **Schrijven** (`SchrijvenStructuredRunner`) — reproduces the real task structure: 8 zinstaken
+    (complete/write one sentence) → 2 deelschrijftaken (fill in a form/short message) → 2 korte
+    schrijftaken (short free text), all under one countdown that force-ends the session at zero. A
+    separate "свободная практика" mode still offers 16 standalone writing tasks to pick from.
+  - **Spreken** (16 items, `ExamSpeakingRunner`) — exactly 8 short (20s) + 8 medium (30s) prompts,
+    beep-paced: a 2s "get ready" cue, then a fixed recording window per item that auto-advances with
+    no way back, ending in a playback-only summary showing the real Cito rubric breakdown (Inhoud 39
+    + Woord-/zinsvorming 33 + Woordenschat 12 + Uitspraak 9 + Woordkeus 6 + Tempo 4 = 103, pass 66).
+    Still no ASR scoring.
+  - **KNM** (21 items) — countdown MC run; still short of the real 40-question length.
 - **Speaking practice** (`/speaking`, 15 prompts) — elicited imitation (§8): record yourself reading a target
   sentence, play it back, self-compare, self-grade into FSRS. The recording is processed entirely in
   the browser and discarded the moment you grade or leave the page — never uploaded, never stored

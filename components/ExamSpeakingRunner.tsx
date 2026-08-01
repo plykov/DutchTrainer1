@@ -133,10 +133,22 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
         <h3 className="text-lg font-medium">Результат симуляции Spreken</h3>
         <p className="text-sm text-zinc-500">
-          Демо из {SPEAKING_EXAM_ITEMS.length} заданий. Без автоматической оценки произношения — прослушайте свои
-          записи и сравните с текстом самостоятельно. Настоящий Spreken: ~25 минут, 8 коротких + 8 средних заданий
-          [VERIFY].
+          Демо из {SPEAKING_EXAM_ITEMS.length} заданий (8 коротких по 20с + 8 средних по 30с — как на настоящем
+          экзамене). Без автоматической оценки произношения — прослушайте свои записи и сравните с текстом
+          самостоятельно.
         </p>
+        <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-3 text-xs text-zinc-600 dark:text-zinc-400">
+          <p className="font-medium mb-1">По каким критериям оценивают Spreken на реальном экзамене (Cito):</p>
+          <ul className="list-disc list-inside space-y-0.5">
+            <li>Inhoud (содержание ответа) — 39 из 103 баллов</li>
+            <li>Woord- en zinsvorming (построение слов/предложений) — 33 балла</li>
+            <li>Woordenschat (словарный запас) — 12 баллов</li>
+            <li>Uitspraak (произношение) — 9 баллов</li>
+            <li>Woordkeus (выбор слов) — 6 баллов</li>
+            <li>Tempo (темп речи) — 4 балла</li>
+          </ul>
+          <p className="mt-1">Проходной балл — 66 из 103 (без учёта обязательных условий).</p>
+        </div>
         <div className="space-y-3">
           {SPEAKING_EXAM_ITEMS.map((it, i) => (
             <div key={it.id} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm space-y-1">

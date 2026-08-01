@@ -164,4 +164,193 @@ export const LEZEN_ITEMS: McItem[] = [
     correctIndex: 0,
     explanationRu: "'Ontvangt u niets, neem dan telefonisch contact op' — если подтверждение не пришло, нужно позвонить.",
   }),
+  lezenItem({
+    id: "lezen-16",
+    topic: "vervoer",
+    prompt:
+      "Vanaf 1 september geldt op deze lijn een nieuwe dienstregeling: bussen rijden 's ochtends elke tien minuten in plaats van elke twintig minuten.\n\nVraag: Wat verandert er in de dienstregeling?",
+    options: ["Bussen rijden vaker 's ochtends", "Bussen rijden minder vaak", "Er rijden geen bussen meer"],
+    correctIndex: 0,
+    explanationRu: "'elke tien minuten in plaats van elke twintig minuten' — автобусы теперь ходят чаще.",
+  }),
+  lezenItem({
+    id: "lezen-17",
+    topic: "veiligheid",
+    prompt:
+      "Bij brand belt u 112. Voor niet-spoedeisende meldingen, zoals een kapotte straatlantaarn, kunt u de gemeente bellen op het gewone nummer.\n\nVraag: Welk nummer belt u bij een kapotte straatlantaarn?",
+    options: ["Het gewone nummer van de gemeente", "112", "De politie"],
+    correctIndex: 0,
+    explanationRu: "'Voor niet-spoedeisende meldingen ... kunt u de gemeente bellen op het gewone nummer' — для несрочных случаев обычный номер мэрии.",
+  }),
+  lezenItem({
+    id: "lezen-18",
+    topic: "vrije_tijd",
+    prompt:
+      "De bibliotheek biedt gratis toegang tot internet en computers. Een lidmaatschap is niet nodig om hiervan gebruik te maken, wel om boeken te lenen.\n\nVraag: Waarvoor heeft u geen lidmaatschap nodig?",
+    options: ["Internet en computers gebruiken", "Boeken lenen", "Beide"],
+    correctIndex: 0,
+    explanationRu: "'Een lidmaatschap is niet nodig om hiervan gebruik te maken' — членство не нужно для интернета/компьютеров, но нужно для книг.",
+  }),
+  lezenItem({
+    id: "lezen-19",
+    topic: "werk",
+    prompt:
+      "Nieuwe medewerkers krijgen de eerste maand een mentor toegewezen die helpt bij vragen over het werk. Na de proeftijd stopt deze begeleiding automatisch.\n\nVraag: Hoe lang duurt de begeleiding door een mentor?",
+    options: ["Tot het einde van de proeftijd", "Voor altijd", "Eén week"],
+    correctIndex: 0,
+    explanationRu: "'Na de proeftijd stopt deze begeleiding automatisch' — наставничество заканчивается вместе с испытательным сроком.",
+  }),
+  lezenItem({
+    id: "lezen-20",
+    topic: "gezondheid",
+    prompt:
+      "Griepprikken worden dit jaar vanaf half oktober gegeven bij de huisartsenpraktijk. Patiënten met een verhoogd risico krijgen automatisch een uitnodiging.\n\nVraag: Wie krijgt automatisch een uitnodiging voor de griepprik?",
+    options: ["Patiënten met een verhoogd risico", "Alle patiënten", "Alleen kinderen"],
+    correctIndex: 0,
+    explanationRu: "'Patiënten met een verhoogd risico krijgen automatisch een uitnodiging' — приглашение автоматически только для группы риска.",
+  }),
+  lezenItem({
+    id: "lezen-21",
+    topic: "wonen",
+    prompt:
+      "Bewoners die willen verhuizen, moeten dit minstens één maand van tevoren schriftelijk melden bij de woningcorporatie.\n\nVraag: Hoe moet een verhuizing worden gemeld?",
+    options: ["Schriftelijk, minstens een maand van tevoren", "Telefonisch, op de dag zelf", "Dat hoeft niet gemeld te worden"],
+    correctIndex: 0,
+    explanationRu: "'schriftelijk melden ... minstens één maand van tevoren' — уведомление в письменном виде минимум за месяц.",
+  }),
+  lezenItem({
+    id: "lezen-22",
+    topic: "documenten",
+    prompt:
+      "Een verlopen identiteitsbewijs kan nog tot vijf jaar na de vervaldatum gebruikt worden als bewijs van identiteit bij een aanvraag voor een nieuw document, maar niet om te reizen.\n\nVraag: Waarvoor kan een verlopen identiteitsbewijs nog gebruikt worden?",
+    options: ["Als bewijs van identiteit bij een aanvraag", "Om te reizen", "Nergens meer voor"],
+    correctIndex: 0,
+    explanationRu: "'nog ... gebruikt worden als bewijs van identiteit bij een aanvraag ... maar niet om te reizen' — можно для подтверждения личности, но не для поездок.",
+  }),
+  lezenItem({
+    id: "lezen-23",
+    topic: "onderwijs",
+    prompt:
+      "Studenten die een cursus willen annuleren, krijgen hun geld terug als de annulering minstens twee weken voor de startdatum wordt doorgegeven.\n\nVraag: Wanneer krijgt een student zijn geld terug?",
+    options: ["Bij annulering minstens twee weken van tevoren", "Altijd, ongeacht de datum", "Nooit"],
+    correctIndex: 0,
+    explanationRu: "'als de annulering minstens twee weken voor de startdatum wordt doorgegeven' — возврат денег только при отмене минимум за две недели.",
+  }),
+  lezenItem({
+    id: "lezen-24",
+    topic: "geld",
+    prompt:
+      "Bij een betalingsachterstand stuurt de instantie eerst een herinnering, daarna een aanmaning met extra kosten, en pas daarna een incassobureau.\n\nVraag: Wat gebeurt er eerst bij een betalingsachterstand?",
+    options: ["U krijgt een herinnering", "Een incassobureau neemt contact op", "U krijgt direct een boete"],
+    correctIndex: 0,
+    explanationRu: "'stuurt de instantie eerst een herinnering' — сначала присылают напоминание, потом уже требование с расходами.",
+  }),
+  lezenItem({
+    id: "lezen-25",
+    topic: "buurt",
+    prompt:
+      "De gemeente plaatst nieuwe afvalcontainers in de straat. Bewoners kunnen hun oude sleutel blijven gebruiken; er is geen nieuwe pas nodig.\n\nVraag: Hebben bewoners een nieuwe pas nodig voor de nieuwe containers?",
+    options: ["Nee, de oude sleutel blijft werken", "Ja, iedereen krijgt een nieuwe pas", "Ja, maar alleen kinderen"],
+    correctIndex: 0,
+    explanationRu: "'er is geen nieuwe pas nodig' — старый ключ продолжает работать.",
+  }),
+  lezenItem({
+    id: "lezen-26",
+    topic: "gezondheid",
+    prompt:
+      "Bij lichte klachten kunt u eerst de zelfzorgwijzer online raadplegen voordat u een afspraak maakt bij de huisarts. Dit bespaart vaak een bezoek.\n\nVraag: Wat kunt u doen voordat u een afspraak maakt?",
+    options: ["De zelfzorgwijzer online raadplegen", "Direct naar het ziekenhuis gaan", "Niets, u moet altijd bellen"],
+    correctIndex: 0,
+    explanationRu: "'eerst de zelfzorgwijzer online raadplegen' — сначала можно посмотреть онлайн-справочник по самопомощи.",
+  }),
+  lezenItem({
+    id: "lezen-27",
+    topic: "werk",
+    prompt:
+      "Overuren worden alleen uitbetaald als ze vooraf zijn goedgekeurd door de leidinggevende. Niet-goedgekeurde overuren worden niet vergoed.\n\nVraag: Wanneer worden overuren uitbetaald?",
+    options: ["Alleen als ze vooraf zijn goedgekeurd", "Altijd automatisch", "Nooit"],
+    correctIndex: 0,
+    explanationRu: "'alleen ... als ze vooraf zijn goedgekeurd door de leidinggevende' — переработки оплачиваются только с предварительного одобрения.",
+  }),
+  lezenItem({
+    id: "lezen-28",
+    topic: "wonen",
+    prompt:
+      "Kleine reparaties, zoals een lekkende kraan, zijn voor rekening van de huurder. Grote reparaties, zoals een kapotte cv-ketel, zijn voor de verhuurder.\n\nVraag: Voor wiens rekening is een kapotte cv-ketel?",
+    options: ["De verhuurder", "De huurder", "De gemeente"],
+    correctIndex: 0,
+    explanationRu: "'Grote reparaties ... zijn voor de verhuurder' — крупный ремонт (например, котёл) оплачивает хозяин жилья.",
+  }),
+  lezenItem({
+    id: "lezen-29",
+    topic: "documenten",
+    prompt:
+      "Voor het aanvragen van een rijbewijs heeft u een geldige medische keuring nodig als u ouder bent dan 75 jaar. Jongere aanvragers hebben dit niet nodig.\n\nVraag: Wie heeft een medische keuring nodig voor een rijbewijs?",
+    options: ["Aanvragers ouder dan 75 jaar", "Alle aanvragers", "Alleen aanvragers onder de 18"],
+    correctIndex: 0,
+    explanationRu: "'als u ouder bent dan 75 jaar' — медосмотр требуется только для заявителей старше 75 лет.",
+  }),
+  lezenItem({
+    id: "lezen-30",
+    topic: "dagelijks_leven",
+    prompt:
+      "Statiegeld op plastic flessen kunt u terugkrijgen bij elke supermarkt met een inleverautomaat, ongeacht waar u de fles gekocht heeft.\n\nVraag: Waar kunt u statiegeld terugkrijgen?",
+    options: ["Bij elke supermarkt met een inleverautomaat", "Alleen waar u de fles kocht", "Nergens"],
+    correctIndex: 0,
+    explanationRu: "'bij elke supermarkt met een inleverautomaat, ongeacht waar u de fles gekocht heeft' — залог можно вернуть в любом магазине с автоматом.",
+  }),
+  lezenItem({
+    id: "lezen-31",
+    topic: "onderwijs",
+    prompt:
+      "Ouders die hun kind willen aanmelden bij een basisschool, moeten dit minstens tien weken voor de vierde verjaardag van het kind doen.\n\nVraag: Wanneer moeten ouders hun kind uiterlijk aanmelden?",
+    options: ["Minstens tien weken voor de vierde verjaardag", "Op de dag van de vierde verjaardag", "Er is geen deadline"],
+    correctIndex: 0,
+    explanationRu: "'minstens tien weken voor de vierde verjaardag van het kind' — запись минимум за десять недель до четырёхлетия.",
+  }),
+  lezenItem({
+    id: "lezen-32",
+    topic: "geld",
+    prompt:
+      "Wie een laag inkomen heeft, kan bij de gemeente bijzondere bijstand aanvragen voor onverwachte, noodzakelijke kosten, zoals een kapotte wasmachine.\n\nVraag: Waarvoor is bijzondere bijstand bedoeld?",
+    options: ["Onverwachte, noodzakelijke kosten", "Vakantiegeld", "Dagelijkse boodschappen"],
+    correctIndex: 0,
+    explanationRu: "'bijzondere bijstand ... voor onverwachte, noodzakelijke kosten' — целевая помощь на непредвиденные необходимые расходы.",
+  }),
+  lezenItem({
+    id: "lezen-33",
+    topic: "gemeente",
+    prompt:
+      "Bezwaar tegen een besluit van de gemeente moet binnen zes weken na de datum van het besluit schriftelijk worden ingediend.\n\nVraag: Binnen welke termijn moet u bezwaar indienen?",
+    options: ["Binnen zes weken", "Binnen zes maanden", "Er is geen termijn"],
+    correctIndex: 0,
+    explanationRu: "'binnen zes weken na de datum van het besluit' — возражение нужно подать в течение шести недель.",
+  }),
+  lezenItem({
+    id: "lezen-34",
+    topic: "vervoer",
+    prompt:
+      "Reist u met een ov-chipkaart, check dan altijd in en uit. Vergeet u uit te checken, dan wordt automatisch het hoogste bedrag afgeschreven.\n\nVraag: Wat gebeurt er als u vergeet uit te checken?",
+    options: ["Het hoogste bedrag wordt afgeschreven", "U krijgt geld terug", "Er gebeurt niets"],
+    correctIndex: 0,
+    explanationRu: "'wordt automatisch het hoogste bedrag afgeschreven' — при неотметке спишут максимальную сумму.",
+  }),
+  lezenItem({
+    id: "lezen-35",
+    topic: "buurt",
+    prompt:
+      "Grofvuil kunt u gratis laten ophalen door de gemeente, maar u moet dit minstens twee werkdagen van tevoren online aanmelden.\n\nVraag: Wat moet u doen voordat grofvuil wordt opgehaald?",
+    options: ["Het minstens twee werkdagen van tevoren aanmelden", "Niets, het wordt automatisch opgehaald", "Ervoor betalen"],
+    correctIndex: 0,
+    explanationRu: "'minstens twee werkdagen van tevoren online aanmelden' — крупногабаритный мусор нужно заранее заказать онлайн.",
+  }),
+  lezenItem({
+    id: "lezen-36",
+    topic: "werk",
+    prompt:
+      "Bij ziekte meldt u zich vóór negen uur 's ochtends telefonisch ziek bij uw leidinggevende, niet per e-mail of app.\n\nVraag: Hoe moet u zich ziekmelden?",
+    options: ["Telefonisch, vóór negen uur", "Per e-mail, wanneer u wilt", "Via een app"],
+    correctIndex: 0,
+    explanationRu: "'telefonisch ziek bij uw leidinggevende, niet per e-mail of app' — больничный сообщают только по телефону, не письмом/приложением.",
+  }),
 ];
