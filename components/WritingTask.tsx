@@ -1,19 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ShortWriteItem } from "@/lib/types";
 import { checkAdequacy, detectErrors, DetectedError } from "@/lib/writingCheck";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
 
 type Stage = "writing" | "adequacy_fail" | "detect" | "hint" | "reveal" | "repair";
 
-export default function WritingTask({ item }: { item: ShortWriteItem }) {
+export default function WritingTask({ item, examMode = false }: { item: ShortWriteItem; examMode?: boolean }) {
   const [text, setText] = useState("");
   const [stage, setStage] = useState<Stage>("writing");
   const [missing, setMissing] = useState<string[]>([]);
   const [errors, setErrors] = useState<DetectedError[]>([]);
   const [activeErrorIdx, setActiveErrorIdx] = useState(0);
   const [repairText, setRepairText] = useState("");
+  const [secondsLeft, setSecondsLeft] = useState(item.timeLimitS ?? 600);
+  const [expired, setExpired] = useState(false);
+
+  useEffect(() => {
+    if (!examMode || stage !== "writing") return;
+    const t = setInterval(() => {
+      setSecondsLeft((s) => {
+        if (s <= 1) {
+          setExpired(true);
+          clearInterval(t);
+          return 0;
+        }
+        return s - 1;
+      });
+    }, 1000);
+    return () => clearInterval(t);
+  }, [examMode, stage]);
+
+  useEffect(() => {
+    if (expired && stage === "writing") submit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [expired]);
 
   function submit() {
     const adequacy = checkAdequacy(text, item.requirements, item.responseMinLen);
@@ -35,7 +57,14 @@ export default function WritingTask({ item }: { item: ShortWriteItem }) {
   return (
     <div className="space-y-4">
       <div className="rounded-md border border-zinc-200 dark:border-zinc-800 p-4">
-        <p className="font-medium mb-2">{item.taskPrompt}</p>
+        <div className="flex items-center justify-between mb-2">
+          <p className="font-medium">{item.taskPrompt}</p>
+          {examMode && stage === "writing" && (
+            <span className="font-mono tabular-nums text-xs px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900 shrink-0 ml-2">
+              {Math.floor(secondsLeft / 60)}:{(secondsLeft % 60).toString().padStart(2, "0")}
+            </span>
+          )}
+        </div>
         <ul className="text-xs text-zinc-500 list-disc list-inside">
           {item.requirements.map((r) => (
             <li key={r}>{r}</li>
@@ -43,10 +72,14 @@ export default function WritingTask({ item }: { item: ShortWriteItem }) {
         </ul>
       </div>
 
+      {expired && stage === "writing" && (
+        <p className="text-sm text-red-600">Время вышло — ответ отправлен автоматически, как на настоящем экзамене.</p>
+      )}
+
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
-        disabled={stage !== "writing" && stage !== "adequacy_fail"}
+        disabled={expired || (stage !== "writing" && stage !== "adequacy_fail")}
         rows={8}
         className="w-full rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
         placeholder="Schrijf hier je antwoord…"

@@ -7,6 +7,8 @@ import { useAppStore } from "@/lib/store";
 const LINKS = [
   { href: "/dashboard", nl: "Overzicht", ru: "Обзор" },
   { href: "/practice", nl: "Oefenen", ru: "Практика" },
+  { href: "/vocab", nl: "Woordenschat", ru: "Словарь" },
+  { href: "/reading", nl: "Lezen", ru: "Чтение" },
   { href: "/write", nl: "Schrijven", ru: "Письмо" },
   { href: "/exam", nl: "Examensimulatie", ru: "Симуляция экзамена" },
 ];
@@ -26,7 +28,7 @@ export default function Nav() {
           NL·A2/B1
         </Link>
         {profile && (
-          <ul className="flex items-center gap-1 text-sm">
+          <ul className="flex items-center gap-1 text-sm overflow-x-auto">
             {LINKS.map((l) => {
               const active = pathname?.startsWith(l.href);
               return (

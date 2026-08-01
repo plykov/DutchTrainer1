@@ -4,6 +4,8 @@ import { useRequireProfile } from "@/lib/useRequireProfile";
 import { useAppStore } from "@/lib/store";
 import { retentionTargetFor } from "@/lib/fsrs";
 import { PRACTICE_ITEMS } from "@/lib/content/items";
+import { NOUN_BUNDLES } from "@/lib/content/nouns";
+import { knownLemmas } from "@/lib/coverage";
 import Link from "next/link";
 
 const SKILL_LABELS: Record<string, string> = {
@@ -27,6 +29,7 @@ export default function DashboardPage() {
   const cardCount = Object.keys(cards).length;
   const targets = Object.values(grammarProgress);
   const graduated = targets.filter((t) => t.stage === "interleaved").length;
+  const knownWordCount = knownLemmas(cards).size;
 
   // §6 readiness estimate: formative, gated on volume of recent unseen
   // review evidence — never shown as a raw-accuracy score.
@@ -47,10 +50,15 @@ export default function DashboardPage() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-4">
         <StatCard label="Серия" value={`${streakDays} дн.`} sub="Только за качественные повторения" />
         <StatCard label="Цель удержания FSRS" value={`${Math.round(retention * 100)}%`} sub={profile.examDate ? "Повышается за 6 недель до экзамена" : "Значение по умолчанию"} />
         <StatCard label="Карточки в системе" value={String(cardCount)} sub={`${graduated}/${targets.length || 0} грамм. целей смешаны`} />
+        <StatCard
+          label="Известные слова"
+          value={`${knownWordCount}/${NOUN_BUNDLES.length}`}
+          sub="Используется для порога чтения §4"
+        />
       </div>
 
       <section>
@@ -112,6 +120,12 @@ export default function DashboardPage() {
         </Link>
         <Link href="/write" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
           Задание на письмо
+        </Link>
+        <Link href="/vocab" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
+          Словарь
+        </Link>
+        <Link href="/reading" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
+          Чтение
         </Link>
       </div>
     </div>

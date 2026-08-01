@@ -1,6 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { useRequireProfile } from "@/lib/useRequireProfile";
+import ExamRunner from "@/components/ExamRunner";
+import WritingTask from "@/components/WritingTask";
+import { KNM_ITEMS } from "@/lib/content/knmItems";
+import { PRACTICE_ITEMS } from "@/lib/content/items";
+import { ShortWriteItem } from "@/lib/types";
 
 const STAATSEXAMEN_P1 = [
   { skill: "Lezen", constraint: "110 мин, 6 текстов, ~36 вопросов MC [VERIFY]. Разрешён Van Dale Pocketwoordenboek NT2." },
@@ -9,19 +15,66 @@ const STAATSEXAMEN_P1 = [
   { skill: "Spreken", constraint: "~25 мин. 8 коротких (20с) + 8 средних (30с) заданий, темп по сигналу, без возврата назад." },
 ];
 
+type ActiveSim = "none" | "knm" | "schrijven";
+
 export default function ExamPage() {
   const { ready } = useRequireProfile();
+  const [active, setActive] = useState<ActiveSim>("none");
+
   if (!ready) return null;
+
+  const writeItem = PRACTICE_ITEMS.find((i) => i.taskType === "short_write") as ShortWriteItem | undefined;
+
+  if (active === "knm") {
+    return (
+      <div className="max-w-2xl mx-auto">
+        <ExamRunner
+          items={KNM_ITEMS}
+          onExit={() => setActive("none")}
+          passNote="Демо из 6 вопросов. Настоящий KNM: 40 вопросов, порог 28/40, 45 минут [VERIFY]."
+        />
+      </div>
+    );
+  }
+
+  if (active === "schrijven" && writeItem) {
+    return (
+      <div className="max-w-2xl mx-auto space-y-4">
+        <button onClick={() => setActive("none")} className="text-sm text-zinc-500 underline">
+          ← Выйти из симуляции
+        </button>
+        <WritingTask item={writeItem} examMode />
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-2xl mx-auto space-y-8">
       <div>
         <h1 className="text-2xl font-semibold mb-1">Экзаменационные ограничения</h1>
         <p className="text-zinc-500">
-          Полная симуляция экзамена — в разработке (Phase 2). Здесь собраны ограничения по времени и формату,
-          на которые ориентируется банк заданий.
+          Ниже — ограничения по времени и формату из блуепринта, и две рабочие демо-симуляции механики экзамена
+          (таймер, без возврата назад, без обратной связи до конца). Это не полноразмерные экзамены — банк заданий
+          пока слишком мал для этого.
         </p>
       </div>
+
+      <section className="flex flex-wrap gap-3">
+        <button
+          onClick={() => setActive("knm")}
+          className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
+        >
+          Демо-симуляция KNM (6 вопросов)
+        </button>
+        {writeItem && (
+          <button
+            onClick={() => setActive("schrijven")}
+            className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium"
+          >
+            Демо-симуляция Schrijven (с таймером)
+          </button>
+        )}
+      </section>
 
       <div className="rounded-md border border-amber-300 bg-amber-50 dark:bg-amber-950 dark:border-amber-800 p-4 text-sm">
         <p className="font-medium mb-1">Важно про KNM</p>
