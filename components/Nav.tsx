@@ -12,6 +12,7 @@ const LINKS = [
   { href: "/listening", nl: "Luisteren", ru: "Аудирование" },
   { href: "/write", nl: "Schrijven", ru: "Письмо" },
   { href: "/speaking", nl: "Spreken", ru: "Говорение" },
+  { href: "/interaction", nl: "Interactie", ru: "Взаимодействие" },
   { href: "/exam", nl: "Examensimulatie", ru: "Симуляция экзамена" },
 ];
 

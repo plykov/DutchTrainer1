@@ -8,6 +8,7 @@ import { NOUN_BUNDLES } from "@/lib/content/nouns";
 import { SPEAKING_PROMPTS } from "@/lib/content/speakingPrompts";
 import { LISTENING_ITEMS } from "@/lib/content/listeningItems";
 import { READING_TEXTS } from "@/lib/content/readingTexts";
+import { INTERACTION_ITEMS } from "@/lib/content/interactionItems";
 import { knownLemmas } from "@/lib/coverage";
 import Link from "next/link";
 
@@ -89,7 +90,8 @@ export default function DashboardPage() {
               PRACTICE_ITEMS.filter((i) => i.skill === skill).length +
               (skill === "speaking" ? SPEAKING_PROMPTS.length : 0) +
               (skill === "listening" ? LISTENING_ITEMS.length : 0) +
-              (skill === "reading" ? READING_TEXTS.length : 0);
+              (skill === "reading" ? READING_TEXTS.length : 0) +
+              (skill === "interaction" ? INTERACTION_ITEMS.length : 0);
             return (
               <div key={skill} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex justify-between">
                 <span>{label}</span>
@@ -121,7 +123,7 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      <div className="flex gap-3">
+      <div className="flex flex-wrap gap-3">
         <Link href="/practice" className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
           Начать практику
         </Link>
@@ -139,6 +141,9 @@ export default function DashboardPage() {
         </Link>
         <Link href="/listening" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
           Аудирование
+        </Link>
+        <Link href="/interaction" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
+          Взаимодействие
         </Link>
       </div>
     </div>

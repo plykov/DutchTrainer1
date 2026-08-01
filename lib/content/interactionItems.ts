@@ -1,0 +1,313 @@
+import { TargetLevel } from "../types";
+
+export interface InteractionItem {
+  id: string;
+  topic: string;
+  level: TargetLevel;
+  situationRu: string; // scene-setting context in Russian — interaction competence depends on
+  // reading the social situation correctly, not just the words
+  dialogue: string[]; // preceding lines of the exchange, in order
+  options: string[]; // candidate responses for the learner's turn
+  correctIndex: number;
+  explanationRu: string;
+}
+
+// §2/§10 — "interaction" is CEFR's dialogic-exchange skill, distinct from
+// monologic "speaking": responding appropriately inside a live exchange
+// (requesting, clarifying, declining, agreeing) rather than producing a
+// planned utterance alone. Kept as constrained response-selection, never a
+// free-form chat tutor — that's explicitly out of scope (§1): an
+// unconstrained model accepts ungrammatical/unnatural input when intent is
+// recoverable, which is the opposite of what this skill should train.
+export const INTERACTION_ITEMS: InteractionItem[] = [
+  {
+    id: "int-1",
+    topic: "huisarts",
+    level: "A2",
+    situationRu: "Вы звоните в регистратуру, чтобы записаться к врачу.",
+    dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk, waarmee kan ik u helpen?"],
+    options: [
+      "Ik wil graag een afspraak maken.",
+      "Ik ben de huisarts.",
+      "Nee, dank u wel.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Прямая и вежливая формула для записи на приём — 'Ik wil graag een afspraak maken'.",
+  },
+  {
+    id: "int-2",
+    topic: "huisarts",
+    level: "A2",
+    situationRu: "Ассистент спрашивает, когда вам удобно.",
+    dialogue: ["Assistente: Wanneer komt het u uit?", "U: Kan het deze week nog?", "Assistente: Ja, donderdag om elf uur kan."],
+    options: ["Nee, dat wil ik niet.", "Goed, dan zie ik u donderdag om elf uur.", "Ik weet het niet."],
+    correctIndex: 1,
+    explanationRu: "Нужно подтвердить и повторить договорённость — это стандартный способ закрыть тему по телефону.",
+  },
+  {
+    id: "int-3",
+    topic: "gemeente",
+    level: "A2",
+    situationRu: "Вы не расслышали, что сказал сотрудник, и просите повторить.",
+    dialogue: ["Ambtenaar: U moet dit formulier binnen twee weken opsturen."],
+    options: [
+      "Sorry, kunt u dat herhalen?",
+      "Ja, dat weet ik al lang.",
+      "Nee, dat doe ik nooit.",
+    ],
+    correctIndex: 0,
+    explanationRu: "'Kunt u dat herhalen?' — вежливая просьба повторить, стандартная формула при непонимании.",
+  },
+  {
+    id: "int-4",
+    topic: "gemeente",
+    level: "A2",
+    situationRu: "Вы не понимаете слово в объяснении сотрудника гемeente.",
+    dialogue: ["Ambtenaar: U heeft een uittreksel uit de basisregistratie nodig."],
+    options: [
+      "Wat betekent 'uittreksel'?",
+      "Dat is heel duidelijk, bedankt.",
+      "Ik ga naar huis.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Прямой вопрос о значении слова — рабочая стратегия при незнакомой лексике, а не делать вид, что всё понятно.",
+  },
+  {
+    id: "int-5",
+    topic: "afspraak_verzetten",
+    level: "A2",
+    situationRu: "Вам нужно отменить или перенести приём.",
+    dialogue: ["U belt de praktijk.", "Assistente: Waarmee kan ik u helpen?"],
+    options: [
+      "Ik kan donderdag niet, kan het naar een andere dag?",
+      "Ik kom morgen zeker.",
+      "Ik heb geen afspraak nodig.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Просьба перенести встречу с указанием причины/ограничения — уместный ответ в этой ситуации.",
+  },
+  {
+    id: "int-6",
+    topic: "werk",
+    level: "B1",
+    situationRu: "Собеседование при приёме на работу — вас просят представиться.",
+    dialogue: ["Werkgever: Kunt u zich even voorstellen?"],
+    options: [
+      "Ik heet Anna en ik werk graag met mensen.",
+      "Waarom vraagt u dat?",
+      "Dat is privé.",
+    ],
+    correctIndex: 0,
+    explanationRu: "На собеседовании ожидается краткое, доброжелательное представление себя.",
+  },
+  {
+    id: "int-7",
+    topic: "werk",
+    level: "B1",
+    situationRu: "Работодатель спрашивает про ваш опыт.",
+    dialogue: ["Werkgever: Heeft u al werkervaring in Nederland?", "U: Nog niet, maar ik heb wel ervaring uit mijn eigen land."],
+    options: [
+      "Kunt u daar iets meer over vertellen?",
+      "Dat interesseert mij niet.",
+      "Ik stop met dit gesprek.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Естественная реакция интервьюера — просьба рассказать подробнее; это пример уместной реплики-продолжения.",
+  },
+  {
+    id: "int-8",
+    topic: "wonen",
+    level: "A2",
+    situationRu: "У вас сломалось отопление, вы звоните хозяину жилья.",
+    dialogue: ["Verhuurder: Wat is het probleem?"],
+    options: [
+      "De verwarming werkt niet meer.",
+      "Ik wil een nieuwe woning.",
+      "Alles is goed, bedankt.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Чётко назвать проблему — первый шаг в обращении с жалобой/просьбой о ремонте.",
+  },
+  {
+    id: "int-9",
+    topic: "wonen",
+    level: "A2",
+    situationRu: "Хозяин жилья спрашивает, когда удобно, чтобы прийти мастер.",
+    dialogue: ["Verhuurder: Wanneer kan de monteur langskomen?"],
+    options: [
+      "Morgenochtend komt mij goed uit.",
+      "Ik weet het niet en het maakt niet uit.",
+      "Nooit, ik ben altijd weg.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Конкретное предложение времени — конструктивный, вежливый ответ.",
+  },
+  {
+    id: "int-10",
+    topic: "buurt",
+    level: "A2",
+    situationRu: "Сосед здоровается с вами во дворе.",
+    dialogue: ["Buurman: Goedemorgen! Alles goed?"],
+    options: [
+      "Goedemorgen, met mij gaat het goed, en met u?",
+      "Ik ken u niet.",
+      "Wat wilt u van mij?",
+    ],
+    correctIndex: 0,
+    explanationRu: "Стандартный обмен приветствиями с встречным вопросом — база вежливого small talk.",
+  },
+  {
+    id: "int-11",
+    topic: "buurt",
+    level: "A2",
+    situationRu: "Разговор с соседом заканчивается, вам нужно идти.",
+    dialogue: ["Buurman: Nou, leuk je gesproken te hebben!"],
+    options: [
+      "Ja, insgelijks! Tot ziens.",
+      "Ik ga nooit meer met u praten.",
+      "Dat weet ik niet.",
+    ],
+    correctIndex: 0,
+    explanationRu: "'Insgelijks' (взаимно) + прощание — естественное завершение короткого разговора.",
+  },
+  {
+    id: "int-12",
+    topic: "documenten",
+    level: "B1",
+    situationRu: "Вы получили письмо от гемeente и не всё поняли.",
+    dialogue: ["U belt de gemeente.", "Ambtenaar: Waar kan ik u mee helpen?"],
+    options: [
+      "Ik heb een brief gekregen, maar ik begrijp een deel niet.",
+      "Ik heb niets gekregen van u, dat is een leugen.",
+      "Stuur mij nog honderd brieven.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Прямое и вежливое объяснение цели звонка — оптимальный первый ход разговора.",
+  },
+  {
+    id: "int-13",
+    topic: "documenten",
+    level: "B1",
+    situationRu: "Сотрудник просит уточнить, какой именно документ вам нужен.",
+    dialogue: ["Ambtenaar: Welk document heeft u precies nodig?"],
+    options: [
+      "Ik heb een uittreksel uit het bevolkingsregister nodig.",
+      "Een document, gewoon een document.",
+      "Dat maakt niet uit voor mij.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Конкретизация запроса — важный навык взаимодействия с официальными учреждениями.",
+  },
+  {
+    id: "int-14",
+    topic: "geld",
+    level: "B1",
+    situationRu: "Вы не согласны с суммой в счёте.",
+    dialogue: ["Klantenservice: Wat kan ik voor u doen?"],
+    options: [
+      "Ik denk dat er een fout staat in mijn rekening.",
+      "Uw bedrijf is heel slecht.",
+      "Ik betaal nooit meer iets.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Формулировка несогласия без агрессии — 'ik denk dat er een fout staat' звучит уважительно и по делу.",
+  },
+  {
+    id: "int-15",
+    topic: "geld",
+    level: "B1",
+    situationRu: "Вас просят прислать подтверждение оплаты.",
+    dialogue: ["Klantenservice: Kunt u een bewijs van betaling sturen?"],
+    options: [
+      "Ja, dat stuur ik vandaag nog op.",
+      "Waarom zou ik dat doen?",
+      "Ik heb geen tijd voor u.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Согласие с конкретным сроком — конструктивная и вежливая реакция на просьбу.",
+  },
+  {
+    id: "int-16",
+    topic: "dagelijks_leven",
+    level: "A2",
+    situationRu: "Вы опоздали на встречу и извиняетесь.",
+    dialogue: ["Collega: Je bent laat, wat is er gebeurd?"],
+    options: [
+      "Sorry, ik stond vast in het verkeer.",
+      "Dat gaat u niets aan.",
+      "Ik ben nooit laat.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Извинение + краткое объяснение причины — стандартная вежливая реакция на опоздание.",
+  },
+  {
+    id: "int-17",
+    topic: "dagelijks_leven",
+    level: "A2",
+    situationRu: "Собеседник предлагает встретиться в другой день.",
+    dialogue: ["Collega: Zullen we het dan volgende week doen?"],
+    options: [
+      "Ja, dat is goed, welke dag komt jou uit?",
+      "Nee, ik wil nooit meer afspreken.",
+      "Dat begrijp ik niet.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Согласие + встречный вопрос о деталях — естественное продолжение договорённости.",
+  },
+  {
+    id: "int-18",
+    topic: "dagelijks_leven",
+    level: "A2",
+    situationRu: "Вы хотите вежливо не согласиться с предложением.",
+    dialogue: ["Vriend: Zullen we morgen om zeven uur 's ochtends afspreken?"],
+    options: [
+      "Dat is best vroeg voor mij, kan het ook wat later?",
+      "Nee, dat doe ik nooit, punt uit.",
+      "Ik vind u een slecht persoon.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Мягкое несогласие с альтернативой — вежливая формула вместо прямого отказа.",
+  },
+  {
+    id: "int-19",
+    topic: "gemeente",
+    level: "A2",
+    situationRu: "Сотрудник уточняет ваш адрес.",
+    dialogue: ["Ambtenaar: Kunt u uw adres bevestigen?"],
+    options: [
+      "Ja, dat is Kerkstraat 12 in Utrecht.",
+      "Waarom wilt u dat weten?",
+      "Ik woon nergens.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Прямое подтверждение с конкретными данными — то, чего ждёт собеседник.",
+  },
+  {
+    id: "int-20",
+    topic: "geld",
+    level: "A2",
+    situationRu: "Вы просите чек/квитанцию в магазине.",
+    dialogue: ["Verkoper: Alstublieft, dat is dan vijftien euro.", "U betaalt.", "Verkoper: Nog een fijne dag!"],
+    options: [
+      "Mag ik ook een bonnetje, alstublieft?",
+      "Ik wil mijn geld terug, nu meteen.",
+      "Dat is te duur, ik betaal niet.",
+    ],
+    correctIndex: 0,
+    explanationRu: "Простая вежливая просьба о квитанции — распространённая бытовая фраза.",
+  },
+  {
+    id: "int-21",
+    topic: "werk",
+    level: "B1",
+    situationRu: "Заканчивается телефонный разговор с работодателем.",
+    dialogue: ["Werkgever: We nemen volgende week contact met u op.", "U:"],
+    options: [
+      "Dank u wel, ik hoor het graag van u. Fijne dag nog!",
+      "Oké, doei.",
+      "Waarom moet ik wachten?",
+    ],
+    correctIndex: 0,
+    explanationRu: "Официально-вежливое завершение делового разговора — благодарность и пожелание, а не разговорное 'doei'.",
+  },
+];
