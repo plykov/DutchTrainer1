@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: isGithubPages ? `/${repoName}` : undefined,
   images: { unoptimized: true },
+  // Static export writes each route as <route>/index.html when this is on,
+  // so both /exam and /exam/ resolve on GitHub Pages instead of only the
+  // no-slash form.
+  trailingSlash: true,
 };
 
 export default nextConfig;
