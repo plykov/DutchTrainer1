@@ -5,6 +5,7 @@ import { useAppStore } from "@/lib/store";
 import { useT } from "@/lib/i18n";
 import { buildVocabQueue, nounCardId } from "@/lib/vocabQueue";
 import { Grade } from "@/lib/fsrs";
+import NextExercise from "@/components/NextExercise";
 
 export default function VocabSession() {
   const cards = useAppStore((s) => s.cards);
@@ -23,6 +24,7 @@ export default function VocabSession() {
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
         <p className="text-lg font-medium mb-2">{t("vocab_all_done")}</p>
         <p className="text-zinc-500">{t("vocab_new_later")}</p>
+        <NextExercise currentHref="/vocab" />
       </div>
     );
   }

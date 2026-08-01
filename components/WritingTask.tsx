@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ShortWriteItem } from "@/lib/types";
 import { checkAdequacy, detectErrors, DetectedError } from "@/lib/writingCheck";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
+import NextExercise from "@/components/NextExercise";
 
 type Stage = "writing" | "adequacy_fail" | "detect" | "hint" | "reveal" | "repair";
 
@@ -115,6 +116,8 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
           Задание выполнено, явных ошибок из отслеживаемых категорий не найдено. Отличная работа!
         </div>
       )}
+
+      {stage === "detect" && !examMode && <NextExercise currentHref="/write" />}
 
       {stage === "hint" && currentError && (
         <div className="rounded-md bg-amber-50 dark:bg-amber-950 p-4 text-sm text-amber-900 dark:text-amber-200 space-y-2">

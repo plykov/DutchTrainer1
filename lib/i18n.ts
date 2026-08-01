@@ -91,6 +91,7 @@ const DICT = {
   action_finish: { ru: "Завершить", en: "Finish" },
   action_show: { ru: "Показать", en: "Show" },
   action_return: { ru: "Вернуться", en: "Return" },
+  next_choose_title: { ru: "Выберите следующее упражнение:", en: "Choose the next exercise:" },
 
   settings_title: { ru: "Настройки", en: "Settings" },
   settings_intro: { ru: "Профиль, обратная связь и управление данными.", en: "Profile, feedback, and data management." },

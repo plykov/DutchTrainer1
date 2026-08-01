@@ -6,6 +6,7 @@ import { useT } from "@/lib/i18n";
 import { INTERACTION_ITEMS } from "@/lib/content/interactionItems";
 import { Grade } from "@/lib/fsrs";
 import { shuffleOptions } from "@/lib/shuffle";
+import NextExercise from "@/components/NextExercise";
 
 export default function InteractionSession() {
   const review = useAppStore((s) => s.review);
@@ -48,6 +49,7 @@ export default function InteractionSession() {
         >
           {t("int_restart")}
         </button>
+        <NextExercise currentHref="/interaction" />
       </div>
     );
   }

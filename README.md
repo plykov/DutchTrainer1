@@ -95,6 +95,13 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   tap. Below the `md` breakpoint it's now a hamburger toggle (`☰`/`✕`, `aria-expanded`/`aria-controls`)
   that opens a full-width vertical panel with large (44px+) tap targets; the panel closes when a link
   is tapped. Desktop/tablet keeps the horizontal bar unchanged.
+- **"Choose the next exercise" prompt** (`components/NextExercise.tsx`, `lib/moduleLinks.ts`) — finishing
+  a session used to be a dead end on several screens (no automatic next question and no link anywhere
+  else), leaving the nav as the only way out. The completion screens for `PracticeSession`,
+  `VocabSession`, `InteractionSession`, and the free-practice `WritingTask` (`/write`, not the exam-mode
+  instance) now end with a row of links to every other module. Exam-runner completion screens
+  (`ExamRunner`, `ExamListeningRunner`, `SchrijvenStructuredRunner`, `ExamSpeakingRunner`) already
+  return to the `/exam` picker, which serves the same purpose, so they were left as-is.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

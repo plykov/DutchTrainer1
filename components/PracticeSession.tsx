@@ -8,6 +8,7 @@ import { Grade } from "@/lib/fsrs";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
 import { shuffleOptions } from "@/lib/shuffle";
 import { ClozeItem, McItem, SentenceTransformItem } from "@/lib/types";
+import NextExercise from "@/components/NextExercise";
 
 function normalize(s: string): string {
   return s.trim().toLowerCase().replace(/\s+/g, " ");
@@ -41,6 +42,7 @@ export default function PracticeSession() {
         <p className="text-zinc-500">
           {t("session_correct")}: {correctCount} / {index}
         </p>
+        <NextExercise currentHref="/practice" />
       </div>
     );
   }
