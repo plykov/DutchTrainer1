@@ -1,0 +1,88 @@
+import { NounBundle } from "../types";
+
+// §4 — sample of the SUBTLEX-NL × NT2Lex intersected core, stored as full
+// noun bundles (never bare translation pairs). This is a seed slice, not
+// the full ~2,000-5,000 lemma target from §4 — real authoring intersects
+// SUBTLEX-NL frequency with NT2Lex CEFR grading and exam-domain vocabulary.
+export const NOUN_BUNDLES: NounBundle[] = [
+  {
+    lemma: "huis",
+    article: "het",
+    plural: "huizen",
+    diminutive: "huisje",
+    diminutivePlural: "huisjes",
+    adjAgreement: { definite: "het grote huis", indefinite: "een groot huis" },
+    collocations: ["een huis kopen", "thuis zijn", "het huis uit gaan"],
+    cefrLevel: "A2",
+  },
+  {
+    lemma: "afspraak",
+    article: "de",
+    plural: "afspraken",
+    diminutive: "afspraakje",
+    diminutivePlural: "afspraakjes",
+    adjAgreement: { definite: "de belangrijke afspraak", indefinite: "een belangrijke afspraak" },
+    collocations: ["een afspraak maken", "een afspraak afzeggen", "op tijd komen voor een afspraak"],
+    cefrLevel: "A2",
+  },
+  {
+    lemma: "gemeente",
+    article: "de",
+    plural: "gemeenten",
+    diminutive: "gemeentetje",
+    diminutivePlural: "gemeentetjes",
+    adjAgreement: { definite: "de lokale gemeente", indefinite: "een lokale gemeente" },
+    collocations: ["je inschrijven bij de gemeente", "naar de gemeente gaan"],
+    cefrLevel: "A2",
+  },
+  {
+    lemma: "huisarts",
+    article: "de",
+    plural: "huisartsen",
+    diminutive: "huisartsje",
+    diminutivePlural: "huisartsjes",
+    adjAgreement: { definite: "de nieuwe huisarts", indefinite: "een nieuwe huisarts" },
+    collocations: ["een afspraak bij de huisarts", "je inschrijven bij een huisarts"],
+    cefrLevel: "A2",
+  },
+  {
+    lemma: "opleiding",
+    article: "de",
+    plural: "opleidingen",
+    diminutive: "opleidinkje",
+    diminutivePlural: "opleidinkjes",
+    adjAgreement: { definite: "de moeilijke opleiding", indefinite: "een moeilijke opleiding" },
+    collocations: ["een opleiding volgen", "een opleiding afmaken"],
+    cefrLevel: "B1",
+  },
+  {
+    lemma: "sollicitatie",
+    article: "de",
+    plural: "sollicitaties",
+    diminutive: "sollicitatietje",
+    diminutivePlural: "sollicitatietjes",
+    adjAgreement: { definite: "de succesvolle sollicitatie", indefinite: "een succesvolle sollicitatie" },
+    collocations: ["solliciteren naar een baan", "een sollicitatiebrief schrijven"],
+    cefrLevel: "B1",
+  },
+  {
+    lemma: "verzekering",
+    article: "de",
+    plural: "verzekeringen",
+    diminutive: "verzekeringetje",
+    diminutivePlural: "verzekeringetjes",
+    adjAgreement: { definite: "de verplichte verzekering", indefinite: "een verplichte verzekering" },
+    collocations: ["een verzekering afsluiten", "zorgverzekering betalen"],
+    cefrLevel: "B1",
+  },
+  {
+    lemma: "kind",
+    article: "het",
+    plural: "kinderen",
+    diminutive: "kindje",
+    diminutivePlural: "kindjes",
+    adjAgreement: { definite: "het kleine kind", indefinite: "een klein kind" },
+    collocations: ["kinderen opvoeden", "een kind krijgen"],
+    cefrLevel: "A2",
+  },
+];
