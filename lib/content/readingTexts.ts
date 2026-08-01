@@ -92,4 +92,79 @@ export const READING_TEXTS: ReadingText[] = [
     body:
       "Ik heb een opleiding. Mijn opleiding is bij een cursus. Ik heb ook een sollicitatie. Mijn sollicitatie is voor een baan.",
   },
+  {
+    id: "reading-sleutel",
+    title: "De sleutel van het huis",
+    level: "A2",
+    topic: "wonen",
+    body: "Ik heb een sleutel. Mijn sleutel is van het huis. Ik heb ook een sleutel van de gemeente.",
+  },
+  {
+    id: "reading-dokter",
+    title: "Bij de dokter",
+    level: "A2",
+    topic: "gezondheid",
+    body:
+      "Ik ga naar de dokter. Mijn dokter is bij de gemeente. Ik heb ook een recept. Mijn recept is van de dokter.",
+  },
+  {
+    id: "reading-tandarts",
+    title: "Bij de tandarts",
+    level: "A2",
+    topic: "gezondheid",
+    body: "Ik heb een afspraak bij de tandarts. Mijn afspraak is morgen. Ik ga naar de tandarts.",
+  },
+  {
+    id: "reading-pas",
+    title: "Mijn pas",
+    level: "A2",
+    topic: "gemeente",
+    body:
+      "Ik heb een pas. Mijn pas is van de gemeente. Ik heb ook een paspoort. Mijn paspoort is bij de gemeente.",
+  },
+  {
+    id: "reading-inkomen",
+    title: "Inkomen en salaris",
+    level: "B1",
+    topic: "werk",
+    body: "Ik heb een inkomen. Mijn inkomen is van mijn baan. Ik heb ook een salaris. Mijn salaris is bij de baan.",
+  },
+  {
+    id: "reading-adres",
+    title: "Mijn adres",
+    level: "A2",
+    topic: "wonen",
+    body: "Ik heb een adres. Mijn adres is bij de gemeente. Ik heb ook een woning. Mijn woning is bij het adres.",
+  },
+  {
+    id: "reading-les",
+    title: "Nederlandse les",
+    level: "A2",
+    topic: "onderwijs",
+    body: "Ik heb een les. Mijn les is bij de school. Ik heb ook een cursus. Mijn cursus is bij de les.",
+  },
+  {
+    id: "reading-rekening",
+    title: "Een hoge rekening",
+    level: "B1",
+    topic: "geld",
+    body:
+      "Ik heb een rekening. Mijn rekening is voor de woning. Ik heb ook een contract. Mijn contract is voor de rekening.",
+  },
+  {
+    id: "reading-polis",
+    title: "Een polis afsluiten",
+    level: "B1",
+    topic: "geld",
+    body:
+      "Ik heb een polis. Mijn polis is voor de verzekering. Ik heb ook een contract. Mijn contract is voor de polis.",
+  },
+  {
+    id: "reading-ziekenhuis-2",
+    title: "Ziekenhuis en medicijn",
+    level: "A2",
+    topic: "gezondheid",
+    body:
+      "Ik ga naar het ziekenhuis. Mijn medicijn is van de dokter. Ik heb ook een recept. Mijn recept is voor het medicijn.",
+  },
 ];

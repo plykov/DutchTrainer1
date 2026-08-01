@@ -26,8 +26,8 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
 
 - **Vocab review** (`/vocab`) — a receptive FSRS flashcard flow over the noun bundles, so the app has
   real per-learner "known word" data to gate on, instead of an empty deck.
-- **Coverage-gated extensive reading** (`/reading`, `lib/coverage.ts`, 10 seed texts across
-  gezondheid/wonen/werk/onderwijs/gemeente) — implements the scope doc's own call-out as "the single
+- **Coverage-gated extensive reading** (`/reading`, `lib/coverage.ts`, 20 seed texts across
+  gezondheid/wonen/werk/onderwijs/gemeente/geld) — implements the scope doc's own call-out as "the single
   most consequential content rule": text is only offered for free extensive reading at ≥95%
   known-word coverage, ≥98% drops glossing entirely for a confidence mode, and below 95% locks into
   intensive mode with unknown words glossed inline (§4). This is a simplified stand-in for the real
@@ -37,17 +37,17 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   task under a hard countdown that auto-submits at zero, mirroring exam-mode's "no backtracking, no
   mid-task feedback" rule, §7). These are mechanism demos, not full-length exams — the seed item bank
   is far too small for a real 36-question Lezen or 40-question KNM run.
-- **Speaking practice** (`/speaking`) — elicited imitation (§8): record yourself reading a target
+- **Speaking practice** (`/speaking`, 15 prompts) — elicited imitation (§8): record yourself reading a target
   sentence, play it back, self-compare, self-grade into FSRS. The recording is processed entirely in
   the browser and discarded the moment you grade or leave the page — never uploaded, never stored
   (the §9 transient-voice-processing default, taken literally since there's no ASR backend to send it
   to anyway).
-- **Listening** (`/listening`) — the exam's single-listen mechanic (§7): 25s to pre-read the
+- **Listening** (`/listening`, 14 items) — the exam's single-listen mechanic (§7): 25s to pre-read the
   question before playback, one pass, no replay button anywhere. Playback uses the browser's built-in
   Web Speech API (`nl-NL`) when available; if the browser has no speech synthesis support, the
   transcript flashes once for a reading-paced duration instead of staying silent — labeled honestly
   in the UI either way, since this environment has no server-side TTS/audio infra.
-- **Interaction** (`/interaction`, 21 items) — the fifth CEFR skill from the learner profile model
+- **Interaction** (`/interaction`, 31 items) — the fifth CEFR skill from the learner profile model
   (§2), previously unbuilt. Distinct from monologic "speaking": each item is a short dialogue with a
   gap for the learner's turn — requesting, clarifying, declining, apologizing, confirming, phone and
   service-desk etiquette — and three candidate responses to choose the most pragmatically appropriate
@@ -56,8 +56,9 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   whenever intent is recoverable, which is the opposite of what this skill should train.
 - Grammar item bank now covers every §5 syntax/morphology error code with at least one item
   (`ERR_CLUSTER`, `ERR_SEP_PART`, `ERR_NEG_POS`, `ERR_PLUR`, `ERR_DIM_ART`, `ERR_PREP_FIXED`,
-  `ERR_COLLOC` added), and the noun bank grew from 8 to 20 lemmas across more exam-domain topics
-  (work, housing, health, official paperwork).
+  `ERR_COLLOC`, plus text-based awareness items for the four `ERR_PHON_*` codes since there's no
+  audio for true perception testing), and the noun bank grew from 8 to 30 lemmas across more
+  exam-domain topics (work, housing, health, official paperwork, money/insurance).
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
