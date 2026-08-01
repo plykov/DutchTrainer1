@@ -72,6 +72,11 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   `ERR_COLLOC`, plus text-based awareness items for the four `ERR_PHON_*` codes since there's no
   audio for true perception testing), and the noun bank grew from 8 to 30 lemmas across more
   exam-domain topics (work, housing, health, official paperwork, money/insurance).
+- **Settings** (`/settings`, linked from the ⚙️ icon in the nav) — a profile summary, a tester
+  feedback form, and a destructive-with-confirmation "delete all progress" button. No backend exists
+  on a static export, so feedback submits as a pre-filled GitHub issue on this repo (or a `mailto:`
+  fallback) instead of going to a server; deleting progress clears `localStorage` only, nothing else
+  to clean up since nothing else is stored anywhere.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

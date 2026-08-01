@@ -53,9 +53,19 @@ export default function Nav() {
           </ul>
         )}
         {profile && (
-          <div className="text-sm text-zinc-500 flex items-center gap-1" aria-live="polite">
-            <span aria-hidden="true">🔥</span>
-            <span>{streakDays}</span>
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="text-sm text-zinc-500 flex items-center gap-1" aria-live="polite">
+              <span aria-hidden="true">🔥</span>
+              <span>{streakDays}</span>
+            </div>
+            <Link
+              href="/settings"
+              aria-label="Настройки"
+              aria-current={pathname?.startsWith("/settings") ? "page" : undefined}
+              className="text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 rounded-md p-1"
+            >
+              ⚙️
+            </Link>
           </div>
         )}
       </nav>
