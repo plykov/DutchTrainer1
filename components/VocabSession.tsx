@@ -2,12 +2,14 @@
 
 import { useMemo, useState } from "react";
 import { useAppStore } from "@/lib/store";
+import { useT } from "@/lib/i18n";
 import { buildVocabQueue, nounCardId } from "@/lib/vocabQueue";
 import { Grade } from "@/lib/fsrs";
 
 export default function VocabSession() {
   const cards = useAppStore((s) => s.cards);
   const review = useAppStore((s) => s.review);
+  const t = useT();
 
   const queue = useMemo(() => buildVocabQueue(cards).slice(0, 15), [cards]);
   const [index, setIndex] = useState(0);
@@ -19,8 +21,8 @@ export default function VocabSession() {
   if (!bundle) {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
-        <p className="text-lg font-medium mb-2">На сегодня всё повторено!</p>
-        <p className="text-zinc-500">Новые слова появятся, когда подойдёт их время по FSRS.</p>
+        <p className="text-lg font-medium mb-2">{t("vocab_all_done")}</p>
+        <p className="text-zinc-500">{t("vocab_new_later")}</p>
       </div>
     );
   }
@@ -39,30 +41,30 @@ export default function VocabSession() {
         <span>
           {index + 1} / {queue.length}
         </span>
-        <span>{cards[nounCardId(bundle.lemma)] ? "повторение" : "новое слово"}</span>
+        <span>{cards[nounCardId(bundle.lemma)] ? t("vocab_review") : t("vocab_new")}</span>
       </div>
 
       <div className="text-center py-8">
         <p className="text-3xl font-semibold">{bundle.lemma}</p>
-        {!revealed && <p className="text-zinc-400 mt-2 text-sm">Вспомните артикль, множественное число и форму с прилагательным</p>}
+        {!revealed && <p className="text-zinc-400 mt-2 text-sm">{t("vocab_recall_hint")}</p>}
       </div>
 
       {revealed && (
         <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-4 text-sm space-y-1">
           <p>
-            <strong>Артикль:</strong> {bundle.article} {bundle.lemma}
+            <strong>{t("vocab_article")}:</strong> {bundle.article} {bundle.lemma}
           </p>
           <p>
-            <strong>Множ. число:</strong> {bundle.plural}
+            <strong>{t("vocab_plural")}:</strong> {bundle.plural}
           </p>
           <p>
-            <strong>Уменьшительное:</strong> {bundle.diminutive} / {bundle.diminutivePlural}
+            <strong>{t("vocab_diminutive")}:</strong> {bundle.diminutive} / {bundle.diminutivePlural}
           </p>
           <p>
-            <strong>С прилагательным:</strong> {bundle.adjAgreement.indefinite} · {bundle.adjAgreement.definite}
+            <strong>{t("vocab_with_adj")}:</strong> {bundle.adjAgreement.indefinite} · {bundle.adjAgreement.definite}
           </p>
           <p>
-            <strong>Словосочетания:</strong> {bundle.collocations.join(", ")}
+            <strong>{t("vocab_collocations")}:</strong> {bundle.collocations.join(", ")}
           </p>
         </div>
       )}
@@ -73,21 +75,21 @@ export default function VocabSession() {
             onClick={() => setRevealed(true)}
             className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
           >
-            Показать
+            {t("action_show")}
           </button>
         ) : (
           <div className="flex gap-2">
             <button onClick={() => grade("again")} className="rounded-md bg-red-600 text-white px-3 py-2 text-sm">
-              Снова
+              {t("grade_again")}
             </button>
             <button onClick={() => grade("hard")} className="rounded-md bg-amber-500 text-white px-3 py-2 text-sm">
-              Трудно
+              {t("grade_hard")}
             </button>
             <button onClick={() => grade("good")} className="rounded-md bg-emerald-600 text-white px-3 py-2 text-sm">
-              Хорошо
+              {t("grade_good")}
             </button>
             <button onClick={() => grade("easy")} className="rounded-md bg-sky-600 text-white px-3 py-2 text-sm">
-              Легко
+              {t("grade_easy")}
             </button>
           </div>
         )}

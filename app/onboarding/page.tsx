@@ -3,13 +3,36 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAppStore } from "@/lib/store";
+import { useT } from "@/lib/i18n";
 import { LegalTrack, Skill, TargetLevel } from "@/lib/types";
 
 const SKILLS: Skill[] = ["reading", "listening", "writing", "speaking", "interaction"];
 
+const TRACK_OPTIONS: { v: LegalTrack; label: { ru: string; en: string } }[] = [
+  {
+    v: "wi2021_b1",
+    label: { ru: "Wi2021 — маршрут B1 (по умолчанию для новых участников)", en: "Wi2021 — B1 route (default for new starters)" },
+  },
+  { v: "wi2013_a2", label: { ru: "Wi2013 — устаревшее законодательство, уровень A2", en: "Wi2013 — legacy law, A2 level" } },
+  {
+    v: "nt2_p1",
+    label: { ru: "Staatsexamen NT2 Programma I напрямую (без inburgering)", en: "Staatsexamen NT2 Programma I directly (no inburgering)" },
+  },
+  { v: "self_study", label: { ru: "Самостоятельное изучение, без юридической привязки", en: "Self-study, no legal track" } },
+];
+
+const EXPL_LANG_OPTIONS: { v: "ru" | "nl" | "en"; label: string }[] = [
+  { v: "ru", label: "Русский" },
+  { v: "nl", label: "Nederlands" },
+  { v: "en", label: "English" },
+];
+
 export default function OnboardingPage() {
   const router = useRouter();
   const setProfile = useAppStore((s) => s.setProfile);
+  const setUiLang = useAppStore((s) => s.setUiLang);
+  const t = useT();
+  const lang = useAppStore((s) => s.uiLang);
 
   const [legalTrack, setLegalTrack] = useState<LegalTrack>("wi2021_b1");
   const [targetLevel, setTargetLevel] = useState<TargetLevel>("B1");
@@ -31,32 +54,21 @@ export default function OnboardingPage() {
       weeklyMinutes,
       onboardedAt: new Date().toISOString(),
     });
+    if (explanationLanguage === "en") setUiLang("en");
     router.push("/dashboard");
   }
 
   return (
     <div className="max-w-xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-1">Welkom / Добро пожаловать</h1>
-      <p className="text-zinc-500 mb-8">
-        Расскажите немного о себе — это определит вашу учебную программу и экзаменационный трек.
-      </p>
+      <h1 className="text-2xl font-semibold mb-1">{t("onb_title")} / Welkom</h1>
+      <p className="text-zinc-500 mb-8">{t("onb_intro")}</p>
 
       <form onSubmit={handleSubmit} className="space-y-8">
         <fieldset>
-          <legend className="font-medium mb-2">По какому закону/PIP вы проходите интеграцию?</legend>
-          <p className="text-sm text-zinc-500 mb-3">
-            Не угадывайте по уровню — уточните у консультанта, если не уверены. Новые участники (Wi2021) по
-            умолчанию идут по треку B1; понижение до A2 требует документального подтверждения часов обучения.
-          </p>
+          <legend className="font-medium mb-2">{t("onb_track_legend")}</legend>
+          <p className="text-sm text-zinc-500 mb-3">{t("onb_track_note")}</p>
           <div className="space-y-2">
-            {(
-              [
-                { v: "wi2021_b1", label: "Wi2021 — маршрут B1 (по умолчанию для новых участников)" },
-                { v: "wi2013_a2", label: "Wi2013 — устаревшее законодательство, уровень A2" },
-                { v: "nt2_p1", label: "Staatsexamen NT2 Programma I напрямую (без inburgering)" },
-                { v: "self_study", label: "Самостоятельное изучение, без юридической привязки" },
-              ] as { v: LegalTrack; label: string }[]
-            ).map((opt) => (
+            {TRACK_OPTIONS.map((opt) => (
               <label key={opt.v} className="flex items-start gap-2 text-sm">
                 <input
                   type="radio"
@@ -65,14 +77,14 @@ export default function OnboardingPage() {
                   checked={legalTrack === opt.v}
                   onChange={() => setLegalTrack(opt.v)}
                 />
-                {opt.label}
+                {opt.label[lang]}
               </label>
             ))}
           </div>
         </fieldset>
 
         <fieldset>
-          <legend className="font-medium mb-2">Целевой уровень</legend>
+          <legend className="font-medium mb-2">{t("onb_level_legend")}</legend>
           <div className="flex gap-3">
             {(["A2", "B1"] as TargetLevel[]).map((lvl) => (
               <button
@@ -93,28 +105,20 @@ export default function OnboardingPage() {
         </fieldset>
 
         <label className="block">
-          <span className="font-medium">Дата экзамена (необязательно)</span>
+          <span className="font-medium">{t("onb_examdate_label")}</span>
           <input
             type="date"
             value={examDate}
             onChange={(e) => setExamDate(e.target.value)}
             className="mt-2 block w-full rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
           />
-          <span className="text-xs text-zinc-500">
-            В последние 6 недель перед экзаменом цель удержания в памяти повышается до 95%.
-          </span>
+          <span className="text-xs text-zinc-500">{t("onb_examdate_note")}</span>
         </label>
 
         <fieldset>
-          <legend className="font-medium mb-2">Язык объяснений</legend>
+          <legend className="font-medium mb-2">{t("onb_explang_legend")}</legend>
           <div className="flex gap-3">
-            {(
-              [
-                { v: "ru", label: "Русский" },
-                { v: "nl", label: "Nederlands" },
-                { v: "en", label: "English" },
-              ] as { v: "ru" | "nl" | "en"; label: string }[]
-            ).map((opt) => (
+            {EXPL_LANG_OPTIONS.map((opt) => (
               <button
                 type="button"
                 key={opt.v}
@@ -134,11 +138,11 @@ export default function OnboardingPage() {
 
         <label className="flex items-center gap-2 text-sm">
           <input type="checkbox" checked={scriptSupport} onChange={(e) => setScriptSupport(e.target.checked)} />
-          Показывать интерфейс на кириллице там, где это возможно
+          {t("onb_script_label")}
         </label>
 
         <label className="block">
-          <span className="font-medium">Сколько минут в неделю вы можете заниматься?</span>
+          <span className="font-medium">{t("onb_minutes_label")}</span>
           <input
             type="number"
             min={30}
@@ -153,7 +157,7 @@ export default function OnboardingPage() {
           type="submit"
           className="w-full rounded-md bg-blue-600 text-white py-3 font-medium hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
         >
-          Начать / Beginnen
+          {t("onb_submit")}
         </button>
       </form>
     </div>

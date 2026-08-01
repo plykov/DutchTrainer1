@@ -77,6 +77,14 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   on a static export, so feedback submits as a pre-filled GitHub issue on this repo (or a `mailto:`
   fallback) instead of going to a server; deleting progress clears `localStorage` only, nothing else
   to clean up since nothing else is stored anywhere.
+- **English UI mode** — a RU/EN toggle in the nav (`lib/i18n.ts`, `lib/store.ts`'s `uiLang`) switches
+  the app chrome: nav, onboarding, dashboard, settings/feedback/delete-progress, and the
+  practice/vocab/interaction/exam-MC/speaking-practice session UIs (buttons, labels, status text).
+  Pedagogical content — every `explanationRu` in `lib/content/*` — stays Russian regardless of
+  `uiLang`, on purpose: it's Russian-L1-contrastive by design (§5), explaining specifically Russian
+  speakers' traps, so translating it to English would remove the thing it exists to explain. A few
+  session components (`WritingTask`, the Schrijven/Luisteren/Spreken exam runners, `ReadingRoom`)
+  still have Russian-only chrome text — not yet wired into `lib/i18n.ts`.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

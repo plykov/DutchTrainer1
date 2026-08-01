@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { useAppStore } from "@/lib/store";
+import { useT } from "@/lib/i18n";
 import { INTERACTION_ITEMS } from "@/lib/content/interactionItems";
 import { Grade } from "@/lib/fsrs";
 
 export default function InteractionSession() {
   const review = useAppStore((s) => s.review);
+  const t = useT();
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
@@ -21,9 +23,9 @@ export default function InteractionSession() {
   if (done) {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
-        <p className="text-lg font-medium mb-2">Все диалоги пройдены!</p>
+        <p className="text-lg font-medium mb-2">{t("int_all_done")}</p>
         <p className="text-zinc-500">
-          Правильно: {correctCount} / {INTERACTION_ITEMS.length}
+          {t("session_correct")}: {correctCount} / {INTERACTION_ITEMS.length}
         </p>
         <button
           onClick={() => {
@@ -36,7 +38,7 @@ export default function InteractionSession() {
           }}
           className="mt-4 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
         >
-          Начать заново
+          {t("int_restart")}
         </button>
       </div>
     );
@@ -77,7 +79,7 @@ export default function InteractionSession() {
       </div>
 
       <fieldset>
-        <legend className="text-sm text-zinc-500 mb-2">Ваш ответ:</legend>
+        <legend className="text-sm text-zinc-500 mb-2">{t("int_your_answer_legend")}</legend>
         <div className="space-y-2">
           {item.options.map((opt, i) => (
             <label
@@ -107,7 +109,7 @@ export default function InteractionSession() {
               : "bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-200"
           }`}
         >
-          <p className="font-medium mb-1">{correct ? "Уместный ответ!" : "Не самый удачный вариант."}</p>
+          <p className="font-medium mb-1">{correct ? t("int_appropriate") : t("int_not_ideal")}</p>
           <p>{item.explanationRu}</p>
         </div>
       )}
@@ -119,21 +121,21 @@ export default function InteractionSession() {
             disabled={selected === null}
             className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
           >
-            Проверить
+            {t("action_check")}
           </button>
         ) : (
           <div className="flex gap-2">
             <button onClick={() => grade("again")} className="rounded-md bg-red-600 text-white px-3 py-2 text-sm">
-              Снова
+              {t("grade_again")}
             </button>
             <button onClick={() => grade("hard")} className="rounded-md bg-amber-500 text-white px-3 py-2 text-sm">
-              Трудно
+              {t("grade_hard")}
             </button>
             <button onClick={() => grade("good")} className="rounded-md bg-emerald-600 text-white px-3 py-2 text-sm">
-              Хорошо
+              {t("grade_good")}
             </button>
             <button onClick={() => grade("easy")} className="rounded-md bg-sky-600 text-white px-3 py-2 text-sm">
-              Легко
+              {t("grade_easy")}
             </button>
           </div>
         )}

@@ -26,6 +26,8 @@ export interface ReviewLogEntry {
   latencyMs: number;
 }
 
+export type UiLang = "ru" | "en";
+
 interface AppState {
   profile: LearnerProfile | null;
   cards: Record<string, CardState>;
@@ -33,12 +35,14 @@ interface AppState {
   reviewLog: ReviewLogEntry[];
   streakDays: number;
   lastQualityActionDate: string | null;
+  uiLang: UiLang;
 
   setProfile: (profile: LearnerProfile) => void;
   ensureCard: (key: CardKey) => CardState;
   ensureGrammarProgress: (grammarTarget: string, siblingGroup?: string) => GrammarTargetProgress;
   review: (key: CardKey, grade: Grade, latencyMs: number) => void;
   resetAll: () => void;
+  setUiLang: (lang: UiLang) => void;
 }
 
 // A review counts as a "quality action" for streaks (§9) only if it reflects
@@ -60,8 +64,10 @@ export const useAppStore = create<AppState>()(
       reviewLog: [],
       streakDays: 0,
       lastQualityActionDate: null,
+      uiLang: "ru",
 
       setProfile: (profile) => set({ profile }),
+      setUiLang: (uiLang) => set({ uiLang }),
 
       ensureCard: (key) => {
         const id = cardKeyId(key);

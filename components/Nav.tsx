@@ -3,23 +3,26 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAppStore } from "@/lib/store";
+import { useT } from "@/lib/i18n";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const LINKS = [
-  { href: "/dashboard", nl: "Overzicht", ru: "Обзор" },
-  { href: "/practice", nl: "Oefenen", ru: "Практика" },
-  { href: "/vocab", nl: "Woordenschat", ru: "Словарь" },
-  { href: "/reading", nl: "Lezen", ru: "Чтение" },
-  { href: "/listening", nl: "Luisteren", ru: "Аудирование" },
-  { href: "/write", nl: "Schrijven", ru: "Письмо" },
-  { href: "/speaking", nl: "Spreken", ru: "Говорение" },
-  { href: "/interaction", nl: "Interactie", ru: "Взаимодействие" },
-  { href: "/exam", nl: "Examensimulatie", ru: "Симуляция экзамена" },
+  { href: "/dashboard", nl: "Overzicht" },
+  { href: "/practice", nl: "Oefenen" },
+  { href: "/vocab", nl: "Woordenschat" },
+  { href: "/reading", nl: "Lezen" },
+  { href: "/listening", nl: "Luisteren" },
+  { href: "/write", nl: "Schrijven" },
+  { href: "/speaking", nl: "Spreken" },
+  { href: "/interaction", nl: "Interactie" },
+  { href: "/exam", nl: "Examensimulatie" },
 ];
 
 export default function Nav() {
   const pathname = usePathname();
   const profile = useAppStore((s) => s.profile);
   const streakDays = useAppStore((s) => s.streakDays);
+  const t = useT();
 
   return (
     <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur sticky top-0 z-40">
@@ -27,7 +30,7 @@ export default function Nav() {
         aria-label="Hoofdnavigatie"
         className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4"
       >
-        <Link href="/" className="font-semibold tracking-tight">
+        <Link href="/" className="font-semibold tracking-tight shrink-0">
           NL·A2/B1
         </Link>
         {profile && (
@@ -52,22 +55,25 @@ export default function Nav() {
             })}
           </ul>
         )}
-        {profile && (
-          <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-3 shrink-0">
+          {profile && (
             <div className="text-sm text-zinc-500 flex items-center gap-1" aria-live="polite">
               <span aria-hidden="true">🔥</span>
               <span>{streakDays}</span>
             </div>
+          )}
+          <LanguageToggle />
+          {profile && (
             <Link
               href="/settings"
-              aria-label="Настройки"
+              aria-label={t("nav_settings")}
               aria-current={pathname?.startsWith("/settings") ? "page" : undefined}
               className="text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600 rounded-md p-1"
             >
               ⚙️
             </Link>
-          </div>
-        )}
+          )}
+        </div>
       </nav>
     </header>
   );

@@ -2,6 +2,7 @@
 
 import { useRequireProfile } from "@/lib/useRequireProfile";
 import { useAppStore } from "@/lib/store";
+import { useT } from "@/lib/i18n";
 import { retentionTargetFor } from "@/lib/fsrs";
 import { PRACTICE_ITEMS } from "@/lib/content/items";
 import { NOUN_BUNDLES } from "@/lib/content/nouns";
@@ -12,13 +13,13 @@ import { INTERACTION_ITEMS } from "@/lib/content/interactionItems";
 import { knownLemmas } from "@/lib/coverage";
 import Link from "next/link";
 
-const SKILL_LABELS: Record<string, string> = {
-  reading: "Чтение",
-  listening: "Аудирование",
-  writing: "Письмо",
-  speaking: "Говорение",
-  interaction: "Взаимодействие",
-};
+const SKILL_LABEL_KEYS = {
+  reading: "nav_reading",
+  listening: "nav_listening",
+  writing: "nav_writing",
+  speaking: "nav_speaking",
+  interaction: "nav_interaction",
+} as const;
 
 export default function DashboardPage() {
   const { profile, ready } = useRequireProfile();
@@ -26,13 +27,14 @@ export default function DashboardPage() {
   const cards = useAppStore((s) => s.cards);
   const reviewLog = useAppStore((s) => s.reviewLog);
   const streakDays = useAppStore((s) => s.streakDays);
+  const t = useT();
 
   if (!ready || !profile) return null;
 
   const retention = retentionTargetFor(profile.examDate);
   const cardCount = Object.keys(cards).length;
   const targets = Object.values(grammarProgress);
-  const graduated = targets.filter((t) => t.stage === "interleaved").length;
+  const graduated = targets.filter((tg) => tg.stage === "interleaved").length;
   const knownWordCount = knownLemmas(cards).size;
 
   // §6 readiness estimate: formative, gated on volume of recent unseen
@@ -42,50 +44,44 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-2xl font-semibold mb-1">Обзор</h1>
+        <h1 className="text-2xl font-semibold mb-1">{t("dash_title")}</h1>
         <p className="text-zinc-500">
-          Трек: <strong>{profile.legalTrack}</strong> · Цель: <strong>{profile.targetLevel}</strong>
+          {t("dash_track")}: <strong>{profile.legalTrack}</strong> · {t("dash_goal")}: <strong>{profile.targetLevel}</strong>
           {profile.examDate && (
             <>
               {" "}
-              · Экзамен: <strong>{profile.examDate}</strong>
+              · {t("dash_exam")}: <strong>{profile.examDate}</strong>
             </>
           )}
         </p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-4">
-        <StatCard label="Серия" value={`${streakDays} дн.`} sub="Только за качественные повторения" />
-        <StatCard label="Цель удержания FSRS" value={`${Math.round(retention * 100)}%`} sub={profile.examDate ? "Повышается за 6 недель до экзамена" : "Значение по умолчанию"} />
-        <StatCard label="Карточки в системе" value={String(cardCount)} sub={`${graduated}/${targets.length || 0} грамм. целей смешаны`} />
+        <StatCard label={t("dash_streak")} value={`${streakDays} ${t("dash_days_unit")}`} sub={t("dash_streak_sub")} />
         <StatCard
-          label="Известные слова"
-          value={`${knownWordCount}/${NOUN_BUNDLES.length}`}
-          sub="Используется для порога чтения §4"
+          label={t("dash_retention")}
+          value={`${Math.round(retention * 100)}%`}
+          sub={profile.examDate ? t("dash_retention_pre_exam") : t("dash_retention_default")}
         />
+        <StatCard label={t("dash_cards")} value={String(cardCount)} sub={`${graduated}/${targets.length || 0}`} />
+        <StatCard label={t("dash_known_words")} value={`${knownWordCount}/${NOUN_BUNDLES.length}`} sub={t("dash_known_words_sub")} />
       </div>
 
       <section>
-        <h2 className="text-lg font-medium mb-3">Готовность к экзамену</h2>
+        <h2 className="text-lg font-medium mb-3">{t("dash_readiness_title")}</h2>
         <div className="rounded-md border border-zinc-200 dark:border-zinc-800 p-4 text-sm">
           {readinessReady ? (
-            <p>
-              Формативная оценка (не официальный результат): на основе {reviewLog.length} последних повторений ваш
-              прогресс стабилен. Продолжайте регулярную практику.
-            </p>
+            <p>{t("dash_readiness_ready", { n: reviewLog.length })}</p>
           ) : (
-            <p className="text-zinc-500">
-              Недостаточно данных для оценки готовности. Нужно больше пройденных заданий во всех навыках
-              ({reviewLog.length}/40). Точность ответов сама по себе не равна итоговому баллу экзамена.
-            </p>
+            <p className="text-zinc-500">{t("dash_readiness_not_ready", { n: reviewLog.length })}</p>
           )}
         </div>
       </section>
 
       <section>
-        <h2 className="text-lg font-medium mb-3">Прогресс по навыкам</h2>
+        <h2 className="text-lg font-medium mb-3">{t("dash_skills_title")}</h2>
         <div className="grid gap-2 sm:grid-cols-2">
-          {Object.entries(SKILL_LABELS).map(([skill, label]) => {
+          {Object.entries(SKILL_LABEL_KEYS).map(([skill, labelKey]) => {
             const total =
               PRACTICE_ITEMS.filter((i) => i.skill === skill).length +
               (skill === "speaking" ? SPEAKING_PROMPTS.length : 0) +
@@ -94,8 +90,10 @@ export default function DashboardPage() {
               (skill === "interaction" ? INTERACTION_ITEMS.length : 0);
             return (
               <div key={skill} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex justify-between">
-                <span>{label}</span>
-                <span className="text-zinc-500">{total} заданий в банке</span>
+                <span>{t(labelKey)}</span>
+                <span className="text-zinc-500">
+                  {total} {t("dash_items_in_bank")}
+                </span>
               </div>
             );
           })}
@@ -103,20 +101,20 @@ export default function DashboardPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-medium mb-3">Грамматические цели</h2>
+        <h2 className="text-lg font-medium mb-3">{t("dash_grammar_title")}</h2>
         <div className="space-y-2">
-          {targets.length === 0 && <p className="text-zinc-500 text-sm">Начните практику, чтобы увидеть прогресс.</p>}
-          {targets.map((t) => (
-            <div key={t.grammarTarget} className="flex items-center justify-between rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm">
-              <span>{t.grammarTarget}</span>
+          {targets.length === 0 && <p className="text-zinc-500 text-sm">{t("dash_grammar_empty")}</p>}
+          {targets.map((tg) => (
+            <div key={tg.grammarTarget} className="flex items-center justify-between rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm">
+              <span>{tg.grammarTarget}</span>
               <span
                 className={`px-2 py-0.5 rounded-full text-xs ${
-                  t.stage === "blocked"
+                  tg.stage === "blocked"
                     ? "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
                     : "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300"
                 }`}
               >
-                {t.stage === "blocked" ? `закрепление (${t.blockedReps})` : "смешанная практика"}
+                {tg.stage === "blocked" ? `${t("dash_stage_blocked")} (${tg.blockedReps})` : t("dash_stage_interleaved")}
               </span>
             </div>
           ))}
@@ -125,25 +123,25 @@ export default function DashboardPage() {
 
       <div className="flex flex-wrap gap-3">
         <Link href="/practice" className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          Начать практику
+          {t("dash_start_practice")}
         </Link>
         <Link href="/write" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
-          Задание на письмо
+          {t("dash_write_task")}
         </Link>
         <Link href="/vocab" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
-          Словарь
+          {t("nav_vocab")}
         </Link>
         <Link href="/reading" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
-          Чтение
+          {t("nav_reading")}
         </Link>
         <Link href="/speaking" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
-          Говорение
+          {t("nav_speaking")}
         </Link>
         <Link href="/listening" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
-          Аудирование
+          {t("nav_listening")}
         </Link>
         <Link href="/interaction" className="rounded-md border border-zinc-300 dark:border-zinc-700 px-4 py-2 text-sm font-medium">
-          Взаимодействие
+          {t("nav_interaction")}
         </Link>
       </div>
     </div>

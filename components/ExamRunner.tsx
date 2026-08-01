@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { McItem } from "@/lib/types";
+import { useT } from "@/lib/i18n";
 
 // §7 — exam mode disables everything: single pass, no backtracking, no
 // feedback until the run ends, hard countdown. This runs whatever MC item
@@ -15,6 +16,7 @@ export default function ExamRunner({
   onExit: () => void;
   passNote?: string;
 }) {
+  const t = useT();
   const totalSeconds = useMemo(() => items.reduce((sum, i) => sum + (i.timeLimitS ?? 60), 0), [items]);
   const [secondsLeft, setSecondsLeft] = useState(totalSeconds);
   const [index, setIndex] = useState(0);
@@ -23,7 +25,7 @@ export default function ExamRunner({
 
   useEffect(() => {
     if (finished) return;
-    const t = setInterval(() => {
+    const interval = setInterval(() => {
       setSecondsLeft((s) => {
         if (s <= 1) {
           setFinished(true);
@@ -32,7 +34,7 @@ export default function ExamRunner({
         return s - 1;
       });
     }, 1000);
-    return () => clearInterval(t);
+    return () => clearInterval(interval);
   }, [finished]);
 
   const item = items[index];
@@ -60,7 +62,7 @@ export default function ExamRunner({
     const correct = answers.filter((a, i) => a === items[i].correctIndex).length;
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
-        <h3 className="text-lg font-medium">Результат симуляции</h3>
+        <h3 className="text-lg font-medium">{t("exam_result_title")}</h3>
         <p className="text-2xl font-semibold">
           {correct} / {items.length}
         </p>
@@ -70,15 +72,15 @@ export default function ExamRunner({
             <div key={it.id} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm">
               <p className="font-medium">{it.prompt}</p>
               <p className={answers[i] === it.correctIndex ? "text-emerald-600" : "text-red-600"}>
-                Ваш ответ: {answers[i] !== null ? it.options[answers[i]!] : "нет ответа"} · Правильно:{" "}
-                {it.options[it.correctIndex]}
+                {t("your_answer")}: {answers[i] !== null ? it.options[answers[i]!] : t("exam_no_answer")} ·{" "}
+                {t("session_correct")}: {it.options[it.correctIndex]}
               </p>
               <p className="text-zinc-500 mt-1">{it.explanationRu}</p>
             </div>
           ))}
         </div>
         <button onClick={onExit} className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          Вернуться
+          {t("action_return")}
         </button>
       </div>
     );
@@ -112,11 +114,11 @@ export default function ExamRunner({
         </div>
       </fieldset>
 
-      <p className="text-xs text-zinc-400 mt-4">Без возврата назад — как на настоящем экзамене.</p>
+      <p className="text-xs text-zinc-400 mt-4">{t("exam_no_backtrack")}</p>
 
       <div className="mt-6 flex justify-end">
         <button onClick={next} className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          {index + 1 >= items.length ? "Завершить" : "Далее"}
+          {index + 1 >= items.length ? t("action_finish") : t("action_next")}
         </button>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useAppStore } from "@/lib/store";
+import { useT } from "@/lib/i18n";
 import { buildQueue, QueueEntry } from "@/lib/queue";
 import { Grade } from "@/lib/fsrs";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
@@ -14,6 +15,7 @@ function normalize(s: string): string {
 export default function PracticeSession() {
   const grammarProgress = useAppStore((s) => s.grammarProgress);
   const review = useAppStore((s) => s.review);
+  const t = useT();
 
   const queue = useMemo(() => buildQueue(grammarProgress, { limit: 12 }), [grammarProgress]);
   const [index, setIndex] = useState(0);
@@ -29,9 +31,9 @@ export default function PracticeSession() {
   if (!entry || sessionDone) {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
-        <p className="text-lg font-medium mb-2">Сессия завершена!</p>
+        <p className="text-lg font-medium mb-2">{t("session_done")}</p>
         <p className="text-zinc-500">
-          Правильно: {correctCount} / {index}
+          {t("session_correct")}: {correctCount} / {index}
         </p>
       </div>
     );
@@ -89,7 +91,7 @@ export default function PracticeSession() {
               stage === "blocked" ? "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300" : "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300"
             }`}
           >
-            {stage === "blocked" ? "закрепление" : "смешанная практика"}
+            {stage === "blocked" ? t("dash_stage_blocked") : t("dash_stage_interleaved")}
           </span>
         )}
       </div>
@@ -112,7 +114,7 @@ export default function PracticeSession() {
               : "bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-200"
           }`}
         >
-          <p className="font-medium mb-1">{correct ? "Правильно!" : "Не совсем."}</p>
+          <p className="font-medium mb-1">{correct ? t("answer_correct") : t("answer_incorrect")}</p>
           <p>{"explanationRu" in item ? item.explanationRu : ""}</p>
           {errorEntry?.l1Note && (
             <p className="mt-2 text-xs opacity-80">
@@ -129,21 +131,21 @@ export default function PracticeSession() {
             disabled={item.taskType === "mc" ? selected === null : typed.trim() === ""}
             className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
           >
-            Проверить
+            {t("action_check")}
           </button>
         ) : (
           <div className="flex gap-2">
             <button onClick={() => grade("again")} className="rounded-md bg-red-600 text-white px-3 py-2 text-sm">
-              Снова
+              {t("grade_again")}
             </button>
             <button onClick={() => grade("hard")} className="rounded-md bg-amber-500 text-white px-3 py-2 text-sm">
-              Трудно
+              {t("grade_hard")}
             </button>
             <button onClick={() => grade("good")} className="rounded-md bg-emerald-600 text-white px-3 py-2 text-sm">
-              Хорошо
+              {t("grade_good")}
             </button>
             <button onClick={() => grade("easy")} className="rounded-md bg-sky-600 text-white px-3 py-2 text-sm">
-              Легко
+              {t("grade_easy")}
             </button>
           </div>
         )}
@@ -194,6 +196,7 @@ function ClozeQuestion({
   setTyped: (v: string) => void;
   revealed: boolean;
 }) {
+  const t = useT();
   return (
     <div>
       <p className="text-lg mb-4">{item.textWithBlank}</p>
@@ -202,9 +205,13 @@ function ClozeQuestion({
         onChange={(e) => setTyped(e.target.value)}
         disabled={revealed}
         className="w-full rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
-        placeholder="Ваш ответ"
+        placeholder={t("your_answer")}
       />
-      {revealed && <p className="mt-2 text-sm text-zinc-500">Правильный ответ: {item.answer}</p>}
+      {revealed && (
+        <p className="mt-2 text-sm text-zinc-500">
+          {t("correct_answer")}: {item.answer}
+        </p>
+      )}
     </div>
   );
 }
@@ -220,6 +227,7 @@ function TransformQuestion({
   setTyped: (v: string) => void;
   revealed: boolean;
 }) {
+  const t = useT();
   return (
     <div>
       <p className="text-sm text-zinc-500 mb-1">{item.prompt}</p>
@@ -229,9 +237,13 @@ function TransformQuestion({
         onChange={(e) => setTyped(e.target.value)}
         disabled={revealed}
         className="w-full rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
-        placeholder="Ваш ответ"
+        placeholder={t("your_answer")}
       />
-      {revealed && <p className="mt-2 text-sm text-zinc-500">Правильный ответ: {item.answer}</p>}
+      {revealed && (
+        <p className="mt-2 text-sm text-zinc-500">
+          {t("correct_answer")}: {item.answer}
+        </p>
+      )}
     </div>
   );
 }
