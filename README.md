@@ -90,6 +90,11 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   actually knowing the answer. `shuffleOptions()` runs a Fisher-Yates shuffle once per question (or
   once per exam run) and is wired into every MC surface: `PracticeSession`, `ExamRunner` (KNM/Lezen
   demos), `InteractionSession`, `ExamListeningRunner`, and `ListeningSession`.
+- **Mobile nav menu** (`components/Nav.tsx`) — the 9-item section list used to spill into a horizontal
+  scroll strip with no visual affordance, which testers on phone browsers found hard to discover and
+  tap. Below the `md` breakpoint it's now a hamburger toggle (`☰`/`✕`, `aria-expanded`/`aria-controls`)
+  that opens a full-width vertical panel with large (44px+) tap targets; the panel closes when a link
+  is tapped. Desktop/tablet keeps the horizontal bar unchanged.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

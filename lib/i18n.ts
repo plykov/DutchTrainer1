@@ -18,6 +18,8 @@ const DICT = {
   nav_interaction: { ru: "Взаимодействие", en: "Interaction" },
   nav_exam: { ru: "Симуляция экзамена", en: "Exam simulation" },
   nav_settings: { ru: "Настройки", en: "Settings" },
+  nav_menu_open: { ru: "Открыть меню разделов", en: "Open section menu" },
+  nav_menu_close: { ru: "Закрыть меню разделов", en: "Close section menu" },
   loading: { ru: "Загрузка…", en: "Loading…" },
   footer_disclaimer: {
     ru: "Формативная оценка, не официальный результат DUO/Cito.",
