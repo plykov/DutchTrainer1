@@ -42,6 +42,11 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   the browser and discarded the moment you grade or leave the page — never uploaded, never stored
   (the §9 transient-voice-processing default, taken literally since there's no ASR backend to send it
   to anyway).
+- **Listening** (`/listening`) — the exam's single-listen mechanic (§7): 25s to pre-read the
+  question before playback, one pass, no replay button anywhere. Playback uses the browser's built-in
+  Web Speech API (`nl-NL`) when available; if the browser has no speech synthesis support, the
+  transcript flashes once for a reading-paced duration instead of staying silent — labeled honestly
+  in the UI either way, since this environment has no server-side TTS/audio infra.
 - Grammar item bank now covers every §5 syntax/morphology error code with at least one item
   (`ERR_CLUSTER`, `ERR_SEP_PART`, `ERR_NEG_POS`, `ERR_PLUR`, `ERR_DIM_ART`, `ERR_PREP_FIXED`,
   `ERR_COLLOC` added), and the noun bank grew from 8 to 20 lemmas across more exam-domain topics
