@@ -7,6 +7,7 @@ import { PRACTICE_ITEMS } from "@/lib/content/items";
 import { NOUN_BUNDLES } from "@/lib/content/nouns";
 import { SPEAKING_PROMPTS } from "@/lib/content/speakingPrompts";
 import { LISTENING_ITEMS } from "@/lib/content/listeningItems";
+import { READING_TEXTS } from "@/lib/content/readingTexts";
 import { knownLemmas } from "@/lib/coverage";
 import Link from "next/link";
 
@@ -87,7 +88,8 @@ export default function DashboardPage() {
             const total =
               PRACTICE_ITEMS.filter((i) => i.skill === skill).length +
               (skill === "speaking" ? SPEAKING_PROMPTS.length : 0) +
-              (skill === "listening" ? LISTENING_ITEMS.length : 0);
+              (skill === "listening" ? LISTENING_ITEMS.length : 0) +
+              (skill === "reading" ? READING_TEXTS.length : 0);
             return (
               <div key={skill} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm flex justify-between">
                 <span>{label}</span>
