@@ -206,6 +206,42 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   UI degrades gracefully when the NLP call can't complete (this sandbox's headless browser can't reach
   external hosts at all — a known limitation noted elsewhere in this session — so that fallback path is
   exactly what ran in-browser here; the real deployed site reaches the API directly).
+- **Vocabulary bank grown from 130 to 2,030 noun bundles** — dataset-sourced rather than hand-authored, per
+  the explicitly chosen tradeoff (less per-item scrutiny than prior batches, in exchange for reaching the
+  §4 ~2,000-lemma target in one pass instead of dozens of hand-written commits). Pipeline: kaikki.org's
+  Wiktextract-derived Dutch dictionary (`kaikki.org-dictionary-Dutch.jsonl`, ~145k entries) supplies
+  lemma/article(gender)/plural/diminutive for every noun that has both a plural and diminutive form on
+  record; hermitdave/FrequencyWords' OpenSubtitles-derived `nl_50k.txt` ranks them by real-world frequency
+  so the selection favors common, exam-relevant words over obscure ones. `adjAgreement` and `collocations`
+  are template-generated (not hand-written per item), and CEFR level is a frequency-rank proxy (top ~40%
+  of the selection → A2, rest → B1) rather than a real CEFR-graded source — both are known simplifications
+  of the full-bundle schema's rigor for this batch specifically.
+  Three real bugs were found and fixed while spot-checking the generated output before merging: (1) the
+  frequency list carries no part-of-speech tags, so pure lemma lookup against the noun index pulled in
+  words that are overwhelmingly a *different* part of speech in real Dutch and only have a marginal/
+  coincidental noun sense — "kan" (modal "can", not noun "jug"), "hij" (pronoun "he"), "een"/"de"
+  (articles), "niet" (negation) — fixed with an explicit `FUNCTION_WORDS` blocklist covering Dutch
+  pronouns, prepositions, conjunctions, negation/adverbs, and conjugated forms of ~15 extremely common
+  verbs; (2) naive string-concatenation adjective inflection ("stem" + "e") violates real Dutch spelling
+  rules — open/closed-syllable vowel-doubling reduction ("groot"+"e" is "grote", not "groote") and
+  consonant doubling for short vowels ("druk"+"e" is "drukke", not "druke") — silently wrong on 6 of 23
+  base adjectives (~26% of all generated entries), directly undermining this app's own `ERR_ADJ_INFL`
+  taxonomy code; fixed with a hand-verified `ADJ_INFLECTED` lookup table instead of derivation; (3) a
+  case-insensitive word-shape regex let a capitalized parsing artifact ("Let", from "Let op!") through as
+  a lowercase "noun" — fixed by rejecting any candidate where `word != word.lower()` before the regex
+  check. Beyond those, two full manual read-throughs of the 1,900-candidate output (in ~300-line chunks)
+  surfaced and excluded roughly 130 more marginal entries via a growing `EXTRA_EXCLUDE` set: mistagged
+  verb/adjective/adverb forms with only a coincidental noun sense ("goed", "gek", "horen", "leek", "las"),
+  character/proper names from subtitle data ("jack", "kim", "romeo"), bare English artifacts ("guy",
+  "dog", "game"), profanity/slurs/derogatory terms, graphic crime/violence topics unsuited to a beginner
+  course (murder, rape, kidnapping, serial killers), redundant informal duplicates of already-present
+  family terms ("papa"/"mama" next to existing "vader"/"moeder"), and archaic/dialectal fragments. This is
+  a spot-check pass, not exhaustive line-by-line review of all 1,900 entries — consistent with the
+  explicitly accepted tradeoff for this approach; some lower-quality entries likely remain. Verified: zero
+  duplicate lemmas (cross-checked against both the existing 130 and within the new batch), `npx tsc
+  --noEmit` / `npm run lint` / `npm run build` all clean, and confirmed via Playwright that `/vocab`
+  sessions run correctly against the expanded pool (surfaced newly-added words like "salaris" mid-session
+  without error) and `/dashboard` reflects the larger word count.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
