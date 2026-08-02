@@ -359,6 +359,16 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   shuffled mix of many different grammar targets instead of one), reloaded the page, completed a second
   session, and confirmed zero item overlap between the two — plus confirmed `/vocab` reloads without error
   after a graded session.
+- **Added word pronunciation to `/vocab`** — a 🔊 button next to the lemma speaks it via the browser's Web
+  Speech API (`nl-NL` voice), reusing the same TTS mechanism already used for `/listening` transcripts,
+  extracted into a small shared `lib/tts.ts` (`speakDutch()` + a `supportsTts` flag) rather than duplicated.
+  Two buttons, deliberately different in scope: before reveal, the button speaks only the bare lemma — never
+  the article, since giving that away would defeat the de/het recall exercise the card is testing. After
+  reveal, a second button speaks the full `article + lemma` phrase, reinforcing the sound-to-gender pairing
+  once the answer is already shown. The button renders only when `supportsTts` is true (some browsers lack
+  `speechSynthesis`), matching the existing listening-module pattern. Verified via `npx tsc --noEmit` / `npm
+  run lint` / `npm run build`, and via Playwright: both buttons render at the right stage (1 before reveal, 2
+  after) and clicking every one triggers no console/page errors.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

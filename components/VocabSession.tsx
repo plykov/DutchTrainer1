@@ -5,7 +5,23 @@ import { useAppStore } from "@/lib/store";
 import { useT } from "@/lib/i18n";
 import { buildVocabQueue, nounCardId } from "@/lib/vocabQueue";
 import { Grade } from "@/lib/fsrs";
+import { speakDutch, supportsTts } from "@/lib/tts";
 import NextExercise from "@/components/NextExercise";
+
+function SpeakButton({ text, label }: { text: string; label: string }) {
+  if (!supportsTts) return null;
+  return (
+    <button
+      type="button"
+      onClick={() => speakDutch(text)}
+      aria-label={label}
+      title={label}
+      className="rounded-md border border-zinc-300 dark:border-zinc-700 px-2 py-1 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+    >
+      🔊
+    </button>
+  );
+}
 
 export default function VocabSession() {
   const cards = useAppStore((s) => s.cards);
@@ -47,14 +63,20 @@ export default function VocabSession() {
       </div>
 
       <div className="text-center py-8">
-        <p className="text-3xl font-semibold">{bundle.lemma}</p>
+        <div className="flex items-center justify-center gap-2">
+          <p className="text-3xl font-semibold">{bundle.lemma}</p>
+          <SpeakButton text={bundle.lemma} label={t("vocab_listen")} />
+        </div>
         {!revealed && <p className="text-zinc-400 mt-2 text-sm">{t("vocab_recall_hint")}</p>}
       </div>
 
       {revealed && (
         <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-4 text-sm space-y-1">
-          <p>
-            <strong>{t("vocab_article")}:</strong> {bundle.article} {bundle.lemma}
+          <p className="flex items-center gap-2">
+            <span>
+              <strong>{t("vocab_article")}:</strong> {bundle.article} {bundle.lemma}
+            </span>
+            <SpeakButton text={`${bundle.article} ${bundle.lemma}`} label={t("vocab_listen_full")} />
           </p>
           <p>
             <strong>{t("vocab_plural")}:</strong> {bundle.plural}
