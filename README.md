@@ -186,14 +186,35 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   onderwerp (101 beschikbaar)" button that swaps to a different random one (never repeats the current
   task twice in a row). Tasks span the same 10 civic-life topics as the other batches. Confirmed via
   Playwright: the button reports 101 available, and 8 clicks surfaced 7 distinct prompts.
+- **Real NLP-backed writing-error detector** (`lib/writingCheck.ts`) — replaces the "small pattern-matcher
+  standing in for it" this README used to flag. Hybrid design, decided after testing both halves directly
+  against real learner-style sentences: local regex patterns stay for the word-order/auxiliary-selection
+  codes central to this app's taxonomy (V2, subordinate-clause verb-final, hebben/zijn, separable verbs,
+  er-existential/quantitative, verb clusters) because LanguageTool's free Dutch rule set has **no rule**
+  for any of them — confirmed by hand: "Morgen ik ga", "Ik heb naar Utrecht gegaan", and "omdat ik ben
+  ziek" all come back with zero matches from `api.languagetool.org`. LanguageTool is added as a second,
+  genuinely-external NLP layer for what it *is* good at — de/het confusion, adjective inflection,
+  subject-verb agreement, spelling — via a live `fetch` to its public checking API (CORS-open, no key
+  needed). Matches map onto this app's §5 error codes where a confident mapping exists (`DE_IPV_HET` →
+  `ERR_ART_DEHET`, `EEN_LELIJKE_MEISJE` → `ERR_ADJ_INFL`); anything else is still surfaced under a new
+  `ERR_NLP_OTHER` catch-all with LanguageTool's own message, rather than silently dropped. The API call
+  is best-effort with a 6s timeout — `detectErrorsCombined()` always resolves, falling back to local-only
+  results on any network failure, so writing feedback never hard-depends on connectivity. `WritingTask`
+  gained a `"checking"` stage (brief "Проверяем текст…" state) since detection is now async. Verified the
+  live API's behavior and rule ids directly via curl against real Dutch sentences before writing the
+  mapping table, and confirmed end-to-end via Playwright that the local-pattern path still works and the
+  UI degrades gracefully when the NLP call can't complete (this sandbox's headless browser can't reach
+  external hosts at all — a known limitation noted elsewhere in this session — so that fallback path is
+  exactly what ran in-browser here; the real deployed site reaches the API directly).
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
 Whisper-NL/GOP pronunciation scoring (needs a fine-tuned ASR model and audio infra this environment
 doesn't have), a live LiNT API integration (coverage above is a local approximation, not the real
-service), full-length timed exam simulations, offline sync, CNaVT/Flemish/teacher-dashboard work, and
-a real NLP-backed writing-error detector (the current one is a small pattern-matcher standing in for
-it). Content in `lib/content/` is a seed slice, not the full ~2,000–5,000 lemma target — swap in a
+service), full-length timed exam simulations, offline sync, and CNaVT/Flemish/teacher-dashboard work.
+The English UI toggle also still has gaps: `WritingTask`, the Schrijven/Luisteren/Spreken exam runners,
+and `ReadingRoom` have Russian-only chrome text, not yet wired into `lib/i18n.ts`. Content in
+`lib/content/` is a seed slice, not the full ~2,000–5,000 lemma target — swap in a
 real content pipeline before shipping to learners, and clear the `[VERIFY]` items in the scope doc's
 §12 backlog first.
 

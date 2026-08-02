@@ -51,6 +51,11 @@ export const ERROR_CODES = [
   "ERR_PHON_FRONTROUND",
   "ERR_PHON_DEVOICE",
   "ERR_PHON_XG",
+  // Catch-all for genuine grammar/spelling issues an external NLP checker
+  // finds outside this curated Russian-L1-contrastive taxonomy (§5 is
+  // deliberately not exhaustive of all Dutch grammar, only the patterns
+  // that matter most for Russian speakers).
+  "ERR_NLP_OTHER",
 ] as const;
 
 export type ErrorCode = (typeof ERROR_CODES)[number];

@@ -176,6 +176,14 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     example: { wrong: "g/ch confused" },
     l1Note: "Приоритет для русскоговорящих: различайте глухой /x/ и звонкий /ɣ/ — оба отличаются от русского [x].",
   },
+  {
+    code: "ERR_NLP_OTHER",
+    category: "lexis_phonology",
+    label: "General grammar/spelling (external checker)",
+    example: { wrong: "varies — flagged by LanguageTool, not this app's curated patterns" },
+    l1Note:
+      "Эта ошибка не входит в основную таблицу §5, специфичную для русскоговорящих, — её нашла внешняя проверка LanguageTool. Подробности — в сообщении на нидерландском выше.",
+  },
 ];
 
 export function getErrorEntry(code: string): ErrorTaxonomyEntry | undefined {

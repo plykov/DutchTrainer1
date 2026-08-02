@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { ShortWriteItem } from "@/lib/types";
-import { checkAdequacy, detectErrors, DetectedError } from "@/lib/writingCheck";
+import { checkAdequacy, detectErrorsCombined, DetectedError } from "@/lib/writingCheck";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
 import NextExercise from "@/components/NextExercise";
 
-type Stage = "writing" | "adequacy_fail" | "detect" | "hint" | "reveal" | "repair";
+type Stage = "writing" | "adequacy_fail" | "checking" | "detect" | "hint" | "reveal" | "repair";
 
 export default function WritingTask({ item, examMode = false }: { item: ShortWriteItem; examMode?: boolean }) {
   const [text, setText] = useState("");
@@ -38,7 +38,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [expired]);
 
-  function submit() {
+  async function submit() {
     const adequacy = checkAdequacy(text, item.requirements, item.responseMinLen);
     if (!adequacy.passed) {
       // §6 adequacy gate: a 0-on-adequacy response cannot score on grammar.
@@ -47,7 +47,8 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
       setStage("adequacy_fail");
       return;
     }
-    const detected = detectErrors(text);
+    setStage("checking");
+    const detected = await detectErrorsCombined(text);
     setErrors(detected);
     setActiveErrorIdx(0);
     setStage(detected.length > 0 ? "hint" : "detect");
@@ -108,6 +109,12 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
           <button onClick={() => setStage("writing")} className="mt-3 text-sm underline">
             Исправить ответ
           </button>
+        </div>
+      )}
+
+      {stage === "checking" && (
+        <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-4 text-sm text-zinc-500">
+          Проверяем текст (локальные правила + LanguageTool)…
         </div>
       )}
 
