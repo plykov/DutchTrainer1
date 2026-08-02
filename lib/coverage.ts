@@ -19,6 +19,7 @@ import { nounCardId } from "./vocabQueue";
 const FUNCTION_WORDS = new Set(
   [
     "de", "het", "een", "ik", "jij", "je", "u", "wij", "we", "zij", "ze", "hij",
+    "mijn",
     "is", "ben", "bent", "zijn", "was", "waren", "heb", "heeft", "hebben",
     "in", "op", "van", "voor", "naar", "met", "bij", "aan", "om", "te", "uit",
     "en", "maar", "of", "want", "dus", "omdat", "dat", "die", "deze", "dit",

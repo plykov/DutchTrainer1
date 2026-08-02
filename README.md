@@ -300,6 +300,38 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   2,970 entries. Verified: 0 duplicate lemmas across all 5,000 entries, `npx tsc --noEmit` / `npm run
   lint` / `npm run build` all clean, and confirmed via Playwright that `/dashboard` shows "Известные слова
   0/5000" and a `/vocab` session runs cleanly through the expanded pool without error.
+- **Grew every remaining practice module to 200 items** (Vocab was already at 5,000 from the two batches
+  above): Reading 120→200, Listening 114→200, Speaking 115→200, Interaction 131→200, Practice (grammar)
+  130→200, Writing 101→200. Split the work by risk: Reading — constrained by the §4 coverage gate, so it
+  needed a generator script rather than free authoring — and Practice (grammar), where an item's
+  `errorCodes`/`grammarTarget` has to be linguistically correct against §5's taxonomy, were done directly;
+  Listening, Speaking, Interaction, and Writing were delegated to parallel background agents, each briefed
+  with the exact schema, existing style, a non-overlapping id prefix, and an explicit instruction not to
+  run build/lint/commit (a single coordinating pass did that afterward).
+  **Reading**: extended the same coverage-safe template generator from the batch above with 8 new topics
+  (sport, natuur, technologie, veiligheid, dieren, reizen, vrije_tijd, gezondheidszorg) drawn from the now-
+  5,000-word noun bank. First run flagged every single generated text as invalid — turned out `mijn` ("my"),
+  used in nearly every sentence across all 120 existing reading texts, was never actually in
+  `lib/coverage.ts`'s `FUNCTION_WORDS` set. That's a real pre-existing bug: the §4 coverage gate had been
+  silently under-counting coverage for the entire `/reading` module since it was built, not something this
+  batch introduced. Fixed by adding `"mijn"` to `FUNCTION_WORDS`; confirmed by re-scanning all 120 original
+  texts programmatically that `mijn` was the *only* token failing to resolve against the function-word set
+  or a noun form.
+  **Practice (grammar)**: added 3 new items per each of the 23 practice-generatable §5 error codes (all of
+  `ERROR_CODES` except the external-checker-only `ERR_NLP_OTHER`), covering mc/cloze/sentence_transform task
+  types, following each error code's existing example pattern exactly (e.g. the vowel-length/front-rounded-
+  vowel/final-devoicing phonology items pick real minimal-pair-style Dutch words, not arbitrary ones).
+  **Writing**: 99 new items across 20 fresh civic-life scenarios (library, gym, insurance, energy company,
+  childcare, vet, landlord, job applications, complaints, formal objections, tech support, official
+  documents, tax office, parking permits, waste collection, safety/police, leisure, school, friendship) not
+  covered by the existing 101-item batch. Every one of the 297 new requirement strings across this batch was
+  checked against `checkAdequacy`'s keyword-derivation logic before merging (the algorithm fixed earlier this
+  session) — caught and fixed 2 that stripped to nothing enforceable ("geeft aan waarvoor" / "geeft aan
+  waarmee", both missing a content word) before they could silently become unenforceable in production.
+  Verified: `npx tsc --noEmit` / `npm run lint` / `npm run build` all clean; 0 duplicate ids across all 6
+  files; confirmed via Playwright that `/dashboard`'s per-skill bank counts reflect the new totals, `/write`
+  surfaces new-batch topics at random, and a new writing item's adequacy gate correctly rejects generic
+  filler with the actual missing requirements listed.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

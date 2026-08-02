@@ -1505,4 +1505,1122 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
     },
   },
+  {
+    id: "listen-gen3-1",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Met de tandartspraktijk. Uw afspraak van vrijdag kan helaas niet doorgaan, de tandarts is ziek. Wilt u ons terugbellen voor een nieuwe datum?",
+    question: {
+      prompt: "Waarom gaat de afspraak van vrijdag niet door?",
+      options: ["De tandarts is ziek", "De praktijk is verhuisd", "U heeft afgezegd"],
+      correctIndex: 0,
+      explanationRu: "'de tandarts is ziek' — приём отменён, потому что заболел сам стоматолог.",
+    },
+  },
+  {
+    id: "listen-gen3-2",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "Uw rijbewijs verloopt over drie maanden. U kunt het verlengen bij de gemeente, maar wacht niet te lang want de aanvraag duurt ongeveer vijf weken.",
+    question: {
+      prompt: "Hoe lang duurt de aanvraag ongeveer?",
+      options: ["Vijf dagen", "Vijf weken", "Vijf maanden"],
+      correctIndex: 1,
+      explanationRu: "'de aanvraag duurt ongeveer vijf weken' — оформление занимает около пяти недель.",
+    },
+  },
+  {
+    id: "listen-gen3-3",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Beste patiënt, dit jaar kunt u weer een gratis griepprik krijgen bij de huisarts. Maak hiervoor een afspraak vóór half november.",
+    question: {
+      prompt: "Wat moet u vóór half november doen?",
+      options: ["Een afspraak maken voor de griepprik", "De prik zelf kopen", "Naar het ziekenhuis gaan"],
+      correctIndex: 0,
+      explanationRu: "'Maak hiervoor een afspraak vóór half november' — записаться на прививку от гриппа нужно до середины ноября.",
+    },
+  },
+  {
+    id: "listen-gen3-4",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "Beste bewoners, in de kelder van het gebouw is een waterlekkage ontdekt. De loodgieter komt vanmiddag langs, houd de gang daarom vrij van spullen.",
+    question: {
+      prompt: "Wat wordt er van de bewoners gevraagd?",
+      options: ["De gang vrijhouden van spullen", "Het gebouw verlaten", "Zelf het water opruimen"],
+      correctIndex: 0,
+      explanationRu: "'houd de gang daarom vrij van spullen' — просят освободить коридор от вещей для слесаря.",
+    },
+  },
+  {
+    id: "listen-gen3-5",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Goedemorgen, ik voel me niet goed en kan vandaag niet komen werken. Kunt u dit doorgeven aan mijn collega's? Ik hoop morgen weer beter te zijn.",
+    question: {
+      prompt: "Wat wil de spreker doorgeven?",
+      options: ["Dat hij op vakantie gaat", "Dat hij zich ziek meldt", "Dat hij later komt"],
+      correctIndex: 1,
+      explanationRu: "'ik voel me niet goed en kan vandaag niet komen werken' — это сообщение о болезни (больничный).",
+    },
+  },
+  {
+    id: "listen-gen3-6",
+    level: "B1",
+    topic: "belasting",
+    transcript:
+      "Vergeet niet dat u vóór 1 mei uw belastingaangifte moet indienen. Doet u dit online, dan krijgt u meestal binnen enkele weken bericht.",
+    question: {
+      prompt: "Vóór welke datum moet de aangifte binnen zijn?",
+      options: ["1 januari", "1 mei", "1 december"],
+      correctIndex: 1,
+      explanationRu: "'vóór 1 mei uw belastingaangifte moet indienen' — декларацию нужно подать до 1 мая.",
+    },
+  },
+  {
+    id: "listen-gen3-7",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers, de trein naar Utrecht heeft ongeveer tien minuten vertraging door werkzaamheden aan het spoor.",
+    question: {
+      prompt: "Waarom heeft de trein vertraging?",
+      options: ["Door werkzaamheden aan het spoor", "Door een storm", "Door een staking"],
+      correctIndex: 0,
+      explanationRu: "'door werkzaamheden aan het spoor' — задержка вызвана ремонтными работами на путях.",
+    },
+  },
+  {
+    id: "listen-gen3-8",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Voor het inburgeringsexamen kunt u zich inschrijven via de website. Let op: u mag het onderdeel spreken pas doen nadat u voor lezen bent geslaagd.",
+    question: {
+      prompt: "Wanneer mag u het onderdeel spreken doen?",
+      options: ["Pas na het slagen voor lezen", "Op elk moment", "Alleen op zaterdag"],
+      correctIndex: 0,
+      explanationRu: "'pas nadat u voor lezen bent geslaagd' — часть «говорение» доступна только после сдачи «чтения».",
+    },
+  },
+  {
+    id: "listen-gen3-9",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Aanstaande zaterdag organiseert de buurt een opschoondag. Verzamelen om tien uur bij het buurthuis, handschoenen worden uitgedeeld.",
+    question: {
+      prompt: "Wat krijgen de deelnemers uitgedeeld?",
+      options: ["Handschoenen", "Vuilniszakken", "Fietsen"],
+      correctIndex: 0,
+      explanationRu: "'handschoenen worden uitgedeeld' — участникам раздают перчатки для уборки.",
+    },
+  },
+  {
+    id: "listen-gen3-10",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "U heeft een aangetekende brief gemist. Deze ligt nu klaar op het postkantoor. Neem een geldig legitimatiebewijs mee als u de brief ophaalt.",
+    question: {
+      prompt: "Wat moet u meenemen om de brief op te halen?",
+      options: ["Een geldig legitimatiebewijs", "Het oude poststuk", "Contant geld"],
+      correctIndex: 0,
+      explanationRu: "'Neem een geldig legitimatiebewijs mee' — для получения письма нужно удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen3-11",
+    level: "A2",
+    topic: "apotheek",
+    transcript:
+      "Voor een herhaalrecept hoeft u niet meer naar de huisarts. Bel de apotheek en zij regelen het recept meestal binnen twee werkdagen.",
+    question: {
+      prompt: "Binnen hoeveel werkdagen wordt het herhaalrecept meestal geregeld?",
+      options: ["Eén werkdag", "Twee werkdagen", "Een week"],
+      correctIndex: 1,
+      explanationRu: "'meestal binnen twee werkdagen' — повторный рецепт обычно оформляют за два рабочих дня.",
+    },
+  },
+  {
+    id: "listen-gen3-12",
+    level: "B1",
+    topic: "energie",
+    transcript:
+      "Beste klant, wilt u vóór eind van de maand uw meterstanden doorgeven via onze app? Zo voorkomt u een te hoge schatting op uw jaarafrekening.",
+    question: {
+      prompt: "Wat voorkomt u door de meterstanden door te geven?",
+      options: ["Een te hoge schatting op de jaarafrekening", "Een boete", "Afsluiting van gas"],
+      correctIndex: 0,
+      explanationRu: "'voorkomt u een te hoge schatting' — вовремя переданные показания счётчика предотвращают завышенный расчёт.",
+    },
+  },
+  {
+    id: "listen-gen3-13",
+    level: "A2",
+    topic: "kinderopvang",
+    transcript:
+      "Helaas staat uw kind nog op de wachtlijst voor de kinderopvang. Wij verwachten in september een plek vrij te hebben.",
+    question: {
+      prompt: "Wanneer verwacht de kinderopvang een plek vrij te hebben?",
+      options: ["In september", "Volgend jaar", "Deze week"],
+      correctIndex: 0,
+      explanationRu: "'in september een plek vrij te hebben' — место ожидается свободным в сентябре.",
+    },
+  },
+  {
+    id: "listen-gen3-14",
+    level: "B1",
+    topic: "sport",
+    transcript:
+      "De zwemles voor beginners op donderdagmiddag is helaas vol. U kunt zich wel inschrijven voor de groep op zaterdagochtend.",
+    question: {
+      prompt: "Waarom kan de luisteraar niet op donderdag beginnen?",
+      options: ["Die groep is vol", "Die groep is afgeschaft", "Het zwembad is dicht"],
+      correctIndex: 0,
+      explanationRu: "'is helaas vol' — группа по четвергам заполнена, предлагают субботу.",
+    },
+  },
+  {
+    id: "listen-gen3-15",
+    level: "A2",
+    topic: "bibliotheek",
+    transcript:
+      "Het boek dat u had aangevraagd, ligt klaar bij de balie van de bibliotheek. U kunt het ophalen tot en met zaterdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het boek ophalen?",
+      options: ["Tot en met zaterdag", "Alleen vandaag", "Tot en met maandag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen tot en met zaterdag' — книгу можно забрать включительно до субботы.",
+    },
+  },
+  {
+    id: "listen-gen3-16",
+    level: "B1",
+    topic: "verzekering",
+    transcript:
+      "U kunt uw zorgverzekering elk jaar vóór 1 januari wijzigen. Zeg de oude polis op tijd op, anders loopt deze automatisch door.",
+    question: {
+      prompt: "Wat gebeurt er als u de oude polis niet op tijd opzegt?",
+      options: ["Die loopt automatisch door", "Die stopt automatisch", "U krijgt een boete"],
+      correctIndex: 0,
+      explanationRu: "'anders loopt deze automatisch door' — без своевременного отказа старый полис продлевается автоматически.",
+    },
+  },
+  {
+    id: "listen-gen3-17",
+    level: "A2",
+    topic: "belasting",
+    transcript:
+      "Om huurtoeslag aan te vragen, heeft u uw inkomen en het huurcontract nodig. U vraagt de toeslag aan via de Belastingdienst.",
+    question: {
+      prompt: "Wat heeft u nodig voor de aanvraag van huurtoeslag?",
+      options: ["Inkomen en huurcontract", "Alleen een paspoort", "Een medische verklaring"],
+      correctIndex: 0,
+      explanationRu: "'uw inkomen en het huurcontract nodig' — для заявки на жилищную субсидию нужны доход и договор аренды.",
+    },
+  },
+  {
+    id: "listen-gen3-18",
+    level: "B1",
+    topic: "afval",
+    transcript:
+      "Beste bewoners, grofvuil wordt deze maand niet op de gebruikelijke dag opgehaald, maar een dag later, vanwege een feestdag.",
+    question: {
+      prompt: "Waarom wordt het grofvuil deze maand later opgehaald?",
+      options: ["Vanwege een feestdag", "Vanwege slecht weer", "Vanwege een staking"],
+      correctIndex: 0,
+      explanationRu: "'vanwege een feestdag' — вывоз крупногабаритного мусора сдвинут из-за праздничного дня.",
+    },
+  },
+  {
+    id: "listen-gen3-19",
+    level: "A2",
+    topic: "parkeren",
+    transcript:
+      "Voor een parkeervergunning voor bewoners kunt u online een aanvraag doen bij de gemeente. De vergunning is een jaar geldig.",
+    question: {
+      prompt: "Hoe lang is de parkeervergunning geldig?",
+      options: ["Een maand", "Een jaar", "Vijf jaar"],
+      correctIndex: 1,
+      explanationRu: "'De vergunning is een jaar geldig' — разрешение на парковку действует один год.",
+    },
+  },
+  {
+    id: "listen-gen3-20",
+    level: "B1",
+    topic: "fiets",
+    transcript:
+      "Goedemiddag, u spreekt met de politie. Wij hebben uw gestolen fiets gevonden. U kunt hem ophalen bij het bureau, neem uw fietssleutel mee.",
+    question: {
+      prompt: "Wat moet u meenemen om de fiets op te halen?",
+      options: ["De fietssleutel", "Een aankoopbon", "Een verzekeringspapier"],
+      correctIndex: 0,
+      explanationRu: "'neem uw fietssleutel mee' — для получения велосипеда нужно взять ключ от него.",
+    },
+  },
+  {
+    id: "listen-gen3-21",
+    level: "A2",
+    topic: "dierenarts",
+    transcript:
+      "Uw hond is aan een vaccinatie toe. U kunt hiervoor terecht bij de dierenarts, zonder afspraak, elke ochtend tussen negen en tien uur.",
+    question: {
+      prompt: "Wanneer kunt u zonder afspraak terecht?",
+      options: ["Elke ochtend tussen negen en tien uur", "Alleen op vrijdag", "In het weekend"],
+      correctIndex: 0,
+      explanationRu: "'zonder afspraak, elke ochtend tussen negen en tien uur' — можно прийти без записи по утрам в это время.",
+    },
+  },
+  {
+    id: "listen-gen3-22",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "Beste bewoner, wij hebben een klacht ontvangen over geluidsoverlast in uw woning na tien uur 's avonds. Wij vragen u hier rekening mee te houden.",
+    question: {
+      prompt: "Waarover gaat de klacht?",
+      options: ["Geluidsoverlast na tien uur 's avonds", "Een lekkage", "Een vuilnisprobleem"],
+      correctIndex: 0,
+      explanationRu: "'een klacht ... over geluidsoverlast ... na tien uur' — жалоба на шум после десяти вечера.",
+    },
+  },
+  {
+    id: "listen-gen3-23",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Uw loonstrook van deze maand staat vanaf vandaag klaar in uw online account. Controleer of alle gegevens kloppen.",
+    question: {
+      prompt: "Waar staat de loonstrook klaar?",
+      options: ["In het online account", "Op papier thuis", "Bij de manager"],
+      correctIndex: 0,
+      explanationRu: "'staat vanaf vandaag klaar in uw online account' — расчётный лист доступен в личном кабинете онлайн.",
+    },
+  },
+  {
+    id: "listen-gen3-24",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Met een spaarrekening bij ons krijgt u dit jaar een iets hogere rente. Het geld opnemen kan altijd, zonder extra kosten.",
+    question: {
+      prompt: "Wat is er mogelijk met het spaargeld?",
+      options: ["Het altijd zonder kosten opnemen", "Het alleen na een jaar opnemen", "Het niet opnemen"],
+      correctIndex: 0,
+      explanationRu: "'Het geld opnemen kan altijd, zonder extra kosten' — снять деньги можно в любое время без дополнительных затрат.",
+    },
+  },
+  {
+    id: "listen-gen3-25",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Let op: uw ov-chipkaart is bijna verlopen. Vraag op tijd een nieuwe kaart aan, zodat u kunt blijven reizen.",
+    question: {
+      prompt: "Wat moet u op tijd doen?",
+      options: ["Een nieuwe ov-chipkaart aanvragen", "Geld overmaken", "Een boete betalen"],
+      correctIndex: 0,
+      explanationRu: "'Vraag op tijd een nieuwe kaart aan' — нужно вовремя заказать новую транспортную карту.",
+    },
+  },
+  {
+    id: "listen-gen3-26",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Wij nodigen u uit voor een oudergesprek over de resultaten van uw kind. Het gesprek duurt ongeveer twintig minuten.",
+    question: {
+      prompt: "Hoe lang duurt het oudergesprek ongeveer?",
+      options: ["Twintig minuten", "Een uur", "Vijf minuten"],
+      correctIndex: 0,
+      explanationRu: "'Het gesprek duurt ongeveer twintig minuten' — беседа с родителями длится примерно двадцать минут.",
+    },
+  },
+  {
+    id: "listen-gen3-27",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "De buurtpreventiegroep zoekt nieuwe vrijwilligers. Wilt u meedoen, meld u dan aan bij de coördinator via de telefoon.",
+    question: {
+      prompt: "Hoe kunt u zich aanmelden voor de buurtpreventiegroep?",
+      options: ["Via de telefoon bij de coördinator", "Via een brief", "Alleen persoonlijk"],
+      correctIndex: 0,
+      explanationRu: "'meld u dan aan bij de coördinator via de telefoon' — записаться можно по телефону у координатора.",
+    },
+  },
+  {
+    id: "listen-gen3-28",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "Uw pakket is bezorgd bij de buren op nummer twaalf, omdat u niet thuis was. U kunt het daar ophalen.",
+    question: {
+      prompt: "Waar is het pakket bezorgd?",
+      options: ["Bij de buren op nummer twaalf", "Op het postkantoor", "Terug naar de afzender"],
+      correctIndex: 0,
+      explanationRu: "'bezorgd bij de buren op nummer twaalf' — посылку оставили у соседей в доме номер 12.",
+    },
+  },
+  {
+    id: "listen-gen3-29",
+    level: "A2",
+    topic: "apotheek",
+    transcript:
+      "Onze apotheek is tijdens de zomervakantie twee weken gesloten. Voor spoedmedicijnen kunt u terecht bij de dienstapotheek in het centrum.",
+    question: {
+      prompt: "Waar kunt u terecht voor spoedmedicijnen tijdens de sluiting?",
+      options: ["Bij de dienstapotheek in het centrum", "Bij de huisarts", "Nergens"],
+      correctIndex: 0,
+      explanationRu: "'terecht bij de dienstapotheek in het centrum' — в это время работает дежурная аптека в центре.",
+    },
+  },
+  {
+    id: "listen-gen3-30",
+    level: "B1",
+    topic: "energie",
+    transcript:
+      "Overweegt u over te stappen naar een andere energieleverancier? Vergelijk eerst de prijzen, want overstappen kan vaak zonder opzegtermijn.",
+    question: {
+      prompt: "Wat kan er vaak zonder opzegtermijn?",
+      options: ["Overstappen naar een andere leverancier", "De meterstand doorgeven", "Een storing melden"],
+      correctIndex: 0,
+      explanationRu: "'overstappen kan vaak zonder opzegtermijn' — сменить поставщика энергии часто можно без срока уведомления.",
+    },
+  },
+  {
+    id: "listen-gen3-31",
+    level: "A2",
+    topic: "kinderopvang",
+    transcript:
+      "De ouderbijdrage voor de peuterspeelzaal is afhankelijk van uw inkomen. Vul het formulier in en stuur het samen met uw loonstrook op.",
+    question: {
+      prompt: "Waarvan is de ouderbijdrage afhankelijk?",
+      options: ["Van het inkomen", "Van de leeftijd van het kind", "Van het aantal kinderen"],
+      correctIndex: 0,
+      explanationRu: "'afhankelijk van uw inkomen' — родительский взнос зависит от дохода семьи.",
+    },
+  },
+  {
+    id: "listen-gen3-32",
+    level: "B1",
+    topic: "sport",
+    transcript:
+      "Bij de sportschool kunt u een contract van drie maanden opzeggen met één maand opzegtermijn. Stuur uw opzegging schriftelijk.",
+    question: {
+      prompt: "Hoe moet u het contract opzeggen?",
+      options: ["Schriftelijk", "Alleen telefonisch", "Via een app"],
+      correctIndex: 0,
+      explanationRu: "'Stuur uw opzegging schriftelijk' — отказ от контракта нужно оформить письменно.",
+    },
+  },
+  {
+    id: "listen-gen3-33",
+    level: "A2",
+    topic: "bibliotheek",
+    transcript:
+      "U heeft een boek te laat ingeleverd bij de bibliotheek. De boete is dertig cent per dag, met een maximum van tien euro.",
+    question: {
+      prompt: "Hoeveel is de boete per dag?",
+      options: ["Dertig cent", "Een euro", "Tien euro"],
+      correctIndex: 0,
+      explanationRu: "'De boete is dertig cent per dag' — штраф за просрочку составляет тридцать центов в день.",
+    },
+  },
+  {
+    id: "listen-gen3-34",
+    level: "B1",
+    topic: "verzekering",
+    transcript:
+      "Om schade aan uw auto te melden bij de verzekering, heeft u foto's van de schade en het kenteken van de andere auto nodig.",
+    question: {
+      prompt: "Wat heeft u nodig om de schade te melden?",
+      options: ["Foto's en het kenteken van de andere auto", "Alleen een politieverslag", "Een nieuw rijbewijs"],
+      correctIndex: 0,
+      explanationRu: "'foto's van de schade en het kenteken ... nodig' — для заявки о повреждении нужны фото и номер другой машины.",
+    },
+  },
+  {
+    id: "listen-gen3-35",
+    level: "A2",
+    topic: "belasting",
+    transcript:
+      "De definitieve aanslag van de belasting komt meestal binnen drie maanden na uw aangifte. Bewaar de brief goed.",
+    question: {
+      prompt: "Wanneer komt de definitieve aanslag meestal?",
+      options: ["Binnen drie maanden na de aangifte", "Binnen een week", "Na een jaar"],
+      correctIndex: 0,
+      explanationRu: "'meestal binnen drie maanden na uw aangifte' — окончательное решение по налогу приходит обычно в течение трёх месяцев.",
+    },
+  },
+  {
+    id: "listen-gen3-36",
+    level: "B1",
+    topic: "afval",
+    transcript:
+      "Beste bewoners, de glasbak op de hoek van de straat is vol. Gebruikt u tijdelijk de glasbak bij het winkelcentrum.",
+    question: {
+      prompt: "Wat is het probleem met de glasbak op de hoek?",
+      options: ["Die is vol", "Die is kapot", "Die is verwijderd"],
+      correctIndex: 0,
+      explanationRu: "'de glasbak op de hoek van de straat is vol' — контейнер для стекла на углу переполнен.",
+    },
+  },
+  {
+    id: "listen-gen3-37",
+    level: "A2",
+    topic: "parkeren",
+    transcript:
+      "U heeft een parkeerboete gekregen omdat uw vergunning niet zichtbaar achter de voorruit lag. Bezwaar maken kan binnen zes weken.",
+    question: {
+      prompt: "Binnen hoeveel weken kunt u bezwaar maken?",
+      options: ["Twee weken", "Zes weken", "Zes maanden"],
+      correctIndex: 1,
+      explanationRu: "'Bezwaar maken kan binnen zes weken' — обжаловать штраф можно в течение шести недель.",
+    },
+  },
+  {
+    id: "listen-gen3-38",
+    level: "B1",
+    topic: "fiets",
+    transcript:
+      "De fietsenstalling bij het station is deze week gratis vanwege werkzaamheden aan de betaalautomaten.",
+    question: {
+      prompt: "Waarom is de fietsenstalling deze week gratis?",
+      options: ["Vanwege werkzaamheden aan de betaalautomaten", "Vanwege een feestdag", "De stalling is nieuw"],
+      correctIndex: 0,
+      explanationRu: "'vanwege werkzaamheden aan de betaalautomaten' — стоянка бесплатна из-за ремонта платёжных автоматов.",
+    },
+  },
+  {
+    id: "listen-gen3-39",
+    level: "A2",
+    topic: "dierenarts",
+    transcript:
+      "Het spreekuur van de dierenarts van vandaag is verzet naar drie uur, want er was een spoedgeval.",
+    question: {
+      prompt: "Waarom is het spreekuur verzet?",
+      options: ["Er was een spoedgeval", "De dierenarts is met vakantie", "De praktijk is verhuisd"],
+      correctIndex: 0,
+      explanationRu: "'want er was een spoedgeval' — приём перенесли из-за срочного случая.",
+    },
+  },
+  {
+    id: "listen-gen3-40",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "De cv-ketel in uw woning krijgt dit jaar het jaarlijkse onderhoud. De monteur belt u om een geschikte datum af te spreken.",
+    question: {
+      prompt: "Wie belt om een datum af te spreken?",
+      options: ["De monteur", "De verhuurder", "De buurman"],
+      correctIndex: 0,
+      explanationRu: "'De monteur belt u om een geschikte datum af te spreken' — мастер сам позвонит, чтобы согласовать дату.",
+    },
+  },
+  {
+    id: "listen-gen3-41",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Deze maand heeft u zes uur overgewerkt. Deze uren worden automatisch bij uw volgende salaris opgeteld.",
+    question: {
+      prompt: "Wat gebeurt er met de overuren?",
+      options: ["Ze worden bij het volgende salaris opgeteld", "Ze vervallen", "Ze worden vrije dagen"],
+      correctIndex: 0,
+      explanationRu: "'worden automatisch bij uw volgende salaris opgeteld' — переработанные часы добавят к следующей зарплате.",
+    },
+  },
+  {
+    id: "listen-gen3-42",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Wij zien dat u regelmatig rood staat op uw rekening. Wilt u langskomen voor een gesprek over uw financiën?",
+    question: {
+      prompt: "Waarover gaat het voorgestelde gesprek?",
+      options: ["Over de financiën van de klant", "Over een nieuwe pas", "Over een verhuizing"],
+      correctIndex: 0,
+      explanationRu: "'een gesprek over uw financiën' — банк предлагает обсудить финансовое положение клиента.",
+    },
+  },
+  {
+    id: "listen-gen3-43",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "De fietsroute langs de rivier is deze week omgeleid vanwege wegwerkzaamheden. Volg de gele borden.",
+    question: {
+      prompt: "Wat moet fietsers volgen tijdens de omleiding?",
+      options: ["De gele borden", "De blauwe lijnen", "Hun navigatie-app"],
+      correctIndex: 0,
+      explanationRu: "'Volg de gele borden' — во время объезда нужно следовать жёлтым указателям.",
+    },
+  },
+  {
+    id: "listen-gen3-44",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Het rapport van uw kind kan vanaf donderdag worden opgehaald op school, tussen half vier en vijf uur.",
+    question: {
+      prompt: "Wanneer kan het rapport worden opgehaald?",
+      options: ["Vanaf donderdag tussen half vier en vijf uur", "Alleen op vrijdagochtend", "Elke dag"],
+      correctIndex: 0,
+      explanationRu: "'vanaf donderdag ... tussen half vier en vijf uur' — табель можно забрать с четверга в указанное время.",
+    },
+  },
+  {
+    id: "listen-gen3-45",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Op zaterdag is er een straatfeest in onze straat. Iedereen mag iets lekkers meenemen om te delen.",
+    question: {
+      prompt: "Wat wordt er van de bewoners gevraagd voor het straatfeest?",
+      options: ["Iets lekkers meenemen om te delen", "Geld betalen voor een kaartje", "Zich van tevoren aanmelden"],
+      correctIndex: 0,
+      explanationRu: "'Iedereen mag iets lekkers meenemen om te delen' — каждый может принести что-то вкусное для общего стола.",
+    },
+  },
+  {
+    id: "listen-gen3-46",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "Bij verhuizing moet u binnen vijf dagen uw nieuwe adres doorgeven aan de gemeente, anders krijgt u geen post meer bezorgd.",
+    question: {
+      prompt: "Binnen hoeveel dagen moet u het nieuwe adres doorgeven?",
+      options: ["Binnen vijf dagen", "Binnen een maand", "Binnen een jaar"],
+      correctIndex: 0,
+      explanationRu: "'binnen vijf dagen uw nieuwe adres doorgeven' — новый адрес нужно сообщить в течение пяти дней.",
+    },
+  },
+  {
+    id: "listen-gen3-47",
+    level: "A2",
+    topic: "apotheek",
+    transcript:
+      "Buiten de openingstijden kunt u 's nachts terecht bij de dienstapotheek. Het adres staat op onze website.",
+    question: {
+      prompt: "Waar staat het adres van de dienstapotheek?",
+      options: ["Op de website", "Op de deur van de apotheek", "In de krant"],
+      correctIndex: 0,
+      explanationRu: "'Het adres staat op onze website' — адрес дежурной аптеки указан на сайте.",
+    },
+  },
+  {
+    id: "listen-gen3-48",
+    level: "B1",
+    topic: "energie",
+    transcript:
+      "Met subsidie voor zonnepanelen kunt u een deel van de kosten terugkrijgen. Dien uw aanvraag in vóór het einde van het jaar.",
+    question: {
+      prompt: "Wanneer moet u de aanvraag indienen?",
+      options: ["Vóór het einde van het jaar", "Binnen een week", "Alleen in de zomer"],
+      correctIndex: 0,
+      explanationRu: "'Dien uw aanvraag in vóór het einde van het jaar' — заявку на субсидию нужно подать до конца года.",
+    },
+  },
+  {
+    id: "listen-gen3-49",
+    level: "A2",
+    topic: "sport",
+    transcript:
+      "De hardloopcursus voor beginners start volgende maand. Trainingen zijn op dinsdag- en donderdagavond in het park.",
+    question: {
+      prompt: "Op welke dagen zijn de trainingen?",
+      options: ["Dinsdag en donderdag", "Maandag en woensdag", "Alleen zaterdag"],
+      correctIndex: 0,
+      explanationRu: "'op dinsdag- en donderdagavond' — тренировки проходят по вторникам и четвергам.",
+    },
+  },
+  {
+    id: "listen-gen3-50",
+    level: "B1",
+    topic: "bibliotheek",
+    transcript:
+      "Voor kinderen tot achttien jaar is een lidmaatschap van de bibliotheek helemaal gratis. Voor volwassenen betaalt u een jaarlijks bedrag.",
+    question: {
+      prompt: "Voor wie is het lidmaatschap gratis?",
+      options: ["Voor kinderen tot achttien jaar", "Voor iedereen", "Voor gepensioneerden"],
+      correctIndex: 0,
+      explanationRu: "'Voor kinderen tot achttien jaar is een lidmaatschap ... gratis' — для детей до 18 лет членство бесплатное.",
+    },
+  },
+  {
+    id: "listen-gen3-51",
+    level: "A2",
+    topic: "verzekering",
+    transcript:
+      "Een aansprakelijkheidsverzekering dekt schade die u per ongeluk bij een ander veroorzaakt, bijvoorbeeld een gebroken raam.",
+    question: {
+      prompt: "Wat dekt een aansprakelijkheidsverzekering?",
+      options: ["Schade die u per ongeluk bij een ander veroorzaakt", "Schade aan uw eigen huis", "Diefstal van uw fiets"],
+      correctIndex: 0,
+      explanationRu: "'dekt schade die u per ongeluk bij een ander veroorzaakt' — страхование ответственности покрывает случайный вред, причинённый другим.",
+    },
+  },
+  {
+    id: "listen-gen3-52",
+    level: "B1",
+    topic: "belasting",
+    transcript:
+      "Als zzp'er moet u ieder kwartaal btw-aangifte doen, ook als u dat kwartaal niets heeft verdiend.",
+    question: {
+      prompt: "Wanneer moet een zzp'er btw-aangifte doen?",
+      options: ["Ieder kwartaal", "Alleen als er winst is", "Eén keer per jaar"],
+      correctIndex: 0,
+      explanationRu: "'moet u ieder kwartaal btw-aangifte doen' — декларацию по НДС подают каждый квартал, даже без дохода.",
+    },
+  },
+  {
+    id: "listen-gen3-53",
+    level: "A2",
+    topic: "afval",
+    transcript:
+      "Na de feestdagen kunt u uw kerstboom gratis inleveren bij het inzamelpunt in het park, tot en met 15 januari.",
+    question: {
+      prompt: "Tot wanneer kunt u de kerstboom inleveren?",
+      options: ["Tot en met 15 januari", "Tot en met 1 januari", "Het hele jaar"],
+      correctIndex: 0,
+      explanationRu: "'tot en met 15 januari' — рождественскую ёлку можно сдать до 15 января включительно.",
+    },
+  },
+  {
+    id: "listen-gen3-54",
+    level: "B1",
+    topic: "parkeren",
+    transcript:
+      "Er komt een nieuwe laadpaal voor elektrische auto's in onze straat. De werkzaamheden duren ongeveer een week.",
+    question: {
+      prompt: "Hoe lang duren de werkzaamheden ongeveer?",
+      options: ["Ongeveer een week", "Ongeveer een dag", "Ongeveer een maand"],
+      correctIndex: 0,
+      explanationRu: "'De werkzaamheden duren ongeveer een week' — установка займёт примерно неделю.",
+    },
+  },
+  {
+    id: "listen-gen3-55",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Volgende week wordt de buitenkant van het gebouw geschilderd. De steigers blijven ongeveer tien dagen staan.",
+    question: {
+      prompt: "Hoe lang blijven de steigers ongeveer staan?",
+      options: ["Ongeveer tien dagen", "Ongeveer twee dagen", "Een maand"],
+      correctIndex: 0,
+      explanationRu: "'De steigers blijven ongeveer tien dagen staan' — леса простоят примерно десять дней.",
+    },
+  },
+  {
+    id: "listen-gen3-56",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "Vanaf volgend jaar gaat de hondenbelasting iets omhoog. Eigenaren ontvangen hierover binnenkort een brief van de gemeente.",
+    question: {
+      prompt: "Wat gaat er volgend jaar gebeuren met de hondenbelasting?",
+      options: ["Ze gaat iets omhoog", "Ze wordt afgeschaft", "Ze blijft gelijk"],
+      correctIndex: 0,
+      explanationRu: "'gaat de hondenbelasting iets omhoog' — налог на собак немного повысится.",
+    },
+  },
+  {
+    id: "listen-gen3-57",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Uw huisarts heeft u doorverwezen naar de fysiotherapeut. Neem de verwijsbrief mee naar de eerste afspraak.",
+    question: {
+      prompt: "Wat moet u meenemen naar de eerste afspraak?",
+      options: ["De verwijsbrief", "Een röntgenfoto", "Uw verzekeringspas alleen"],
+      correctIndex: 0,
+      explanationRu: "'Neem de verwijsbrief mee' — на первый приём нужно взять направление от врача.",
+    },
+  },
+  {
+    id: "listen-gen3-58",
+    level: "B1",
+    topic: "buurt",
+    transcript:
+      "De speeltuin in het park wordt volgende maand vernieuwd. Tot die tijd is een deel van het park afgesloten.",
+    question: {
+      prompt: "Wat gebeurt er met een deel van het park tot de vernieuwing klaar is?",
+      options: ["Het is afgesloten", "Het wordt gratis toegankelijk", "Het blijft precies hetzelfde"],
+      correctIndex: 0,
+      explanationRu: "'is een deel van het park afgesloten' — часть парка закрыта до завершения обновления.",
+    },
+  },
+  {
+    id: "listen-gen3-59",
+    level: "A2",
+    topic: "stembureau",
+    transcript:
+      "Op woensdag zijn de gemeenteraadsverkiezingen. De stembureaus zijn open van half acht 's ochtends tot negen uur 's avonds.",
+    question: {
+      prompt: "Hoe laat gaan de stembureaus open?",
+      options: ["Half acht 's ochtends", "Negen uur 's ochtends", "Tien uur 's ochtends"],
+      correctIndex: 0,
+      explanationRu: "'open van half acht 's ochtends' — избирательные участки открываются в семь тридцать утра.",
+    },
+  },
+  {
+    id: "listen-gen3-60",
+    level: "B1",
+    topic: "DigiD",
+    transcript:
+      "Bent u uw DigiD-wachtwoord vergeten? U kunt dit eenvoudig resetten via de app, met een geldig identiteitsbewijs bij de hand.",
+    question: {
+      prompt: "Wat heeft u nodig om het wachtwoord te resetten?",
+      options: ["Een geldig identiteitsbewijs", "Een nieuwe simkaart", "Een pincode van de bank"],
+      correctIndex: 0,
+      explanationRu: "'met een geldig identiteitsbewijs bij de hand' — для сброса пароля нужно удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen3-61",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Vanuit het UWV: u moet elke maand minstens vier keer solliciteren om uw uitkering te behouden.",
+    question: {
+      prompt: "Hoeveel keer per maand moet u minstens solliciteren?",
+      options: ["Vier keer", "Eén keer", "Tien keer"],
+      correctIndex: 0,
+      explanationRu: "'minstens vier keer solliciteren' — для сохранения пособия нужно откликаться минимум четыре раза в месяц.",
+    },
+  },
+  {
+    id: "listen-gen3-62",
+    level: "B1",
+    topic: "gezondheid",
+    transcript:
+      "Het consultatiebureau nodigt u uit voor de controle van uw baby van zes maanden. Neem het groeiboekje mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar het consultatiebureau?",
+      options: ["Het groeiboekje", "Een geboorteakte", "Een medicijnlijst"],
+      correctIndex: 0,
+      explanationRu: "'Neem het groeiboekje mee' — на приём в консультационном бюро нужно взять книжку роста ребёнка.",
+    },
+  },
+  {
+    id: "listen-gen3-63",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "De brandweer controleert deze week gratis de rookmelders in de flat. Bent u niet thuis, dan komen zij een andere dag terug.",
+    question: {
+      prompt: "Wat controleert de brandweer deze week?",
+      options: ["De rookmelders", "De verwarming", "De brievenbussen"],
+      correctIndex: 0,
+      explanationRu: "'controleert ... gratis de rookmelders' — пожарная служба бесплатно проверяет дымовые извещатели.",
+    },
+  },
+  {
+    id: "listen-gen3-64",
+    level: "B1",
+    topic: "politie",
+    transcript:
+      "Voor het doen van aangifte van diefstal kunt u online een formulier invullen of langsgaan bij het politiebureau.",
+    question: {
+      prompt: "Hoe kunt u aangifte doen van diefstal?",
+      options: ["Online of bij het politiebureau", "Alleen telefonisch", "Alleen via de post"],
+      correctIndex: 0,
+      explanationRu: "'online een formulier invullen of langsgaan bij het politiebureau' — заявление можно подать онлайн или лично.",
+    },
+  },
+  {
+    id: "listen-gen3-65",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Dit weekend is de toegang tot het museum gratis voor alle inwoners van de gemeente. Neem een legitimatiebewijs mee.",
+    question: {
+      prompt: "Voor wie is de toegang dit weekend gratis?",
+      options: ["Voor alle inwoners van de gemeente", "Alleen voor kinderen", "Alleen voor studenten"],
+      correctIndex: 0,
+      explanationRu: "'gratis voor alle inwoners van de gemeente' — вход бесплатный для всех жителей муниципалитета.",
+    },
+  },
+  {
+    id: "listen-gen3-66",
+    level: "B1",
+    topic: "sport",
+    transcript:
+      "De openingstijden van het zwembad veranderen vanaf volgende week. Het bad gaat een uur eerder dicht, om acht uur 's avonds.",
+    question: {
+      prompt: "Hoe laat gaat het zwembad vanaf volgende week dicht?",
+      options: ["Om acht uur 's avonds", "Om negen uur 's avonds", "Om zeven uur 's avonds"],
+      correctIndex: 0,
+      explanationRu: "'gaat een uur eerder dicht, om acht uur 's avonds' — бассейн будет закрываться на час раньше, в восемь вечера.",
+    },
+  },
+  {
+    id: "listen-gen3-67",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Vanaf maandag rijdt bus lijn 5 een andere route vanwege wegwerkzaamheden. Kijk op de website voor de nieuwe haltes.",
+    question: {
+      prompt: "Waarom rijdt lijn 5 een andere route?",
+      options: ["Vanwege wegwerkzaamheden", "Vanwege een ongeluk", "Vanwege minder reizigers"],
+      correctIndex: 0,
+      explanationRu: "'vanwege wegwerkzaamheden' — маршрут изменён из-за дорожных работ.",
+    },
+  },
+  {
+    id: "listen-gen3-68",
+    level: "B1",
+    topic: "kinderopvang",
+    transcript:
+      "Vanaf augustus wordt de kinderopvangtoeslag berekend op basis van uw meest recente inkomen. Controleer uw gegevens in de app.",
+    question: {
+      prompt: "Waarop wordt de toeslag vanaf augustus berekend?",
+      options: ["Op het meest recente inkomen", "Op het aantal kinderen", "Op de woonplaats"],
+      correctIndex: 0,
+      explanationRu: "'berekend op basis van uw meest recente inkomen' — субсидия рассчитывается по последнему доходу.",
+    },
+  },
+  {
+    id: "listen-gen3-69",
+    level: "A2",
+    topic: "telefoon",
+    transcript:
+      "Wilt u uw telefoonabonnement opzeggen? Dat kan schriftelijk, met een opzegtermijn van één maand.",
+    question: {
+      prompt: "Hoe lang is de opzegtermijn?",
+      options: ["Eén maand", "Eén week", "Zes maanden"],
+      correctIndex: 0,
+      explanationRu: "'met een opzegtermijn van één maand' — срок уведомления при расторжении договора — один месяц.",
+    },
+  },
+  {
+    id: "listen-gen3-70",
+    level: "B1",
+    topic: "internet",
+    transcript:
+      "Er is momenteel een storing in het internet in uw wijk. Onze monteurs werken eraan, de storing wordt vanavond verholpen.",
+    question: {
+      prompt: "Wanneer wordt de storing naar verwachting verholpen?",
+      options: ["Vanavond", "Morgenvroeg", "Volgende week"],
+      correctIndex: 0,
+      explanationRu: "'de storing wordt vanavond verholpen' — сбой планируют устранить сегодня вечером.",
+    },
+  },
+  {
+    id: "listen-gen3-71",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "De sleuteloverdracht van uw nieuwe woning is gepland op de eerste van de maand om elf uur bij de makelaar.",
+    question: {
+      prompt: "Waar vindt de sleuteloverdracht plaats?",
+      options: ["Bij de makelaar", "Bij de gemeente", "Bij de bank"],
+      correctIndex: 0,
+      explanationRu: "'de sleuteloverdracht ... bij de makelaar' — передача ключей состоится у риелтора.",
+    },
+  },
+  {
+    id: "listen-gen3-72",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Aanstaande vakantie zijn de scholen twee weken dicht. Let op: de kinderopvang blijft wel gewoon open.",
+    question: {
+      prompt: "Wat blijft tijdens de vakantie gewoon open?",
+      options: ["De kinderopvang", "De school", "De bibliotheek voor kinderen"],
+      correctIndex: 0,
+      explanationRu: "'de kinderopvang blijft wel gewoon open' — детский сад продолжает работать, в отличие от школы.",
+    },
+  },
+  {
+    id: "listen-gen3-73",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Voor uw vlucht van morgenochtend wordt geadviseerd twee uur van tevoren op het vliegveld aanwezig te zijn.",
+    question: {
+      prompt: "Hoeveel uur van tevoren moet u aanwezig zijn?",
+      options: ["Twee uur", "Een half uur", "Vier uur"],
+      correctIndex: 0,
+      explanationRu: "'twee uur van tevoren op het vliegveld aanwezig te zijn' — в аэропорт советуют приезжать за два часа.",
+    },
+  },
+  {
+    id: "listen-gen3-74",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "Voor het gemeentearchief kunt u een afspraak maken als u oude documenten wilt inzien, bijvoorbeeld een geboorteakte.",
+    question: {
+      prompt: "Waarvoor kunt u een afspraak maken bij het gemeentearchief?",
+      options: ["Om oude documenten in te zien", "Om een paspoort aan te vragen", "Om belasting te betalen"],
+      correctIndex: 0,
+      explanationRu: "'een afspraak maken als u oude documenten wilt inzien' — записаться нужно для просмотра старых документов, например свидетельства о рождении.",
+    },
+  },
+  {
+    id: "listen-gen3-75",
+    level: "A2",
+    topic: "kapper",
+    transcript:
+      "Onze kapperszaak is verhuisd naar het adres naast de bakker. De openingstijden blijven precies hetzelfde.",
+    question: {
+      prompt: "Wat is er veranderd bij de kapperszaak?",
+      options: ["Het adres", "De openingstijden", "De prijzen"],
+      correctIndex: 0,
+      explanationRu: "'is verhuisd naar het adres naast de bakker' — изменился именно адрес парикмахерской, время работы прежнее.",
+    },
+  },
+  {
+    id: "listen-gen3-76",
+    level: "B1",
+    topic: "telefoon",
+    transcript:
+      "Uw nieuwe simkaart is onderweg en komt binnen twee werkdagen aan. Uw oude kaart blijft tot die tijd actief.",
+    question: {
+      prompt: "Tot wanneer blijft de oude simkaart actief?",
+      options: ["Tot de nieuwe kaart aankomt", "Vanaf vandaag niet meer", "Nog een maand"],
+      correctIndex: 0,
+      explanationRu: "'Uw oude kaart blijft tot die tijd actief' — старая сим-карта работает, пока не придёт новая.",
+    },
+  },
+  {
+    id: "listen-gen3-77",
+    level: "A2",
+    topic: "internet",
+    transcript:
+      "De monteur komt uw modem vervangen op dinsdag tussen twaalf en twee uur. Zorg dat er iemand thuis is.",
+    question: {
+      prompt: "Wat wordt er van u gevraagd op dinsdag?",
+      options: ["Dat er iemand thuis is", "Dat u het modem zelf koopt", "Dat u naar de winkel gaat"],
+      correctIndex: 0,
+      explanationRu: "'Zorg dat er iemand thuis is' — просят обеспечить присутствие кого-то дома для замены модема.",
+    },
+  },
+  {
+    id: "listen-gen3-78",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Uw pinpas verloopt aan het einde van deze maand. De nieuwe pas wordt automatisch naar uw huisadres gestuurd.",
+    question: {
+      prompt: "Waarnaartoe wordt de nieuwe pas gestuurd?",
+      options: ["Naar uw huisadres", "Naar de bank zelf", "U moet hem ophalen"],
+      correctIndex: 0,
+      explanationRu: "'wordt automatisch naar uw huisadres gestuurd' — новая карта автоматически придёт на домашний адрес.",
+    },
+  },
+  {
+    id: "listen-gen3-79",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "De schoolbibliotheek is elke woensdagmiddag open voor leerlingen. U kunt daar gratis boeken lenen.",
+    question: {
+      prompt: "Wat kunnen leerlingen op woensdagmiddag doen?",
+      options: ["Gratis boeken lenen", "Examens maken", "Sporten"],
+      correctIndex: 0,
+      explanationRu: "'U kunt daar gratis boeken lenen' — в школьной библиотеке можно бесплатно брать книги.",
+    },
+  },
+  {
+    id: "listen-gen3-80",
+    level: "B1",
+    topic: "buurt",
+    transcript:
+      "Vanwege een lekkage in de hoofdleiding is het water in enkele straten vanmiddag tijdelijk afgesloten.",
+    question: {
+      prompt: "Waarom is het water tijdelijk afgesloten?",
+      options: ["Vanwege een lekkage in de hoofdleiding", "Vanwege onderhoud aan de weg", "Vanwege vorst"],
+      correctIndex: 0,
+      explanationRu: "'Vanwege een lekkage in de hoofdleiding' — воду отключили из-за протечки в главном трубопроводе.",
+    },
+  },
+  {
+    id: "listen-gen3-81",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "Voor het aanvragen van een uittreksel uit de basisregistratie kunt u terecht bij de balie of het online doen.",
+    question: {
+      prompt: "Hoe kunt u een uittreksel aanvragen?",
+      options: ["Bij de balie of online", "Alleen telefonisch", "Alleen per post"],
+      correctIndex: 0,
+      explanationRu: "'bij de balie of het online doen' — выписку можно заказать в окошке или онлайн.",
+    },
+  },
+  {
+    id: "listen-gen3-82",
+    level: "B1",
+    topic: "werk",
+    transcript:
+      "Uw proeftijd van twee maanden loopt volgende week af. Uw leidinggevende plant een gesprek om de samenwerking te bespreken.",
+    question: {
+      prompt: "Wanneer loopt de proeftijd af?",
+      options: ["Volgende week", "Over een jaar", "Morgen"],
+      correctIndex: 0,
+      explanationRu: "'Uw proeftijd van twee maanden loopt volgende week af' — испытательный срок заканчивается на следующей неделе.",
+    },
+  },
+  {
+    id: "listen-gen3-83",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Voor het bloedonderzoek hoeft u niet nuchter te zijn. U kunt gewoon ontbijten voordat u naar het laboratorium gaat.",
+    question: {
+      prompt: "Wat moet u weten over het bloedonderzoek?",
+      options: ["U hoeft niet nuchter te zijn", "U mag niet eten", "U moet water drinken"],
+      correctIndex: 0,
+      explanationRu: "'hoeft u niet nuchter te zijn' — перед анализом крови можно завтракать, голодание не требуется.",
+    },
+  },
+  {
+    id: "listen-gen3-84",
+    level: "B1",
+    topic: "vervoer",
+    transcript:
+      "Door een technisch mankement rijdt de metro vanavond niet verder dan het centraal station. Er zijn pendelbussen ingezet.",
+    question: {
+      prompt: "Wat is er ingezet vanwege het mankement?",
+      options: ["Pendelbussen", "Extra treinen", "Taxi's voor iedereen"],
+      correctIndex: 0,
+      explanationRu: "'Er zijn pendelbussen ingezet' — вместо метро запустили автобусы-шаттлы.",
+    },
+  },
+  {
+    id: "listen-gen3-85",
+    level: "A2",
+    topic: "kinderopvang",
+    transcript:
+      "Op de eerste dag bij de kinderopvang mag u uw kind een half uur langer brengen, zodat het rustig kan wennen.",
+    question: {
+      prompt: "Waarom mag u het kind een half uur langer brengen?",
+      options: ["Zodat het rustig kan wennen", "Omdat de opvang later opengaat", "Omdat er te veel kinderen zijn"],
+      correctIndex: 0,
+      explanationRu: "'zodat het rustig kan wennen' — дополнительное время дают, чтобы ребёнок спокойно привык к садику.",
+    },
+  },
+  {
+    id: "listen-gen3-86",
+    level: "B1",
+    topic: "belasting",
+    transcript:
+      "Heeft u bezwaar tegen de WOZ-waarde van uw woning? U kunt binnen zes weken na de brief bezwaar indienen bij de gemeente.",
+    question: {
+      prompt: "Binnen hoeveel weken kunt u bezwaar indienen?",
+      options: ["Zes weken", "Twee weken", "Twaalf weken"],
+      correctIndex: 0,
+      explanationRu: "'binnen zes weken na de brief bezwaar indienen' — возразить против кадастровой оценки можно в течение шести недель после письма.",
+    },
+  },
 ];
