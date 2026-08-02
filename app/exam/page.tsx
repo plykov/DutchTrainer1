@@ -67,7 +67,7 @@ export default function ExamPage() {
         <ExamRunner
           items={KNM_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 31 вопроса. Настоящий KNM: 45 вопросов, порог 27/45 (60%), 45 минут."
+          passNote="Демо из 41 вопроса. Настоящий KNM: 45 вопросов, порог 27/45 (60%), 45 минут."
         />
       </div>
     );
@@ -79,7 +79,7 @@ export default function ExamPage() {
         <ExamRunner
           items={LEZEN_ITEMS}
           onExit={() => setActive("none")}
-          passNote="Демо из 46 вопросов — больше, чем в реальном Lezen (36 вопросов, 110 минут, 6 текстов), для дополнительной тренировки."
+          passNote="Демо из 56 вопросов — больше, чем в реальном Lezen (36 вопросов, 110 минут, 6 текстов), для дополнительной тренировки."
         />
       </div>
     );

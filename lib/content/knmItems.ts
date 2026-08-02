@@ -5,7 +5,7 @@ import { McItem } from "../types";
 // Holocaust knowledge. These are original demo items modelled on the public
 // blueprint, not reproductions of secure Cito material — a real KNM run is
 // 45 items / 45 minutes / pass 27-45 (60%), per inburgeren.nl (checked
-// August 2026); this is a 31-item mechanism demo, not a full-length
+// August 2026); this is a 41-item mechanism demo, not a full-length
 // practice test. Question order is shuffled per run by ExamRunner, on top
 // of each item's shuffled MC option order.
 function knmItem(overrides: Omit<McItem, keyof ReturnType<typeof base>> & Partial<ReturnType<typeof base>>): McItem {
@@ -279,5 +279,85 @@ export const KNM_ITEMS: McItem[] = [
     options: ["De burgers, via verkiezingen", "De koning", "De burgemeesters"],
     correctIndex: 0,
     explanationRu: "Членов Второй палаты (Tweede Kamer) избирают граждане на всеобщих выборах.",
+  }),
+  knmItem({
+    id: "knm-32",
+    topic: "vrijheid",
+    prompt: "Mag u in Nederland openlijk kritiek geven op de regering?",
+    options: ["Ja, vrijheid van meningsuiting is een grondrecht", "Nee, dat is strafbaar", "Alleen via een advocaat"],
+    correctIndex: 0,
+    explanationRu: "Свобода слова — конституционное право, включая открытую критику правительства.",
+  }),
+  knmItem({
+    id: "knm-33",
+    topic: "gelijkheid",
+    prompt: "Is het toegestaan om iemand te discrimineren op basis van geloof of afkomst?",
+    options: ["Nee, discriminatie is bij wet verboden", "Ja, als de werkgever dat wil", "Alleen op scholen niet"],
+    correctIndex: 0,
+    explanationRu: "Дискриминация по религии или происхождению запрещена законом (статья 1 Конституции).",
+  }),
+  knmItem({
+    id: "knm-34",
+    topic: "gezondheidszorg",
+    prompt: "Is een basiszorgverzekering in Nederland verplicht voor volwassenen?",
+    options: ["Ja, iedereen die in Nederland woont of werkt moet zich verzekeren", "Nee, dat is optioneel", "Alleen voor mensen ouder dan 65"],
+    correctIndex: 0,
+    explanationRu: "Базовая медстраховка обязательна для всех, кто живёт или работает в Нидерландах.",
+  }),
+  knmItem({
+    id: "knm-35",
+    topic: "onderwijs",
+    prompt: "Tot welke leeftijd geldt in Nederland de leerplicht?",
+    options: ["Tot 16 jaar, daarna vaak nog kwalificatieplicht tot 18", "Tot 12 jaar", "Tot 21 jaar"],
+    correctIndex: 0,
+    explanationRu: "Обязательное школьное обучение — до 16 лет, затем часто действует обязанность получить квалификацию до 18.",
+  }),
+  knmItem({
+    id: "knm-36",
+    topic: "instellingen",
+    prompt: "Wat is de taak van de burgemeester in een gemeente?",
+    options: ["Hij/zij leidt het gemeentebestuur en is verantwoordelijk voor de openbare orde", "Hij/zij maakt alle landelijke wetten", "Hij/zij is de rechter van de gemeente"],
+    correctIndex: 0,
+    explanationRu: "Бургомистр возглавляет муниципальное управление и отвечает за общественный порядок.",
+  }),
+  knmItem({
+    id: "knm-37",
+    topic: "werk",
+    prompt: "Heeft een werknemer in Nederland recht op doorbetaling bij ziekte?",
+    options: ["Ja, meestal minimaal 70% van het loon gedurende de eerste twee jaar", "Nee, ziekteverzuim wordt nooit betaald", "Alleen bij een vast contract van meer dan 10 jaar"],
+    correctIndex: 0,
+    explanationRu: "При болезни работник обычно получает минимум 70% зарплаты в течение первых двух лет.",
+  }),
+  knmItem({
+    id: "knm-38",
+    topic: "veiligheid",
+    prompt: "Welk nummer belt u in Nederland bij een levensbedreigende noodsituatie?",
+    options: ["112", "0900-8844", "14020"],
+    correctIndex: 0,
+    explanationRu: "112 — единый номер экстренных служб при угрозе жизни.",
+  }),
+  knmItem({
+    id: "knm-39",
+    topic: "gelijkheid",
+    prompt: "Mogen twee mensen van hetzelfde geslacht in Nederland trouwen?",
+    options: ["Ja, het homohuwelijk is sinds 2001 wettelijk toegestaan", "Nee, dat mag niet", "Alleen als de gemeente daarvoor toestemming geeft"],
+    correctIndex: 0,
+    explanationRu: "Однополые браки легальны в Нидерландах с 2001 года — Нидерланды были первой страной в мире, где это разрешили.",
+  }),
+  knmItem({
+    id: "knm-40",
+    topic: "wonen",
+    prompt: "Moet u zich inschrijven bij de gemeente als u een nieuw adres heeft?",
+    options: ["Ja, binnen 5 dagen na verhuizing bij de Basisregistratie Personen", "Nee, dat is niet nodig", "Alleen als u een huis koopt, niet als u huurt"],
+    correctIndex: 0,
+    explanationRu: "О новом адресе нужно сообщить муниципалитету (BRP) в течение 5 дней после переезда, независимо от того, аренда это или собственность.",
+  }),
+  knmItem({
+    id: "knm-41",
+    topic: "geschiedenis",
+    prompt: "Waar herdenkt Nederland jaarlijks op 4 mei de slachtoffers van de Tweede Wereldoorlog?",
+    options: ["Bij herdenkingsplekken door het hele land, met twee minuten stilte om 20:00", "Alleen in Amsterdam", "Deze herdenking bestaat niet meer"],
+    correctIndex: 0,
+    explanationRu: "4 мая — общенациональный день поминовения, с двумя минутами молчания в 20:00 по всей стране.",
   }),
 ];

@@ -12,15 +12,15 @@ import WritingTask from "@/components/WritingTask";
 // choosing their own order, under a single 100-minute clock. This runner
 // sequences the three task types (order fixed here for simplicity) under
 // one shared countdown that force-ends the session at zero, same as a real
-// exam auto-submitting. The zinstaken and korte-schrijftaak pools are
-// bigger than one run needs, so which 8 (or 2) appear — and in what order
-// — is randomized per run instead of always showing the same fixed slice.
+// exam auto-submitting. All three pools are bigger than one run needs, so
+// which items appear — and in what order — is randomized per run instead
+// of always showing the same fixed slice.
 
 type Stage = "zinstaken" | "deelschrijftaken" | "kort" | "result";
 
 export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => void }) {
   const zinItems = useMemo(() => shuffleArray(ZINSTAKEN_ITEMS).slice(0, 8), []);
-  const deelItems = useMemo(() => shuffleArray(DEELSCHRIJFTAKEN_ITEMS), []);
+  const deelItems = useMemo(() => shuffleArray(DEELSCHRIJFTAKEN_ITEMS).slice(0, 2), []);
   const kortItems = useMemo(() => shuffleArray(WRITING_EXAM_ITEMS).slice(0, 2), []);
   const totalSeconds = zinItems.length * 60 + deelItems.length * 300 + kortItems.length * 480;
 
