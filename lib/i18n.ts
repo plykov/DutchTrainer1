@@ -153,6 +153,8 @@ const DICT = {
   vocab_diminutive: { ru: "Уменьшительное", en: "Diminutive" },
   vocab_with_adj: { ru: "С прилагательным", en: "With adjective" },
   vocab_collocations: { ru: "Словосочетания", en: "Collocations" },
+  vocab_listen: { ru: "Произношение", en: "Pronunciation" },
+  vocab_listen_full: { ru: "Произношение с артиклем", en: "Pronunciation with article" },
 
   int_all_done: { ru: "Все диалоги пройдены!", en: "All dialogues done!" },
   int_restart: { ru: "Начать заново", en: "Start over" },
