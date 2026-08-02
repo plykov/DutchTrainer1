@@ -179,6 +179,13 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   targets maps to a single consistent error code with no mismatches, all 100 new ids are unique and don't
   collide with the existing 31, and confirmed via Playwright that a full 12-item queue mixing all three
   task types renders, grades, and reaches the completion screen without errors.
+- **+100 writing tasks (1→101), and a real fix: `/write` only ever used the pool's first item** — final
+  stage. `app/write/page.tsx` did `PRACTICE_ITEMS.find((i) => i.taskType === "short_write")`, i.e. always
+  the same single fixed task no matter how many existed in the bank — so the 100 new items would have
+  been dead content without also fixing that. `/write` now picks a random task on load and has an "Ander
+  onderwerp (101 beschikbaar)" button that swaps to a different random one (never repeats the current
+  task twice in a row). Tasks span the same 10 civic-life topics as the other batches. Confirmed via
+  Playwright: the button reports 101 available, and 8 clicks surfaced 7 distinct prompts.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
