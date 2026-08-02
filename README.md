@@ -149,6 +149,14 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   pairing produces. Confirmed 100/100 passed validation with zero stray tokens, all 120 ids unique, and
   spot-checked via Playwright that `/reading` renders all 120 topic chips and computes coverage without
   errors.
+- **+100 listening items (14→114)** — third stage. No coverage-gate constraint here (`/listening` doesn't
+  call `computeCoverage`), so these are natural civic-life announcements/messages rather than
+  vocabulary-constrained sentences: appointment reschedules, municipality notices, pharmacy/work/
+  housing/transport/school/money/post/neighborhood scenarios, 10 per topic. Built from one vetted
+  sentence frame per topic with day/time/name slots varied for genuine variety rather than copy-pasted
+  repeats — confirmed all 100 transcripts are textually distinct (an early pass had 9 accidental repeats
+  from too few distinct day values; fixed before shipping). Spot-checked via Playwright: `/listening`
+  shows 114 total and plays/answers/grades several of the new items correctly.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

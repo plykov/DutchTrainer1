@@ -200,4 +200,1309 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       explanationRu: "'Iedereen is welkom, ook kinderen' — собрание для всех жителей района.",
     },
   },
+
+  // --- +100 batch: templated across 10 civic-life scenarios (appointment
+  // reschedules, municipality notices, pharmacy/work/housing/transport/
+  // school/money/post/neighborhood announcements), varying day/time/name
+  // slots for genuine variety while keeping each sentence frame vetted.
+  {
+    id: "listen-gen-1",
+    level: "B1",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Jansen. Uw afspraak is verzet naar maandag om negen uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar maandag om negen uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar maandag om negen uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-2",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter de Vries. Uw afspraak is verzet naar dinsdag om tien uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar dinsdag om tien uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar dinsdag om tien uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-3",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Bakker. Uw afspraak is verzet naar woensdag om elf uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar woensdag om elf uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar woensdag om elf uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-4",
+    level: "B1",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Visser. Uw afspraak is verzet naar donderdag om twaalf uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar donderdag om twaalf uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar donderdag om twaalf uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-5",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Smit. Uw afspraak is verzet naar vrijdag om één uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar vrijdag om één uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar vrijdag om één uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-6",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Meijer. Uw afspraak is verzet naar zaterdag om twee uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar zaterdag om twee uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar zaterdag om twee uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-7",
+    level: "B1",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter de Boer. Uw afspraak is verzet naar zondag om drie uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar zondag om drie uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar zondag om drie uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-8",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Mulder. Uw afspraak is verzet naar volgende maandag om vier uur. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar volgende maandag om vier uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar volgende maandag om vier uur' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-9",
+    level: "A2",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter de Groot. Uw afspraak is verzet naar volgende dinsdag om half tien. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar volgende dinsdag om half tien", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar volgende dinsdag om half tien' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-10",
+    level: "B1",
+    topic: "afspraak_verzetten",
+    transcript:
+      "Goedemiddag, met de praktijk van dokter Bos. Uw afspraak is verzet naar volgende woensdag om half elf. Belt u ons als dat niet uitkomt.",
+    question: {
+      prompt: "Naar wanneer is de afspraak verzet?",
+      options: ["Naar volgende woensdag om half elf", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
+      correctIndex: 0,
+      explanationRu: "'verzet naar volgende woensdag om half elf' — приём перенесён на указанные день и время.",
+    },
+  },
+  {
+    id: "listen-gen-11",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op maandag om negen uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-12",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op dinsdag om tien uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-13",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op woensdag om elf uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-14",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op donderdag om twaalf uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-15",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op vrijdag om één uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-16",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op zaterdag om twee uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-17",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op zondag om drie uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-18",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op volgende maandag om vier uur. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-19",
+    level: "A2",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op volgende dinsdag om half tien. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-20",
+    level: "B1",
+    topic: "gemeente",
+    transcript:
+      "U spreekt de gemeente. Uw afspraak voor het inschrijven staat gepland op volgende woensdag om half elf. Neemt u een geldig identiteitsbewijs mee.",
+    question: {
+      prompt: "Wat moet u meenemen naar de afspraak?",
+      options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
+      correctIndex: 0,
+      explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+    },
+  },
+  {
+    id: "listen-gen-21",
+    level: "B1",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot negen uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot negen uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot negen uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-22",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot tien uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot tien uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot tien uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-23",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot elf uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot elf uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot elf uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-24",
+    level: "B1",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot twaalf uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot twaalf uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot twaalf uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-25",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot één uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot één uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot één uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-26",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot twee uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot twee uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot twee uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-27",
+    level: "B1",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot drie uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot drie uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot drie uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-28",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot vier uur vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot vier uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot vier uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-29",
+    level: "A2",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot half tien vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot half tien vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot half tien vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-30",
+    level: "B1",
+    topic: "gezondheid",
+    transcript:
+      "Dit is een bericht van de apotheek. Uw medicijnen liggen klaar en kunnen worden opgehaald tot half elf vanmiddag.",
+    question: {
+      prompt: "Tot hoe laat kunt u de medicijnen ophalen?",
+      options: ["Tot half elf vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
+      correctIndex: 0,
+      explanationRu: "'kunnen worden opgehaald tot half elf vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+    },
+  },
+  {
+    id: "listen-gen-31",
+    level: "B1",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor maandag om negen uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Maandag om negen uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor maandag om negen uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-32",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor dinsdag om tien uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Dinsdag om tien uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor dinsdag om tien uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-33",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor woensdag om elf uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Woensdag om elf uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor woensdag om elf uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-34",
+    level: "B1",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor donderdag om twaalf uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Donderdag om twaalf uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor donderdag om twaalf uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-35",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor vrijdag om één uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Vrijdag om één uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor vrijdag om één uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-36",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor zaterdag om twee uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Zaterdag om twee uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor zaterdag om twee uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-37",
+    level: "B1",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor zondag om drie uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Zondag om drie uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor zondag om drie uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-38",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor volgende maandag om vier uur op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Volgende maandag om vier uur", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor volgende maandag om vier uur' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-39",
+    level: "A2",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor volgende dinsdag om half tien op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Volgende dinsdag om half tien", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor volgende dinsdag om half tien' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-40",
+    level: "B1",
+    topic: "werk",
+    transcript:
+      "Beste kandidaat, uw sollicitatiegesprek is bevestigd voor volgende woensdag om half elf op ons kantoor. Komt u tien minuten van tevoren.",
+    question: {
+      prompt: "Wanneer is het sollicitatiegesprek?",
+      options: ["Volgende woensdag om half elf", "Volgende maand", "Vandaag"],
+      correctIndex: 0,
+      explanationRu: "'bevestigd voor volgende woensdag om half elf' — собеседование подтверждено на указанный день и время.",
+    },
+  },
+  {
+    id: "listen-gen-41",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op maandag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op maandag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op maandag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-42",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op dinsdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op dinsdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op dinsdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-43",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op woensdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op woensdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op woensdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-44",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op donderdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op donderdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op donderdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-45",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op vrijdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op vrijdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op vrijdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-46",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op zaterdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op zaterdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op zaterdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-47",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op zondag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op zondag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op zondag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-48",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op volgende maandag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op volgende maandag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op volgende maandag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-49",
+    level: "A2",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op volgende dinsdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op volgende dinsdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op volgende dinsdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-50",
+    level: "B1",
+    topic: "wonen",
+    transcript:
+      "Bericht van de woningcorporatie: de monteur komt langs op volgende woensdag tussen negen en twaalf uur om de verwarming te repareren.",
+    question: {
+      prompt: "Wanneer komt de monteur langs?",
+      options: ["Op volgende woensdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
+      correctIndex: 0,
+      explanationRu: "'komt langs op volgende woensdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+    },
+  },
+  {
+    id: "listen-gen-51",
+    level: "B1",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van negen uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-52",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van tien uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-53",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van elf uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-54",
+    level: "B1",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van twaalf uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-55",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van één uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-56",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van twee uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-57",
+    level: "B1",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van drie uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-58",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van vier uur naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-59",
+    level: "A2",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van half tien naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-60",
+    level: "B1",
+    topic: "vervoer",
+    transcript:
+      "Attentie reizigers: de bus van half elf naar het centrum rijdt vandaag niet. De eerstvolgende bus vertrekt een half uur later.",
+    question: {
+      prompt: "Wat is er met de bus van die tijd?",
+      options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
+      correctIndex: 0,
+      explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+    },
+  },
+  {
+    id: "listen-gen-61",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van maandag verschuift naar negen uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar negen uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-62",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van dinsdag verschuift naar tien uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar tien uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-63",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van woensdag verschuift naar elf uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar elf uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-64",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van donderdag verschuift naar twaalf uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar twaalf uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-65",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van vrijdag verschuift naar één uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar één uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-66",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van zaterdag verschuift naar twee uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar twee uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-67",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van zondag verschuift naar drie uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar drie uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-68",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van volgende maandag verschuift naar vier uur in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar vier uur' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-69",
+    level: "A2",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van volgende dinsdag verschuift naar half tien in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar half tien' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-70",
+    level: "B1",
+    topic: "onderwijs",
+    transcript:
+      "Bericht van de taalschool: de les van volgende woensdag verschuift naar half elf in plaats van de gebruikelijke tijd. Het lokaal blijft hetzelfde.",
+    question: {
+      prompt: "Wat verandert er aan de les?",
+      options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
+      correctIndex: 0,
+      explanationRu: "'verschuift naar half elf' — меняется только время урока, кабинет остаётся тем же.",
+    },
+  },
+  {
+    id: "listen-gen-71",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk maandag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-72",
+    level: "A2",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk dinsdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-73",
+    level: "A2",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk woensdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-74",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk donderdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-75",
+    level: "A2",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk vrijdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-76",
+    level: "A2",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk zaterdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-77",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk zondag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-78",
+    level: "A2",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk volgende maandag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-79",
+    level: "A2",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk volgende dinsdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-80",
+    level: "B1",
+    topic: "geld",
+    transcript:
+      "Herinnering van de bank: uw rekening moet uiterlijk volgende woensdag betaald zijn, anders volgen extra kosten.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd betaalt?",
+      options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
+      correctIndex: 0,
+      explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+    },
+  },
+  {
+    id: "listen-gen-81",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met maandag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met maandag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met maandag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-82",
+    level: "A2",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met dinsdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met dinsdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met dinsdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-83",
+    level: "A2",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met woensdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met woensdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met woensdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-84",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met donderdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met donderdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met donderdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-85",
+    level: "A2",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met vrijdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met vrijdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met vrijdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-86",
+    level: "A2",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met zaterdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met zaterdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met zaterdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-87",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met zondag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met zondag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met zondag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-88",
+    level: "A2",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met volgende maandag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met volgende maandag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met volgende maandag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-89",
+    level: "A2",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met volgende dinsdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met volgende dinsdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met volgende dinsdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-90",
+    level: "B1",
+    topic: "post",
+    transcript:
+      "Bericht van PostNL: uw pakket kon niet worden bezorgd. U kunt het ophalen bij het afhaalpunt tot en met volgende woensdag.",
+    question: {
+      prompt: "Tot wanneer kunt u het pakket ophalen?",
+      options: ["Tot en met volgende woensdag", "Er is geen deadline", "Alleen vandaag"],
+      correctIndex: 0,
+      explanationRu: "'ophalen bij het afhaalpunt tot en met volgende woensdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+    },
+  },
+  {
+    id: "listen-gen-91",
+    level: "B1",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar maandag om negen uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-92",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar dinsdag om tien uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-93",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar woensdag om elf uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-94",
+    level: "B1",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar donderdag om twaalf uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-95",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar vrijdag om één uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-96",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar zaterdag om twee uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-97",
+    level: "B1",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar zondag om drie uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-98",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar volgende maandag om vier uur, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-99",
+    level: "A2",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar volgende dinsdag om half tien, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
+  {
+    id: "listen-gen-100",
+    level: "B1",
+    topic: "buurt",
+    transcript:
+      "Bericht van het buurthuis: de buurtbijeenkomst is verplaatst naar volgende woensdag om half elf, omdat de zaal deze week bezet is.",
+    question: {
+      prompt: "Waarom is de bijeenkomst verplaatst?",
+      options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
+      correctIndex: 0,
+      explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+    },
+  },
 ];
