@@ -283,6 +283,23 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   `npm run build`, and via Playwright: `/exam` now shows "41 вопрос" / "56 вопросов" / "60 вопросов" on the
   KNM/Lezen/Luisteren buttons, KNM's runner correctly shows "1 / 41", Luisteren's shows "1 / 60", and the
   Schrijven structured demo correctly shows "Zinstaken 1 / 8" drawn from the larger pool.
+- **Vocabulary bank grown from 2,030 to 5,000 noun bundles** — a second pass of the same kaikki.org +
+  hermitdave/FrequencyWords pipeline used for the first 130→2,030 batch, drawing 2,970 more candidates
+  from further down the 50k-word frequency ranking. `adjAgreement`/`collocations` stay template-generated
+  and CEFR level stays a frequency-rank proxy (this batch used a 15%-A2/85%-B1 split instead of the first
+  batch's 40/60, since words this far down the frequency list are much less plausibly A2). Going deeper
+  into OpenSubtitles-derived frequency data surfaced a much higher density of quality issues than the
+  first batch: a full read-through of all 2,970 candidates (in ~300-line chunks, same process as before)
+  found roughly **150 more** words needing exclusion — mostly informal insults/pejoratives ("stommeling",
+  "leeghoofd", "zeurpiet", "klikspaan", and dozens more — subtitle dialogue skews heavily toward
+  confrontational speech the deeper you go), plus bare English/foreign artifacts, proper-name fragments,
+  a few more mistagged adjective/verb homonyms, and darker crime/violence topics (genocide, mass murder,
+  beheading, sexual-assault terms) not present in the higher-frequency first batch. All additions folded
+  into the same growing `EXTRA_EXCLUDE` set in the pipeline script; each exclusion round automatically
+  pulled in a same-count replacement from further down the list, so the final output is still exactly
+  2,970 entries. Verified: 0 duplicate lemmas across all 5,000 entries, `npx tsc --noEmit` / `npm run
+  lint` / `npm run build` all clean, and confirmed via Playwright that `/dashboard` shows "Известные слова
+  0/5000" and a `/vocab` session runs cleanly through the expanded pool without error.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
