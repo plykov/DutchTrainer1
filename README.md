@@ -164,6 +164,12 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   diphthongs, dental r, etc.). Confirmed all 100 sentences are textually distinct and spot-checked via
   Playwright (with the fake-media-device flags, since `/speaking` needs mic access): `/speaking` shows
   115 total and records/grades several of the new prompts correctly.
+- **+100 interaction items (31→131)** — fifth stage. Dialogic-exchange items across 10 topics (huisarts,
+  gemeente, werk, winkel, buurt, school, bank, apotheek, station, verzekering), 10 per topic; a first
+  pass reused the exact same dialogue+options text across all 10 instances of 7 of the 10 topics (only
+  37/100 were actually distinct) — fixed by threading a concrete slot (day, item, city, form name,
+  amount) through every topic's template, confirmed all 100 now textually distinct. Spot-checked via
+  Playwright that `/interaction` shows 131 total and grades several of the new items correctly.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
