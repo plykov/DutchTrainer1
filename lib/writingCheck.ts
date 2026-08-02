@@ -87,6 +87,71 @@ export interface AdequacyResult {
   missing: string[]; // requirement labels not satisfied
 }
 
+// Hand-tuned overrides for requirement phrasings where the generic
+// derivation below (stopword-stripping) would leave the wrong keyword —
+// e.g. "de afspraak te verzetten" strips down to "afspraak", which is too
+// generic to actually confirm a reschedule was requested.
+const KEYWORD_OVERRIDES: Record<string, string[]> = {
+  "vraagt om de afspraak te verzetten": ["verzetten", "andere dag", "andere datum"],
+  "stelt een nieuwe datum of vraagt om opties": ["datum", "week", "wanneer", "opties"],
+  // Strips to nothing content-bearing under the generic rule ("hoe"/"lang"
+  // are stopwords) — checks for an actual duration instead.
+  "geeft aan voor hoe lang": ["dag", "dagen", "week", "weken", "maand", "maanden", "uur", "uren", "jaar"],
+  // Same issue — "hoeveel"/"was" strip to nothing; checks for an amount.
+  "geeft aan hoeveel het was": ["euro", "bedrag", "€"],
+  // "nodigt uit" is the whole separable verb ("uitnodigen") with nothing
+  // else to strip — checks for invitation language instead of a leftover noun.
+  "nodigt uit": ["uitnodig", "kom", "welkom", "graag"],
+};
+
+// "beleefde aanhef en afsluiting" / "beleefde toon" / "vriendelijke toon" /
+// "korte, duidelijke toon" etc. ask for a *style*, not a specific word — so
+// this checks for the conventions a Dutch email greeting/closing actually
+// uses, rather than one fixed phrase.
+const POLITE_MARKERS = ["beste", "geachte", "meneer", "mevrouw", "groet", "bedankt", "hoogachtend", "dank"];
+
+// "geeft de reden aan" / "geeft aan waarom ..." ask the learner to justify
+// something. Checking for the literal word "reden" would miss the far more
+// common way Dutch actually expresses a reason: a subordinate clause with
+// omdat/want.
+const REASON_MARKERS = ["omdat", "want", "doordat", "vanwege", "daarom", "reden"];
+
+// Dutch verb/function-word scaffolding that recurs across the requirement
+// phrasings in lib/content/items.ts ("vraagt om X", "geeft aan Y", "legt uit
+// Z", "meldt W", ...) but carries no content of its own — stripped so
+// whatever remains is the actual thing the learner's text needs to mention.
+const REQUIREMENT_STOPWORDS = new Set([
+  "vraagt", "geeft", "legt", "meldt", "noemt", "beschrijft", "stelt", "biedt",
+  "kondigt", "nodigt", "herinnert", "feliciteert", "vertelt", "reserveert",
+  "annuleert", "heet",
+  "aan", "om", "naar", "uit", "dat", "je", "jou", "jouw", "het", "de", "een",
+  "over", "met", "dan", "of", "zich", "zijn", "er", "tegen", "voor", "en",
+  "van", "weer", "denkt", "te", "wilt", "wil", "kunt", "kan", "hebt", "heb",
+  "is", "was", "al", "lang", "hoe", "hoeveel", "welke", "waarvoor", "waarmee",
+  "specifiek", "kort", "korte", "duidelijke", "toon", "vriendelijk",
+  "vriendelijke", "beleefd", "beleefde", "aanhef", "afsluiting", "welkom",
+]);
+
+// Derives the keyword(s) a response must contain to satisfy a requirement
+// string. Returns null when nothing content-bearing is left to check (a
+// pure style instruction) — the caller then treats that requirement as
+// unenforceable rather than impossible to satisfy.
+function deriveKeywords(req: string): string[] | null {
+  if (KEYWORD_OVERRIDES[req]) return KEYWORD_OVERRIDES[req];
+  const lower = req.toLowerCase();
+  if (lower.includes("aanhef") || lower.includes("afsluiting") || lower.includes("toon")) {
+    return POLITE_MARKERS;
+  }
+  if (lower.includes("reden") || lower.includes("waarom")) {
+    return REASON_MARKERS;
+  }
+  const words = lower
+    .replace(/[().,]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length >= 3 && !REQUIREMENT_STOPWORDS.has(w));
+  return words.length > 0 ? words : null;
+}
+
 export function checkAdequacy(text: string, requirements: string[], minLen: number | null): AdequacyResult {
   const missing: string[] = [];
   if (minLen && text.trim().split(/\s+/).filter(Boolean).length < minLen) {
@@ -95,14 +160,8 @@ export function checkAdequacy(text: string, requirements: string[], minLen: numb
   // Heuristic keyword coverage per requirement — Phase 2 replaces this with
   // a proper NLP task-completion classifier.
   const lower = text.toLowerCase();
-  const keywordMap: Record<string, string[]> = {
-    "vraagt om de afspraak te verzetten": ["verzetten", "andere dag", "andere datum"],
-    "geeft een reden": ["omdat", "want", "reden"],
-    "stelt een nieuwe datum of vraagt om opties": ["datum", "week", "wanneer", "opties"],
-    "beleefde aanhef en afsluiting": ["beste", "geachte", "groet", "bedankt"],
-  };
   for (const req of requirements) {
-    const keywords = keywordMap[req];
+    const keywords = deriveKeywords(req);
     if (keywords && !keywords.some((k) => lower.includes(k))) missing.push(req);
   }
   return { passed: missing.length === 0, missing };

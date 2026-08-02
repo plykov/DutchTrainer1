@@ -206,6 +206,69 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   UI degrades gracefully when the NLP call can't complete (this sandbox's headless browser can't reach
   external hosts at all — a known limitation noted elsewhere in this session — so that fallback path is
   exactly what ran in-browser here; the real deployed site reaches the API directly).
+- **Vocabulary bank grown from 130 to 2,030 noun bundles** — dataset-sourced rather than hand-authored, per
+  the explicitly chosen tradeoff (less per-item scrutiny than prior batches, in exchange for reaching the
+  §4 ~2,000-lemma target in one pass instead of dozens of hand-written commits). Pipeline: kaikki.org's
+  Wiktextract-derived Dutch dictionary (`kaikki.org-dictionary-Dutch.jsonl`, ~145k entries) supplies
+  lemma/article(gender)/plural/diminutive for every noun that has both a plural and diminutive form on
+  record; hermitdave/FrequencyWords' OpenSubtitles-derived `nl_50k.txt` ranks them by real-world frequency
+  so the selection favors common, exam-relevant words over obscure ones. `adjAgreement` and `collocations`
+  are template-generated (not hand-written per item), and CEFR level is a frequency-rank proxy (top ~40%
+  of the selection → A2, rest → B1) rather than a real CEFR-graded source — both are known simplifications
+  of the full-bundle schema's rigor for this batch specifically.
+  Three real bugs were found and fixed while spot-checking the generated output before merging: (1) the
+  frequency list carries no part-of-speech tags, so pure lemma lookup against the noun index pulled in
+  words that are overwhelmingly a *different* part of speech in real Dutch and only have a marginal/
+  coincidental noun sense — "kan" (modal "can", not noun "jug"), "hij" (pronoun "he"), "een"/"de"
+  (articles), "niet" (negation) — fixed with an explicit `FUNCTION_WORDS` blocklist covering Dutch
+  pronouns, prepositions, conjunctions, negation/adverbs, and conjugated forms of ~15 extremely common
+  verbs; (2) naive string-concatenation adjective inflection ("stem" + "e") violates real Dutch spelling
+  rules — open/closed-syllable vowel-doubling reduction ("groot"+"e" is "grote", not "groote") and
+  consonant doubling for short vowels ("druk"+"e" is "drukke", not "druke") — silently wrong on 6 of 23
+  base adjectives (~26% of all generated entries), directly undermining this app's own `ERR_ADJ_INFL`
+  taxonomy code; fixed with a hand-verified `ADJ_INFLECTED` lookup table instead of derivation; (3) a
+  case-insensitive word-shape regex let a capitalized parsing artifact ("Let", from "Let op!") through as
+  a lowercase "noun" — fixed by rejecting any candidate where `word != word.lower()` before the regex
+  check. Beyond those, two full manual read-throughs of the 1,900-candidate output (in ~300-line chunks)
+  surfaced and excluded roughly 130 more marginal entries via a growing `EXTRA_EXCLUDE` set: mistagged
+  verb/adjective/adverb forms with only a coincidental noun sense ("goed", "gek", "horen", "leek", "las"),
+  character/proper names from subtitle data ("jack", "kim", "romeo"), bare English artifacts ("guy",
+  "dog", "game"), profanity/slurs/derogatory terms, graphic crime/violence topics unsuited to a beginner
+  course (murder, rape, kidnapping, serial killers), redundant informal duplicates of already-present
+  family terms ("papa"/"mama" next to existing "vader"/"moeder"), and archaic/dialectal fragments. This is
+  a spot-check pass, not exhaustive line-by-line review of all 1,900 entries — consistent with the
+  explicitly accepted tradeoff for this approach; some lower-quality entries likely remain. Verified: zero
+  duplicate lemmas (cross-checked against both the existing 130 and within the new batch), `npx tsc
+  --noEmit` / `npm run lint` / `npm run build` all clean, and confirmed via Playwright that `/vocab`
+  sessions run correctly against the expanded pool (surfaced newly-added words like "salaris" mid-session
+  without error) and `/dashboard` reflects the larger word count.
+- **Fixed `checkAdequacy`'s keyword-map coverage gap** (`lib/writingCheck.ts`) — the §6 adequacy gate is
+  supposed to block grammar feedback until a response actually satisfies its task requirements, but the
+  `keywordMap` doing that check was a hardcoded `Record` with exactly **4** exact-string entries, all
+  copied from the single original seed writing item. Once `/write` grew to 101 `short_write` items
+  (previous batch), those items introduced **164 distinct requirement strings** — and for every one not in
+  the map, `keywordMap[req]` was `undefined`, so the `if (keywords && ...)` check silently skipped it
+  entirely. In practice this meant the adequacy gate only ever enforced anything on ~1 in 40 items; for the
+  rest, a learner could submit content-free filler (as long as it met the minimum word count) and the app
+  would treat every requirement as satisfied. Replaced the static map with a generic `deriveKeywords()`
+  that strips the recurring Dutch verb/function-word scaffolding shared across the requirement phrasings
+  ("vraagt om X", "geeft aan Y", "legt uit Z", "meldt W", ...) via a `REQUIREMENT_STOPWORDS` set, leaving
+  whatever content word(s) remain as the keyword(s) to check for — so new items get adequacy coverage
+  automatically instead of needing a hand-added map entry. Two categories get dedicated handling instead of
+  literal stopword-stripping, since they need semantic rather than lexical matching: tone/politeness
+  requirements ("beleefde aanhef en afsluiting", "vriendelijke toon", ...) check for actual Dutch email
+  greeting/closing conventions (`beste`, `geachte`, `groet`, `bedankt`, ...) rather than one fixed phrase,
+  and reason-giving requirements ("geeft de reden aan", "geeft aan waarom ...") check for the connectives
+  Dutch actually uses to justify something (`omdat`, `want`, `doordat`, ...) instead of the literal word
+  "reden". A handful of requirement strings strip down to a keyword too generic to be meaningful (e.g.
+  "afspraak" alone doesn't confirm a *reschedule* was requested) or to nothing at all (e.g. "nodigt uit" is
+  the entire separable verb, with no object left after stripping "uit") — those get explicit
+  `KEYWORD_OVERRIDES`. Verified by running the derivation against all 164 real requirement strings pulled
+  from `lib/content/items.ts`: 0 fall through with no enforceable keyword (previously 160/164 were silently
+  unenforced). Confirmed end-to-end via Playwright against the live `/write` flow: a generic filler response
+  is now correctly rejected with the actual missing requirements listed, and a response that genuinely
+  satisfies an item's requirements (constructed from its displayed requirement text) passes through to the
+  grammar-checking stage and completes successfully.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
