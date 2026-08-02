@@ -170,6 +170,15 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   37/100 were actually distinct) — fixed by threading a concrete slot (day, item, city, form name,
   amount) through every topic's template, confirmed all 100 now textually distinct. Spot-checked via
   Playwright that `/interaction` shows 131 total and grades several of the new items correctly.
+- **+100 practice/grammar items (31→131)** — sixth stage, `/practice`'s bank. This one carries the most
+  mechanical risk: each item's `grammarTarget` must pair with exactly the right `errorCodes` entry (the
+  §5 error taxonomy — `ERR_V2_POS`, `ERR_SUB_END`, `ERR_ART_DEHET`, etc.) for FSRS's blocked→interleaved
+  gating and the dashboard's per-target progress to stay meaningful. Added ~4-5 items per existing
+  grammar target (mc/cloze/sentence_transform mixed) instead of piling onto a couple of them, so review
+  data accumulates across the full grammar-point set. Verified programmatically that every one of the 23
+  targets maps to a single consistent error code with no mismatches, all 100 new ids are unique and don't
+  collide with the existing 31, and confirmed via Playwright that a full 12-item queue mixing all three
+  task types renders, grades, and reaches the completion screen without errors.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
