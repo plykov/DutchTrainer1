@@ -332,6 +332,33 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   files; confirmed via Playwright that `/dashboard`'s per-skill bank counts reflect the new totals, `/write`
   surfaces new-batch topics at random, and a new writing item's adequacy gate correctly rejects generic
   filler with the actual missing requirements listed.
+- **Fixed `/practice` ("Oefenen") always serving the same set of exercises** — `lib/queue.ts`'s `buildQueue`
+  never checked FSRS due/new state at all (unlike `lib/vocabQueue.ts`, which already did this correctly for
+  `/vocab`); it just included every practice item unconditionally on every visit. Combined with the
+  blocked→interleaved gate (§3, `BLOCKED_REPS_MIN = 12`) and blocked-stage items being taken in fixed
+  source-file order with no shuffling, a learner would see the same first grammar target's items (often only
+  8-11 unique ones per target) in the same order, session after session, since 12+ correct reps are required
+  before a target graduates out of isolation. Fixed by having `buildQueue` skip any card that's neither new
+  nor actually due (mirroring `vocabQueue.ts`), and shuffling the blocked group instead of taking it in fixed
+  order. Also excluded `short_write` items from this queue — they were being pulled into `/practice`'s
+  grammar-drill array unconditionally too, but `PracticeSession` has no UI for that task type at all.
+  Wiring this up surfaced a second, genuinely pre-existing bug it had been masking: `card.due`/`last_review`
+  (real `Date` objects from `ts-fsrs`) were never actually being reconstructed as `Date` instances after a
+  page reload. The store's custom Date replacer/reviver in `lib/store.ts` looked for a `{ __type: "Date" }`
+  wrapper shape that was never actually produced, because `JSON.stringify` calls `Date.prototype.toJSON()`
+  and converts a `Date` to a plain ISO string *before* any replacer function ever sees the value — so
+  `value instanceof Date` inside the replacer was always false, dead code since the persistence layer was
+  built. This was invisible until now because nothing had ever called a Date method (like `.getTime()`, via
+  `isDue()`) on a *reloaded* card — `/practice` crashed outright on revisit once `buildQueue` started calling
+  `isDue()`. Fixed by reconstructing `Date` objects by key name (`due`/`last_review`, the only two `Date`
+  fields on a persisted card) in the reviver instead of relying on a wrapper shape that JSON.stringify can
+  never produce. Since `/vocab` already called the same `isDue()` function on reloaded cards via
+  `vocabQueue.ts`, this was very likely already silently crashing `/vocab` on any revisit after a graded
+  session too — confirmed fixed there as well. Verified via `npx tsc --noEmit` / `npm run lint` / `npm run
+  build`, and via Playwright: completed a full 12-item `/practice` session (now correctly drawn from a
+  shuffled mix of many different grammar targets instead of one), reloaded the page, completed a second
+  session, and confirmed zero item overlap between the two — plus confirmed `/vocab` reloads without error
+  after a graded session.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
