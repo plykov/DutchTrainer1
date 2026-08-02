@@ -14,7 +14,7 @@ export interface ListeningExamItem {
 // §7 — Luisteren exam demo: original transcripts, distinct from the
 // /listening practice pool, run under strict exam pacing (no early-start
 // button, forced pre-read, single play, no replay) via ExamListeningRunner.
-// 50-item mechanism demo — larger than the real ~40-question / 90-minute
+// 60-item mechanism demo — larger than the real ~40-question / 90-minute
 // run, for extra practice volume. ExamListeningRunner shuffles item order
 // per run, on top of each item's shuffled MC option order.
 export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
@@ -566,6 +566,116 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["In het buurthuis", "Bij de gemeente zelf", "Online"],
       correctIndex: 0,
       explanationRu: "'elke dinsdag en donderdag in het buurthuis' — бесплатные языковые уроки проходят в общественном центре.",
+    },
+  },
+  {
+    id: "lexam-51",
+    transcript:
+      "Let op: het zwembad is dit weekend gesloten wegens onderhoud aan de filterinstallatie. Vanaf maandag zijn wij weer geopend.",
+    question: {
+      prompt: "Waarom is het zwembad dit weekend gesloten?",
+      options: ["Onderhoud aan de filterinstallatie", "Er is een feest", "Het personeel is ziek"],
+      correctIndex: 0,
+      explanationRu: "'onderhoud aan de filterinstallatie' — техобслуживание фильтрационной установки.",
+    },
+  },
+  {
+    id: "lexam-52",
+    transcript:
+      "U hoort dit bericht omdat uw abonnement over twee weken afloopt. Verlengt u niet op tijd, dan wordt de toegang automatisch stopgezet.",
+    question: {
+      prompt: "Wat gebeurt er als u niet op tijd verlengt?",
+      options: ["De toegang wordt stopgezet", "Er verandert niets", "U krijgt een boete"],
+      correctIndex: 0,
+      explanationRu: "'wordt de toegang automatisch stopgezet' — доступ автоматически прекращается.",
+    },
+  },
+  {
+    id: "lexam-53",
+    transcript:
+      "De bus naar het centrum rijdt vandaag via een andere route vanwege een marathon. Reken op ongeveer tien minuten extra reistijd.",
+    question: {
+      prompt: "Waarom rijdt de bus vandaag een andere route?",
+      options: ["Vanwege een marathon", "Vanwege sneeuw", "Vanwege een ongeluk"],
+      correctIndex: 0,
+      explanationRu: "'vanwege een marathon' — из-за марафона.",
+    },
+  },
+  {
+    id: "lexam-54",
+    transcript:
+      "Voor de cursus Nederlands kunt u zich inschrijven tot en met vrijdag; daarna is de groep vol en moet u wachten op de volgende ronde.",
+    question: {
+      prompt: "Tot wanneer kunt u zich inschrijven voor de cursus?",
+      options: ["Tot en met vrijdag", "Tot het einde van de maand", "Er is geen deadline"],
+      correctIndex: 0,
+      explanationRu: "'tot en met vrijdag' — запись открыта до пятницы включительно.",
+    },
+  },
+  {
+    id: "lexam-55",
+    transcript:
+      "Wegens een storing in het systeem kunnen wij op dit moment geen betalingen verwerken. Probeert u het over een uur nogmaals.",
+    question: {
+      prompt: "Wat is het advies bij de storing?",
+      options: ["Probeer het over een uur nogmaals", "Kom langs op kantoor", "Bel de politie"],
+      correctIndex: 0,
+      explanationRu: "'probeert u het over een uur nogmaals' — попробуйте снова через час.",
+    },
+  },
+  {
+    id: "lexam-56",
+    transcript:
+      "Vanaf volgende maand verhuist het spreekuur van de wijkagent van de dinsdag naar de donderdag, van 10 tot 12 uur.",
+    question: {
+      prompt: "Op welke dag is het spreekuur van de wijkagent vanaf volgende maand?",
+      options: ["Donderdag", "Dinsdag", "Zaterdag"],
+      correctIndex: 0,
+      explanationRu: "'verhuist... naar de donderdag' — приёмные часы переносятся на четверг.",
+    },
+  },
+  {
+    id: "lexam-57",
+    transcript:
+      "Om een parkeervergunning aan te vragen heeft u een kopie van uw kentekenbewijs en uw huurcontract nodig.",
+    question: {
+      prompt: "Wat heeft u nodig voor een parkeervergunning?",
+      options: ["Een kopie van uw kentekenbewijs en huurcontract", "Alleen uw paspoort", "Een verklaring van uw werkgever"],
+      correctIndex: 0,
+      explanationRu: "Для парковочного разрешения нужны копия техпаспорта автомобиля и договор аренды жилья.",
+    },
+  },
+  {
+    id: "lexam-58",
+    transcript:
+      "De apotheek is vandaag eerder gesloten, om vier uur in plaats van zes uur, in verband met een personeelsbijeenkomst.",
+    question: {
+      prompt: "Hoe laat sluit de apotheek vandaag?",
+      options: ["Om vier uur", "Om zes uur", "Om acht uur"],
+      correctIndex: 0,
+      explanationRu: "'om vier uur in plaats van zes uur' — сегодня аптека закрывается в четыре, а не в шесть.",
+    },
+  },
+  {
+    id: "lexam-59",
+    transcript:
+      "Voor het aanvragen van bijzondere bijstand moet u eerst een intakegesprek voeren bij de gemeente; dit kan telefonisch of op afspraak.",
+    question: {
+      prompt: "Wat moet u eerst doen om bijzondere bijstand aan te vragen?",
+      options: ["Een intakegesprek voeren bij de gemeente", "Direct geld overmaken", "Een brief sturen naar de rechtbank"],
+      correctIndex: 0,
+      explanationRu: "Сначала нужно провести вводную беседу с муниципалитетом — по телефону или по записи.",
+    },
+  },
+  {
+    id: "lexam-60",
+    transcript:
+      "Let op: door werkzaamheden is de ingang aan de Marktstraat dicht. Gebruikt u tijdelijk de ingang aan de achterzijde van het gebouw.",
+    question: {
+      prompt: "Welke ingang moet u tijdelijk gebruiken?",
+      options: ["De ingang aan de achterzijde", "De hoofdingang blijft open", "Er is geen andere ingang"],
+      correctIndex: 0,
+      explanationRu: "'gebruikt u tijdelijk de ingang aan de achterzijde' — временно нужно пользоваться входом с тыльной стороны здания.",
     },
   },
 ];

@@ -269,6 +269,20 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   is now correctly rejected with the actual missing requirements listed, and a response that genuinely
   satisfies an item's requirements (constructed from its displayed requirement text) passes through to the
   grammar-checking stage and completes successfully.
+- **+10 items to each of the 5 exam-simulation modules**: KNM (31→41), Lezen (46→56), Luisteren
+  (50→60), Spreken (26→36, split evenly 5 short + 5 medium to keep the pool's 18/18 short/medium
+  balance for `ExamSpeakingRunner`'s random 8+8 draw), and Schrijven's zinstaken pool (18→28). Also grew
+  Schrijven's deelschrijftaken pool from 2→10 — previously `SchrijvenStructuredRunner` drew *all*
+  deelschrijftaken every run (`shuffleArray(DEELSCHRIJFTAKEN_ITEMS)` with no `.slice`), which was correct
+  at exactly 2 items but would have shown all 10 in a single run once the pool grew, breaking the real
+  exam's 2-deelschrijftaken structure — fixed by adding `.slice(0, 2)` so it draws 2 at random like the
+  zinstaken/korte-schrijftaak pools already did. KNM/Lezen/Luisteren all run their entire pool each time
+  (no slicing in `ExamRunner`/`ExamListeningRunner`), so those buttons' displayed counts update
+  automatically via `.length`; updated the two hardcoded `passNote` strings (KNM, Lezen) and file-header
+  comments that had the old counts baked into prose. Verified via `npx tsc --noEmit` / `npm run lint` /
+  `npm run build`, and via Playwright: `/exam` now shows "41 вопрос" / "56 вопросов" / "60 вопросов" on the
+  KNM/Lezen/Luisteren buttons, KNM's runner correctly shows "1 / 41", Luisteren's shows "1 / 60", and the
+  Schrijven structured demo correctly shows "Zinstaken 1 / 8" drawn from the larger pool.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 

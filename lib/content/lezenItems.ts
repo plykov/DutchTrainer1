@@ -3,7 +3,7 @@ import { McItem } from "../types";
 // §7 — Staatsexamen NT2 P1 Lezen: 110 min / 6 texts / 36 MC items, per
 // staatsexamensnt2.nl (checked August 2026: "Bij de 6 teksten moet u 36
 // vragen beantwoorden"). Original short passages modelled on the public
-// blueprint, not reproductions of secure material. This is a 46-item
+// blueprint, not reproductions of secure material. This is a 56-item
 // mechanism demo (single pass, countdown, no feedback until the run ends
 // via ExamRunner) — larger than the real 36-question run for extra
 // practice volume, with question order shuffled per run on top of each
@@ -445,5 +445,95 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Voor iedereen die Nederlands wil oefenen", "Alleen voor kinderen", "Alleen voor mensen die er wonen"],
     correctIndex: 0,
     explanationRu: "Разговорный клуб открыт для всех, кто хочет практиковать нидерландский язык.",
+  }),
+  lezenItem({
+    id: "lezen-47",
+    topic: "bibliotheek",
+    prompt:
+      "Leden van de bibliotheek mogen maximaal tien boeken tegelijk lenen, voor een periode van drie weken. Te laat inleveren kost 25 cent per boek per dag.\n\nVraag: Wat gebeurt er als u een boek te laat inlevert?",
+    options: ["U betaalt 25 cent per dag per boek", "U verliest uw lidmaatschap direct", "Er gebeurt niets"],
+    correctIndex: 0,
+    explanationRu: "За просрочку возврата книги взимается 25 центов в день за книгу.",
+  }),
+  lezenItem({
+    id: "lezen-48",
+    topic: "energie",
+    prompt:
+      "Vanwege stijgende energieprijzen kunt u bij de gemeente een eenmalige energietoeslag aanvragen als uw inkomen onder een bepaalde grens ligt.\n\nVraag: Wie kan de energietoeslag aanvragen?",
+    options: ["Mensen met een inkomen onder een bepaalde grens", "Alle inwoners, ongeacht inkomen", "Alleen huiseigenaren"],
+    correctIndex: 0,
+    explanationRu: "Единовременную доплату на энергию можно получить, только если доход ниже определённого порога.",
+  }),
+  lezenItem({
+    id: "lezen-49",
+    topic: "sport",
+    prompt:
+      "De sportschool biedt een gratis proefles aan voor nieuwe leden, maar u moet zich vooraf online aanmelden.\n\nVraag: Wat moet u doen voordat u de gratis proefles kunt volgen?",
+    options: ["U vooraf online aanmelden", "Contant betalen bij de deur", "Een doktersverklaring meenemen"],
+    correctIndex: 0,
+    explanationRu: "Для бесплатного пробного занятия нужно заранее записаться онлайн.",
+  }),
+  lezenItem({
+    id: "lezen-50",
+    topic: "kinderopvang",
+    prompt:
+      "Voor kinderopvangtoeslag moet u beiden werken of studeren, en uw kind moet ingeschreven staan bij een geregistreerde opvang.\n\nVraag: Wat is een voorwaarde voor kinderopvangtoeslag?",
+    options: ["Uw kind staat ingeschreven bij een geregistreerde opvang", "U bent alleenstaand ouder", "Uw kind is ouder dan twaalf"],
+    correctIndex: 0,
+    explanationRu: "Одно из условий получения пособия на детский сад — регистрация ребёнка в лицензированном учреждении.",
+  }),
+  lezenItem({
+    id: "lezen-51",
+    topic: "documenten",
+    prompt:
+      "Een verlopen identiteitskaart kunt u alleen vernieuwen op afspraak bij de gemeente; meeneemen: een pasfoto en het oude document.\n\nVraag: Wat moet u meenemen om uw identiteitskaart te vernieuwen?",
+    options: ["Een pasfoto en het oude document", "Alleen een pasfoto", "Niets, alles gaat digitaal"],
+    correctIndex: 0,
+    explanationRu: "Для продления удостоверения личности нужно принести фото на документ и старый документ.",
+  }),
+  lezenItem({
+    id: "lezen-52",
+    topic: "vervoer",
+    prompt:
+      "Met een OV-chipkaart kunt u inchecken bij alle vormen van openbaar vervoer; vergeet niet uit te checken, anders wordt het maximale bedrag afgeschreven.\n\nVraag: Wat gebeurt er als u vergeet uit te checken?",
+    options: ["Het maximale bedrag wordt afgeschreven", "U krijgt een boete van 50 euro", "De kaart wordt geblokkeerd"],
+    correctIndex: 0,
+    explanationRu: "Если забыть выписаться, спишется максимальная сумма поездки.",
+  }),
+  lezenItem({
+    id: "lezen-53",
+    topic: "geld",
+    prompt:
+      "Bij betalingsproblemen kunt u gratis en vrijwillig hulp krijgen van de schuldhulpverlening van de gemeente.\n\nVraag: Wat kost de hulp van de schuldhulpverlening?",
+    options: ["Niets, het is gratis", "Een vast bedrag per maand", "Een percentage van uw schuld"],
+    correctIndex: 0,
+    explanationRu: "Помощь службы урегулирования долгов при муниципалитете — бесплатная.",
+  }),
+  lezenItem({
+    id: "lezen-54",
+    topic: "gezondheid",
+    prompt:
+      "Voor een griepprik hoeft u geen afspraak te maken; u kunt gewoon binnenlopen op de aangegeven dagen bij de huisartsenpraktijk.\n\nVraag: Moet u een afspraak maken voor de griepprik?",
+    options: ["Nee, u kunt binnenlopen", "Ja, minimaal een week van tevoren", "Ja, alleen telefonisch"],
+    correctIndex: 0,
+    explanationRu: "Для прививки от гриппа предварительная запись не нужна — можно прийти без записи в указанные дни.",
+  }),
+  lezenItem({
+    id: "lezen-55",
+    topic: "wonen",
+    prompt:
+      "Als huurder bent u verplicht om kleine reparaties, zoals een kapotte deurklink, zelf te betalen; grote reparaties zijn voor de verhuurder.\n\nVraag: Wie betaalt een kapotte deurklink?",
+    options: ["De huurder zelf", "Altijd de verhuurder", "De gemeente"],
+    correctIndex: 0,
+    explanationRu: "Мелкий ремонт, например поломанную дверную ручку, оплачивает сам арендатор; крупный ремонт — за счёт арендодателя.",
+  }),
+  lezenItem({
+    id: "lezen-56",
+    topic: "werk",
+    prompt:
+      "Bij ontslag heeft u meestal recht op een WW-uitkering, mits u voldoende weken heeft gewerkt in de periode ervoor.\n\nVraag: Waar hangt het recht op een WW-uitkering van af?",
+    options: ["Of u voldoende weken heeft gewerkt", "Of u getrouwd bent", "Of u ouder bent dan 40"],
+    correctIndex: 0,
+    explanationRu: "Право на пособие по безработице (WW) зависит от того, отработали ли вы достаточно недель в предшествующий период.",
   }),
 ];

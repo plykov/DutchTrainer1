@@ -8,8 +8,8 @@ export interface SpeakingExamItem {
 // §7 — Spreken exam demo: original prompts, distinct from the /speaking
 // practice pool, run beep-paced with no backtracking via
 // ExamSpeakingRunner. Real Spreken: ~25 min, 8 short (20s) + 8 medium (30s)
-// (staatsexamensnt2.nl). This pool is larger than one run needs (13 short +
-// 13 medium) so ExamSpeakingRunner can draw a random 8+8 each time — keeps
+// (staatsexamensnt2.nl). This pool is larger than one run needs (18 short +
+// 18 medium) so ExamSpeakingRunner can draw a random 8+8 each time — keeps
 // the real 8/30s structure while varying which prompts appear.
 export const SPEAKING_EXAM_ITEMS: SpeakingExamItem[] = [
   { id: "sexam-1", topic: "gezondheid", timeLimitS: 20, text: "Vertel kort waarom u vandaag naar de huisarts gaat." },
@@ -38,4 +38,14 @@ export const SPEAKING_EXAM_ITEMS: SpeakingExamItem[] = [
   { id: "sexam-24", topic: "werk", timeLimitS: 30, text: "Beschrijf een normale werkdag van u, van begin tot eind." },
   { id: "sexam-25", topic: "familie", timeLimitS: 20, text: "Vertel kort iets over uw familie." },
   { id: "sexam-26", topic: "verzekering", timeLimitS: 30, text: "Leg uit waarom een basiszorgverzekering in Nederland verplicht is." },
+  { id: "sexam-27", topic: "bibliotheek", timeLimitS: 20, text: "Vertel kort welk boek u het laatst heeft gelezen." },
+  { id: "sexam-28", topic: "kinderopvang", timeLimitS: 30, text: "Leg uit hoe u de kinderopvang voor uw kind heeft geregeld." },
+  { id: "sexam-29", topic: "afval", timeLimitS: 20, text: "Vertel kort hoe u uw afval scheidt." },
+  { id: "sexam-30", topic: "energie", timeLimitS: 30, text: "Leg uit wat u zou doen als uw energierekening plotseling veel hoger is." },
+  { id: "sexam-31", topic: "sport", timeLimitS: 20, text: "Vertel kort of u aan sport doet en welke." },
+  { id: "sexam-32", topic: "post", timeLimitS: 30, text: "Leg uit wat u zou doen als u een belangrijke brief niet heeft ontvangen." },
+  { id: "sexam-33", topic: "bank", timeLimitS: 20, text: "Vertel kort waarom u een bankrekening heeft geopend." },
+  { id: "sexam-34", topic: "veiligheid", timeLimitS: 30, text: "Leg uit wat u zou doen als u getuige bent van een ongeluk op straat." },
+  { id: "sexam-35", topic: "buurt", timeLimitS: 20, text: "Vertel kort wat u het fijnst vindt aan uw buurt." },
+  { id: "sexam-36", topic: "documenten", timeLimitS: 30, text: "Leg uit welke stappen u zou nemen om een uittreksel uit het bevolkingsregister aan te vragen." },
 ];
