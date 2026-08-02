@@ -137,6 +137,18 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   diminutive, adjective agreement, collocations, CEFR level). Verified no duplicate lemmas against the
   existing 30 (found and fixed 6 accidental repeats before shipping) and confirmed via Playwright that
   `/dashboard`'s known-word stat and `/vocab`'s session both reflect the new count (130) correctly.
+- **+100 reading texts (20→120)** — second stage of the content expansion. `/reading`'s §4 coverage gate
+  (`lib/coverage.ts`) only counts a token as "known" if it's in a small closed-class function-word list
+  or a form from `lib/content/nouns.ts` — so unlike the other sections, these can't just be freely
+  written prose; every token has to resolve against that fixed vocabulary or the coverage % becomes
+  meaningless. Generated the batch with a validation script (run once, output pasted in and discarded —
+  not part of the shipped app) that builds sentences only from function words and noun forms, rejects
+  anything that doesn't validate, and prefers a "go to X" phrasing only for an explicit whitelist of
+  actually-visitable nouns (dokter, school, kantoor, winkel, ...) rather than every noun in a topic, to
+  cut down on the "Ik moet naar het formulier gaan" (go to the form) oddities that a fully mechanical
+  pairing produces. Confirmed 100/100 passed validation with zero stray tokens, all 120 ids unique, and
+  spot-checked via Playwright that `/reading` renders all 120 topic chips and computes coverage without
+  errors.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
