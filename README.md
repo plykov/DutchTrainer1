@@ -157,6 +157,13 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   repeats — confirmed all 100 transcripts are textually distinct (an early pass had 9 accidental repeats
   from too few distinct day values; fixed before shipping). Spot-checked via Playwright: `/listening`
   shows 114 total and plays/answers/grades several of the new items correctly.
+- **+100 speaking prompts (15→115)** — fourth stage. Elicited-imitation sentences (read aloud, self-compare
+  against your own recording, no ASR) across the same 10 civic-life topics as the listening batch, 10
+  distinct sentences per topic rather than slot-filled repeats, each topic sharing one
+  pronunciation-focus hint targeting a specific Russian-L1 trouble spot (guttural g/ch, the ui/ei/eu
+  diphthongs, dental r, etc.). Confirmed all 100 sentences are textually distinct and spot-checked via
+  Playwright (with the fake-media-device flags, since `/speaking` needs mic access): `/speaking` shows
+  115 total and records/grades several of the new prompts correctly.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
