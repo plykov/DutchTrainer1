@@ -16,10 +16,14 @@ function normalize(s: string): string {
 
 export default function PracticeSession() {
   const grammarProgress = useAppStore((s) => s.grammarProgress);
+  const cards = useAppStore((s) => s.cards);
   const review = useAppStore((s) => s.review);
   const t = useT();
 
-  const queue = useMemo(() => buildQueue(grammarProgress, { limit: 12 }), [grammarProgress]);
+  // Queue is built once per mount — grammarProgress/cards are intentionally
+  // excluded so grading mid-session doesn't reshuffle the in-progress queue.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const queue = useMemo(() => buildQueue(grammarProgress, cards, { limit: 12 }), []);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<number | null>(null);
   const [typed, setTyped] = useState("");

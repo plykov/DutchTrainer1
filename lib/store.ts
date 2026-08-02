@@ -144,13 +144,17 @@ export const useAppStore = create<AppState>()(
     {
       name: "dutch-a2b1-store",
       storage: createJSONStorage(() => localStorage, {
-        replacer: (_key, value) => {
-          if (value instanceof Date) return { __type: "Date", iso: value.toISOString() };
-          return value;
-        },
-        reviver: (_key, value) => {
-          if (value && typeof value === "object" && (value as { __type?: string }).__type === "Date") {
-            return new Date((value as { iso: string }).iso);
+        // CardState.card.due/last_review are real `Date` objects (ts-fsrs's
+        // Card type), but JSON.stringify calls Date.prototype.toJSON() and
+        // serializes them to plain ISO strings *before* any replacer
+        // function ever sees the value — so a replacer can never detect
+        // `value instanceof Date` here, and a reviver keyed off a custom
+        // wrapper shape (e.g. { __type: "Date" }) never matches anything.
+        // The only reliable fix on the read side is to reconstruct by key
+        // name: these are the only two Date fields on a persisted card.
+        reviver: (key, value) => {
+          if ((key === "due" || key === "last_review") && typeof value === "string") {
+            return new Date(value);
           }
           return value;
         },
