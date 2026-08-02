@@ -242,6 +242,33 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   --noEmit` / `npm run lint` / `npm run build` all clean, and confirmed via Playwright that `/vocab`
   sessions run correctly against the expanded pool (surfaced newly-added words like "salaris" mid-session
   without error) and `/dashboard` reflects the larger word count.
+- **Fixed `checkAdequacy`'s keyword-map coverage gap** (`lib/writingCheck.ts`) — the §6 adequacy gate is
+  supposed to block grammar feedback until a response actually satisfies its task requirements, but the
+  `keywordMap` doing that check was a hardcoded `Record` with exactly **4** exact-string entries, all
+  copied from the single original seed writing item. Once `/write` grew to 101 `short_write` items
+  (previous batch), those items introduced **164 distinct requirement strings** — and for every one not in
+  the map, `keywordMap[req]` was `undefined`, so the `if (keywords && ...)` check silently skipped it
+  entirely. In practice this meant the adequacy gate only ever enforced anything on ~1 in 40 items; for the
+  rest, a learner could submit content-free filler (as long as it met the minimum word count) and the app
+  would treat every requirement as satisfied. Replaced the static map with a generic `deriveKeywords()`
+  that strips the recurring Dutch verb/function-word scaffolding shared across the requirement phrasings
+  ("vraagt om X", "geeft aan Y", "legt uit Z", "meldt W", ...) via a `REQUIREMENT_STOPWORDS` set, leaving
+  whatever content word(s) remain as the keyword(s) to check for — so new items get adequacy coverage
+  automatically instead of needing a hand-added map entry. Two categories get dedicated handling instead of
+  literal stopword-stripping, since they need semantic rather than lexical matching: tone/politeness
+  requirements ("beleefde aanhef en afsluiting", "vriendelijke toon", ...) check for actual Dutch email
+  greeting/closing conventions (`beste`, `geachte`, `groet`, `bedankt`, ...) rather than one fixed phrase,
+  and reason-giving requirements ("geeft de reden aan", "geeft aan waarom ...") check for the connectives
+  Dutch actually uses to justify something (`omdat`, `want`, `doordat`, ...) instead of the literal word
+  "reden". A handful of requirement strings strip down to a keyword too generic to be meaningful (e.g.
+  "afspraak" alone doesn't confirm a *reschedule* was requested) or to nothing at all (e.g. "nodigt uit" is
+  the entire separable verb, with no object left after stripping "uit") — those get explicit
+  `KEYWORD_OVERRIDES`. Verified by running the derivation against all 164 real requirement strings pulled
+  from `lib/content/items.ts`: 0 fall through with no enforceable keyword (previously 160/164 were silently
+  unenforced). Confirmed end-to-end via Playwright against the live `/write` flow: a generic filler response
+  is now correctly rejected with the actual missing requirements listed, and a response that genuinely
+  satisfies an item's requirements (constructed from its displayed requirement text) passes through to the
+  grammar-checking stage and completes successfully.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
