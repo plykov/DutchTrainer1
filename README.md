@@ -129,6 +129,14 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   to resolve further. The one real correction: KNM is **45** questions / 45 minutes / pass 27-45 (60%)
   per inburgeren.nl, not the 40/45/28-40 the app had been showing — that stale figure predated this
   session's research and is now fixed everywhere it appeared (`/exam` copy, `knmItems.ts` comment).
+- **+100 vocab noun bundles (30→130)** — the first of a staged +100-per-section content expansion (the
+  other six main modules — Practice, Reading, Listening, Speaking, Interaction, Writing — follow in
+  separate commits so each batch can be typechecked/linted/spot-checked on its own). Covers housing,
+  family, food/shopping, clothing, body, time/weather, transport, work/government, and health domains,
+  in the same full-bundle schema as the seed slice (never bare translation pairs — article, plural,
+  diminutive, adjective agreement, collocations, CEFR level). Verified no duplicate lemmas against the
+  existing 30 (found and fixed 6 accidental repeats before shipping) and confirmed via Playwright that
+  `/dashboard`'s known-word stat and `/vocab`'s session both reflect the new count (130) correctly.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
