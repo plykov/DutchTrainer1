@@ -78,6 +78,11 @@ export default function VocabSession() {
             </span>
             <SpeakButton text={`${bundle.article} ${bundle.lemma}`} label={t("vocab_listen_full")} />
           </p>
+          {bundle.translationRu && (
+            <p>
+              <strong>{t("vocab_translation")}:</strong> {bundle.translationRu}
+            </p>
+          )}
           <p>
             <strong>{t("vocab_plural")}:</strong> {bundle.plural}
           </p>
