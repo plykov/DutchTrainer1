@@ -369,6 +369,42 @@ Live at **https://plykov.github.io/DutchTrainer1/**.
   `speechSynthesis`), matching the existing listening-module pattern. Verified via `npx tsc --noEmit` / `npm
   run lint` / `npm run build`, and via Playwright: both buttons render at the right stage (1 before reveal, 2
   after) and clicking every one triggers no console/page errors.
+- **Added Russian translations to `/vocab`** — a `translationRu` field on `NounBundle`, shown only after
+  Reveal alongside the existing grammar bundle fields (never before, and never as a replacement for them —
+  consistent with the app's "never bare translation pairs" design; the full bundle stays the thing being
+  tested, this is a supplementary gloss). Sourced by machine-translating all 5,000 lemmas nl→ru: Google
+  Translate's unofficial endpoint as primary source (retried on 429s, ~5s pacing), MyMemory as fallback for
+  anything Google couldn't produce a valid-looking result for (2 of 5,000 lemmas), run as a background batch
+  job over ~30 minutes. Two loanwords ("dvd", "wifi") got neither a valid API result and were set by hand.
+  Machine translation of single words out of context is genuinely unreliable for a language this
+  homograph-heavy — Dutch nouns very often share a spelling with an unrelated verb or adjective (e.g.
+  "baan" is overwhelmingly "job" as a noun but the API returned "отслеживать", the verb "to track";
+  "sollicitatie" came back as "приложение", the software-application sense of "application", not the job-
+  application sense actually needed here) — so this batch got a real, multi-pass quality-control effort
+  rather than being trusted as-is:
+  1. A cheap, high-yield automatic filter: every source word here is a noun, so any Russian result shaped
+     like a verb infinitive (ending in -ть/-ти/-чь) is a strong signal of a wrong-sense pick. Flagged 365
+     of 5,000; after excluding legitimate Russian nouns that happen to end the same way (е.g. "часть",
+     "власть", "мать", "кость" — genuine -ь-final feminine nouns, not infinitives), ~237 were confirmed
+     genuine errors and hand-corrected to the right noun sense.
+  2. Two rounds of manual spot-checking on random samples (400 + 300 words, ~14% of the dataset) to catch
+     wrong-sense errors that don't happen to look verb-shaped (this is how "sollicitatie" above was actually
+     caught) — found and fixed ~15 more, mostly adjective-shaped or wrong-POS results for words the API
+     picked an unrelated sense of.
+  3. A handful of API-artifact fixes: sentence-initial capitalization on ordinary common nouns (normalized
+     to lowercase across the board), and a few real Russian acronyms/abbreviations (ВВС, НЛО, ПИН-код) that
+     the blanket lowercasing broke by lowercasing only the first letter — restored by hand.
+  This is a real, meaningful spot-check pass, not exhaustive line-by-line verification of all 5,000 entries
+  — consistent with the tradeoff already established for the vocabulary bank itself (dataset-sourced,
+  spot-checked, not hand-authored per item); some remaining wrong-sense translations are still plausible
+  in the untouched ~86% of the dataset. Also learned a real lesson mid-pass: an early fix used a blind
+  string replace on a translation *value* ("приложение" → the correct job-application sense) which silently
+  broke 3 *other*, unrelated, correctly-translated entries that happened to share that same Russian string
+  ("app", "toepassing" — both genuinely "приложение" — and "blindedarm", coincidentally mistranslated to the
+  same string) — caught by re-checking immediately after, fixed by switching every subsequent correction to
+  a lemma-scoped regex instead of a global value replace. Verified: `npx tsc --noEmit` / `npm run lint` /
+  `npm run build` all clean, 5,000/5,000 bundles have a `translationRu`, and confirmed via Playwright that
+  the translation is hidden before Reveal and shown correctly after.
 
 ## What's still deliberately not here (see scope doc §11 Phase 2/3)
 
