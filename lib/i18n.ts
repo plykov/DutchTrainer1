@@ -155,6 +155,7 @@ const DICT = {
   vocab_collocations: { ru: "Словосочетания", en: "Collocations" },
   vocab_listen: { ru: "Произношение", en: "Pronunciation" },
   vocab_listen_full: { ru: "Произношение с артиклем", en: "Pronunciation with article" },
+  vocab_translation: { ru: "Перевод", en: "Translation" },
 
   int_all_done: { ru: "Все диалоги пройдены!", en: "All dialogues done!" },
   int_restart: { ru: "Начать заново", en: "Start over" },

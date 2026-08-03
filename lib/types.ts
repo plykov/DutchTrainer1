@@ -162,6 +162,10 @@ export interface NounBundle {
   collocations: string[]; // 2-3 collocations
   cefrLevel: TargetLevel;
   frequencyRank?: number;
+  // Supplementary gloss shown only after Reveal, never as the primary study
+  // artifact — the full grammar bundle above is what's tested/recalled, so
+  // this never becomes a bare translation-pair flashcard (§4).
+  translationRu?: string;
 }
 
 // --- FSRS-related retrieval mode ---------------------------------------------
