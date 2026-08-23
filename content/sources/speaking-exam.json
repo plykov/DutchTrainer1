@@ -1,0 +1,600 @@
+{
+  "schemaVersion": 1,
+  "bank": "speaking-exam",
+  "sources": [
+    {
+      "id": "project-authored-spreken-v1",
+      "origin": "project-authored",
+      "title": "DutchTrainer1 original Spreken demo prompts",
+      "license": "Repository project content; not copied from official exam materials",
+      "url": "https://github.com/plykov/DutchTrainer1/blob/main/content/sources/speaking-exam.json",
+      "verifiedAt": "2026-08-23"
+    },
+    {
+      "id": "staatsexamen-spreken-blueprint-2026",
+      "origin": "official-blueprint",
+      "title": "Staatsexamen NT2 Programma I Spreken format reference",
+      "license": "Reference only; no official questions reproduced",
+      "url": "https://www.staatsexamensnt2.nl/voorbereiden/hoe-ziet-het-examen-eruit",
+      "verifiedAt": "2026-08-23"
+    }
+  ],
+  "items": [
+    {
+      "id": "sexam-1",
+      "topic": "gezondheid",
+      "timeLimitS": 20,
+      "text": "Vertel kort waarom u vandaag naar de huisarts gaat.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-1; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-2",
+      "topic": "gemeente",
+      "timeLimitS": 30,
+      "text": "Leg uit welke documenten u nodig heeft om u in te schrijven bij de gemeente.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-2; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-3",
+      "topic": "werk",
+      "timeLimitS": 20,
+      "text": "Vertel kort wat voor werk u zoekt.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-3; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-4",
+      "topic": "wonen",
+      "timeLimitS": 30,
+      "text": "Beschrijf uw woning en waarom u daar graag woont.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-4; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-5",
+      "topic": "afspraak_verzetten",
+      "timeLimitS": 20,
+      "text": "Leg uit waarom u een afspraak wilt verzetten.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-5; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-6",
+      "topic": "onderwijs",
+      "timeLimitS": 30,
+      "text": "Vertel waarom u een cursus Nederlands volgt.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-6; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-7",
+      "topic": "geld",
+      "timeLimitS": 20,
+      "text": "Leg kort uit hoe u uw rekeningen betaalt.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-7; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-8",
+      "topic": "buurt",
+      "timeLimitS": 30,
+      "text": "Vertel iets over uw buurt en uw buren.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-8; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-9",
+      "topic": "gezondheid",
+      "timeLimitS": 20,
+      "text": "Beschrijf kort uw klachten aan de dokter.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-9; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-10",
+      "topic": "werk",
+      "timeLimitS": 30,
+      "text": "Vertel over uw laatste sollicitatiegesprek.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-10; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-11",
+      "topic": "documenten",
+      "timeLimitS": 20,
+      "text": "Leg uit welk document u bij de gemeente wilt aanvragen.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-11; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-12",
+      "topic": "wonen",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als de verwarming in uw huis stuk is.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-12; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-13",
+      "topic": "dagelijks_leven",
+      "timeLimitS": 20,
+      "text": "Vertel kort over uw dagelijkse routine.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-13; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-14",
+      "topic": "gemeente",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou zeggen als u een fout in een brief van de gemeente vindt.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-14; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-15",
+      "topic": "werk",
+      "timeLimitS": 20,
+      "text": "Vertel kort waarom u geschikt bent voor een baan.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-15; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-16",
+      "topic": "geld",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als er een fout op uw rekening staat.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-16; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-17",
+      "topic": "onderwijs",
+      "timeLimitS": 20,
+      "text": "Vertel kort welke cursus u nu volgt of zou willen volgen.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-17; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-18",
+      "topic": "gezondheid",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als u een afspraak bij de dokter wilt verzetten.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-18; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-19",
+      "topic": "vervoer",
+      "timeLimitS": 20,
+      "text": "Vertel kort hoe u meestal naar uw werk of school reist.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-19; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-20",
+      "topic": "documenten",
+      "timeLimitS": 30,
+      "text": "Beschrijf welke stappen u zou nemen om een verlopen paspoort te vernieuwen.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-20; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-21",
+      "topic": "vrije_tijd",
+      "timeLimitS": 20,
+      "text": "Vertel kort wat u het liefst doet in uw vrije tijd.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-21; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-22",
+      "topic": "buurt",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als u geluidsoverlast van de buren heeft.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-22; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-23",
+      "topic": "eten",
+      "timeLimitS": 20,
+      "text": "Vertel kort wat uw favoriete Nederlandse gerecht is en waarom.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-23; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-24",
+      "topic": "werk",
+      "timeLimitS": 30,
+      "text": "Beschrijf een normale werkdag van u, van begin tot eind.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-24; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-25",
+      "topic": "familie",
+      "timeLimitS": 20,
+      "text": "Vertel kort iets over uw familie.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-25; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-26",
+      "topic": "verzekering",
+      "timeLimitS": 30,
+      "text": "Leg uit waarom een basiszorgverzekering in Nederland verplicht is.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-26; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-27",
+      "topic": "bibliotheek",
+      "timeLimitS": 20,
+      "text": "Vertel kort welk boek u het laatst heeft gelezen.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-27; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-28",
+      "topic": "kinderopvang",
+      "timeLimitS": 30,
+      "text": "Leg uit hoe u de kinderopvang voor uw kind heeft geregeld.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-28; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-29",
+      "topic": "afval",
+      "timeLimitS": 20,
+      "text": "Vertel kort hoe u uw afval scheidt.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-29; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-30",
+      "topic": "energie",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als uw energierekening plotseling veel hoger is.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-30; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-31",
+      "topic": "sport",
+      "timeLimitS": 20,
+      "text": "Vertel kort of u aan sport doet en welke.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-31; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-32",
+      "topic": "post",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als u een belangrijke brief niet heeft ontvangen.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-32; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-33",
+      "topic": "bank",
+      "timeLimitS": 20,
+      "text": "Vertel kort waarom u een bankrekening heeft geopend.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-33; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-34",
+      "topic": "veiligheid",
+      "timeLimitS": 30,
+      "text": "Leg uit wat u zou doen als u getuige bent van een ongeluk op straat.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-34; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-35",
+      "topic": "buurt",
+      "timeLimitS": 20,
+      "text": "Vertel kort wat u het fijnst vindt aan uw buurt.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-35; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sexam-36",
+      "topic": "documenten",
+      "timeLimitS": 30,
+      "text": "Leg uit welke stappen u zou nemen om een uittreksel uit het bevolkingsregister aan te vragen.",
+      "provenance": {
+        "sourceId": "project-authored-spreken-v1",
+        "locator": "prompt-36; format informed by staatsexamen-spreken-blueprint-2026"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    }
+  ]
+}

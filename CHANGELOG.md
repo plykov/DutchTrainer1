@@ -5,6 +5,11 @@ for releases and remains a public beta while its version is below `1.0.0`.
 
 ## Unreleased
 
+### Added
+
+- A provenance-aware source, generation, validation, and educator-review workflow, initially applied
+  to the Spreken exam bank and enforced against generated-file drift in CI.
+
 ### Changed
 
 - Completed English learner-facing chrome across navigation, learning modules, writing feedback,
