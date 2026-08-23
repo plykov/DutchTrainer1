@@ -10,6 +10,9 @@ For the current, prioritised development backlog and production-launch criteria,
 [ROADMAP.md](./ROADMAP.md). The long history below records delivered work; it is not the source of
 truth for remaining scope.
 
+Releases follow the documented [release process](./RELEASING.md), with user-visible changes in
+[CHANGELOG.md](./CHANGELOG.md). The current package version is shown in the site footer.
+
 ## Phase 1 — exam-ready core
 
 - Learner profile onboarding (`/onboarding`) — legal track, target level, exam date, explanation
@@ -81,6 +84,13 @@ truth for remaining scope.
   on a static export, so feedback submits as a pre-filled GitHub issue on this repo (or a `mailto:`
   fallback) instead of going to a server; deleting progress clears `localStorage` only, nothing else
   to clean up since nothing else is stored anywhere.
+- **Beta legal and release baseline** (`/privacy`, `/terms`, footer links, `RELEASING.md`,
+  `CHANGELOG.md`) — documents the app's actual data boundaries: browser-local learner progress,
+  transient microphone recordings, browser/OS speech synthesis, GitHub Pages security logging,
+  public-or-email feedback, and the off-by-default LanguageTool request. The release checklist makes
+  privacy review mandatory when those flows change and uses SemVer with `package.json` as the displayed
+  version source. These are provisional beta notices; professional legal review remains required for
+  production launch.
 - **English UI mode** — a RU/EN toggle in the nav (`lib/i18n.ts`, `lib/store.ts`'s `uiLang`) switches
   the app chrome: nav, onboarding, dashboard, settings/feedback/delete-progress, and the
   practice/vocab/interaction/exam-MC/speaking-practice session UIs (buttons, labels, status text).
@@ -429,7 +439,9 @@ a real backend before multi-device sync or teacher dashboards are needed.
 Progress and recordings remain in the learner's browser. The optional LanguageTool writing check is
 **off by default**. When a learner explicitly enables it on `/write`, their submitted text is sent to
 LanguageTool's public checking service; local writing checks continue to work without it. A formal
-privacy policy and terms are still required before a production launch; see the roadmap.
+beta [privacy notice](https://plykov.github.io/DutchTrainer1/privacy/) and
+[terms](https://plykov.github.io/DutchTrainer1/terms/) now disclose these flows. They still require
+professional legal review before a production launch; see the roadmap.
 
 ## Getting started
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRequireProfile } from "@/lib/useRequireProfile";
 import { useT } from "@/lib/i18n";
 import FeedbackForm from "@/components/FeedbackForm";
@@ -43,9 +44,11 @@ export default function SettingsPage() {
       <section>
         <h2 className="text-lg font-medium mb-3">{t("settings_data_title")}</h2>
         <p className="text-sm text-zinc-500 mb-3">{t("settings_data_note")}</p>
-        <p className="text-sm text-zinc-500 mb-3">
-          При проверке письма внешняя проверка LanguageTool выключена по умолчанию. Если вы включите её прямо
-          на странице письма, текст ответа будет отправлен в публичный сервис LanguageTool для проверки.
+        <p className="text-sm text-zinc-500 mb-3">{t("settings_languagetool_note")}</p>
+        <p className="text-sm mb-4">
+          <Link className="text-blue-700 underline underline-offset-2 dark:text-blue-400" href="/privacy">
+            {t("settings_privacy_link")}
+          </Link>
         </p>
         <DeleteProgressButton />
       </section>

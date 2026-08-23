@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ShortWriteItem } from "@/lib/types";
 import { checkAdequacy, detectErrorsCombined, DetectedError } from "@/lib/writingCheck";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
@@ -101,7 +102,12 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
           />
           <span>
             Добавить внешнюю проверку орфографии и грамматики через LanguageTool. При включении текст ответа
-            отправляется в публичный сервис LanguageTool; без этой опции проверка остаётся только в браузере.
+            отправляется в публичный сервис LanguageTool вместе с обычными сетевыми данными; без этой опции
+            проверка остаётся только в браузере.{" "}
+            <Link className="text-blue-700 underline underline-offset-2 dark:text-blue-400" href="/privacy">
+              Подробнее о конфиденциальности
+            </Link>
+            .
           </span>
         </label>
       )}

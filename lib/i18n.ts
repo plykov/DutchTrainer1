@@ -99,9 +99,14 @@ const DICT = {
   settings_feedback_title: { ru: "Обратная связь для тестировщиков", en: "Tester feedback" },
   settings_data_title: { ru: "Данные", en: "Data" },
   settings_data_note: {
-    ru: "Все данные хранятся только в этом браузере (localStorage) — ничего не отправляется на сервер, кроме того, что вы сами явно отправите через форму обратной связи выше.",
-    en: "All data lives only in this browser (localStorage) — nothing is sent to a server except what you explicitly submit via the feedback form above.",
+    ru: "Профиль и учебный прогресс хранятся только в этом браузере (localStorage); у проекта нет сервера приложений или резервной копии. Хостинг и явно выбранные внешние функции описаны в политике конфиденциальности.",
+    en: "Your profile and learning progress live only in this browser (localStorage); the project has no app server or backup. Hosting and explicitly chosen external features are described in the privacy notice.",
   },
+  settings_languagetool_note: {
+    ru: "Внешняя проверка LanguageTool выключена по умолчанию. Если вы включите её на странице письма и отправите ответ, весь текст и обычные сетевые данные будут обработаны LanguageTool/Learneo по их собственной политике.",
+    en: "The external LanguageTool check is off by default. If you enable it on the writing page and submit, the complete text and normal connection data are processed by LanguageTool/Learneo under its own policy.",
+  },
+  settings_privacy_link: { ru: "Открыть полную политику конфиденциальности", en: "Read the full privacy notice" },
   settings_track_label: { ru: "Трек", en: "Track" },
   settings_goal_label: { ru: "Цель", en: "Goal" },
   settings_exam_label: { ru: "Экзамен", en: "Exam" },
@@ -120,8 +125,8 @@ const DICT = {
   fb_submit_github: { ru: "Отправить как GitHub issue", en: "Submit as a GitHub issue" },
   fb_submit_email: { ru: "Отправить по почте", en: "Submit by email" },
   fb_note: {
-    ru: "В приложении нет сервера — «Отправить как GitHub issue» откроет новую вкладку с уже заполненной формой на github.com (нужен аккаунт GitHub, чтобы её отправить). «Отправить по почте» откроет ваш почтовый клиент. Текст нигде не сохраняется автоматически.",
-    en: "This app has no server — \"Submit as a GitHub issue\" opens a new tab with a pre-filled form on github.com (you'll need a GitHub account to send it). \"Submit by email\" opens your email client. Nothing is saved automatically.",
+    ru: "Сам ввод ничего не отправляет. GitHub откроет предзаполненный публичный issue на github.com: отправленный текст и ваш профиль GitHub будут видны всем. Почта откроет сообщение сопровождающему проекта в вашем почтовом клиенте. Не включайте конфиденциальные данные.",
+    en: "Typing alone sends nothing. GitHub opens a pre-filled public issue on github.com: submitted text and your GitHub identity will be visible to everyone. Email opens a message to the project maintainer in your mail client. Don't include confidential data.",
   },
   fb_sent: {
     ru: "Открыто в новой вкладке / в почтовом клиенте — проверьте, что оно не заблокировано.",
