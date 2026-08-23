@@ -1,0 +1,1508 @@
+{
+  "schemaVersion": 1,
+  "bank": "knm",
+  "sources": [
+    {
+      "id": "project-authored-knm-v1",
+      "origin": "project-authored",
+      "title": "DutchTrainer1 original KNM demo questions",
+      "license": "Repository project content; not copied from official exam materials",
+      "url": "https://github.com/plykov/DutchTrainer1/blob/main/content/sources/knm.json",
+      "verifiedAt": "2026-08-23"
+    },
+    {
+      "id": "duo-knm-format-2026",
+      "origin": "official-guidance",
+      "title": "DUO KNM exam format",
+      "license": "Reference only",
+      "url": "https://www.inburgeren.nl/examen-doen/inhoud-kennisexamens.jsp",
+      "verifiedAt": "2026-08-23"
+    },
+    {
+      "id": "rijksoverheid-knm-2025",
+      "origin": "official-policy",
+      "title": "Renewed KNM eindtermen from 1 July 2025",
+      "license": "Reference only",
+      "url": "https://www.rijksoverheid.nl/actueel/nieuws/2025/06/30/inburgeringsexamen-vernieuwd-extra-aandacht-voor-zelfbeschikking-vrouwen-en-kennis-holocaust",
+      "verifiedAt": "2026-08-23"
+    }
+  ],
+  "items": [
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-1",
+      "topic": "gelijkheid",
+      "prompt": "Mag een vrouw in Nederland zelf beslissen of ze buitenshuis werkt?",
+      "options": [
+        "Ja, dat mag zij zelf beslissen",
+        "Nee, alleen met toestemming van haar man",
+        "Alleen als de gemeente het goedkeurt"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "В Нидерландах женщина сама решает, работать ли ей вне дома — это часть самоопределения, закреплённого в eindtermen KNM с 2025 года.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-1; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-2",
+      "topic": "geschiedenis",
+      "prompt": "In welke jaren vond de Tweede Wereldoorlog in Nederland plaats?",
+      "options": [
+        "1914–1918",
+        "1940–1945",
+        "1950–1955"
+      ],
+      "correctIndex": 1,
+      "explanationRu": "Нидерланды были оккупированы с 1940 по 1945 год. Знание Холокоста — отдельный обязательный блок в обновлённой программе KNM.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-2; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-3",
+      "topic": "gelijkheid",
+      "prompt": "Moeten mannen en vrouwen volgens de wet gelijk loon krijgen voor gelijk werk?",
+      "options": [
+        "Ja, dat is wettelijk verplicht",
+        "Nee, de werkgever mag zelf kiezen",
+        "Alleen in de overheidssector"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Равная оплата за равный труд закреплена законом в Нидерландах.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-3; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-4",
+      "topic": "instellingen",
+      "prompt": "Bij welke instantie vraag je een verblijfsvergunning aan?",
+      "options": [
+        "IND",
+        "Belastingdienst",
+        "UWV"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "IND (Immigratie- en Naturalisatiedienst) занимается видами на жительство.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-4; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-5",
+      "topic": "onderwijs",
+      "prompt": "Is onderwijs in Nederland verplicht voor kinderen tot en met 16 jaar?",
+      "options": [
+        "Ja, er is leerplicht",
+        "Nee, onderwijs is altijd vrijwillig",
+        "Alleen voor jongens"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "В Нидерландах действует leerplicht (обязательное образование) минимум до 16 лет, затем ещё частичная kwalificatieplicht.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-5; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-6",
+      "topic": "vrijheid",
+      "prompt": "Mag je in Nederland in het openbaar kritiek geven op de regering?",
+      "options": [
+        "Ja, vrijheid van meningsuiting geldt ook hiervoor",
+        "Nee, dat is verboden",
+        "Alleen via een advocaat"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Свобода слова гарантирована конституцией и распространяется на критику власти.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-6; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-7",
+      "topic": "gelijkheid",
+      "prompt": "Mogen twee mensen van hetzelfde geslacht in Nederland trouwen?",
+      "options": [
+        "Ja, dat is wettelijk toegestaan",
+        "Nee, dat mag niet",
+        "Alleen buiten Nederland"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Однополые браки легальны в Нидерландах с 2001 года — одна из первых стран в мире.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-7; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-8",
+      "topic": "instellingen",
+      "prompt": "Welke instantie betaalt een uitkering als je je baan verliest?",
+      "options": [
+        "UWV",
+        "IND",
+        "Belastingdienst"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "UWV (Uitvoeringsinstituut Werknemersverzekeringen) занимается пособиями по безработице.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-8; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-9",
+      "topic": "geschiedenis",
+      "prompt": "Wat is de betekenis van 4 en 5 mei in Nederland?",
+      "options": [
+        "Dodenherdenking en Bevrijdingsdag",
+        "Koningsdag",
+        "Sinterklaas"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "4 мая — день поминовения погибших, 5 мая — день освобождения от нацистской оккупации.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-9; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-10",
+      "topic": "gezondheid",
+      "prompt": "Is een zorgverzekering in Nederland verplicht voor volwassenen?",
+      "options": [
+        "Ja, voor iedereen verplicht",
+        "Nee, alleen voor ouderen",
+        "Alleen als je ziek bent"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Медицинская страховка обязательна для всех взрослых, проживающих в Нидерландах.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-10; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-11",
+      "topic": "instellingen",
+      "prompt": "Waar moet je je inschrijven als je in een nieuwe gemeente gaat wonen?",
+      "options": [
+        "Bij de gemeente (basisregistratie)",
+        "Bij de huisarts",
+        "Bij de kerk"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Прописка (basisregistratie personen) оформляется в мэрии по новому месту жительства.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-11; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-12",
+      "topic": "vrijheid",
+      "prompt": "Mag je in Nederland zelf kiezen welke religie je hebt, of geen religie?",
+      "options": [
+        "Ja, godsdienstvrijheid is een grondrecht",
+        "Nee, iedereen moet dezelfde religie hebben",
+        "Alleen met toestemming van de gemeente"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Свобода вероисповедания — конституционное право, включая право не исповедовать никакой религии.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-12; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-13",
+      "topic": "gelijkheid",
+      "prompt": "Mag een werkgever iemand weigeren om alleen zijn of haar afkomst?",
+      "options": [
+        "Nee, discriminatie is verboden",
+        "Ja, dat mag hij zelf beslissen",
+        "Alleen bij overheidsbanen"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Дискриминация по происхождению при найме на работу запрещена законом.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-13; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-14",
+      "topic": "onderwijs",
+      "prompt": "Mogen meisjes en jongens in Nederland naar dezelfde school?",
+      "options": [
+        "Ja, jongens en meisjes leren samen",
+        "Nee, altijd gescheiden scholen",
+        "Alleen tot 10 jaar"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Совместное обучение мальчиков и девочек — обычная практика в нидерландских школах.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-14; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-15",
+      "topic": "instellingen",
+      "prompt": "Bij welke instantie vraag je kinderbijslag aan?",
+      "options": [
+        "SVB (Sociale Verzekeringsbank)",
+        "IND",
+        "Politie"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "SVB (Sociale Verzekeringsbank) выплачивает пособия на детей и другие социальные выплаты.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-15; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-16",
+      "topic": "vrijheid",
+      "prompt": "Mag je in Nederland lid worden van een vakbond?",
+      "options": [
+        "Ja, vrijheid van vereniging geldt ook hiervoor",
+        "Nee, dat is verboden voor werknemers",
+        "Alleen met toestemming van de werkgever"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Свобода объединений включает право вступать в профсоюзы без разрешения работодателя.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-16; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-17",
+      "topic": "gezondheid",
+      "prompt": "Mag een vrouw in Nederland zelf beslissen over anticonceptie?",
+      "options": [
+        "Ja, dat is haar eigen keuze",
+        "Nee, alleen met toestemming van haar partner",
+        "Alleen na overleg met de gemeente"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Право самостоятельно принимать решения о контрацепции — часть self-determination в обновлённой программе KNM.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-17; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-18",
+      "topic": "geschiedenis",
+      "prompt": "Wat gebeurde er met de meeste Joodse inwoners van Nederland tijdens de Tweede Wereldoorlog?",
+      "options": [
+        "De meesten werden gedeporteerd en vermoord tijdens de Holocaust",
+        "Ze werden allemaal beschermd door de regering",
+        "Er veranderde niets voor hen"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Большинство еврейского населения Нидерландов было депортировано и убито во время Холокоста — ключевая тема обновлённой программы KNM.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-18; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-19",
+      "topic": "instellingen",
+      "prompt": "Wat doet de Belastingdienst?",
+      "options": [
+        "Belasting innen en toeslagen uitbetalen",
+        "Huizen verkopen",
+        "Medicijnen verstrekken"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Belastingdienst — налоговая служба, которая также выплачивает пособия (toeslagen).",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-19; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-20",
+      "topic": "gelijkheid",
+      "prompt": "Mag een vrouw in Nederland zonder toestemming van haar man werken, reizen of studeren?",
+      "options": [
+        "Ja, zij heeft dezelfde rechten als een man",
+        "Nee, ze heeft altijd toestemming nodig",
+        "Alleen als ze getrouwd is"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Женщина имеет те же права, что и мужчина, и не нуждается в разрешении супруга — базовый принцип самоопределения.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-20; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-21",
+      "topic": "vrijheid",
+      "prompt": "Mag je in Nederland vreedzaam demonstreren tegen een beslissing van de overheid?",
+      "options": [
+        "Ja, demonstratievrijheid is een grondrecht",
+        "Nee, dat is altijd verboden",
+        "Alleen met toestemming van de koning"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Свобода мирных демонстраций — конституционное право в Нидерландах.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-21; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-22",
+      "topic": "onderwijs",
+      "prompt": "Vanaf welke leeftijd is onderwijs in Nederland verplicht voor kinderen?",
+      "options": [
+        "Vanaf 5 jaar",
+        "Vanaf 10 jaar",
+        "Onderwijs is niet verplicht"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Обязательное школьное обучение (leerplicht) в Нидерландах начинается с 5 лет.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-22; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-23",
+      "topic": "gezondheidszorg",
+      "prompt": "Is iedereen in Nederland verplicht een zorgverzekering te hebben?",
+      "options": [
+        "Ja, een basisverzekering is verplicht",
+        "Nee, dat is optioneel",
+        "Alleen voor kinderen"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Базовая медицинская страховка обязательна для всех жителей Нидерландов.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-23; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-24",
+      "topic": "instellingen",
+      "prompt": "Waar kunt u terecht als u een uitkering wilt aanvragen?",
+      "options": [
+        "Bij het UWV of de gemeente",
+        "Bij de politie",
+        "Bij de kerk"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "За пособиями обращаются в UWV (по безработице) или в муниципалитет (социальная помощь).",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-24; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-25",
+      "topic": "veiligheid",
+      "prompt": "Welk nummer belt u bij een levensbedreigende noodsituatie?",
+      "options": [
+        "112",
+        "0900-8844",
+        "14020"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "112 — единый номер экстренных служб при угрозе жизни.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-25; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-26",
+      "topic": "geschiedenis",
+      "prompt": "In welk jaar werd Nederland bevrijd van de Duitse bezetting?",
+      "options": [
+        "1945",
+        "1918",
+        "1989"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Нидерланды были освобождены от немецкой оккупации в 1945 году.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-26; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-27",
+      "topic": "vrijheid",
+      "prompt": "Mag u in Nederland vrij uw eigen geloof kiezen of geen geloof hebben?",
+      "options": [
+        "Ja, godsdienstvrijheid is een grondrecht",
+        "Nee, iedereen moet hetzelfde geloof hebben",
+        "Alleen met toestemming van de gemeente"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Свобода вероисповедания — конституционное право, включая право не иметь религии.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-27; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-28",
+      "topic": "gelijkheid",
+      "prompt": "Mogen twee mensen van hetzelfde geslacht in Nederland trouwen?",
+      "options": [
+        "Ja, het homohuwelijk is wettelijk toegestaan",
+        "Nee, dat mag niet",
+        "Alleen in sommige gemeenten"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Однополые браки легальны в Нидерландах с 2001 года — первая страна в мире, легализовавшая это.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-28; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-29",
+      "topic": "werk",
+      "prompt": "Heeft een werknemer in Nederland recht op betaalde vakantiedagen?",
+      "options": [
+        "Ja, minimaal vier keer de wekelijkse arbeidsduur per jaar",
+        "Nee, vakantie is onbetaald",
+        "Alleen na tien jaar dienstverband"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Минимум оплачиваемого отпуска — 4 недели (в пересчёте на рабочие часы) в год.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-29; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-30",
+      "topic": "wonen",
+      "prompt": "Mag een verhuurder zomaar bij u binnenkomen zonder uw toestemming?",
+      "options": [
+        "Nee, dat mag niet zonder uw toestemming",
+        "Ja, altijd",
+        "Alleen 's nachts"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Арендодатель не имеет права входить в жильё без согласия жильца, кроме экстренных случаев по закону.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-30; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-31",
+      "topic": "instellingen",
+      "prompt": "Wie kiest de leden van de Tweede Kamer?",
+      "options": [
+        "De burgers, via verkiezingen",
+        "De koning",
+        "De burgemeesters"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Членов Второй палаты (Tweede Kamer) избирают граждане на всеобщих выборах.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-31; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-32",
+      "topic": "vrijheid",
+      "prompt": "Mag u in Nederland openlijk kritiek geven op de regering?",
+      "options": [
+        "Ja, vrijheid van meningsuiting is een grondrecht",
+        "Nee, dat is strafbaar",
+        "Alleen via een advocaat"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Свобода слова — конституционное право, включая открытую критику правительства.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-32; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-33",
+      "topic": "gelijkheid",
+      "prompt": "Is het toegestaan om iemand te discrimineren op basis van geloof of afkomst?",
+      "options": [
+        "Nee, discriminatie is bij wet verboden",
+        "Ja, als de werkgever dat wil",
+        "Alleen op scholen niet"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Дискриминация по религии или происхождению запрещена законом (статья 1 Конституции).",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-33; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-34",
+      "topic": "gezondheidszorg",
+      "prompt": "Is een basiszorgverzekering in Nederland verplicht voor volwassenen?",
+      "options": [
+        "Ja, iedereen die in Nederland woont of werkt moet zich verzekeren",
+        "Nee, dat is optioneel",
+        "Alleen voor mensen ouder dan 65"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Базовая медстраховка обязательна для всех, кто живёт или работает в Нидерландах.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-34; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-35",
+      "topic": "onderwijs",
+      "prompt": "Tot welke leeftijd geldt in Nederland de leerplicht?",
+      "options": [
+        "Tot 16 jaar, daarna vaak nog kwalificatieplicht tot 18",
+        "Tot 12 jaar",
+        "Tot 21 jaar"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Обязательное школьное обучение — до 16 лет, затем часто действует обязанность получить квалификацию до 18.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-35; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-36",
+      "topic": "instellingen",
+      "prompt": "Wat is de taak van de burgemeester in een gemeente?",
+      "options": [
+        "Hij/zij leidt het gemeentebestuur en is verantwoordelijk voor de openbare orde",
+        "Hij/zij maakt alle landelijke wetten",
+        "Hij/zij is de rechter van de gemeente"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Бургомистр возглавляет муниципальное управление и отвечает за общественный порядок.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-36; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-37",
+      "topic": "werk",
+      "prompt": "Heeft een werknemer in Nederland recht op doorbetaling bij ziekte?",
+      "options": [
+        "Ja, meestal minimaal 70% van het loon gedurende de eerste twee jaar",
+        "Nee, ziekteverzuim wordt nooit betaald",
+        "Alleen bij een vast contract van meer dan 10 jaar"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "При болезни работник обычно получает минимум 70% зарплаты в течение первых двух лет.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-37; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-38",
+      "topic": "veiligheid",
+      "prompt": "Welk nummer belt u in Nederland bij een levensbedreigende noodsituatie?",
+      "options": [
+        "112",
+        "0900-8844",
+        "14020"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "112 — единый номер экстренных служб при угрозе жизни.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-38; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-39",
+      "topic": "gelijkheid",
+      "prompt": "Mogen twee mensen van hetzelfde geslacht in Nederland trouwen?",
+      "options": [
+        "Ja, het homohuwelijk is sinds 2001 wettelijk toegestaan",
+        "Nee, dat mag niet",
+        "Alleen als de gemeente daarvoor toestemming geeft"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "Однополые браки легальны в Нидерландах с 2001 года — Нидерланды были первой страной в мире, где это разрешили.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-39; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-40",
+      "topic": "wonen",
+      "prompt": "Moet u zich inschrijven bij de gemeente als u een nieuw adres heeft?",
+      "options": [
+        "Ja, binnen 5 dagen na verhuizing bij de Basisregistratie Personen",
+        "Nee, dat is niet nodig",
+        "Alleen als u een huis koopt, niet als u huurt"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "О новом адресе нужно сообщить муниципалитету (BRP) в течение 5 дней после переезда, независимо от того, аренда это или собственность.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-40; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    },
+    {
+      "examTrack": "knm",
+      "cefrLevel": "A2",
+      "skill": "reading",
+      "taskType": "mc",
+      "register": "neutral",
+      "regionVariant": "netherlandic",
+      "targetLemmas": [],
+      "errorCodes": [],
+      "l1ContrastFlag": false,
+      "singleListen": false,
+      "allowedTools": "none",
+      "timeLimitS": 68,
+      "responseMinLen": null,
+      "difficultyTheta": 0,
+      "id": "knm-41",
+      "topic": "geschiedenis",
+      "prompt": "Waar herdenkt Nederland jaarlijks op 4 mei de slachtoffers van de Tweede Wereldoorlog?",
+      "options": [
+        "Bij herdenkingsplekken door het hele land, met twee minuten stilte om 20:00",
+        "Alleen in Amsterdam",
+        "Deze herdenking bestaat niet meer"
+      ],
+      "correctIndex": 0,
+      "explanationRu": "4 мая — общенациональный день поминовения, с двумя минутами молчания в 20:00 по всей стране.",
+      "provenance": {
+        "sourceId": "project-authored-knm-v1",
+        "locator": "question-41; format informed by duo-knm-format-2026 and curriculum themes by rijksoverheid-knm-2025"
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": null
+      }
+    }
+  ]
+}
