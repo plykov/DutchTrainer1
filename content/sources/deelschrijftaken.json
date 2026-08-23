@@ -64,7 +64,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Fill out the registration form at the city hall with your data."
+      "instructionEn": "Fill in the municipal registration form with your details."
     },
     {
       "id": "deel-2",
@@ -97,7 +97,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Add the short message to the missing parts."
+      "instructionEn": "Complete the missing parts of the short message."
     },
     {
       "id": "deel-3",
@@ -135,7 +135,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Complete formulier voor het aanvragen van een bibliotheekpas."
+      "instructionEn": "Fill in the application form for a library card."
     },
     {
       "id": "deel-4",
@@ -168,7 +168,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Add a short message to a colleague."
+      "instructionEn": "Complete the short message to a colleague."
     },
     {
       "id": "deel-5",
@@ -201,7 +201,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Fill out the address change request form."
+      "instructionEn": "Fill in the change-of-address form."
     },
     {
       "id": "deel-6",
@@ -234,7 +234,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Complete the text of the sale announcement."
+      "instructionEn": "Complete the classified advertisement."
     },
     {
       "id": "deel-7",
@@ -272,7 +272,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Fill out the form of enrolling the child in kindergarten."
+      "instructionEn": "Fill in the childcare registration form."
     },
     {
       "id": "deel-8",
@@ -300,7 +300,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Add a short message to your neighbor."
+      "instructionEn": "Complete the short message to your neighbour."
     },
     {
       "id": "deel-9",
@@ -338,7 +338,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Fill out the Dutch course entry form."
+      "instructionEn": "Fill in the Dutch course registration form."
     },
     {
       "id": "deel-10",
@@ -366,7 +366,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "instructionEn": "Complete the text of a short letter to the housing corporation."
+      "instructionEn": "Complete the short letter to the housing association."
     }
   ]
 }

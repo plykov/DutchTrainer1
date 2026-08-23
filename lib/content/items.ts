@@ -48,7 +48,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "После omdat спрягаемый глагол уходит в конец придаточного предложения: 'omdat ik ziek ben', а не 'omdat ik ben ziek'.",
-    explanationEn: "After omdat, the conjugated verb goes to the end of the appendage sentence: 'omdat ik ziek ben', not 'omdat ik ben ziek'.",
+    explanationEn: "After 'omdat', the conjugated verb goes to the end of the subordinate clause: 'omdat ik ziek ben', not 'omdat ik ben ziek'.",
   } as PracticeItem),
   base({
     id: "sep-split-cloze-1",
@@ -61,7 +61,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     acceptableVariants: ["bel"],
     explanationRu:
       "Разделяемый глагол opbellen: приставка 'op' уходит в конец предложения, спрягается только основа: 'Ik bel ... op'.",
-    explanationEn: "Shared verb opbellen: the prefix 'op' goes to the end of the sentence, conjugated only the basis: 'Ik bel ... op'.",
+    explanationEn: "With the separable verb 'opbellen', the prefix 'op' moves to the end and only the stem is conjugated: 'Ik bel ... op'.",
   } as PracticeItem),
   base({
     id: "aux-sel-mc-1",
@@ -165,7 +165,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'huis' — het-слово. Надёжного правила нет (кроме уменьшительных на -je, которые всегда het) — het-слова запоминайте как меньший, отдельно заучиваемый набор.",
-    explanationEn: "'huis' is a het word. There is no reliable rule (except for diminutives in -je, which are always het) - remember het words as a smaller, separately memorized set.",
+    explanationEn: "'Huis' is a 'het' word. Apart from rules such as all diminutives taking 'het', learn 'het' nouns individually.",
   } as PracticeItem),
   base({
     id: "adj-infl-mc-1",
@@ -208,7 +208,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "У разделяемых глаголов приставка 'ge-' вставляется между приставкой и основой: op + ge + beld = 'opgebeld', а не 'geopbeld'.",
-    explanationEn: "In shared verbs, the prefix 'ge-' is inserted between the prefix and the base: op + ge + beld = 'opgebeld', not 'geopbeld'.",
+    explanationEn: "In a separable verb's past participle, 'ge-' comes between the prefix and stem: op + ge + beld = 'opgebeld', not 'geopbeld'.",
   } as PracticeItem),
   base({
     id: "neg-pos-mc-1",
@@ -221,7 +221,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'niet' обычно стоит в конце предложения или перед тем, что отрицается, но не сразу перед личным глаголом. Здесь 'niet' идёт после дополнения 'het formulier'.",
-    explanationEn: "\"niet\" usually stands at the end of a sentence or before what is denied, but not immediately before the personal verb. Here \"niet\" comes after the addition of \"het formulier\".",
+    explanationEn: "'Niet' normally comes at the end or before the element being negated, not immediately before the finite verb. Here it follows the object 'het formulier'.",
   } as PracticeItem),
   base({
     id: "plur-mc-1",
@@ -377,7 +377,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "В конце слова 'hond' звучит оглушённо, почти как /t/, но пишется по основе множественного числа: 'honden'. Не пишите так, как слышите на конце слова.",
-    explanationEn: "At the end of the word 'hond' sounds deafening, almost like /t/, but is written on a plural basis: 'honden'. Do not write as you hear at the end of the word.",
+    explanationEn: "At the end of 'hond', the final consonant is devoiced and sounds like /t/. The spelling becomes clear in the plural 'honden'.",
   } as PracticeItem),
   base({
     id: "phon-xg-mc-1",
@@ -415,7 +415,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik ga naar de huisarts. Ik ben ziek.",
     answer: "Ik ga naar de huisarts, omdat ik ziek ben.",
     explanationRu: "После 'omdat' спрягаемый глагол в самом конце придаточного.",
-    explanationEn: "After 'omdat', the conjugated verb is at the very end of the appendage.",
+    explanationEn: "After 'omdat', the conjugated verb comes at the end of the subordinate clause.",
   } as PracticeItem),
   base({
     id: "short-write-1",
@@ -523,7 +523,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "После 'dat' спрягаемый глагол уходит в конец придаточного: 'dat hij morgen komt'.",
-    explanationEn: "After ‘dat’, the conjugated verb goes to the end of the appendage: ‘dat hij morgen komt’.",
+    explanationEn: "After 'dat', the conjugated verb goes to the end of the subordinate clause: 'dat hij morgen komt'.",
   } as PracticeItem),
   base({
     id: "sub-end-gen-2",
@@ -539,7 +539,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "'Omdat' требует, чтобы глагол 'is' стоял в самом конце придаточного предложения.",
-    explanationEn: "'Omdat' requires the verb 'is' to be at the very end of the appendage sentence.",
+    explanationEn: "'Omdat' requires the verb 'is' at the end of the subordinate clause.",
   } as PracticeItem),
   base({
     id: "sub-end-gen-3",
@@ -551,7 +551,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "werkt",
     acceptableVariants: ["werkt"],
     explanationRu: "После 'of' глагол 'werkt' стоит в конце придаточного предложения.",
-    explanationEn: "After 'of', the verb 'werkt' stands at the end of the appendage sentence.",
+    explanationEn: "In this indirect question with 'of', the verb 'werkt' comes at the end of the subordinate clause.",
   } as PracticeItem),
   base({
     id: "sub-end-gen-4",
@@ -580,7 +580,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik kook. Mijn man dekt de tafel.",
     answer: "Ik kook, terwijl mijn man de tafel dekt.",
     explanationRu: "После 'terwijl' спрягаемый глагол 'dekt' уходит в конец придаточного предложения.",
-    explanationEn: "After 'terwijl' the conjugated verb 'dekt' goes to the end of the appendage sentence.",
+    explanationEn: "After 'terwijl', the conjugated verb 'dekt' goes to the end of the subordinate clause.",
   } as PracticeItem),
 
   base({
@@ -593,7 +593,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "zet",
     acceptableVariants: ["zet"],
     explanationRu: "Разделяемый глагол 'aanzetten': основа 'zet' спрягается, приставка 'aan' уходит в конец.",
-    explanationEn: "Shared verb 'aanzetten': the base 'zet' conjugates, the prefix 'aan' goes to the end.",
+    explanationEn: "With the separable verb 'aanzetten', the stem 'zet' is conjugated and the prefix 'aan' moves to the end.",
   } as PracticeItem),
   base({
     id: "sep-split-gen-2",
@@ -605,7 +605,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ruim mijn kamer op.", "Ik opruim mijn kamer.", "Ik ruim op mijn kamer."],
     correctIndex: 0,
     explanationRu: "'Opruimen': приставка 'op' идёт в конец предложения, а не перед дополнением.",
-    explanationEn: "Opruimen: The prefix 'op' comes at the end of a sentence, not before the addition.",
+    explanationEn: "With 'opruimen', the prefix 'op' comes at the end of the clause, not before the object.",
   } as PracticeItem),
   base({
     id: "sep-split-gen-3",
@@ -654,7 +654,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Zij heeft het boek gelezen.", "Zij is het boek gelezen.", "Zij heeft het boek geleesd."],
     correctIndex: 0,
     explanationRu: "'Lezen' — переходный глагол без изменения места/состояния, перфект образуется с 'hebben'.",
-    explanationEn: "'Lezen' is a transitional verb without changing place/state, the perfect is formed with 'hebben'.",
+    explanationEn: "'Lezen' is transitive and does not express a change of place or state, so its perfect tense uses 'hebben'.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen-3",
@@ -874,7 +874,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ben er niet bang voor.", "Ik ben niet bang voor het.", "Ik ben bang voor er niet."],
     correctIndex: 0,
     explanationRu: "'Bang zijn voor iets' → 'er ... voor' заменяет неодушевлённое дополнение.",
-    explanationEn: "'Bang zijn voor iets' → 'er ... voor' replaces the inanimate addition.",
+    explanationEn: "In 'bang zijn voor iets', 'er ... voor' replaces an inanimate prepositional complement.",
   } as PracticeItem),
 
   base({
@@ -1009,7 +1009,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["het contract", "de contract", "een contract die"],
     correctIndex: 0,
     explanationRu: "'Contract' — het-слово; артикль 'het contract'.",
-    explanationEn: "\"Contract\" is a het-word; the article is \"het contract\".",
+    explanationEn: "'Contract' is a 'het' word: 'het contract'.",
   } as PracticeItem),
   base({
     id: "art-dehet-gen-4",
@@ -1021,7 +1021,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de formulier", "het formulier", "een formulier deze"],
     correctIndex: 1,
     explanationRu: "'Formulier' — het-слово; артикль 'het formulier'.",
-    explanationEn: "\"Formulier\" is the het word; the article is \"het formulier\".",
+    explanationEn: "'Formulier' is a 'het' word: 'het formulier'.",
   } as PracticeItem),
   base({
     id: "art-dehet-gen-5",
@@ -1155,7 +1155,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik wil dit vandaag afmaken.",
     answer: "Ik wil dit vandaag kunnen afmaken.",
     explanationRu: "Дополнительный модальный глагол 'kunnen' вставляется перед инфинитивом в конце кластера.",
-    explanationEn: "The additional modal verb 'kunnen' is inserted before the infinitive at the end of the cluster.",
+    explanationEn: "The modal verb 'kunnen' comes before the infinitive at the end of the verb cluster.",
   } as PracticeItem),
 
   base({
@@ -1168,7 +1168,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb de tv aangezet.", "Ik heb aangezet de tv.", "Ik heb de tv gezetaan."],
     correctIndex: 0,
     explanationRu: "В причастии разделяемого глагола 'ge-' встаёт между приставкой и основой: 'aan-ge-zet'.",
-    explanationEn: "In the participle of the shared verb \"ge-\" stands between the prefix and the base: \"aan-ge-zet\".",
+    explanationEn: "In a separable verb's past participle, 'ge-' comes between the prefix and stem: 'aan-ge-zet'.",
   } as PracticeItem),
   base({
     id: "sep-part-gen-2",
@@ -1180,7 +1180,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb mijn kamer opgeruimd.", "Ik heb mijn kamer geopruimd.", "Ik heb opgeruimd mijn kamer."],
     correctIndex: 0,
     explanationRu: "'Opruimen' → причастие 'opgeruimd' — 'ge-' между 'op' и основой 'ruim'.",
-    explanationEn: "Opruimen: The participle of opgeruimd is the ge- between op and the basis of ruim.",
+    explanationEn: "The past participle of 'opruimen' is 'opgeruimd': 'ge-' comes between 'op' and the stem 'ruim'.",
   } as PracticeItem),
   base({
     id: "sep-part-gen-3",
@@ -1217,7 +1217,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ga niet naar de markt.", "Ik ga naar de markt niet.", "Ik niet ga naar de markt."],
     correctIndex: 0,
     explanationRu: "'Niet' обычно стоит перед предложной группой места ('naar de markt'), а не в конце.",
-    explanationEn: "The Niet usually stands in front of the proposed group of seats (naar de markt) rather than at the end.",
+    explanationEn: "'Niet' normally comes before the prepositional phrase 'naar de markt', not at the end.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-2",
@@ -1253,7 +1253,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik begrijp deze les niet.", "Ik begrijp niet deze les.", "Niet ik begrijp deze les."],
     correctIndex: 0,
     explanationRu: "'Niet' стоит после определённого прямого дополнения 'deze les', перед которым его ставить нельзя.",
-    explanationEn: "\"Niet\" stands after a certain direct addition \"deze les\", before which it can not be put.",
+    explanationEn: "'Niet' comes after the definite direct object 'deze les'.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-5",
@@ -1265,7 +1265,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["De verwarming werkt niet.", "De verwarming niet werkt.", "Niet de verwarming werkt."],
     correctIndex: 0,
     explanationRu: "При отсутствии дополнения 'niet' ставится сразу после глагола, в конце предложения.",
-    explanationEn: "In the absence of a supplement, \"niet\" is placed immediately after the verb, at the end of the sentence.",
+    explanationEn: "When no object or other complement follows, 'niet' can come directly after the verb at the end of the clause.",
   } as PracticeItem),
 
   base({
@@ -1327,7 +1327,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de huisje", "het huisje", "een huisje die"],
     correctIndex: 1,
     explanationRu: "Все уменьшительные существительные среднего рода — используем 'het': 'het huisje'.",
-    explanationEn: "All diminutive nouns of the middle kind - use 'het': 'het huisje'.",
+    explanationEn: "All Dutch diminutives take 'het': 'het huisje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen-2",
@@ -1339,7 +1339,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de tabletje", "het tabletje", "een tabletje deze"],
     correctIndex: 1,
     explanationRu: "Даже если основа слова 'de'-рода, уменьшительная форма всегда 'het': 'het tabletje'.",
-    explanationEn: "Even if the basis of the word de' genus, the diminutive form is always het: het tabletje.",
+    explanationEn: "Even when the base noun takes 'de', its diminutive takes 'het': 'het tabletje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen-3",
@@ -1351,7 +1351,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["het tafeltje", "de tafeltje", "een tafeltje die"],
     correctIndex: 0,
     explanationRu: "'Tafel' — de-слово, но уменьшительное 'tafeltje' всегда среднего рода: 'het tafeltje'.",
-    explanationEn: "'Tafel' is a de-word, but the diminutive 'tafeltje' is always of the middle kind: 'het tafeltje'.",
+    explanationEn: "'Tafel' takes 'de', but its diminutive takes 'het': 'het tafeltje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen-4",
@@ -1363,7 +1363,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "Het",
     acceptableVariants: ["Het"],
     explanationRu: "Уменьшительное 'kopje' всегда с артиклем 'het', независимо от рода основы 'kop'.",
-    explanationEn: "The diminutive 'kopje' always has the article 'het', regardless of the kind of basis 'kop'.",
+    explanationEn: "The diminutive 'kopje' always takes 'het', regardless of the base noun's article.",
   } as PracticeItem),
 
   base({
@@ -1596,7 +1596,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [z]", "stemloos [s]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "В конце слова звонкие согласные оглушаются: 'huis' произносится с глухим [s], хотя во множественном числе 'huizen' звучит [z].",
-    explanationEn: "At the end of the word, the voiced consonants are stunned: 'huis' is pronounced with a deaf [s], although in the plural 'huizen' sounds [z].",
+    explanationEn: "Word-final consonants are devoiced: 'huis' ends in voiceless [s], while the plural 'huizen' has voiced [z].",
   } as PracticeItem),
   base({
     id: "devoice-gen-2",
@@ -1608,7 +1608,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "stemhebbend [b]"],
     correctIndex: 1,
     explanationRu: "Финальное оглушение: если бы 'baan' оканчивалось на 'd' (как в 'goed'), оно бы звучало как глухое [t].",
-    explanationEn: "Final stunning: If 'baan' ended in 'd' (as in 'goed'), it would sound deaf [t].",
+    explanationEn: "Final devoicing means a word-final 'd', as in 'goed', is pronounced as voiceless [t].",
   } as PracticeItem),
   base({
     id: "devoice-gen-3",
@@ -1620,7 +1620,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "stil, niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "'Goed' оканчивается на глухой [t], хотя пишется 'd' — сравните форму 'goede' со звонким [d].",
-    explanationEn: "'Goed' ends in deaf [t], although it is written 'd' - compare the form 'goede' with the voiced [d].",
+    explanationEn: "'Goed' ends in voiceless [t] although it is written with 'd'; compare 'goede', which has voiced [d].",
   } as PracticeItem),
   base({
     id: "devoice-gen-4",
@@ -1632,7 +1632,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [z]", "stemloos [s]", "stemhebbend [zj]"],
     correctIndex: 1,
     explanationRu: "'Prijs' оканчивается на глухой [s], сравните со звонким [z] в форме множественного числа 'prijzen'.",
-    explanationEn: "'Prijs' ends in deaf [s], compared to the ringing [z] in the plural form 'prijzen'.",
+    explanationEn: "'Prijs' ends in voiceless [s], compared with voiced [z] in the plural 'prijzen'.",
   } as PracticeItem),
 
   base({
@@ -1645,7 +1645,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["gemeente", "kamer", "tafel"],
     correctIndex: 0,
     explanationRu: "Нидерландское 'g' — гортанный щелевой звук, глубже русского [х] и не такой, как [г].",
-    explanationEn: "The Dutch 'g' is a laryngeal slit sound deeper than the Russian [x] and not like [d].",
+    explanationEn: "The Dutch 'g' is a velar or uvular fricative. It differs from Russian [x] and is not a stop consonant like [d].",
   } as PracticeItem),
   base({
     id: "xg-gen-2",
@@ -1757,7 +1757,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik weet dat ze morgen komt.", "Ik weet dat ze komt morgen.", "Ik weet dat komt ze morgen."],
     correctIndex: 0,
     explanationRu: "После 'dat' спрягаемый глагол уходит в конец придаточного: 'dat ze morgen komt'.",
-    explanationEn: "After 'dat', the conjugated verb goes to the end of the appendage: 'dat ze morgen komt'.",
+    explanationEn: "After 'dat', the conjugated verb goes to the end of the subordinate clause: 'dat ze morgen komt'.",
   } as PracticeItem),
   base({
     id: "sub-end-gen3-2",
@@ -1781,7 +1781,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik kom later. Ik moet werken.",
     answer: "Ik kom later omdat ik moet werken.",
     explanationRu: "После 'omdat' спрягаемый глагол 'moet' уходит в конец придаточного предложения.",
-    explanationEn: "After 'omdat', the conjugated verb 'moet' goes to the end of the appendage sentence.",
+    explanationEn: "After 'omdat', the conjugated verb 'moet' goes to the end of the subordinate clause.",
   } as PracticeItem),
   base({
     id: "cluster-gen3-1",
@@ -1841,7 +1841,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ruim mijn kamer op.", "Ik opruim mijn kamer.", "Ik ruim op mijn kamer."],
     correctIndex: 0,
     explanationRu: "'Opruimen': основа 'ruim' спрягается, приставка 'op' уходит в самый конец предложения.",
-    explanationEn: "'Opruimen': the basis of 'ruim' conjugates, the prefix 'op' goes to the very end of the sentence.",
+    explanationEn: "With 'opruimen', conjugate the stem 'ruim' and move the prefix 'op' to the end of the clause.",
   } as PracticeItem),
   base({
     id: "sep-split-gen3-3",
@@ -1877,7 +1877,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Hij heeft de vergadering voorbereid.", "Hij heeft voorbereid de vergadering.", "Hij heeft de vergadering bereidvoor."],
     correctIndex: 0,
     explanationRu: "'Voorbereiden' — неотделяемое сочетание с 'be-' внутри, причастие 'voorbereid' без дополнительного 'ge-'.",
-    explanationEn: "Voorbereiden is an inseparable combination with the be- inside, the participle of the voorbereid without the additional ge-.",
+    explanationEn: "'Voorbereiden' is inseparable because of 'be-'; its past participle is 'voorbereid', without an extra 'ge-'.",
   } as PracticeItem),
   base({
     id: "sep-part-gen3-3",
@@ -1889,7 +1889,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "dichtgedaan",
     acceptableVariants: ["dichtgedaan"],
     explanationRu: "'Ge-' встаёт между приставкой 'dicht' и основой 'gedaan': 'dicht-ge-daan'.",
-    explanationEn: "\"Ge-\" stands between the prefix \"dicht\" and the basis \"gedaan\": \"dicht-ge-daan\".",
+    explanationEn: "In 'dichtgedaan', 'ge-' comes between the prefix 'dicht' and the stem: 'dicht-ge-daan'.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen3-1",
@@ -1913,7 +1913,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ga niet naar kantoor vandaag.", "Ik ga naar kantoor niet vandaag.", "Ik niet ga naar kantoor vandaag."],
     correctIndex: 0,
     explanationRu: "'Niet' обычно стоит перед предложной группой места 'naar kantoor', а не после неё.",
-    explanationEn: "\"Niet\" usually stands in front of the proposed group of places \"naar kantoor\" and not after it.",
+    explanationEn: "'Niet' normally comes before the prepositional phrase 'naar kantoor', not after it.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen3-3",
@@ -2093,7 +2093,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb het boek gelezen.", "Ik ben het boek gelezen.", "Ik heb het boek geweest."],
     correctIndex: 0,
     explanationRu: "'Lezen' — переходный глагол с прямым дополнением, перфект всегда с 'hebben'.",
-    explanationEn: "Lezen is a transitional verb with direct addition, perfect always with hebben.",
+    explanationEn: "'Lezen' is a transitive verb with a direct object and forms the perfect tense with 'hebben'.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen3-3",
@@ -2477,7 +2477,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "В конце слова звонкие согласные оглушаются: 'hond' произносится с глухим [t], хотя во множественном числе 'honden' звучит [d].",
-    explanationEn: "At the end of the word, the voiced consonants are stunned: 'hond' is pronounced with a deaf [t], although in the plural 'honden' sounds [d].",
+    explanationEn: "Word-final consonants are devoiced: 'hond' ends in voiceless [t], while the plural 'honden' has voiced [d].",
   } as PracticeItem),
   base({
     id: "devoice-gen3-2",
@@ -2489,7 +2489,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "'Brood' в конце произносится с глухим [t], хотя во множественном числе 'broden' звучит [d].",
-    explanationEn: "'Brood' is pronounced deaf at the end [t], although plural 'broden' sounds [d].",
+    explanationEn: "'Brood' ends in voiceless [t], while the plural 'broden' has voiced [d].",
   } as PracticeItem),
   base({
     id: "devoice-gen3-3",
@@ -2513,7 +2513,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["groente", "kamer", "stoel"],
     correctIndex: 0,
     explanationRu: "Нидерландское 'g' — гортанный щелевой звук, глубже русского [х] и не такой, как [г].",
-    explanationEn: "The Dutch 'g' is a laryngeal slit sound deeper than the Russian [x] and not like [d].",
+    explanationEn: "The Dutch 'g' is a velar or uvular fricative. It differs from Russian [x] and is not a stop consonant like [d].",
   } as PracticeItem),
   base({
     id: "xg-gen3-2",
@@ -2525,7 +2525,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["geld", "tijd", "huis"],
     correctIndex: 0,
     explanationRu: "'Geld' начинается с гортанного щелевого 'g' — приоритетный контраст для русскоговорящих.",
-    explanationEn: "'Geld' begins with a laryngeal slit 'g' - a priority contrast for Russian speakers.",
+    explanationEn: "'Geld' begins with the Dutch fricative 'g', an important pronunciation contrast for Russian speakers.",
   } as PracticeItem),
   base({
     id: "xg-gen3-3",

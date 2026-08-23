@@ -15,3 +15,8 @@ and `hintEn` in:
 
 Russian source fields remain intact and are the runtime fallback. Vocabulary `translationRu` glosses
 and the bilingual privacy and terms pages are deliberately outside this migration.
+
+An editorial QA pass on 2026-08-23 corrected recurring machine-translation defects in grammar and
+pronunciation terminology and repaired malformed instructions. Automated content tests reject the
+known failure patterns found in that audit. This improves readability but does not change the English
+copy's `unreviewed` status or replace review by a qualified NT2 educator.

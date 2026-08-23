@@ -29,10 +29,15 @@ function assertMcItems(items: { id: string; options: string[]; correctIndex: num
 }
 
 const CYRILLIC = /[А-Яа-яЁё]/;
+const KNOWN_MT_FAILURES =
+  /\b(?:appendage|communion|final stunning|laryngeal slit|proposed group|transitional verb|incomprehensible|laggards)\b|ruined vowel/i;
 
 function assertEnglishInstruction(label: string, russian: string, english: string | undefined) {
   if (russian.trim()) expect(english, `${label} needs English instructional copy`).toBeTruthy();
   expect(english ?? "", `${label} English copy must not contain Cyrillic`).not.toMatch(CYRILLIC);
+  expect(english ?? "", `${label} English copy contains a known machine-translation failure`).not.toMatch(
+    KNOWN_MT_FAILURES,
+  );
 }
 
 describe("content-bank invariants", () => {
