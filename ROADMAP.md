@@ -22,15 +22,15 @@ learner-facing production launch.
 
 ## Milestone 2 — validated learning content
 
-- [ ] Have qualified NT2 educators review content, Russian explanations, answer keys, CEFR labels, and
-  machine-translated vocabulary glosses.
+- [ ] Have qualified NT2 educators review content, Russian explanations, machine-translated English
+  instructions, answer keys, CEFR labels, and machine-translated vocabulary glosses.
 - [ ] Migrate all banks through the provenance-aware import-and-review pipeline rather than maintaining
   them directly in TypeScript. Spreken, KNM, and all three Schrijven exam banks are migrated; remaining
   banks are pending.
 - [ ] Add high-frequency verbs, adjectives, fixed expressions, and productive-use activities alongside
   the current noun-first vocabulary bank.
-- [x] Finish English UI chrome for reading, writing, and all exam runners. Russian L1-specific teaching
-  explanations remain intentionally Russian unless a separately reviewed English pedagogy is added.
+- [x] Finish English UI chrome and add English learner-visible instructions/explanations across practice
+  and exam flows. The English pedagogical copy remains machine-translated and requires educator review.
 
 ## Milestone 3 — assessment and exam realism
 

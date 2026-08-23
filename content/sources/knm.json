@@ -1,6 +1,14 @@
 {
   "schemaVersion": 1,
   "bank": "knm",
+  "translations": {
+    "en": {
+      "method": "machine-translation",
+      "engine": "Argos Translate ru-en 1.9",
+      "generatedAt": "2026-08-23",
+      "reviewStatus": "unreviewed"
+    }
+  },
   "sources": [
     {
       "id": "project-authored-knm-v1",
@@ -62,7 +70,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "In the Netherlands, a woman decides whether to work outside the home as part of the self-determination enshrined in the eindtermen KNM since 2025."
     },
     {
       "examTrack": "knm",
@@ -98,7 +107,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The Netherlands was occupied from 1940 to 1945. Knowledge of the Holocaust is a separate mandatory block in the updated KNM program."
     },
     {
       "examTrack": "knm",
@@ -134,7 +144,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Equal pay for equal work is guaranteed by law in the Netherlands."
     },
     {
       "examTrack": "knm",
@@ -170,7 +181,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "IND (Immigratie-en Naturalisatiedienst) deals with residence permits."
     },
     {
       "examTrack": "knm",
@@ -206,7 +218,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "In the Netherlands, leerplicht (compulsory education) is valid for at least 16 years, then a partial kwalificatieplicht."
     },
     {
       "examTrack": "knm",
@@ -242,7 +255,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Freedom of speech is guaranteed by the Constitution and extends to criticism of the authorities."
     },
     {
       "examTrack": "knm",
@@ -278,7 +292,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Same-sex marriage has been legal in the Netherlands since 2001, one of the first countries in the world."
     },
     {
       "examTrack": "knm",
@@ -314,7 +329,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "UWV (Uitvoeringsinstituut Werknemersverzekeringen) deals with unemployment benefits."
     },
     {
       "examTrack": "knm",
@@ -350,7 +366,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "May 4 is the day of remembrance of the dead, May 5 is the day of liberation from Nazi occupation."
     },
     {
       "examTrack": "knm",
@@ -386,7 +403,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Health insurance is compulsory for all adults living in the Netherlands."
     },
     {
       "examTrack": "knm",
@@ -422,7 +440,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "A residence permit (basisregistratie personen) is issued at the City Hall at the new place of residence."
     },
     {
       "examTrack": "knm",
@@ -458,7 +477,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Freedom of religion is a constitutional right, including the right not to profess any religion."
     },
     {
       "examTrack": "knm",
@@ -494,7 +514,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Discrimination based on origin in employment is prohibited by law."
     },
     {
       "examTrack": "knm",
@@ -530,7 +551,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Co-education of boys and girls is a common practice in Dutch schools."
     },
     {
       "examTrack": "knm",
@@ -566,7 +588,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "SVB (Sociale Verzekeringsbank) pays child benefits and other social benefits."
     },
     {
       "examTrack": "knm",
@@ -602,7 +625,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Freedom of association includes the right to join trade unions without the permission of the employer."
     },
     {
       "examTrack": "knm",
@@ -638,7 +662,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The right to make decisions about contraception is part of self-determination in the updated KNM program."
     },
     {
       "examTrack": "knm",
@@ -674,7 +699,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The majority of the Jewish population of the Netherlands was deported and killed during the Holocaust, a key theme of the updated KNM program."
     },
     {
       "examTrack": "knm",
@@ -710,7 +736,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Belastingdienst is a tax service that also pays benefits (toeslagen)."
     },
     {
       "examTrack": "knm",
@@ -746,7 +773,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "A woman has the same rights as a man and does not need permission from her husband, a basic principle of self-determination."
     },
     {
       "examTrack": "knm",
@@ -782,7 +810,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Freedom of peaceful demonstration is a constitutional right in the Netherlands."
     },
     {
       "examTrack": "knm",
@@ -818,7 +847,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Compulsory schooling (leerplicht) in the Netherlands starts at age 5."
     },
     {
       "examTrack": "knm",
@@ -854,7 +884,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Basic health insurance is compulsory for all Dutch residents."
     },
     {
       "examTrack": "knm",
@@ -890,7 +921,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "For benefits apply to UWV (unemployment) or municipality (social assistance)."
     },
     {
       "examTrack": "knm",
@@ -926,7 +958,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "112 - a single number of emergency services in case of threat to life."
     },
     {
       "examTrack": "knm",
@@ -962,7 +995,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The Netherlands was liberated from German occupation in 1945."
     },
     {
       "examTrack": "knm",
@@ -998,7 +1032,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Freedom of religion is a constitutional right, including the right not to have a religion."
     },
     {
       "examTrack": "knm",
@@ -1034,7 +1069,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Same-sex marriage has been legal in the Netherlands since 2001, the first country in the world to legalize it."
     },
     {
       "examTrack": "knm",
@@ -1070,7 +1106,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The minimum paid leave is 4 weeks (in terms of working hours) per year."
     },
     {
       "examTrack": "knm",
@@ -1106,7 +1143,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The landlord has no right to enter the housing without the consent of the tenant, except in emergency cases by law."
     },
     {
       "examTrack": "knm",
@@ -1142,7 +1180,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The members of the Second House (Tweede Kamer) are elected by citizens in general elections."
     },
     {
       "examTrack": "knm",
@@ -1178,7 +1217,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Freedom of speech is a constitutional right, including open criticism of the government."
     },
     {
       "examTrack": "knm",
@@ -1214,7 +1254,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Discrimination based on religion or origin is prohibited by law (article 1 of the Constitution)."
     },
     {
       "examTrack": "knm",
@@ -1250,7 +1291,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Basic health insurance is compulsory for anyone living or working in the Netherlands."
     },
     {
       "examTrack": "knm",
@@ -1286,7 +1328,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Compulsory schooling is up to the age of 16, then there is often a duty to obtain qualifications up to 18."
     },
     {
       "examTrack": "knm",
@@ -1322,7 +1365,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The mayor heads the municipal administration and is responsible for public order."
     },
     {
       "examTrack": "knm",
@@ -1358,7 +1402,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "When sick, the employee usually receives a minimum of 70% of the salary for the first two years."
     },
     {
       "examTrack": "knm",
@@ -1394,7 +1439,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "112 - a single number of emergency services in case of threat to life."
     },
     {
       "examTrack": "knm",
@@ -1430,7 +1476,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Same-sex marriage has been legal in the Netherlands since 2001, the Netherlands being the first country in the world to allow it."
     },
     {
       "examTrack": "knm",
@@ -1466,7 +1513,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The new address must be reported to the municipality (BRP) within 5 days of the move, regardless of whether it is a rental or property."
     },
     {
       "examTrack": "knm",
@@ -1502,7 +1550,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "May 4 is a nationwide commemoration day, with two minutes of silence at 20:00 across the country."
     }
   ]
 }

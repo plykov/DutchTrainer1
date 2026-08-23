@@ -91,12 +91,12 @@ Releases follow the documented [release process](./RELEASING.md), with user-visi
   privacy review mandatory when those flows change and uses SemVer with `package.json` as the displayed
   version source. These are provisional beta notices; professional legal review remains required for
   production launch.
-- **English UI mode** — a RU/EN toggle in the nav (`lib/i18n.ts`, `lib/store.ts`'s `uiLang`) switches
-  the learner-facing app chrome across navigation, onboarding, dashboard, settings, every learning
-  module, writing feedback, reading/listening sessions, and all exam runners (buttons, labels, status text).
-  Pedagogical content — every `explanationRu` in `lib/content/*` — stays Russian regardless of
-  `uiLang`, on purpose: it's Russian-L1-contrastive by design (§5), explaining specifically Russian
-  speakers' traps, so translating it to English would remove the thing it exists to explain.
+- **English UI and explanation mode** — a RU/EN toggle in the nav (`lib/i18n.ts`, `lib/store.ts`'s
+  `uiLang`) switches the app chrome. Learners who select English as their explanation language also
+  receive English instructions, feedback explanations, pronunciation hints, and Russian-L1 contrastive
+  notes. The Russian source fields remain as fallback; the English pedagogical copy is machine-translated
+  and unreviewed (`content/TRANSLATIONS.md`). Vocabulary glosses remain Russian, and legal pages remain
+  bilingual by design.
 - **Provenance-aware content workflow** (`content/`, `scripts/content-pipeline.mjs`) — the Spreken exam
   Spreken, KNM, and all three Schrijven exam banks are migrated from hand-edited TypeScript to structured sources with
   source/license references and per-item educator-review state. The pipeline validates the source,

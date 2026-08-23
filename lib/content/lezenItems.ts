@@ -40,6 +40,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Online een afspraak maken", "Gewoon langskomen", "Bellen naar de politie"],
     correctIndex: 0,
     explanationRu: "Текст явно говорит: с 1 сентября без предварительной онлайн-записи попасть на приём нельзя.",
+    explanationEn: "The text clearly says: from September 1 without a preliminary online entry to the reception is impossible.",
   }),
   lezenItem({
     id: "lezen-2",
@@ -49,6 +50,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Bellen naar de huisartsenpost", "Wachten tot volgende week", "Naar de gemeente gaan"],
     correctIndex: 0,
     explanationRu: "Для срочных случаев указан отдельный номер — huisartsenpost, а не ожидание до следующей недели.",
+    explanationEn: "For urgent cases, a separate number is given - huisartsenpost, rather than waiting until next week.",
   }),
   lezenItem({
     id: "lezen-3",
@@ -58,6 +60,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Nee, ervaring is niet vereist", "Ja, minimaal twee jaar ervaring", "Alleen ervaring in de zorg"],
     correctIndex: 0,
     explanationRu: "В объявлении прямо сказано: 'Ervaring is niet vereist' — опыт не требуется.",
+    explanationEn: "The ad clearly states, 'Ervaring is niet vereist' - no experience required.",
   }),
   lezenItem({
     id: "lezen-4",
@@ -67,6 +70,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Er wordt aan de leidingen gewerkt", "Het gebouw wordt geverfd", "Er komt een nieuwe lift"],
     correctIndex: 0,
     explanationRu: "'aan de leidingen gewerkt' — идут работы по трубам/коммуникациям.",
+    explanationEn: "'aan de leidingen gewerkt' - works on pipes/communications are underway.",
   }),
   lezenItem({
     id: "lezen-5",
@@ -76,6 +80,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Tot en met vrijdag", "Tot het einde van de maand", "Er is geen deadline"],
     correctIndex: 0,
     explanationRu: "'Inschrijven kan ... tot en met komende vrijdag' — запись открыта до пятницы включительно.",
+    explanationEn: "'Inschrijven kan ... tot en met komende vrijdag' - recording open until Friday inclusive.",
   }),
   lezenItem({
     id: "lezen-6",
@@ -85,6 +90,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Alleen hoe vaak u betaalt", "Het totale jaarbedrag stijgt", "U hoeft niet meer te betalen"],
     correctIndex: 0,
     explanationRu: "'Dit verandert niets aan het totale jaarbedrag, alleen de betaalfrequentie' — меняется только частота платежей.",
+    explanationEn: "\"Dit verandert niets aan het totale jaarbedrag, alleen de betaalfrequentie\" - only the frequency of payments changes.",
   }),
   lezenItem({
     id: "lezen-7",
@@ -94,6 +100,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Bij het buurthuis", "Bij de gemeente", "Bij het ziekenhuis"],
     correctIndex: 0,
     explanationRu: "'verzamelt om 10 uur bij het buurthuis' — сбор у общественного дома района.",
+    explanationEn: "'verzamelt om 10 uur bij het buurthuis' - gathering at the community house of the district.",
   }),
   lezenItem({
     id: "lezen-8",
@@ -103,6 +110,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Een geldig identiteitsbewijs", "Een medische verklaring", "Een werkgeversverklaring"],
     correctIndex: 0,
     explanationRu: "'heeft u een geldig identiteitsbewijs nodig' — нужен действительный документ, удостоверяющий личность.",
+    explanationEn: "'heeft u een geldig identiteitsbewijs nodig' - you need a valid identity document.",
   }),
   lezenItem({
     id: "lezen-9",
@@ -112,6 +120,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Vijftien minuten", "Een uur", "Vijf minuten"],
     correctIndex: 0,
     explanationRu: "'vijftien minuten voor de afspraak aanwezig te zijn' — прийти на пятнадцать минут раньше.",
+    explanationEn: "'vijftien minuten voor de afspraak aanwezig te zijn' - arrive fifteen minutes early.",
   }),
   lezenItem({
     id: "lezen-10",
@@ -121,6 +130,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Twee weken van tevoren", "Op de dag zelf", "Een maand van tevoren"],
     correctIndex: 0,
     explanationRu: "'ontvangen hun nieuwe rooster uiterlijk twee weken van tevoren' — не позднее чем за две недели.",
+    explanationEn: "'ontvangen hun nieuwe rooster uiterlijk twee weken van tevoren' - no later than two weeks in advance.",
   }),
   lezenItem({
     id: "lezen-11",
@@ -130,6 +140,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["3 procent", "10 procent", "Er is geen maximum"],
     correctIndex: 0,
     explanationRu: "'maximaal 3 procent' — максимум три процента повышения аренды.",
+    explanationEn: "'maximaal 3 procent' - a maximum of three percent rent increase",
   }),
   lezenItem({
     id: "lezen-12",
@@ -139,6 +150,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["16 jaar", "18 jaar", "21 jaar"],
     correctIndex: 0,
     explanationRu: "'leerplichtig' до 16 лет, затем частичная kwalificatieplicht — до 18, если нет базовой квалификации.",
+    explanationEn: "'leerplichtig' up to 16 years, then partial kwalificatieplicht - up to 18 if there is no basic qualification.",
   }),
   lezenItem({
     id: "lezen-13",
@@ -148,6 +160,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De Belastingdienst", "De gemeente", "Uw werkgever"],
     correctIndex: 0,
     explanationRu: "'wordt ... gestort door de Belastingdienst' — пособие на медстраховку выплачивает налоговая служба.",
+    explanationEn: "Wordt ... gestort door de Belastingdienst - Medicare benefits are paid by the IRS.",
   }),
   lezenItem({
     id: "lezen-14",
@@ -157,6 +170,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Beperkte openingstijden, van 10 tot 17 uur", "Volledig gesloten", "Normale openingstijden"],
     correctIndex: 0,
     explanationRu: "'behalve op Koningsdag, wanneer de openingstijden beperkt zijn' — в День короля магазин работает по сокращённому графику.",
+    explanationEn: "'behalve op Koningsdag, wanneer de openingstijden beperkt zijn' - on King's Day, the shop operates on a reduced schedule.",
   }),
   lezenItem({
     id: "lezen-15",
@@ -166,6 +180,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Telefonisch contact opnemen", "Niets doen", "Het formulier weggooien"],
     correctIndex: 0,
     explanationRu: "'Ontvangt u niets, neem dan telefonisch contact op' — если подтверждение не пришло, нужно позвонить.",
+    explanationEn: "'Ontvangt u niets, neem dan telefonisch contact op' - if confirmation has not come, call.",
   }),
   lezenItem({
     id: "lezen-16",
@@ -175,6 +190,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Bussen rijden vaker 's ochtends", "Bussen rijden minder vaak", "Er rijden geen bussen meer"],
     correctIndex: 0,
     explanationRu: "'elke tien minuten in plaats van elke twintig minuten' — автобусы теперь ходят чаще.",
+    explanationEn: "'elke tien minuten in plaats van elke twintig minuten' - buses now run more frequently",
   }),
   lezenItem({
     id: "lezen-17",
@@ -184,6 +200,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Het gewone nummer van de gemeente", "112", "De politie"],
     correctIndex: 0,
     explanationRu: "'Voor niet-spoedeisende meldingen ... kunt u de gemeente bellen op het gewone nummer' — для несрочных случаев обычный номер мэрии.",
+    explanationEn: "'Voor niet-spoedeisende meldingen ... kunt u de gemeente bellen op het gewone nummer' - for non-urgent cases the usual number of the City Hall.",
   }),
   lezenItem({
     id: "lezen-18",
@@ -193,6 +210,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Internet en computers gebruiken", "Boeken lenen", "Beide"],
     correctIndex: 0,
     explanationRu: "'Een lidmaatschap is niet nodig om hiervan gebruik te maken' — членство не нужно для интернета/компьютеров, но нужно для книг.",
+    explanationEn: "Een lidmaatschap is niet nodig om hiervan gebruik te maken - membership is not required for the Internet/computers, but is required for books.",
   }),
   lezenItem({
     id: "lezen-19",
@@ -202,6 +220,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Tot het einde van de proeftijd", "Voor altijd", "Eén week"],
     correctIndex: 0,
     explanationRu: "'Na de proeftijd stopt deze begeleiding automatisch' — наставничество заканчивается вместе с испытательным сроком.",
+    explanationEn: "'Na de proeftijd stopt deze begeleiding automatisch' - mentorship ends with probation.",
   }),
   lezenItem({
     id: "lezen-20",
@@ -211,6 +230,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Patiënten met een verhoogd risico", "Alle patiënten", "Alleen kinderen"],
     correctIndex: 0,
     explanationRu: "'Patiënten met een verhoogd risico krijgen automatisch een uitnodiging' — приглашение автоматически только для группы риска.",
+    explanationEn: "'Patiënten met een verhoogd risico krijgen automatisch een uitnodiging' - invitation automatically only for the risk group.",
   }),
   lezenItem({
     id: "lezen-21",
@@ -220,6 +240,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Schriftelijk, minstens een maand van tevoren", "Telefonisch, op de dag zelf", "Dat hoeft niet gemeld te worden"],
     correctIndex: 0,
     explanationRu: "'schriftelijk melden ... minstens één maand van tevoren' — уведомление в письменном виде минимум за месяц.",
+    explanationEn: "'schriftelijk melden ... minstens één maand van tevoren' - notice in writing at least one month in advance.",
   }),
   lezenItem({
     id: "lezen-22",
@@ -229,6 +250,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Als bewijs van identiteit bij een aanvraag", "Om te reizen", "Nergens meer voor"],
     correctIndex: 0,
     explanationRu: "'nog ... gebruikt worden als bewijs van identiteit bij een aanvraag ... maar niet om te reizen' — можно для подтверждения личности, но не для поездок.",
+    explanationEn: "'nog ... gebruikt worden als bewijs van identiteit bij een aanvraag ... maar niet om te reizen' - may be for identification, but not for travel.",
   }),
   lezenItem({
     id: "lezen-23",
@@ -238,6 +260,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Bij annulering minstens twee weken van tevoren", "Altijd, ongeacht de datum", "Nooit"],
     correctIndex: 0,
     explanationRu: "'als de annulering minstens twee weken voor de startdatum wordt doorgegeven' — возврат денег только при отмене минимум за две недели.",
+    explanationEn: "'als de annulering minstens twee weken voor de startdatum wordt doorgegeven' is a refund only if cancelled at least two weeks in advance.",
   }),
   lezenItem({
     id: "lezen-24",
@@ -247,6 +270,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["U krijgt een herinnering", "Een incassobureau neemt contact op", "U krijgt direct een boete"],
     correctIndex: 0,
     explanationRu: "'stuurt de instantie eerst een herinnering' — сначала присылают напоминание, потом уже требование с расходами.",
+    explanationEn: "\"stuurt de instantie eerst een herinnering\" - first send a reminder, then a demand with expenses.",
   }),
   lezenItem({
     id: "lezen-25",
@@ -256,6 +280,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Nee, de oude sleutel blijft werken", "Ja, iedereen krijgt een nieuwe pas", "Ja, maar alleen kinderen"],
     correctIndex: 0,
     explanationRu: "'er is geen nieuwe pas nodig' — старый ключ продолжает работать.",
+    explanationEn: "'er is geen nieuwe pas nodig' - the old key keeps working.",
   }),
   lezenItem({
     id: "lezen-26",
@@ -265,6 +290,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De zelfzorgwijzer online raadplegen", "Direct naar het ziekenhuis gaan", "Niets, u moet altijd bellen"],
     correctIndex: 0,
     explanationRu: "'eerst de zelfzorgwijzer online raadplegen' — сначала можно посмотреть онлайн-справочник по самопомощи.",
+    explanationEn: "'eerst de zelfzorgwijzer online raadplegen' - first look at the online self-help guide.",
   }),
   lezenItem({
     id: "lezen-27",
@@ -274,6 +300,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Alleen als ze vooraf zijn goedgekeurd", "Altijd automatisch", "Nooit"],
     correctIndex: 0,
     explanationRu: "'alleen ... als ze vooraf zijn goedgekeurd door de leidinggevende' — переработки оплачиваются только с предварительного одобрения.",
+    explanationEn: "'alleen ... als ze vooraf zijn goedgekeurd door de leidinggevende' - recycling is paid only with prior approval.",
   }),
   lezenItem({
     id: "lezen-28",
@@ -283,6 +310,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De verhuurder", "De huurder", "De gemeente"],
     correctIndex: 0,
     explanationRu: "'Grote reparaties ... zijn voor de verhuurder' — крупный ремонт (например, котёл) оплачивает хозяин жилья.",
+    explanationEn: "'Grote reparaties ... zijn voor de verhuurder' - major repairs (for example, a boiler) are paid by the owner of the house.",
   }),
   lezenItem({
     id: "lezen-29",
@@ -292,6 +320,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Aanvragers ouder dan 75 jaar", "Alle aanvragers", "Alleen aanvragers onder de 18"],
     correctIndex: 0,
     explanationRu: "'als u ouder bent dan 75 jaar' — медосмотр требуется только для заявителей старше 75 лет.",
+    explanationEn: "'als u ouder bent dan 75 jaar' - medical examination is required only for applicants over 75 years of age.",
   }),
   lezenItem({
     id: "lezen-30",
@@ -301,6 +330,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Bij elke supermarkt met een inleverautomaat", "Alleen waar u de fles kocht", "Nergens"],
     correctIndex: 0,
     explanationRu: "'bij elke supermarkt met een inleverautomaat, ongeacht waar u de fles gekocht heeft' — залог можно вернуть в любом магазине с автоматом.",
+    explanationEn: "'bij elke supermarkt met een inleverautomaat, ongeacht waar u de fles gekocht heeft' - deposit can be returned at any store with a vending machine.",
   }),
   lezenItem({
     id: "lezen-31",
@@ -310,6 +340,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Minstens tien weken voor de vierde verjaardag", "Op de dag van de vierde verjaardag", "Er is geen deadline"],
     correctIndex: 0,
     explanationRu: "'minstens tien weken voor de vierde verjaardag van het kind' — запись минимум за десять недель до четырёхлетия.",
+    explanationEn: "'minstens tien weken voor de vierde verjaardag van het kind' is a record at least ten weeks before the four-year anniversary.",
   }),
   lezenItem({
     id: "lezen-32",
@@ -319,6 +350,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Onverwachte, noodzakelijke kosten", "Vakantiegeld", "Dagelijkse boodschappen"],
     correctIndex: 0,
     explanationRu: "'bijzondere bijstand ... voor onverwachte, noodzakelijke kosten' — целевая помощь на непредвиденные необходимые расходы.",
+    explanationEn: "'bijzondere bijstand ... voor onverwachte, noodzakelijke kosten' - targeted assistance for unforeseen necessary expenses.",
   }),
   lezenItem({
     id: "lezen-33",
@@ -328,6 +360,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Binnen zes weken", "Binnen zes maanden", "Er is geen termijn"],
     correctIndex: 0,
     explanationRu: "'binnen zes weken na de datum van het besluit' — возражение нужно подать в течение шести недель.",
+    explanationEn: "'binnen zes weken na de datum van het besluit' - an objection must be filed within six weeks.",
   }),
   lezenItem({
     id: "lezen-34",
@@ -337,6 +370,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Het hoogste bedrag wordt afgeschreven", "U krijgt geld terug", "Er gebeurt niets"],
     correctIndex: 0,
     explanationRu: "'wordt automatisch het hoogste bedrag afgeschreven' — при неотметке спишут максимальную сумму.",
+    explanationEn: "'wordt automatisch het hoogste bedrag afgeschreven' - the maximum amount will be written off if not marked.",
   }),
   lezenItem({
     id: "lezen-35",
@@ -346,6 +380,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Het minstens twee werkdagen van tevoren aanmelden", "Niets, het wordt automatisch opgehaald", "Ervoor betalen"],
     correctIndex: 0,
     explanationRu: "'minstens twee werkdagen van tevoren online aanmelden' — крупногабаритный мусор нужно заранее заказать онлайн.",
+    explanationEn: "'minstens twee werkdagen van tevoren online aanmelden' - bulky garbage must be ordered online in advance.",
   }),
   lezenItem({
     id: "lezen-36",
@@ -355,6 +390,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Telefonisch, vóór negen uur", "Per e-mail, wanneer u wilt", "Via een app"],
     correctIndex: 0,
     explanationRu: "'telefonisch ziek bij uw leidinggevende, niet per e-mail of app' — больничный сообщают только по телефону, не письмом/приложением.",
+    explanationEn: "'telefonisch ziek bij uw leidinggevende, niet per e-mail of app' - the sick person is reported only by phone, not by letter/application.",
   }),
   lezenItem({
     id: "lezen-37",
@@ -364,6 +400,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Een aanvullende verzekering afsluiten", "Niets, dit wordt altijd vergoed", "Contant betalen bij de gemeente"],
     correctIndex: 0,
     explanationRu: "Физиотерапия не входит в базовую страховку — нужна дополнительная (aanvullende) страховка.",
+    explanationEn: "Physical therapy is not included in the basic insurance - you need additional (aanvullende) insurance.",
   }),
   lezenItem({
     id: "lezen-38",
@@ -373,6 +410,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Bij een vertraging van meer dan dertig minuten", "Bij elke vertraging", "Nooit"],
     correctIndex: 0,
     explanationRu: "Право на компенсацию возникает при задержке более 30 минут.",
+    explanationEn: "The right to compensation arises if the delay exceeds 30 minutes.",
   }),
   lezenItem({
     id: "lezen-39",
@@ -382,6 +420,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De opvang moet geregistreerd zijn bij de gemeente", "U moet minstens drie kinderen hebben", "U moet in Amsterdam wonen"],
     correctIndex: 0,
     explanationRu: "Одно из условий — детский сад должен быть зарегистрирован в муниципалитете.",
+    explanationEn: "One of the conditions is that the kindergarten must be registered in the municipality.",
   }),
   lezenItem({
     id: "lezen-40",
@@ -391,6 +430,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["U betaalt een boete per dag", "U krijgt een gratis waarschuwing per e-mail", "Uw pas wordt meteen geblokkeerd"],
     correctIndex: 0,
     explanationRu: "За просрочку возврата книги взимается штраф за каждый день.",
+    explanationEn: "For late return of the book is charged a fine for each day.",
   }),
   lezenItem({
     id: "lezen-41",
@@ -400,6 +440,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["U van tevoren online aanmelden", "Gewoon binnenlopen", "Eerst een jaarabonnement kopen"],
     correctIndex: 0,
     explanationRu: "На бесплатное пробное занятие нужно записаться заранее онлайн.",
+    explanationEn: "For a free trial, you need to register online in advance.",
   }),
   lezenItem({
     id: "lezen-42",
@@ -409,6 +450,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De netbeheerder", "De energieleverancier", "De gemeente"],
     correctIndex: 0,
     explanationRu: "При аварии звонят сетевому оператору (netbeheerder), а не поставщику энергии.",
+    explanationEn: "In an accident, the network operator (netbeheerder) is called, not the energy provider.",
   }),
   lezenItem({
     id: "lezen-43",
@@ -418,6 +460,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Een identiteitsbewijs en een Nederlands adres", "Alleen een telefoonnummer", "Een werkgeversverklaring is altijd verplicht"],
     correctIndex: 0,
     explanationRu: "Для открытия банковского счёта нужны действительное удостоверение личности и нидерландский адрес.",
+    explanationEn: "To open a bank account, you need a valid identity card and a Dutch address.",
   }),
   lezenItem({
     id: "lezen-44",
@@ -427,6 +470,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Binnen twee weken", "Binnen één dag", "Er is geen tijdslimiet"],
     correctIndex: 0,
     explanationRu: "Заказное письмо можно забрать на почте в течение двух недель.",
+    explanationEn: "Order letter can be picked up at the post office within two weeks.",
   }),
   lezenItem({
     id: "lezen-45",
@@ -436,6 +480,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Eens per twee weken", "Elke dag", "Eens per jaar"],
     correctIndex: 0,
     explanationRu: "Контейнер PBD (пластик/жесть/пакеты) вывозят раз в две недели.",
+    explanationEn: "PBD containers (plastic/tin/packages) are exported every two weeks.",
   }),
   lezenItem({
     id: "lezen-46",
@@ -445,6 +490,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Voor iedereen die Nederlands wil oefenen", "Alleen voor kinderen", "Alleen voor mensen die er wonen"],
     correctIndex: 0,
     explanationRu: "Разговорный клуб открыт для всех, кто хочет практиковать нидерландский язык.",
+    explanationEn: "The Conversation Club is open to anyone who wants to practice Dutch.",
   }),
   lezenItem({
     id: "lezen-47",
@@ -454,6 +500,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["U betaalt 25 cent per dag per boek", "U verliest uw lidmaatschap direct", "Er gebeurt niets"],
     correctIndex: 0,
     explanationRu: "За просрочку возврата книги взимается 25 центов в день за книгу.",
+    explanationEn: "For late return of the book is charged 25 cents a day per book.",
   }),
   lezenItem({
     id: "lezen-48",
@@ -463,6 +510,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Mensen met een inkomen onder een bepaalde grens", "Alle inwoners, ongeacht inkomen", "Alleen huiseigenaren"],
     correctIndex: 0,
     explanationRu: "Единовременную доплату на энергию можно получить, только если доход ниже определённого порога.",
+    explanationEn: "A one-time energy supplement can only be obtained if the income is below a certain threshold.",
   }),
   lezenItem({
     id: "lezen-49",
@@ -472,6 +520,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["U vooraf online aanmelden", "Contant betalen bij de deur", "Een doktersverklaring meenemen"],
     correctIndex: 0,
     explanationRu: "Для бесплатного пробного занятия нужно заранее записаться онлайн.",
+    explanationEn: "For a free trial, you need to register online in advance.",
   }),
   lezenItem({
     id: "lezen-50",
@@ -481,6 +530,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Uw kind staat ingeschreven bij een geregistreerde opvang", "U bent alleenstaand ouder", "Uw kind is ouder dan twaalf"],
     correctIndex: 0,
     explanationRu: "Одно из условий получения пособия на детский сад — регистрация ребёнка в лицензированном учреждении.",
+    explanationEn: "One of the conditions for obtaining a kindergarten allowance is the registration of the child in a licensed institution.",
   }),
   lezenItem({
     id: "lezen-51",
@@ -490,6 +540,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Een pasfoto en het oude document", "Alleen een pasfoto", "Niets, alles gaat digitaal"],
     correctIndex: 0,
     explanationRu: "Для продления удостоверения личности нужно принести фото на документ и старый документ.",
+    explanationEn: "To renew the identity card, you need to bring a photo to the document and the old document.",
   }),
   lezenItem({
     id: "lezen-52",
@@ -499,6 +550,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Het maximale bedrag wordt afgeschreven", "U krijgt een boete van 50 euro", "De kaart wordt geblokkeerd"],
     correctIndex: 0,
     explanationRu: "Если забыть выписаться, спишется максимальная сумма поездки.",
+    explanationEn: "If you forget to check out, the maximum amount of the trip will be written off.",
   }),
   lezenItem({
     id: "lezen-53",
@@ -508,6 +560,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Niets, het is gratis", "Een vast bedrag per maand", "Een percentage van uw schuld"],
     correctIndex: 0,
     explanationRu: "Помощь службы урегулирования долгов при муниципалитете — бесплатная.",
+    explanationEn: "Debt settlement service at the municipality is free of charge.",
   }),
   lezenItem({
     id: "lezen-54",
@@ -517,6 +570,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Nee, u kunt binnenlopen", "Ja, minimaal een week van tevoren", "Ja, alleen telefonisch"],
     correctIndex: 0,
     explanationRu: "Для прививки от гриппа предварительная запись не нужна — можно прийти без записи в указанные дни.",
+    explanationEn: "For the flu vaccine, a pre-registration is not necessary - you can come without an appointment on the specified days.",
   }),
   lezenItem({
     id: "lezen-55",
@@ -526,6 +580,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De huurder zelf", "Altijd de verhuurder", "De gemeente"],
     correctIndex: 0,
     explanationRu: "Мелкий ремонт, например поломанную дверную ручку, оплачивает сам арендатор; крупный ремонт — за счёт арендодателя.",
+    explanationEn: "Minor repairs, such as a broken door handle, are paid by the tenant himself; major repairs are paid by the landlord.",
   }),
   lezenItem({
     id: "lezen-56",
@@ -535,5 +590,6 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Of u voldoende weken heeft gewerkt", "Of u getrouwd bent", "Of u ouder bent dan 40"],
     correctIndex: 0,
     explanationRu: "Право на пособие по безработице (WW) зависит от того, отработали ли вы достаточно недель в предшествующий период.",
+    explanationEn: "Eligibility for unemployment benefit (WW) depends on whether you have worked enough weeks in the previous period.",
   }),
 ];

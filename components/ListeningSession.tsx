@@ -5,6 +5,8 @@ import { LISTENING_ITEMS } from "@/lib/content/listeningItems";
 import { shuffleOptions } from "@/lib/shuffle";
 import { useT } from "@/lib/i18n";
 import NextExercise from "@/components/NextExercise";
+import { useAppStore } from "@/lib/store";
+import { instructionFor } from "@/lib/contentLanguage";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -17,6 +19,7 @@ const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window
 
 export default function ListeningSession() {
   const t = useT();
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   // Shuffled once per mount so the correct answer's position isn't
   // memorizable/predictable.
   const items = useMemo(
@@ -193,7 +196,9 @@ export default function ListeningSession() {
           }`}
         >
           <p className="font-medium mb-1">{correct ? t("answer_correct") : t("answer_incorrect")}</p>
-          <p>{item.question.explanationRu}</p>
+          <p data-testid="instruction-explanation">
+            {instructionFor(explanationLanguage, item.question.explanationRu, item.question.explanationEn)}
+          </p>
           <button onClick={next} className="mt-3 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
             {t("listening_next")}
           </button>

@@ -7,11 +7,14 @@ import { checkAdequacy, detectErrorsCombined, DetectedError } from "@/lib/writin
 import { getErrorEntry } from "@/lib/errorTaxonomy";
 import { useT } from "@/lib/i18n";
 import NextExercise from "@/components/NextExercise";
+import { useAppStore } from "@/lib/store";
+import { instructionFor } from "@/lib/contentLanguage";
 
 type Stage = "writing" | "adequacy_fail" | "checking" | "detect" | "hint" | "reveal" | "repair";
 
 export default function WritingTask({ item, examMode = false }: { item: ShortWriteItem; examMode?: boolean }) {
   const t = useT();
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   const [text, setText] = useState("");
   const [stage, setStage] = useState<Stage>("writing");
   const [missing, setMissing] = useState<string[]>([]);
@@ -156,7 +159,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
           <p className="font-medium">
             {t("writing_found_span")} <span className="font-mono">&quot;{currentError.span}&quot;</span>
           </p>
-          <p>{currentError.hintRu}</p>
+          <p>{instructionFor(explanationLanguage, currentError.hintRu, currentError.hintEn)}</p>
           <p className="text-xs opacity-80">{t("writing_try_first")}</p>
           <button onClick={() => setStage("reveal")} className="text-sm underline">
             {t("writing_show_analysis")}
@@ -169,7 +172,12 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
           <p>
             <strong>{t("writing_error_code")}</strong> {currentError.code}
           </p>
-          <p>{getErrorEntry(currentError.code)?.l1Note}</p>
+          <p>
+            {(() => {
+              const entry = getErrorEntry(currentError.code);
+              return entry ? instructionFor(explanationLanguage, entry.l1Note, entry.l1NoteEn) : "";
+            })()}
+          </p>
           <button onClick={() => setStage("repair")} className="text-sm underline">
             {t("writing_repair_action")}
           </button>

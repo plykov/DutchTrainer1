@@ -7,9 +7,11 @@ import { INTERACTION_ITEMS } from "@/lib/content/interactionItems";
 import { Grade } from "@/lib/fsrs";
 import { shuffleOptions } from "@/lib/shuffle";
 import NextExercise from "@/components/NextExercise";
+import { instructionFor } from "@/lib/contentLanguage";
 
 export default function InteractionSession() {
   const review = useAppStore((s) => s.review);
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   const t = useT();
 
   // Shuffled once per mount so the correct response's position isn't
@@ -78,7 +80,9 @@ export default function InteractionSession() {
         <span>{item.level}</span>
       </div>
 
-      <p className="text-sm text-zinc-500 italic">{item.situationRu}</p>
+      <p className="text-sm text-zinc-500 italic">
+        {instructionFor(explanationLanguage, item.situationRu, item.situationEn)}
+      </p>
 
       <div className="space-y-1">
         {item.dialogue.map((line, i) => (
@@ -120,7 +124,9 @@ export default function InteractionSession() {
           }`}
         >
           <p className="font-medium mb-1">{correct ? t("int_appropriate") : t("int_not_ideal")}</p>
-          <p>{item.explanationRu}</p>
+          <p data-testid="instruction-explanation">
+            {instructionFor(explanationLanguage, item.explanationRu, item.explanationEn)}
+          </p>
         </div>
       )}
 

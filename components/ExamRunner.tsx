@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { McItem } from "@/lib/types";
 import { useT } from "@/lib/i18n";
 import { shuffleArray, shuffleOptions } from "@/lib/shuffle";
+import { useAppStore } from "@/lib/store";
+import { instructionFor } from "@/lib/contentLanguage";
 
 // §7 — exam mode disables everything: single pass, no backtracking, no
 // feedback until the run ends, hard countdown. This runs whatever MC item
@@ -18,6 +20,7 @@ export default function ExamRunner({
   passNote?: string;
 }) {
   const t = useT();
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   // Shuffle once per run (not per render): question order, plus each
   // question's MC option order, so neither position is memorizable/
   // predictable from how the content was authored.
@@ -83,7 +86,9 @@ export default function ExamRunner({
                 {t("your_answer")}: {answers[i] !== null ? it.options[answers[i]!] : t("exam_no_answer")} ·{" "}
                 {t("session_correct")}: {it.options[it.correctIndex]}
               </p>
-              <p className="text-zinc-500 mt-1">{it.explanationRu}</p>
+              <p className="text-zinc-500 mt-1">
+                {instructionFor(explanationLanguage, it.explanationRu, it.explanationEn)}
+              </p>
             </div>
           ))}
         </div>

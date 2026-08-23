@@ -1,6 +1,14 @@
 {
   "schemaVersion": 1,
   "bank": "deelschrijftaken",
+  "translations": {
+    "en": {
+      "method": "machine-translation",
+      "engine": "Argos Translate ru-en 1.9",
+      "generatedAt": "2026-08-23",
+      "reviewStatus": "unreviewed"
+    }
+  },
   "sources": [
     {
       "id": "project-authored-deelschrijftaken-v1",
@@ -55,7 +63,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Fill out the registration form at the city hall with your data."
     },
     {
       "id": "deel-2",
@@ -87,7 +96,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Add the short message to the missing parts."
     },
     {
       "id": "deel-3",
@@ -124,7 +134,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Complete formulier voor het aanvragen van een bibliotheekpas."
     },
     {
       "id": "deel-4",
@@ -156,7 +167,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Add a short message to a colleague."
     },
     {
       "id": "deel-5",
@@ -188,7 +200,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Fill out the address change request form."
     },
     {
       "id": "deel-6",
@@ -220,7 +233,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Complete the text of the sale announcement."
     },
     {
       "id": "deel-7",
@@ -257,7 +271,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Fill out the form of enrolling the child in kindergarten."
     },
     {
       "id": "deel-8",
@@ -284,7 +299,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Add a short message to your neighbor."
     },
     {
       "id": "deel-9",
@@ -321,7 +337,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Fill out the Dutch course entry form."
     },
     {
       "id": "deel-10",
@@ -348,7 +365,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "instructionEn": "Complete the text of a short letter to the housing corporation."
     }
   ]
 }

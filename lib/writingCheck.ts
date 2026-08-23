@@ -28,6 +28,7 @@ export interface DetectedError {
   code: ErrorCode;
   span: string;
   hintRu: string;
+  hintEn: string;
 }
 
 // LanguageTool public API rule ids/categories confirmed (by direct testing
@@ -72,13 +73,16 @@ function ltMatchesToDetectedErrors(text: string, matches: LtMatch[]): DetectedEr
     const span = text.slice(m.offset, m.offset + m.length);
     const code = LT_RULE_TO_CODE[m.rule.id];
     if (code) {
-      return { code, span, hintRu: `LanguageTool: ${m.message}` };
+      return { code, span, hintRu: `LanguageTool: ${m.message}`, hintEn: `LanguageTool: ${m.message}` };
     }
     const suggestion = m.replacements[0]?.value;
     const hintRu = suggestion
       ? `LanguageTool (нидерл.): ${m.message} Предлагаемое исправление: "${suggestion}".`
       : `LanguageTool (нидерл.): ${m.message}`;
-    return { code: "ERR_NLP_OTHER", span, hintRu };
+    const hintEn = suggestion
+      ? `LanguageTool (Dutch): ${m.message} Suggested correction: "${suggestion}".`
+      : `LanguageTool (Dutch): ${m.message}`;
+    return { code: "ERR_NLP_OTHER", span, hintRu, hintEn };
   });
 }
 
@@ -206,56 +210,66 @@ export function checkAdequacy(
   return { passed: missing.length === 0, missing };
 }
 
-const PATTERNS: { re: RegExp; code: ErrorCode; hintRu: string }[] = [
+const PATTERNS: { re: RegExp; code: ErrorCode; hintRu: string; hintEn: string }[] = [
   {
     re: /\bomdat ik (ben|heb|word)\b/i,
     code: "ERR_SUB_END",
     hintRu: "Проверьте порядок слов после 'omdat' — спрягаемый глагол должен быть в конце.",
+    hintEn: "Check the word order after 'omdat' — the conjugated verb must come at the end.",
   },
   {
     re: /\b(morgen|vandaag|straks|daarna) ik\b/i,
     code: "ERR_V2_POS",
     hintRu: "Проверьте позицию спрягаемого глагола — правило V2 требует его на втором месте.",
+    hintEn: "Check the conjugated verb's position — the V2 rule requires it to be in second position.",
   },
   {
     re: /\bik heb (ge)?ga(an)?\b/i,
     code: "ERR_AUX_SEL",
     hintRu: "Проверьте вспомогательный глагол с 'gaan' — hebben или zijn?",
+    hintEn: "Check the auxiliary verb used with 'gaan' — should it be hebben or zijn?",
   },
   {
     re: /\bde huis\b/i,
     code: "ERR_ART_DEHET",
     hintRu: "Проверьте артикль перед 'huis'.",
+    hintEn: "Check the article before 'huis'.",
   },
   {
     re: /\bik opbel\b|\bik aanbel\b|\bik opruim\b|\bik aanzet\b/i,
     code: "ERR_SEP_SPLIT",
     hintRu: "Это разделяемый глагол — приставка должна уйти в конец предложения, а не остаться перед основой.",
+    hintEn: "This is a separable verb — the prefix belongs at the end of the sentence, not before the stem.",
   },
   {
     re: /\b(wij|zij|ze) (ben|is)\b/i,
     code: "ERR_AUX_SEL",
     hintRu: "Проверьте спряжение 'zijn' — с 'wij'/'zij' используется 'zijn', а не 'ben'/'is'.",
+    hintEn: "Check the conjugation of 'zijn' — use 'zijn' with 'wij'/'zij', not 'ben'/'is'.",
   },
   {
     re: /\b(naar|bij|op|in) de \w+ niet\b/i,
     code: "ERR_NEG_POS",
     hintRu: "'Niet' обычно ставится перед предложной группой места ('niet naar de markt'), а не после неё.",
+    hintEn: "'Niet' normally comes before a prepositional phrase of place ('niet naar de markt'), not after it.",
   },
   {
     re: /\b(is|zijn|staat|staan|komt|komen) (een|twee|drie|veel|geen)\b(?!.*\ber\b)/i,
     code: "ERR_ER_EXIST",
     hintRu: "Перед неопределённым подлежащим в начале высказывания обычно нужно вводное 'er' ('Er is een...').",
+    hintEn: "An indefinite subject at the start of a statement normally needs introductory 'er' ('Er is een...').",
   },
   {
     re: /\bik heb (twee|drie|vier|vijf|veel|weinig)\b(?!.*\ber\b)/i,
     code: "ERR_ER_QUANT",
     hintRu: "Если существительное после числительного опущено, перед числительным нужно 'er' ('Ik heb er twee').",
+    hintEn: "When the noun after a number is omitted, put 'er' before the number ('Ik heb er twee').",
   },
   {
     re: /\b(had|heeft|heb) (ge)?\w+ (moeten|willen|kunnen|zullen)\b/i,
     code: "ERR_CLUSTER",
     hintRu: "Проверьте порядок глаголов в кластере — модальный глагол обычно идёт перед смысловым в конце предложения.",
+    hintEn: "Check the verb-cluster order — the modal verb normally comes before the main verb at the end of the sentence.",
   },
 ];
 
@@ -263,7 +277,7 @@ export function detectErrors(text: string): DetectedError[] {
   const found: DetectedError[] = [];
   for (const p of PATTERNS) {
     const m = text.match(p.re);
-    if (m) found.push({ code: p.code, span: m[0], hintRu: p.hintRu });
+    if (m) found.push({ code: p.code, span: m[0], hintRu: p.hintRu, hintEn: p.hintEn });
   }
   return found;
 }

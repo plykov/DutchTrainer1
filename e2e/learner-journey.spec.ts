@@ -122,6 +122,26 @@ test("English chrome covers every learning module and the exam runners", async (
   await expect(page.getByText(/Read the question first/i)).toBeVisible();
 });
 
+test("English explanation language renders English learning feedback", async ({ page }) => {
+  await onboardInEnglish(page);
+  await page.evaluate(() => {
+    Math.random = () => 0;
+  });
+  await page.goto("/practice");
+
+  const firstRadio = page.locator('input[type="radio"]').first();
+  if (await firstRadio.isVisible()) {
+    await firstRadio.check();
+  } else {
+    await page.getByRole("textbox").first().fill("test");
+  }
+  await page.getByRole("button", { name: "Check" }).click();
+
+  const explanation = page.getByTestId("instruction-explanation");
+  await expect(explanation).toBeVisible();
+  await expect(explanation).not.toHaveText(/[А-Яа-яЁё]/);
+});
+
 test("legal and version information is public before onboarding", async ({ page }) => {
   await page.goto("/onboarding");
 

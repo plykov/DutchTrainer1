@@ -9,6 +9,7 @@ import { getErrorEntry } from "@/lib/errorTaxonomy";
 import { shuffleOptions } from "@/lib/shuffle";
 import { ClozeItem, McItem, SentenceTransformItem } from "@/lib/types";
 import NextExercise from "@/components/NextExercise";
+import { instructionFor } from "@/lib/contentLanguage";
 
 function normalize(s: string): string {
   return s.trim().toLowerCase().replace(/\s+/g, " ");
@@ -18,6 +19,7 @@ export default function PracticeSession() {
   const grammarProgress = useAppStore((s) => s.grammarProgress);
   const cards = useAppStore((s) => s.cards);
   const review = useAppStore((s) => s.review);
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   const t = useT();
 
   // Queue is built once per mount — grammarProgress/cards are intentionally
@@ -134,10 +136,15 @@ export default function PracticeSession() {
           }`}
         >
           <p className="font-medium mb-1">{correct ? t("answer_correct") : t("answer_incorrect")}</p>
-          <p>{"explanationRu" in item ? item.explanationRu : ""}</p>
+          <p data-testid="instruction-explanation">
+            {"explanationRu" in item
+              ? instructionFor(explanationLanguage, item.explanationRu, item.explanationEn)
+              : ""}
+          </p>
           {errorEntry?.l1Note && (
             <p className="mt-2 text-xs opacity-80">
-              <strong>{t("writing_error_code")} {errorEntry.code}</strong> {errorEntry.l1Note}
+              <strong>{t("writing_error_code")} {errorEntry.code}</strong>{" "}
+              {instructionFor(explanationLanguage, errorEntry.l1Note, errorEntry.l1NoteEn)}
             </p>
           )}
         </div>

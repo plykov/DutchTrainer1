@@ -66,6 +66,7 @@ export interface ErrorTaxonomyEntry {
   label: string;
   example: { wrong: string; correct?: string };
   l1Note: string; // Russian-L1 contrastive note, may be empty
+  l1NoteEn?: string;
   siblingGroup?: string; // confusable interleaving group, see §3
 }
 
@@ -130,6 +131,7 @@ export interface ClozeItem extends ItemMeta {
   answer: string;
   acceptableVariants?: string[];
   explanationRu: string;
+  explanationEn?: string;
 }
 
 export interface SentenceTransformItem extends ItemMeta {
@@ -138,6 +140,7 @@ export interface SentenceTransformItem extends ItemMeta {
   source: string;
   answer: string;
   explanationRu: string;
+  explanationEn?: string;
 }
 
 export interface ShortWriteItem extends ItemMeta {

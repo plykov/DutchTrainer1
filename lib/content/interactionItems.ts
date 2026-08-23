@@ -5,11 +5,13 @@ export interface InteractionItem {
   topic: string;
   level: TargetLevel;
   situationRu: string; // scene-setting context in Russian — interaction competence depends on
+  situationEn?: string;
   // reading the social situation correctly, not just the words
   dialogue: string[]; // preceding lines of the exchange, in order
   options: string[]; // candidate responses for the learner's turn
   correctIndex: number;
   explanationRu: string;
+  explanationEn?: string;
 }
 
 // §2/§10 — "interaction" is CEFR's dialogic-exchange skill, distinct from
@@ -25,6 +27,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы записаться к врачу.",
+    situationEn: "You call the registry office to see a doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk, waarmee kan ik u helpen?"],
     options: [
       "Ik wil graag een afspraak maken.",
@@ -33,22 +36,26 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямая и вежливая формула для записи на приём — 'Ik wil graag een afspraak maken'.",
+    explanationEn: "The straightforward and polite formula for making an appointment is 'Ik wil graag een afspraak maken'.",
   },
   {
     id: "int-2",
     topic: "huisarts",
     level: "A2",
     situationRu: "Ассистент спрашивает, когда вам удобно.",
+    situationEn: "The assistant asks when you are comfortable.",
     dialogue: ["Assistente: Wanneer komt het u uit?", "U: Kan het deze week nog?", "Assistente: Ja, donderdag om elf uur kan."],
     options: ["Nee, dat wil ik niet.", "Goed, dan zie ik u donderdag om elf uur.", "Ik weet het niet."],
     correctIndex: 1,
     explanationRu: "Нужно подтвердить и повторить договорённость — это стандартный способ закрыть тему по телефону.",
+    explanationEn: "You need to confirm and repeat the agreement – this is the standard way to close the topic over the phone.",
   },
   {
     id: "int-3",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы не расслышали, что сказал сотрудник, и просите повторить.",
+    situationEn: "You didn't hear what the employee said and ask for a repeat.",
     dialogue: ["Ambtenaar: U moet dit formulier binnen twee weken opsturen."],
     options: [
       "Sorry, kunt u dat herhalen?",
@@ -57,12 +64,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "'Kunt u dat herhalen?' — вежливая просьба повторить, стандартная формула при непонимании.",
+    explanationEn: "'Kunt u dat herhalen?' is a polite request to repeat, the standard formula for misunderstanding.",
   },
   {
     id: "int-4",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы не понимаете слово в объяснении сотрудника гемeente.",
+    situationEn: "You don't understand the word in the Gemeente employee's explanation.",
     dialogue: ["Ambtenaar: U heeft een uittreksel uit de basisregistratie nodig."],
     options: [
       "Wat betekent 'uittreksel'?",
@@ -71,12 +80,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямой вопрос о значении слова — рабочая стратегия при незнакомой лексике, а не делать вид, что всё понятно.",
+    explanationEn: "A direct question about the meaning of a word is a working strategy with unfamiliar vocabulary, not pretending that everything is clear.",
   },
   {
     id: "int-5",
     topic: "afspraak_verzetten",
     level: "A2",
     situationRu: "Вам нужно отменить или перенести приём.",
+    situationEn: "You need to cancel or reschedule your appointment.",
     dialogue: ["U belt de praktijk.", "Assistente: Waarmee kan ik u helpen?"],
     options: [
       "Ik kan donderdag niet, kan het naar een andere dag?",
@@ -85,12 +96,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Просьба перенести встречу с указанием причины/ограничения — уместный ответ в этой ситуации.",
+    explanationEn: "Please reschedule the meeting with a reason/restriction is an appropriate response in this situation.",
   },
   {
     id: "int-6",
     topic: "werk",
     level: "B1",
     situationRu: "Собеседование при приёме на работу — вас просят представиться.",
+    situationEn: "A job interview – you are asked to introduce yourself.",
     dialogue: ["Werkgever: Kunt u zich even voorstellen?"],
     options: [
       "Ik heet Anna en ik werk graag met mensen.",
@@ -99,12 +112,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "На собеседовании ожидается краткое, доброжелательное представление себя.",
+    explanationEn: "A brief, friendly presentation of yourself is expected at the interview.",
   },
   {
     id: "int-7",
     topic: "werk",
     level: "B1",
     situationRu: "Работодатель спрашивает про ваш опыт.",
+    situationEn: "Your employer asks about your experience.",
     dialogue: ["Werkgever: Heeft u al werkervaring in Nederland?", "U: Nog niet, maar ik heb wel ervaring uit mijn eigen land."],
     options: [
       "Kunt u daar iets meer over vertellen?",
@@ -113,12 +128,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Естественная реакция интервьюера — просьба рассказать подробнее; это пример уместной реплики-продолжения.",
+    explanationEn: "The interviewer’s natural response is to ask for more details; this is an example of an appropriate follow-up.",
   },
   {
     id: "int-8",
     topic: "wonen",
     level: "A2",
     situationRu: "У вас сломалось отопление, вы звоните хозяину жилья.",
+    situationEn: "Your heating is broken, you call the landlord.",
     dialogue: ["Verhuurder: Wat is het probleem?"],
     options: [
       "De verwarming werkt niet meer.",
@@ -127,12 +144,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко назвать проблему — первый шаг в обращении с жалобой/просьбой о ремонте.",
+    explanationEn: "Clearly naming the problem is the first step in filing a complaint/request for repair.",
   },
   {
     id: "int-9",
     topic: "wonen",
     level: "A2",
     situationRu: "Хозяин жилья спрашивает, когда удобно, чтобы прийти мастер.",
+    situationEn: "The host asks when it is convenient for the master to come.",
     dialogue: ["Verhuurder: Wanneer kan de monteur langskomen?"],
     options: [
       "Morgenochtend komt mij goed uit.",
@@ -141,12 +160,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное предложение времени — конструктивный, вежливый ответ.",
+    explanationEn: "A specific offer of time is a constructive, polite response.",
   },
   {
     id: "int-10",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед здоровается с вами во дворе.",
+    situationEn: "The neighbor says hello to you in the yard.",
     dialogue: ["Buurman: Goedemorgen! Alles goed?"],
     options: [
       "Goedemorgen, met mij gaat het goed, en met u?",
@@ -155,12 +176,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Стандартный обмен приветствиями с встречным вопросом — база вежливого small talk.",
+    explanationEn: "The standard exchange of greetings with a counter question is the base of a polite small talk.",
   },
   {
     id: "int-11",
     topic: "buurt",
     level: "A2",
     situationRu: "Разговор с соседом заканчивается, вам нужно идти.",
+    situationEn: "The conversation with the neighbor ends, you have to go.",
     dialogue: ["Buurman: Nou, leuk je gesproken te hebben!"],
     options: [
       "Ja, insgelijks! Tot ziens.",
@@ -169,12 +192,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "'Insgelijks' (взаимно) + прощание — естественное завершение короткого разговора.",
+    explanationEn: "'Insgelijks' (mutual) + farewell is the natural conclusion of a short conversation.",
   },
   {
     id: "int-12",
     topic: "documenten",
     level: "B1",
     situationRu: "Вы получили письмо от гемeente и не всё поняли.",
+    situationEn: "You received a letter from Gemeente and didn't understand everything.",
     dialogue: ["U belt de gemeente.", "Ambtenaar: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een brief gekregen, maar ik begrijp een deel niet.",
@@ -183,12 +208,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямое и вежливое объяснение цели звонка — оптимальный первый ход разговора.",
+    explanationEn: "A direct and polite explanation of the purpose of the call is the optimal first move of the conversation.",
   },
   {
     id: "int-13",
     topic: "documenten",
     level: "B1",
     situationRu: "Сотрудник просит уточнить, какой именно документ вам нужен.",
+    situationEn: "The employee asks you to specify which document you need.",
     dialogue: ["Ambtenaar: Welk document heeft u precies nodig?"],
     options: [
       "Ik heb een uittreksel uit het bevolkingsregister nodig.",
@@ -197,12 +224,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретизация запроса — важный навык взаимодействия с официальными учреждениями.",
+    explanationEn: "Specification of the request is an important skill of interaction with official institutions.",
   },
   {
     id: "int-14",
     topic: "geld",
     level: "B1",
     situationRu: "Вы не согласны с суммой в счёте.",
+    situationEn: "You disagree with the amount in the account.",
     dialogue: ["Klantenservice: Wat kan ik voor u doen?"],
     options: [
       "Ik denk dat er een fout staat in mijn rekening.",
@@ -211,12 +240,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Формулировка несогласия без агрессии — 'ik denk dat er een fout staat' звучит уважительно и по делу.",
+    explanationEn: "The wording of disagreement without aggression - 'ik denk dat er een fout staat' sounds respectful and practical.",
   },
   {
     id: "int-15",
     topic: "geld",
     level: "B1",
     situationRu: "Вас просят прислать подтверждение оплаты.",
+    situationEn: "You are asked to send a confirmation of payment.",
     dialogue: ["Klantenservice: Kunt u een bewijs van betaling sturen?"],
     options: [
       "Ja, dat stuur ik vandaag nog op.",
@@ -225,12 +256,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие с конкретным сроком — конструктивная и вежливая реакция на просьбу.",
+    explanationEn: "Agreeing to a specific deadline is a constructive and polite response to a request.",
   },
   {
     id: "int-16",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Вы опоздали на встречу и извиняетесь.",
+    situationEn: "You're late for a meeting and you apologize.",
     dialogue: ["Collega: Je bent laat, wat is er gebeurd?"],
     options: [
       "Sorry, ik stond vast in het verkeer.",
@@ -239,12 +272,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извинение + краткое объяснение причины — стандартная вежливая реакция на опоздание.",
+    explanationEn: "An apology + a brief explanation of the reason is the standard polite response to being late.",
   },
   {
     id: "int-17",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Собеседник предлагает встретиться в другой день.",
+    situationEn: "The interviewer proposes to meet on another day.",
     dialogue: ["Collega: Zullen we het dan volgende week doen?"],
     options: [
       "Ja, dat is goed, welke dag komt jou uit?",
@@ -253,12 +288,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие + встречный вопрос о деталях — естественное продолжение договорённости.",
+    explanationEn: "Consent + counter-question about details is a natural continuation of the agreement.",
   },
   {
     id: "int-18",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Вы хотите вежливо не согласиться с предложением.",
+    situationEn: "You want to politely disagree with the offer.",
     dialogue: ["Vriend: Zullen we morgen om zeven uur 's ochtends afspreken?"],
     options: [
       "Dat is best vroeg voor mij, kan het ook wat later?",
@@ -267,12 +304,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Мягкое несогласие с альтернативой — вежливая формула вместо прямого отказа.",
+    explanationEn: "Mild disagreement with the alternative is a polite formula instead of outright refusal.",
   },
   {
     id: "int-19",
     topic: "gemeente",
     level: "A2",
     situationRu: "Сотрудник уточняет ваш адрес.",
+    situationEn: "The officer's checking your address.",
     dialogue: ["Ambtenaar: Kunt u uw adres bevestigen?"],
     options: [
       "Ja, dat is Kerkstraat 12 in Utrecht.",
@@ -281,12 +320,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямое подтверждение с конкретными данными — то, чего ждёт собеседник.",
+    explanationEn: "Direct confirmation with specific data is what the interlocutor expects.",
   },
   {
     id: "int-20",
     topic: "geld",
     level: "A2",
     situationRu: "Вы просите чек/квитанцию в магазине.",
+    situationEn: "You ask for a check/receipt at the store.",
     dialogue: ["Verkoper: Alstublieft, dat is dan vijftien euro.", "U betaalt.", "Verkoper: Nog een fijne dag!"],
     options: [
       "Mag ik ook een bonnetje, alstublieft?",
@@ -295,12 +336,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Простая вежливая просьба о квитанции — распространённая бытовая фраза.",
+    explanationEn: "A simple polite request for a receipt is a common household phrase.",
   },
   {
     id: "int-21",
     topic: "werk",
     level: "B1",
     situationRu: "Заканчивается телефонный разговор с работодателем.",
+    situationEn: "The telephone conversation with the employer ends.",
     dialogue: ["Werkgever: We nemen volgende week contact met u op.", "U:"],
     options: [
       "Dank u wel, ik hoor het graag van u. Fijne dag nog!",
@@ -309,12 +352,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Официально-вежливое завершение делового разговора — благодарность и пожелание, а не разговорное 'doei'.",
+    explanationEn: "The formal and polite conclusion of a business conversation is a thank you and a wish, not a colloquial doei.",
   },
   {
     id: "int-22",
     topic: "wonen",
     level: "A2",
     situationRu: "Вы забыли ключ и просите соседа впустить вас.",
+    situationEn: "You forget the key and ask your neighbor to let you in.",
     dialogue: ["Buurman: Wat is er aan de hand?"],
     options: [
       "Ik ben mijn sleutel vergeten, mag ik even wachten bij u?",
@@ -323,12 +368,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Объяснение ситуации + вежливая просьба — уместная реакция, не требование.",
+    explanationEn: "Explanation + polite request - appropriate response, not a requirement.",
   },
   {
     id: "int-23",
     topic: "gezondheid",
     level: "A2",
     situationRu: "Врач спрашивает о симптомах.",
+    situationEn: "The doctor asks about the symptoms.",
     dialogue: ["Dokter: Wat zijn uw klachten?"],
     options: [
       "Ik heb al twee dagen hoofdpijn en koorts.",
@@ -337,12 +384,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное описание симптомов — то, что нужно врачу для помощи.",
+    explanationEn: "A specific description of the symptoms is what the doctor needs to help.",
   },
   {
     id: "int-24",
     topic: "gezondheid",
     level: "A2",
     situationRu: "Врач предлагает выписать рецепт.",
+    situationEn: "The doctor suggests writing a prescription.",
     dialogue: ["Dokter: Ik schrijf u een recept voor.", "U:"],
     options: [
       "Dank u wel, waar kan ik het medicijn ophalen?",
@@ -351,12 +400,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Благодарность + уточняющий вопрос — естественное продолжение диалога у врача.",
+    explanationEn: "Gratitude + clarifying question - a natural continuation of the dialogue with the doctor.",
   },
   {
     id: "int-25",
     topic: "onderwijs",
     level: "A2",
     situationRu: "Преподаватель спрашивает, понятен ли материал.",
+    situationEn: "The teacher asks if the material is clear.",
     dialogue: ["Docent: Is alles duidelijk, of heeft iemand nog vragen?"],
     options: [
       "Ik heb een vraag over de vorige les.",
@@ -365,12 +416,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретный вопрос по теме — ожидаемая и уместная реакция на приглашение задать вопросы.",
+    explanationEn: "A specific question on a topic is an expected and appropriate response to an invitation to ask questions.",
   },
   {
     id: "int-26",
     topic: "geld",
     level: "B1",
     situationRu: "Сотрудник банка спрашивает про открытие полиса.",
+    situationEn: "A bank employee asks about opening a policy.",
     dialogue: ["Medewerker: Wilt u ook een verzekering afsluiten?"],
     options: [
       "Kunt u me eerst vertellen wat de kosten zijn?",
@@ -379,12 +432,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Запрос информации перед принятием решения — разумная и вежливая реакция.",
+    explanationEn: "Asking for information before making a decision is a reasonable and polite response.",
   },
   {
     id: "int-27",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед приглашает вас на встречу жителей района.",
+    situationEn: "The neighbor invites you to a meeting of the residents of the area.",
     dialogue: ["Buurvrouw: Kom je ook naar de buurtbijeenkomst volgende week?"],
     options: [
       "Ja, leuk, hoe laat begint het?",
@@ -393,12 +448,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие с уточняющим вопросом — вовлечённая и вежливая реакция на приглашение.",
+    explanationEn: "Agreeing with a clarifying question is an engaged and polite response to an invitation.",
   },
   {
     id: "int-28",
     topic: "werk",
     level: "B1",
     situationRu: "Работодатель спрашивает про зарплатные ожидания.",
+    situationEn: "The employer asks about salary expectations.",
     dialogue: ["Werkgever: Wat voor salaris heeft u in gedachten?"],
     options: [
       "Dat hangt af van de functie, kunt u een indicatie geven?",
@@ -407,12 +464,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Дипломатичный встречный вопрос — уместная тактика при обсуждении зарплаты на собеседовании.",
+    explanationEn: "Diplomatic counter-question is an appropriate tactic when discussing salary in an interview.",
   },
   {
     id: "int-29",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы пришли за новым удостоверением, но забыли фото.",
+    situationEn: "You came for a new ID, but you forgot the photo.",
     dialogue: ["Ambtenaar: Heeft u een pasfoto bij u?"],
     options: [
       "Nee, sorry, ik ben die vergeten. Kan ik later terugkomen?",
@@ -421,12 +480,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извинение + предложение решения — конструктивная реакция на собственную ошибку.",
+    explanationEn: "Apologizing + offering a solution is a constructive response to your own mistake.",
   },
   {
     id: "int-30",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Друг спрашивает, всё ли у вас в порядке после трудного дня.",
+    situationEn: "A friend asks if you're okay after a hard day.",
     dialogue: ["Vriend: Gaat het wel goed met je?"],
     options: [
       "Het gaat wel, het was een drukke dag.",
@@ -435,12 +496,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честный, но короткий ответ близкому знакомому — естественный регистр для дружеского разговора.",
+    explanationEn: "An honest but short answer to a close acquaintance is a natural register for friendly conversation.",
   },
   {
     id: "int-31",
     topic: "wonen",
     level: "B1",
     situationRu: "Хозяин жилья предлагает продлить контракт аренды.",
+    situationEn: "The owner offers to extend the lease contract.",
     dialogue: ["Verhuurder: Wilt u het huurcontract verlengen?"],
     options: [
       "Ja, graag, onder dezelfde voorwaarden als nu?",
@@ -449,6 +512,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие + уточнение условий — деловой и вежливый способ обсудить продление договора.",
+    explanationEn: "Consent + clarification of terms is a businesslike and polite way to discuss contract extension.",
   },
 
   // --- +100 batch: 10 scenarios per topic (huisarts, gemeente, werk,
@@ -460,6 +524,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor maandag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik moet werken. Kan het een andere dag?",
@@ -468,12 +533,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-2",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor dinsdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik ben ziek. Kan het een andere dag?",
@@ -482,12 +549,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-3",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor woensdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik heb een andere afspraak. Kan het een andere dag?",
@@ -496,12 +565,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-4",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor donderdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want mijn kind is ziek. Kan het een andere dag?",
@@ -510,12 +581,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-5",
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor vrijdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik ben op vakantie. Kan het een andere dag?",
@@ -524,12 +597,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-6",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor zaterdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want de auto is kapot. Kan het een andere dag?",
@@ -538,12 +613,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-7",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor zondag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik heb geen oppas. Kan het een andere dag?",
@@ -552,12 +629,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-8",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor volgende week. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want het komt slecht uit. Kan het een andere dag?",
@@ -566,12 +645,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-9",
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor morgenochtend. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik ben er niet. Kan het een andere dag?",
@@ -580,12 +661,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-10",
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
+    situationEn: "You call the registry office to reschedule the doctor.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor vanmiddag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik heb een sollicitatiegesprek. Kan het een andere dag?",
@@ -594,12 +677,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо и по делу: сказать, что не подходит, назвать причину и попросить другой день.",
+    explanationEn: "Polite and practical: say what is not suitable, name the reason and ask for another day.",
   },
   {
     id: "int-gen-11",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het inschrijfformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het inschrijfformulier niet helemaal. Kunt u het uitleggen?",
@@ -608,12 +693,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-12",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het aanvraagformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het aanvraagformulier niet helemaal. Kunt u het uitleggen?",
@@ -622,12 +709,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-13",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het uittrekselformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het uittrekselformulier niet helemaal. Kunt u het uitleggen?",
@@ -636,12 +725,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-14",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het vergunningsformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het vergunningsformulier niet helemaal. Kunt u het uitleggen?",
@@ -650,12 +741,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-15",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het verhuisformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het verhuisformulier niet helemaal. Kunt u het uitleggen?",
@@ -664,12 +757,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-16",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het belastingformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het belastingformulier niet helemaal. Kunt u het uitleggen?",
@@ -678,12 +773,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-17",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het kinderbijslagformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het kinderbijslagformulier niet helemaal. Kunt u het uitleggen?",
@@ -692,12 +789,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-18",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het paspoortformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het paspoortformulier niet helemaal. Kunt u het uitleggen?",
@@ -706,12 +805,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-19",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het identiteitsformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het identiteitsformulier niet helemaal. Kunt u het uitleggen?",
@@ -720,12 +821,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-20",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
+    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het adreswijzigingsformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het adreswijzigingsformulier niet helemaal. Kunt u het uitleggen?",
@@ -734,12 +837,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
+    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
   },
   {
     id: "int-gen-21",
     topic: "werk",
     level: "B1",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je maandag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -748,12 +853,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-22",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je dinsdag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -762,12 +869,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-23",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je woensdag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -776,12 +885,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-24",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je donderdag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -790,12 +901,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-25",
     topic: "werk",
     level: "B1",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je vrijdag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -804,12 +917,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-26",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je zaterdag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -818,12 +933,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-27",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je zondag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -832,12 +949,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-28",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je volgende week kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -846,12 +965,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-29",
     topic: "werk",
     level: "B1",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je morgenochtend kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -860,12 +981,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-30",
     topic: "werk",
     level: "A2",
     situationRu: "Ваш начальник спрашивает, можете ли вы поработать в выходной.",
+    situationEn: "Your boss asks if you can work on the weekend.",
     dialogue: ["Baas: Zou je vanmiddag kunnen werken? We hebben extra hulp nodig."],
     options: [
       "Dat is lastig, want ik heb al iets gepland. Kan iemand anders het doen?",
@@ -874,12 +997,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
+    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
   },
   {
     id: "int-gen-31",
     topic: "winkel",
     level: "B1",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze jas terugbrengen. Ik heb de bon nog.",
@@ -888,12 +1013,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-32",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze schoenen terugbrengen. Ik heb de bon nog.",
@@ -902,12 +1029,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-33",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag dit apparaat terugbrengen. Ik heb de bon nog.",
@@ -916,12 +1045,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-34",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze broek terugbrengen. Ik heb de bon nog.",
@@ -930,12 +1061,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-35",
     topic: "winkel",
     level: "B1",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag dit horloge terugbrengen. Ik heb de bon nog.",
@@ -944,12 +1077,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-36",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze tas terugbrengen. Ik heb de bon nog.",
@@ -958,12 +1093,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-37",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze trui terugbrengen. Ik heb de bon nog.",
@@ -972,12 +1109,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-38",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze lamp terugbrengen. Ik heb de bon nog.",
@@ -986,12 +1125,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-39",
     topic: "winkel",
     level: "B1",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag dit speelgoed terugbrengen. Ik heb de bon nog.",
@@ -1000,12 +1141,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-40",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
+    situationEn: "In the store, you want to return a product that did not fit.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze fiets terugbrengen. Ik heb de bon nog.",
@@ -1014,12 +1157,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
+    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
   },
   {
     id: "int-gen-41",
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na tien uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1028,12 +1173,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-42",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na elf uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1042,12 +1189,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-43",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na middernacht?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1056,12 +1205,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-44",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na negen uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1070,12 +1221,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-45",
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na acht uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1084,12 +1237,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-46",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na half elf 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1098,12 +1253,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-47",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na tien uur?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1112,12 +1269,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-48",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na elf uur?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1126,12 +1285,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-49",
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na twaalf uur 's nachts?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1140,12 +1301,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-50",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
+    situationEn: "Neighbor complains of noise from your apartment late at night.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na negen uur?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1154,12 +1317,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
+    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
   },
   {
     id: "int-gen-51",
     topic: "school",
     level: "B1",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was maandag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik moet werken. Ik had het moeten doorgeven.",
@@ -1168,12 +1333,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-52",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was dinsdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik ben ziek. Ik had het moeten doorgeven.",
@@ -1182,12 +1349,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-53",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was woensdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik heb een andere afspraak. Ik had het moeten doorgeven.",
@@ -1196,12 +1365,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-54",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was donderdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, mijn kind is ziek. Ik had het moeten doorgeven.",
@@ -1210,12 +1381,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-55",
     topic: "school",
     level: "B1",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was vrijdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik ben op vakantie. Ik had het moeten doorgeven.",
@@ -1224,12 +1397,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-56",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was zaterdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, de auto is kapot. Ik had het moeten doorgeven.",
@@ -1238,12 +1413,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-57",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was zondag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik heb geen oppas. Ik had het moeten doorgeven.",
@@ -1252,12 +1429,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-58",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was volgende week niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, het komt slecht uit. Ik had het moeten doorgeven.",
@@ -1266,12 +1445,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-59",
     topic: "school",
     level: "B1",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was morgenochtend niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik ben er niet. Ik had het moeten doorgeven.",
@@ -1280,12 +1461,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-60",
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
+    situationEn: "Your child’s teacher asks about his absence from school.",
     dialogue: ["Leraar: Uw kind was vanmiddag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik heb een sollicitatiegesprek. Ik had het moeten doorgeven.",
@@ -1294,12 +1477,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
+    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
   },
   {
     id: "int-gen-61",
     topic: "bank",
     level: "B1",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een betaalrekening openen.",
@@ -1308,12 +1493,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-62",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een spaarrekening openen.",
@@ -1322,12 +1509,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-63",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een jongerenrekening openen.",
@@ -1336,12 +1525,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-64",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een gezamenlijke rekening openen.",
@@ -1350,12 +1541,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-65",
     topic: "bank",
     level: "B1",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een zakelijke rekening openen.",
@@ -1364,12 +1557,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-66",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een tweede rekening openen.",
@@ -1378,12 +1573,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-67",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een rekening voor mijn kind openen.",
@@ -1392,12 +1589,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-68",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een nieuwe betaalrekening openen.",
@@ -1406,12 +1605,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-69",
     topic: "bank",
     level: "B1",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een spaarrekening voor later openen.",
@@ -1420,12 +1621,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-70",
     topic: "bank",
     level: "A2",
     situationRu: "В банке вы хотите открыть новый счёт.",
+    situationEn: "At the bank, you want to open a new account.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen vandaag?"],
     options: [
       "Ik wil graag een rekening in euro's openen.",
@@ -1434,12 +1637,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Чётко сформулировать цель визита — открыть новый счёт.",
+    explanationEn: "The purpose of the visit is to open a new account.",
   },
   {
     id: "int-gen-71",
     topic: "apotheek",
     level: "B1",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn medicijnen ophalen.",
@@ -1448,12 +1653,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-72",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn antibiotica ophalen.",
@@ -1462,12 +1669,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-73",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn pijnstillers ophalen.",
@@ -1476,12 +1685,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-74",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn hoestdrank ophalen.",
@@ -1490,12 +1701,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-75",
     topic: "apotheek",
     level: "B1",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn zalf ophalen.",
@@ -1504,12 +1717,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-76",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn tabletten ophalen.",
@@ -1518,12 +1733,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-77",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn drupjes ophalen.",
@@ -1532,12 +1749,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-78",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn recept voor mijn kind ophalen.",
@@ -1546,12 +1765,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-79",
     topic: "apotheek",
     level: "B1",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn nieuwe medicijnen ophalen.",
@@ -1560,12 +1781,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-80",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
+    situationEn: "At the pharmacy, you want to pick up prescription medications.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn herhaalrecept ophalen.",
@@ -1574,12 +1797,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
+    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
   },
   {
     id: "int-gen-81",
     topic: "station",
     level: "B1",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Utrecht gemist. Hoe laat vertrekt de volgende?",
@@ -1588,12 +1813,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-82",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Amsterdam gemist. Hoe laat vertrekt de volgende?",
@@ -1602,12 +1829,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-83",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Rotterdam gemist. Hoe laat vertrekt de volgende?",
@@ -1616,12 +1845,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-84",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Den Haag gemist. Hoe laat vertrekt de volgende?",
@@ -1630,12 +1861,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-85",
     topic: "station",
     level: "B1",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Eindhoven gemist. Hoe laat vertrekt de volgende?",
@@ -1644,12 +1877,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-86",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Groningen gemist. Hoe laat vertrekt de volgende?",
@@ -1658,12 +1893,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-87",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Arnhem gemist. Hoe laat vertrekt de volgende?",
@@ -1672,12 +1909,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-88",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Maastricht gemist. Hoe laat vertrekt de volgende?",
@@ -1686,12 +1925,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-89",
     topic: "station",
     level: "B1",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Tilburg gemist. Hoe laat vertrekt de volgende?",
@@ -1700,12 +1941,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-90",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы пропустили поезд и спрашиваете о следующем.",
+    situationEn: "At the train station, you miss the train and ask about the next one.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb mijn trein naar Breda gemist. Hoe laat vertrekt de volgende?",
@@ -1714,12 +1957,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
+    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
   },
   {
     id: "int-gen-91",
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de eigen bijdrage in mijn polis. Dat is mij niet duidelijk.",
@@ -1728,12 +1973,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-92",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de dekking voor tandarts in mijn polis. Dat is mij niet duidelijk.",
@@ -1742,12 +1989,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-93",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de premie in mijn polis. Dat is mij niet duidelijk.",
@@ -1756,12 +2005,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-94",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de aanvullende verzekering in mijn polis. Dat is mij niet duidelijk.",
@@ -1770,12 +2021,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-95",
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de vergoeding voor fysiotherapie in mijn polis. Dat is mij niet duidelijk.",
@@ -1784,12 +2037,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-96",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over het eigen risico in mijn polis. Dat is mij niet duidelijk.",
@@ -1798,12 +2053,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-97",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de dekking in het buitenland in mijn polis. Dat is mij niet duidelijk.",
@@ -1812,12 +2069,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-98",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de opzegtermijn in mijn polis. Dat is mij niet duidelijk.",
@@ -1826,12 +2085,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-99",
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de vergoeding voor medicijnen in mijn polis. Dat is mij niet duidelijk.",
@@ -1840,12 +2101,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
   {
     id: "int-gen-100",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
+    situationEn: "You call the insurance company about an obscure item in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de vergoeding voor de bril in mijn polis. Dat is mij niet duidelijk.",
@@ -1854,6 +2117,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
+    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
   },
 
   // --- gen3 batch: 69 fresh, hand-varied scenarios spanning civic/everyday
@@ -1865,6 +2129,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы пришли к врачу, но результаты анализов ещё не готовы.",
+    situationEn: "You went to the doctor, but the test results are not ready yet.",
     dialogue: ["Dokter: De uitslag van uw bloedonderzoek is nog niet binnen."],
     options: [
       "Oké, wanneer kan ik die dan verwachten?",
@@ -1873,12 +2138,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойный уточняющий вопрос о сроках — уместная реакция вместо обвинений.",
+    explanationEn: "A calm clarifying question about the timing is an appropriate response instead of accusations.",
   },
   {
     id: "int-gen3-2",
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вам говорят, что лекарства нет в наличии.",
+    situationEn: "The pharmacy tells you that the medicine is not available.",
     dialogue: ["Apotheker: Dit medicijn hebben we helaas niet op voorraad."],
     options: [
       "Kunt u het voor mij bestellen?",
@@ -1887,12 +2154,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Просьба заказать лекарство — конструктивный следующий шаг, а не отказ или угроза.",
+    explanationEn: "Asking for medication is a constructive next step, not a denial or threat.",
   },
   {
     id: "int-gen3-3",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы хотите пожаловаться на долгое ожидание ответа от муниципалитета.",
+    situationEn: "You want to complain about the long wait for a response from the municipality.",
     dialogue: ["Ambtenaar: Waarmee kan ik u helpen?"],
     options: [
       "Ik heb drie weken geleden een aanvraag ingediend en nog niets gehoord. Kunt u kijken wat de status is?",
@@ -1901,12 +2170,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая, конкретная жалоба с просьбой проверить статус — эффективнее, чем эмоциональные упрёки.",
+    explanationEn: "A polite, specific complaint asking for a status check is more effective than emotional rebukes.",
   },
   {
     id: "int-gen3-4",
     topic: "bank",
     level: "A2",
     situationRu: "Сотрудник банка спрашивает, для чего вам нужен новый счёт.",
+    situationEn: "A bank employee asks why you need a new account.",
     dialogue: ["Medewerker: Waarvoor wilt u de rekening gebruiken?"],
     options: [
       "Voor mijn dagelijkse uitgaven en salaris.",
@@ -1915,12 +2186,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямой и информативный ответ на рабочий вопрос сотрудника банка.",
+    explanationEn: "A direct and informative answer to the employee’s question.",
   },
   {
     id: "int-gen3-5",
     topic: "bank",
     level: "B1",
     situationRu: "Сотрудник банка предупреждает о комиссии, о которой вы не знали.",
+    situationEn: "An employee of the bank warns about a commission that you did not know about.",
     dialogue: ["Medewerker: Voor deze overschrijving betaalt u helaas extra kosten."],
     options: [
       "Dat wist ik niet, kunt u uitleggen waarom die kosten er zijn?",
@@ -1929,12 +2202,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый запрос объяснения непонятной комиссии — разумная реакция вместо обвинений.",
+    explanationEn: "Politely asking for an explanation of an incomprehensible commission is a reasonable response instead of accusations.",
   },
   {
     id: "int-gen3-6",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы не знаете, с какой платформы отправляется поезд.",
+    situationEn: "At the station, you don’t know which platform the train is coming from.",
     dialogue: ["Medewerker: Kan ik u helpen?"],
     options: [
       "Ja, van welk spoor vertrekt de trein naar Utrecht?",
@@ -1943,12 +2218,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Простой уточняющий вопрос про платформу — типичная ситуация на вокзале.",
+    explanationEn: "A simple clarifying question about the platform is a typical situation at the station.",
   },
   {
     id: "int-gen3-7",
     topic: "station",
     level: "A2",
     situationRu: "Вы опоздали на поезд и спрашиваете о следующем.",
+    situationEn: "You miss the train and ask about the next one.",
     dialogue: ["Medewerker: De trein van tien uur is net vertrokken."],
     options: [
       "Jammer, hoe laat gaat de volgende trein?",
@@ -1957,12 +2234,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное принятие факта и вопрос о следующем поезде — практичная реакция.",
+    explanationEn: "Calmly accepting the fact and questioning the next train is a practical reaction.",
   },
   {
     id: "int-gen3-8",
     topic: "verzekering",
     level: "B1",
     situationRu: "Страховой агент предлагает более дорогой пакет, чем вы хотели.",
+    situationEn: "The insurance company offers a more expensive package than you wanted.",
     dialogue: ["Adviseur: Ik raad u dit uitgebreide pakket aan, dat is net iets duurder."],
     options: [
       "Dat begrijp ik, maar ik zoek eigenlijk iets goedkopers. Wat zijn de opties?",
@@ -1971,12 +2250,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо обозначить бюджетные рамки и попросить альтернативы — уместная реакция на навязывание.",
+    explanationEn: "Politely designating a budget framework and asking for alternatives is an appropriate response to the imposition.",
   },
   {
     id: "int-gen3-9",
     topic: "werk",
     level: "A2",
     situationRu: "Коллега просит помочь с задачей, но у вас мало времени.",
+    situationEn: "A colleague asks for help with the task, but you have little time.",
     dialogue: ["Collega: Kun je me even helpen met deze taak?"],
     options: [
       "Over een half uurtje kan ik wel, is dat oké?",
@@ -1985,12 +2266,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Предложение помочь чуть позже — вежливый компромисс вместо резкого отказа.",
+    explanationEn: "Offering help later is a polite compromise instead of a sharp refusal.",
   },
   {
     id: "int-gen3-10",
     topic: "werk",
     level: "B1",
     situationRu: "Начальник критикует вашу работу, и вы хотите объясниться.",
+    situationEn: "Your boss criticizes your work and you want to explain.",
     dialogue: ["Baas: Dit rapport is niet compleet, er ontbreken cijfers."],
     options: [
       "Sorry, dat klopt. Ik kan de ontbrekende cijfers vandaag nog toevoegen.",
@@ -1999,12 +2282,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Признать ошибку и предложить быстрое решение — профессиональная реакция на критику.",
+    explanationEn: "Admitting a mistake and offering a quick solution is a professional response to criticism.",
   },
   {
     id: "int-gen3-11",
     topic: "wonen",
     level: "B1",
     situationRu: "Хозяин жилья хочет повысить арендную плату, и вы хотите обсудить это.",
+    situationEn: "The landlord wants to raise the rent and you want to discuss it.",
     dialogue: ["Verhuurder: Ik ga de huur volgend jaar verhogen."],
     options: [
       "Kunt u uitleggen met hoeveel en waarom?",
@@ -2013,12 +2298,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойная просьба объяснить причину и размер повышения — разумная реакция арендатора.",
+    explanationEn: "Calmly asking to explain the reason and amount of the increase is a reasonable reaction of the tenant.",
   },
   {
     id: "int-gen3-12",
     topic: "wonen",
     level: "A2",
     situationRu: "Сосед по дому просит вас не оставлять велосипед в коридоре.",
+    situationEn: "Your neighbor asks you not to leave your bike in the hallway.",
     dialogue: ["Buurman: Kunt u uw fiets niet in de gang zetten?"],
     options: [
       "Sorry, ik zet hem voortaan buiten.",
@@ -2027,12 +2314,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извинение и обещание исправиться — уместная реакция на замечание соседа.",
+    explanationEn: "An apology and a promise to make amends is an appropriate response to a neighbor's remark.",
   },
   {
     id: "int-gen3-13",
     topic: "gezondheid",
     level: "B1",
     situationRu: "Врач предлагает направление к специалисту, но вы хотите сначала подумать.",
+    situationEn: "The doctor suggests a referral to a specialist, but you want to think first.",
     dialogue: ["Dokter: Ik kan u doorverwijzen naar een specialist."],
     options: [
       "Mag ik daar even over nadenken en u later bellen?",
@@ -2041,12 +2330,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Просьба на размышление и обещание перезвонить — уместный способ отложить решение.",
+    explanationEn: "Asking for reflection and promising to call back is an appropriate way to delay a decision.",
   },
   {
     id: "int-gen3-14",
     topic: "gezondheid",
     level: "A2",
     situationRu: "Медсестра спрашивает, есть ли у вас аллергия перед прививкой.",
+    situationEn: "The nurse asks if you are allergic before the vaccination.",
     dialogue: ["Verpleegkundige: Heeft u ergens een allergie voor?"],
     options: [
       "Ja, ik ben allergisch voor penicilline.",
@@ -2055,12 +2346,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямой ответ на важный медицинский вопрос — необходимая информация для безопасности.",
+    explanationEn: "A direct answer to an important medical question is essential information for safety.",
   },
   {
     id: "int-gen3-15",
     topic: "onderwijs",
     level: "A2",
     situationRu: "Преподаватель предлагает дополнительный урок для отстающих.",
+    situationEn: "The teacher offers an additional lesson for the laggards.",
     dialogue: ["Docent: Wilt u een extra les volgen om bij te blijven?"],
     options: [
       "Ja, graag, wanneer is die les?",
@@ -2069,12 +2362,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие с уточнением деталей — конструктивная реакция на предложение помощи.",
+    explanationEn: "Accepting details is a constructive response to an offer of assistance.",
   },
   {
     id: "int-gen3-16",
     topic: "onderwijs",
     level: "B1",
     situationRu: "Вы хотите попросить преподавателя отсрочку для сдачи задания.",
+    situationEn: "You want to ask the teacher to postpone the assignment.",
     dialogue: ["Docent: Uw opdracht moet morgen ingeleverd worden."],
     options: [
       "Zou ik een paar dagen extra kunnen krijgen? Ik ben deze week ziek geweest.",
@@ -2083,12 +2378,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба об отсрочке с указанием причины — уместная стратегия при нехватке времени.",
+    explanationEn: "Politely requesting a delay with a reason is an appropriate strategy for time constraints.",
   },
   {
     id: "int-gen3-17",
     topic: "geld",
     level: "A2",
     situationRu: "Кассир говорит, что ваша карта не сработала.",
+    situationEn: "The cashier says your card didn't work.",
     dialogue: ["Kassamedewerker: Uw pas werkt helaas niet."],
     options: [
       "Mag ik het nog een keer proberen, of kan ik contant betalen?",
@@ -2097,12 +2394,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное предложение решения (повторить попытку или заплатить наличными) — практичная реакция.",
+    explanationEn: "A calm offer of a solution (to try again or pay in cash) is a practical reaction.",
   },
   {
     id: "int-gen3-18",
     topic: "geld",
     level: "B1",
     situationRu: "Вы заметили двойное списание с вашего счёта и звоните в банк.",
+    situationEn: "You notice a double charge from your account and call the bank.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik zie dat hetzelfde bedrag twee keer van mijn rekening is afgeschreven. Kunt u dat controleren?",
@@ -2111,12 +2410,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное, спокойное описание проблемы с просьбой проверить — эффективный способ решить вопрос.",
+    explanationEn: "A specific, calm description of the problem with a request to check is an effective way to resolve the issue.",
   },
   {
     id: "int-gen3-19",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Друг предлагает пойти в кино, но вы устали.",
+    situationEn: "A friend suggests going to the movies, but you're tired.",
     dialogue: ["Vriend: Zullen we vanavond naar de bioscoop gaan?"],
     options: [
       "Ik ben best moe vandaag, zullen we het een andere keer doen?",
@@ -2125,12 +2426,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Мягкий отказ с объяснением и предложением альтернативы — вежливая формула среди друзей.",
+    explanationEn: "A gentle refusal to explain and offer an alternative is a polite formula among friends.",
   },
   {
     id: "int-gen3-20",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Знакомый предлагает встретиться, но вы не помните, где договорились.",
+    situationEn: "A friend offers to meet, but you do not remember where you agreed.",
     dialogue: ["Vriend: Zie ik je om vijf uur bij het station?"],
     options: [
       "Sorry, welk station bedoel je precies?",
@@ -2139,12 +2442,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Уточняющий вопрос при неясной детали — нормальная стратегия при планировании встречи.",
+    explanationEn: "A clarifying question with unclear details is a normal strategy when planning a meeting.",
   },
   {
     id: "int-gen3-21",
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед просит присмотреть за его кошкой на выходные.",
+    situationEn: "A neighbor asks him to look after his cat for the weekend.",
     dialogue: ["Buurvrouw: Zou je mijn kat kunnen voeren dit weekend? Ik ben weg."],
     options: [
       "Ja, dat kan ik doen. Hoe vaak moet ik haar voeren?",
@@ -2153,12 +2458,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие помочь + уточняющий вопрос — дружелюбная и практичная реакция на просьбу.",
+    explanationEn: "Agreeing to help + clarifying question is a friendly and practical response to a request.",
   },
   {
     id: "int-gen3-22",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед стучится, чтобы вернуть вам почту, доставленную по ошибке.",
+    situationEn: "Neighbor knocks to return mail delivered by mistake.",
     dialogue: ["Buurman: Dit pakketje is bij mij bezorgd, maar het is voor u."],
     options: [
       "O, dank u wel dat u het langsbrengt!",
@@ -2167,12 +2474,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Простая благодарность за любезность соседа — уместная реакция.",
+    explanationEn: "A simple thank you for your neighbor's courtesy is an appropriate response.",
   },
   {
     id: "int-gen3-23",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите узнать, есть ли размер побольше.",
+    situationEn: "In the store, you want to know if there is a larger size.",
     dialogue: ["Verkoper: Past deze maat u goed?"],
     options: [
       "Nee, hij is te klein. Heeft u een maat groter?",
@@ -2181,12 +2490,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное указание проблемы и просьба о другом размере — практичная реакция в магазине.",
+    explanationEn: "Specifically pointing out the problem and asking for a different size is a practical reaction in the store.",
   },
   {
     id: "int-gen3-24",
     topic: "winkel",
     level: "B1",
     situationRu: "Продавец предлагает дополнительную услугу, которая вам не нужна.",
+    situationEn: "The seller offers an additional service that you do not need.",
     dialogue: ["Verkoper: Wilt u er ook een garantieverlenging bij nemen?"],
     options: [
       "Nee, dank u, dat hoeft voor mij niet.",
@@ -2195,12 +2506,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ от дополнительной услуги — стандартная и уместная реакция.",
+    explanationEn: "Polite refusal of an additional service is a standard and appropriate reaction.",
   },
   {
     id: "int-gen3-25",
     topic: "huisarts",
     level: "B1",
     situationRu: "Врач спрашивает, помогло ли предыдущее лечение.",
+    situationEn: "The doctor asks if previous treatment has helped.",
     dialogue: ["Dokter: Heeft de vorige behandeling geholpen?"],
     options: [
       "Een beetje, maar de klachten zijn nog niet helemaal weg.",
@@ -2209,12 +2522,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честная и информативная обратная связь помогает врачу скорректировать лечение.",
+    explanationEn: "Honest and informative feedback helps the doctor adjust treatment.",
   },
   {
     id: "int-gen3-26",
     topic: "apotheek",
     level: "B1",
     situationRu: "Вы не понимаете, как правильно принимать лекарство.",
+    situationEn: "You don’t know how to take the medicine properly.",
     dialogue: ["Apotheker: Neem dit medicijn twee keer per dag met voedsel in."],
     options: [
       "Sorry, kunt u dat nog een keer uitleggen? Voor of na de maaltijd?",
@@ -2223,12 +2538,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Уточняющий вопрос по важной медицинской инструкции — необходимая и уместная реакция.",
+    explanationEn: "A clarifying question on an important medical instruction is a necessary and appropriate response.",
   },
   {
     id: "int-gen3-27",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы пришли в муниципалитет, но забыли один нужный документ.",
+    situationEn: "You came to the city hall, but you forgot one document.",
     dialogue: ["Ambtenaar: Heeft u ook uw huurcontract meegenomen?"],
     options: [
       "Nee, sorry, dat ben ik vergeten. Kan ik het later opsturen?",
@@ -2237,12 +2554,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Признание ошибки + предложение решения (прислать позже) — конструктивная реакция.",
+    explanationEn: "Admitting an error + offering a solution (send it later) is a constructive response.",
   },
   {
     id: "int-gen3-28",
     topic: "bank",
     level: "A2",
     situationRu: "Сотрудник банка объясняет, что вам нужно записаться заранее.",
+    situationEn: "The bank employee explains that you need to register in advance.",
     dialogue: ["Medewerker: Voor dit gesprek moet u van tevoren een afspraak maken."],
     options: [
       "Oké, hoe kan ik dat het beste doen?",
@@ -2251,12 +2570,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное принятие правила и вопрос о способе записи — практичная реакция.",
+    explanationEn: "Calmly accepting the rule and questioning how to record is a practical reaction.",
   },
   {
     id: "int-gen3-29",
     topic: "station",
     level: "B1",
     situationRu: "Кондуктор просит показать билет, но вы его потеряли.",
+    situationEn: "The conductor asks for a ticket, but you lost it.",
     dialogue: ["Conducteur: Mag ik uw kaartje zien?"],
     options: [
       "Sorry, ik kan het niet vinden, maar ik heb het wel gekocht via de app.",
@@ -2265,12 +2586,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извинение и объяснение ситуации с предложением доказательства — уместная реакция при проверке билетов.",
+    explanationEn: "Apologizing and explaining the situation with the offer of proof is an appropriate response when checking tickets.",
   },
   {
     id: "int-gen3-30",
     topic: "verzekering",
     level: "A2",
     situationRu: "Страховой агент спрашивает, какой вид страховки вам нужен.",
+    situationEn: "The insurance agent asks you what type of insurance you need.",
     dialogue: ["Adviseur: Welk soort verzekering zoekt u precies?"],
     options: [
       "Ik zoek een zorgverzekering voor mezelf en mijn kind.",
@@ -2279,12 +2602,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретный ответ на запрос сотрудника — необходимая информация для подбора страховки.",
+    explanationEn: "A specific response to the employee’s request is the necessary information for the selection of insurance.",
   },
   {
     id: "int-gen3-31",
     topic: "werk",
     level: "A2",
     situationRu: "Коллега приглашает вас на обед в столовой.",
+    situationEn: "A colleague invites you to lunch in the dining room.",
     dialogue: ["Collega: Ga je mee lunchen in de kantine?"],
     options: [
       "Ja, leuk, ik kom over vijf minuten.",
@@ -2293,12 +2618,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Дружелюбное согласие с уточнением времени — уместная реакция на приглашение коллеги.",
+    explanationEn: "A friendly agreement with the clarification of time is an appropriate reaction to the invitation of a colleague.",
   },
   {
     id: "int-gen3-32",
     topic: "werk",
     level: "B1",
     situationRu: "Вы хотите попросить о переносе выходного дня из-за личных дел.",
+    situationEn: "You want to request a postponement of the day due to personal matters.",
     dialogue: ["Baas: Waarom wil je die dag graag vrij?"],
     options: [
       "Ik heb die dag een belangrijke afspraak bij de tandarts die ik niet kan verzetten.",
@@ -2307,12 +2634,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Краткое конкретное объяснение причины — уместно, чтобы обосновать просьбу об отгуле.",
+    explanationEn: "A brief specific explanation of the reason is appropriate to justify the request for time off.",
   },
   {
     id: "int-gen3-33",
     topic: "wonen",
     level: "A2",
     situationRu: "Хозяин жилья спрашивает, готовы ли вы показать квартиру потенциальным новым жильцам.",
+    situationEn: "The host asks if you are ready to show the apartment to potential new tenants.",
     dialogue: ["Verhuurder: Mag ik de woning laten zien aan geïnteresseerden?"],
     options: [
       "Ja, dat is prima, maar kunt u van tevoren bellen?",
@@ -2321,12 +2650,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие с условием (предупредить заранее) — практичный и вежливый компромисс.",
+    explanationEn: "Agreeing to the condition (notify in advance) is a practical and polite compromise.",
   },
   {
     id: "int-gen3-34",
     topic: "wonen",
     level: "B1",
     situationRu: "Вы заметили плесень в ванной и хотите сообщить об этом хозяину.",
+    situationEn: "You notice mold in the bathroom and want to report it to the owner.",
     dialogue: ["Verhuurder: Wat kan ik voor u doen?"],
     options: [
       "Er zit schimmel in de badkamer, kunt u iemand sturen om dat te bekijken?",
@@ -2335,12 +2666,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясное описание проблемы и просьба о ремонте — типичный и уместный способ сообщить о неисправности.",
+    explanationEn: "A clear description of the problem and a request for repair is a typical and appropriate way to report a malfunction.",
   },
   {
     id: "int-gen3-35",
     topic: "gezondheid",
     level: "A2",
     situationRu: "В аптеке вас спрашивают, принимаете ли вы другие лекарства.",
+    situationEn: "The pharmacy asks you if you are taking other medications.",
     dialogue: ["Apotheker: Gebruikt u nog andere medicijnen?"],
     options: [
       "Ja, ik gebruik ook pillen voor mijn bloeddruk.",
@@ -2349,12 +2682,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Точная информация о принимаемых лекарствах важна для безопасности и уместна в такой ситуации.",
+    explanationEn: "Accurate information about medications taken is important for safety and appropriate in such a situation.",
   },
   {
     id: "int-gen3-36",
     topic: "onderwijs",
     level: "A2",
     situationRu: "Родитель спрашивает учителя о поведении ребёнка в классе.",
+    situationEn: "The parent asks the teacher about the behavior of the child in the classroom.",
     dialogue: ["Ouder: Hoe gaat het met mijn kind in de klas?"],
     options: [
       "Uw kind doet het goed, maar praat soms veel tijdens de les.",
@@ -2363,12 +2698,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честный и сбалансированный ответ учителя на вопрос родителя — ожидаемая реакция.",
+    explanationEn: "A teacher’s honest and balanced response to a parent’s question is the expected response.",
   },
   {
     id: "int-gen3-37",
     topic: "documenten",
     level: "B1",
     situationRu: "Вы хотите узнать, сколько будет стоить перевод документа.",
+    situationEn: "You want to know how much it costs to translate the document.",
     dialogue: ["Vertaler: Welk document wilt u laten vertalen?"],
     options: [
       "Mijn diploma, van het Russisch naar het Nederlands. Wat zijn de kosten?",
@@ -2377,12 +2714,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретный ответ + вопрос о цене — практичная реакция при заказе услуги перевода.",
+    explanationEn: "Specific answer + price question is a practical reaction when ordering a translation service.",
   },
   {
     id: "int-gen3-38",
     topic: "documenten",
     level: "A2",
     situationRu: "Сотрудник просит копию паспорта.",
+    situationEn: "The officer requests a copy of the passport.",
     dialogue: ["Ambtenaar: Heeft u een kopie van uw paspoort bij u?"],
     options: [
       "Nee, maar ik kan die morgen brengen.",
@@ -2391,12 +2730,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Признание, что документа нет, с предложением принести позже — уместная реакция.",
+    explanationEn: "Admitting that there is no document with an offer to bring later is an appropriate reaction.",
   },
   {
     id: "int-gen3-39",
     topic: "geld",
     level: "A2",
     situationRu: "Вы хотите узнать курс обмена валюты в банке.",
+    situationEn: "You want to know the exchange rate at the bank.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Wat is vandaag de wisselkoers van euro naar roebel?",
@@ -2405,12 +2746,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Прямой конкретный вопрос о курсе обмена — уместная реакция в банке.",
+    explanationEn: "A direct, specific exchange rate question is an appropriate response at the bank.",
   },
   {
     id: "int-gen3-40",
     topic: "dagelijks_leven",
     level: "B1",
     situationRu: "Сосед по квартире просит вас платить свою долю коммунальных услуг вовремя.",
+    situationEn: "The roommate asks you to pay your share of utilities on time.",
     dialogue: ["Huisgenoot: Kun je voortaan op tijd je deel van de rekeningen betalen?"],
     options: [
       "Sorry, dat ging niet goed deze maand. Ik maak het morgen over.",
@@ -2419,12 +2762,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извинение и конкретное обещание исправить ситуацию — уместная реакция на справедливое замечание.",
+    explanationEn: "An apology and a concrete promise to remedy the situation are an appropriate response to a fair remark.",
   },
   {
     id: "int-gen3-41",
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед приглашает вас на барбекю в саду.",
+    situationEn: "The neighbor invites you to a barbecue in the garden.",
     dialogue: ["Buurvrouw: Kom je vanavond naar onze barbecue in de tuin?"],
     options: [
       "Wat leuk, hoe laat begint het?",
@@ -2433,12 +2778,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Дружелюбное согласие с уточнением времени — уместная реакция на приглашение соседей.",
+    explanationEn: "Friendly agreement with the timing is an appropriate response to the invitation of neighbors.",
   },
   {
     id: "int-gen3-42",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине электроники вы спрашиваете о гарантии на товар.",
+    situationEn: "At an electronics store, you ask for a warranty for the item.",
     dialogue: ["Verkoper: Wilt u dit apparaat kopen?"],
     options: [
       "Ja, maar hoeveel garantie zit er op dit apparaat?",
@@ -2447,12 +2794,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Уточнение важной детали (гарантии) перед покупкой — практичный и уместный вопрос.",
+    explanationEn: "Clarifying an important detail (guarantee) before buying is a practical and pertinent question.",
   },
   {
     id: "int-gen3-43",
     topic: "school",
     level: "B1",
     situationRu: "Учитель просит вас подписать разрешение на школьную экскурсию.",
+    situationEn: "The teacher asks you to sign a school tour permit.",
     dialogue: ["Leraar: Kunt u dit formulier voor het schoolreisje ondertekenen?"],
     options: [
       "Ja, natuurlijk. Mag ik het eerst even doorlezen?",
@@ -2461,12 +2810,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие с просьбой сначала прочитать документ — разумная и вежливая реакция родителя.",
+    explanationEn: "Agreeing to read the document first is a reasonable and polite parent’s response.",
   },
   {
     id: "int-gen3-44",
     topic: "school",
     level: "A2",
     situationRu: "Учитель спрашивает, нужна ли вашему ребёнку дополнительная помощь с языком.",
+    situationEn: "The teacher asks if your child needs more help with the language.",
     dialogue: ["Leraar: Heeft uw kind extra hulp nodig bij Nederlands?"],
     options: [
       "Ja, dat denk ik wel, kunt u iets adviseren?",
@@ -2475,12 +2826,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Открытость к помощи с уточняющим вопросом — конструктивная реакция родителя.",
+    explanationEn: "Openness to help with clarifying questions is a constructive response from a parent.",
   },
   {
     id: "int-gen3-45",
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы хотите отменить страховку, потому что нашли более дешёвый вариант.",
+    situationEn: "You want to cancel your insurance because you found a cheaper option.",
     dialogue: ["Adviseur: Waarom wilt u de verzekering opzeggen?"],
     options: [
       "Ik heb een goedkopere polis bij een andere verzekeraar gevonden.",
@@ -2489,12 +2842,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честное и краткое объяснение причины отказа от услуги — нормальная деловая формулировка.",
+    explanationEn: "An honest and concise explanation of the reason for refusing the service is a normal business wording.",
   },
   {
     id: "int-gen3-46",
     topic: "huisarts",
     level: "A2",
     situationRu: "Регистратура спрашивает, есть ли у вас страховая карта с собой.",
+    situationEn: "Registrar asks if you have an insurance card with you.",
     dialogue: ["Assistente: Heeft u uw verzekeringspasje bij u?"],
     options: [
       "Ja, hier is het.",
@@ -2503,12 +2858,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Простой прямой ответ на административный вопрос — то, чего ожидает регистратура.",
+    explanationEn: "A simple direct answer to an administrative question is what the registry expects.",
   },
   {
     id: "int-gen3-47",
     topic: "apotheek",
     level: "A2",
     situationRu: "Фармацевт предупреждает о побочных эффектах лекарства.",
+    situationEn: "The pharmacist warns about the side effects of the medicine.",
     dialogue: ["Apotheker: Dit medicijn kan slaperigheid veroorzaken."],
     options: [
       "Bedankt voor de waarschuwing, dat zal ik onthouden.",
@@ -2517,12 +2874,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Благодарность за важное предупреждение — уместная реакция при получении информации о лекарстве.",
+    explanationEn: "Gratitude for an important warning is an appropriate response when receiving information about a drug.",
   },
   {
     id: "int-gen3-48",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы хотите узнать, можно ли подать заявление онлайн вместо личного визита.",
+    situationEn: "You want to know if you can apply online instead of a personal visit.",
     dialogue: ["Ambtenaar: U kunt hiervoor ook langskomen bij het gemeentehuis."],
     options: [
       "Kan dit ook online geregeld worden, of moet het persoonlijk?",
@@ -2531,12 +2890,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Уточняющий вопрос об альтернативном способе подачи — практичная и уместная реакция.",
+    explanationEn: "The clarifying question of an alternative method of filing is a practical and appropriate response.",
   },
   {
     id: "int-gen3-49",
     topic: "bank",
     level: "B1",
     situationRu: "Банк отклонил ваш кредитный запрос, и вы хотите узнать причину.",
+    situationEn: "The bank rejected your loan request and you want to know why.",
     dialogue: ["Medewerker: Helaas is uw aanvraag voor een lening afgewezen."],
     options: [
       "Kunt u mij vertellen waarom de aanvraag is afgewezen?",
@@ -2545,12 +2906,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойный вопрос о причине отказа — разумная реакция, помогающая понять ситуацию.",
+    explanationEn: "Quietly asking about the reason for the refusal is a reasonable response to help understand the situation.",
   },
   {
     id: "int-gen3-50",
     topic: "station",
     level: "A2",
     situationRu: "Вы спрашиваете, где можно купить билет на автобус.",
+    situationEn: "Ask where you can buy a bus ticket.",
     dialogue: ["Voorbijganger: Kan ik u ergens mee helpen?"],
     options: [
       "Ja, weet u waar ik een buskaartje kan kopen?",
@@ -2559,12 +2922,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый конкретный вопрос прохожему — типичная ситуация, когда нужна помощь на улице.",
+    explanationEn: "A polite specific question to a passerby is a typical situation when you need help on the street.",
   },
   {
     id: "int-gen3-51",
     topic: "werk",
     level: "A2",
     situationRu: "Коллега спрашивает, можете ли вы поменяться сменами.",
+    situationEn: "A colleague asks if you can switch shifts.",
     dialogue: ["Collega: Zou je met mij van dienst kunnen ruilen volgende week?"],
     options: [
       "Welke dag bedoel je precies? Dan kijk ik of het lukt.",
@@ -2573,12 +2938,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Уточняющий вопрос перед ответом — разумная реакция при просьбе поменяться сменами.",
+    explanationEn: "A clarifying question before answering is a reasonable response when asked to switch shifts.",
   },
   {
     id: "int-gen3-52",
     topic: "wonen",
     level: "A2",
     situationRu: "Управляющий домом сообщает о плановом отключении воды.",
+    situationEn: "The house manager reports a planned water outage.",
     dialogue: ["Beheerder: Morgen wordt het water tussen negen en elf uur afgesloten."],
     options: [
       "Bedankt voor de informatie, dan zorg ik dat ik genoeg water heb.",
@@ -2587,12 +2954,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Благодарность за информацию + практичная реакция — уместный ответ на уведомление.",
+    explanationEn: "Gratitude for information + practical response - an appropriate response to notification.",
   },
   {
     id: "int-gen3-53",
     topic: "gezondheid",
     level: "B1",
     situationRu: "Вы хотите записаться к стоматологу впервые в этой клинике.",
+    situationEn: "You want to see a dentist for the first time in this clinic.",
     dialogue: ["Assistente: Bent u al patiënt bij ons?"],
     options: [
       "Nee, dit is de eerste keer. Wat moet ik meenemen?",
@@ -2601,12 +2970,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честный ответ + уточняющий вопрос о необходимых документах — уместная реакция нового пациента.",
+    explanationEn: "An honest answer + a clarifying question about the necessary documents is the appropriate response of the new patient.",
   },
   {
     id: "int-gen3-54",
     topic: "onderwijs",
     level: "A2",
     situationRu: "Преподаватель курса нидерландского спрашивает, почему вы пропустили занятие.",
+    situationEn: "The Dutch teacher asks why you missed class.",
     dialogue: ["Docent: Waarom was u vorige week niet bij de les?"],
     options: [
       "Sorry, ik was ziek. Kan ik het materiaal ergens inhalen?",
@@ -2615,12 +2986,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Объяснение причины + просьба наверстать материал — конструктивная реакция ученика.",
+    explanationEn: "Explanation of the reason + request to catch up - constructive reaction of the student.",
   },
   {
     id: "int-gen3-55",
     topic: "documenten",
     level: "A2",
     situationRu: "Сотрудник почты спрашивает, хотите ли вы отправить письмо с уведомлением о вручении.",
+    situationEn: "The postal officer asks if you would like to send a notice of delivery.",
     dialogue: ["Medewerker: Wilt u deze brief aangetekend versturen?"],
     options: [
       "Ja, graag, dat is veiliger voor belangrijke documenten.",
@@ -2629,12 +3002,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Осмысленное согласие с кратким пояснением — уместная реакция на предложение сотрудника почты.",
+    explanationEn: "A meaningful acceptance of a brief explanation is an appropriate response to a postal employee's proposal.",
   },
   {
     id: "int-gen3-56",
     topic: "geld",
     level: "B1",
     situationRu: "Вы хотите оспорить штраф за просрочку платежа.",
+    situationEn: "You want to challenge the late payment penalty.",
     dialogue: ["Medewerker: U heeft een boete gekregen voor te late betaling."],
     options: [
       "Ik heb wel op tijd betaald, kunt u dat controleren in het systeem?",
@@ -2643,12 +3018,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное несогласие с фактами и просьба проверить в системе — уместный способ оспорить штраф.",
+    explanationEn: "Calmly disagreeing with the facts and asking to check in the system is an appropriate way to challenge a fine.",
   },
   {
     id: "int-gen3-57",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Знакомый спрашивает, можно ли одолжить у вас зонт.",
+    situationEn: "A friend asks if I can borrow an umbrella.",
     dialogue: ["Kennis: Mag ik jouw paraplu even lenen?"],
     options: [
       "Ja, natuurlijk, hier heb je hem.",
@@ -2657,12 +3034,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Простое дружелюбное согласие — уместная реакция на небольшую просьбу знакомого.",
+    explanationEn: "A simple friendly consent is an appropriate response to a small request from a friend.",
   },
   {
     id: "int-gen3-58",
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед просит вас подписать петицию о новом парке рядом с домом.",
+    situationEn: "A neighbor asks you to sign a petition for a new park near the house.",
     dialogue: ["Buurman: Wilt u deze petitie voor een nieuw park ondertekenen?"],
     options: [
       "Kunt u eerst kort vertellen waar het precies over gaat?",
@@ -2671,12 +3050,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Просьба сначала объяснить суть петиции перед подписанием — разумная и уместная реакция.",
+    explanationEn: "Please explain the essence of the petition before signing is a reasonable and appropriate response.",
   },
   {
     id: "int-gen3-59",
     topic: "winkel",
     level: "B1",
     situationRu: "Вы хотите пожаловаться на плохое качество купленного товара.",
+    situationEn: "You want to complain about the poor quality of the purchased product.",
     dialogue: ["Verkoper: Wat is het probleem met het product?"],
     options: [
       "De rits van deze jas is na één week al kapot. Kan ik hem omruilen?",
@@ -2685,12 +3066,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное описание дефекта + просьба об обмене — вежливая и эффективная жалоба.",
+    explanationEn: "A specific description of the defect plus a request for an exchange is a polite and effective complaint.",
   },
   {
     id: "int-gen3-60",
     topic: "school",
     level: "A2",
     situationRu: "Учитель спрашивает, можете ли вы прийти на родительское собрание.",
+    situationEn: "The teacher asks if you can come to the parent meeting.",
     dialogue: ["Leraar: Kunt u dinsdagavond bij de ouderavond zijn?"],
     options: [
       "Ja, dat kan ik. Hoe laat begint het?",
@@ -2699,12 +3082,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Согласие + уточнение времени — уместная реакция родителя на приглашение.",
+    explanationEn: "Consent + timing is the appropriate response of the parent to the invitation.",
   },
   {
     id: "int-gen3-61",
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы хотите подать заявку на возмещение расходов по страховке.",
+    situationEn: "You want to apply for insurance reimbursement.",
     dialogue: ["Medewerker: Waarmee kan ik u helpen?"],
     options: [
       "Ik wil graag een schade indienen voor mijn gebroken bril.",
@@ -2713,12 +3098,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное объяснение цели обращения — необходимая информация для оформления заявки.",
+    explanationEn: "A specific explanation of the purpose of the application is the necessary information for registration of the application.",
   },
   {
     id: "int-gen3-62",
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы просите врача выписать справку для работодателя.",
+    situationEn: "You ask the doctor to write out a certificate for the employer.",
     dialogue: ["Dokter: Waarvoor heeft u de verklaring nodig?"],
     options: [
       "Mijn werkgever vraagt om een verklaring dat ik ziek ben geweest.",
@@ -2727,12 +3114,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясное объяснение цели запроса справки — необходимая информация для врача.",
+    explanationEn: "A clear explanation of the purpose of the request for help is necessary information for the doctor.",
   },
   {
     id: "int-gen3-63",
     topic: "gemeente",
     level: "A2",
     situationRu: "Сотрудник спрашивает, есть ли у вас уже BSN-номер.",
+    situationEn: "Ask if you already have a BSN number.",
     dialogue: ["Ambtenaar: Heeft u al een BSN-nummer?"],
     options: [
       "Nee, nog niet, hoe kan ik dat aanvragen?",
@@ -2741,12 +3130,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честный ответ + вопрос о процедуре получения — конструктивная реакция новичка.",
+    explanationEn: "An honest answer + a question about the procedure of obtaining is a constructive reaction of the beginner.",
   },
   {
     id: "int-gen3-64",
     topic: "apotheek",
     level: "A2",
     situationRu: "Фармацевт спрашивает, нужна ли вам более дешёвая версия лекарства.",
+    situationEn: "The pharmacist asks if you need a cheaper version of the medicine.",
     dialogue: ["Apotheker: Wilt u het goedkopere merk of het duurdere merk?"],
     options: [
       "Het goedkopere merk is prima, als het hetzelfde werkt.",
@@ -2755,12 +3146,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясный, осмысленный выбор с условием — уместная реакция при выборе между вариантами лекарства.",
+    explanationEn: "A clear, meaningful choice with a condition is an appropriate response when choosing between drug options.",
   },
   {
     id: "int-gen3-65",
     topic: "bank",
     level: "B1",
     situationRu: "Сотрудник банка спрашивает, хотите ли вы получать выписки по почте или онлайн.",
+    situationEn: "A bank employee asks if you want to receive statements by mail or online.",
     dialogue: ["Medewerker: Wilt u uw afschriften per post of digitaal ontvangen?"],
     options: [
       "Digitaal graag, dat is makkelijker voor mij.",
@@ -2769,12 +3162,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясный выбор с кратким обоснованием — конкретный и уместный ответ на административный вопрос.",
+    explanationEn: "A clear choice with a brief justification is a specific and appropriate answer to an administrative question.",
   },
   {
     id: "int-gen3-66",
     topic: "station",
     level: "B1",
     situationRu: "Вы хотите узнать, действует ли ваш билет на другой поезд после отмены рейса.",
+    situationEn: "You want to know if your ticket is valid for another train after the flight is cancelled.",
     dialogue: ["Medewerker: Deze trein is helaas uitgevallen."],
     options: [
       "Wat vervelend. Kan ik met dit kaartje ook in de volgende trein?",
@@ -2783,12 +3178,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойная реакция на неудобство + практичный вопрос — уместное поведение при отмене рейса.",
+    explanationEn: "Calm reaction to inconvenience + practical question - appropriate behavior when canceling a flight.",
   },
   {
     id: "int-gen3-67",
     topic: "werk",
     level: "B1",
     situationRu: "Вы хотите попросить о частичной удалённой работе.",
+    situationEn: "You want to ask for partial remote work.",
     dialogue: ["Baas: Wat wilde je bespreken?"],
     options: [
       "Ik zou graag een dag per week thuis willen werken. Is dat bespreekbaar?",
@@ -2797,12 +3194,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая формулировка просьбы с открытым вопросом — подходящий способ начать переговоры с начальником.",
+    explanationEn: "Politely wording an open-question request is an appropriate way to start negotiations with your boss.",
   },
   {
     id: "int-gen3-68",
     topic: "wonen",
     level: "B1",
     situationRu: "Вы хотите узнать, включена ли уборка общих зон в арендную плату.",
+    situationEn: "You want to know if cleaning common areas is included in the rent.",
     dialogue: ["Verhuurder: Heeft u nog vragen over het huurcontract?"],
     options: [
       "Ja, is de schoonmaak van de gemeenschappelijke ruimtes inbegrepen in de huur?",
@@ -2811,12 +3210,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретный уточняющий вопрос по договору аренды — разумная реакция перед подписанием.",
+    explanationEn: "A specific clarifying question on the lease agreement is a reasonable reaction before signing.",
   },
   {
     id: "int-gen3-69",
     topic: "dagelijks_leven",
     level: "A2",
     situationRu: "Вы хотите поблагодарить коллегу за помощь в переезде.",
+    situationEn: "You want to thank a colleague for helping you move.",
     dialogue: ["Collega: Is de verhuizing goed gegaan?"],
     options: [
       "Ja, dankzij jouw hulp ging alles heel soepel. Heel erg bedankt!",
@@ -2825,5 +3226,6 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Тёплая, конкретная благодарность за помощь — уместная реакция на заботливый вопрос коллеги.",
+    explanationEn: "A warm, concrete thank you for your help is an appropriate response to a colleague’s thoughtful question.",
   },
 ];
