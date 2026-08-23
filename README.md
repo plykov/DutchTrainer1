@@ -92,13 +92,11 @@ Releases follow the documented [release process](./RELEASING.md), with user-visi
   version source. These are provisional beta notices; professional legal review remains required for
   production launch.
 - **English UI mode** — a RU/EN toggle in the nav (`lib/i18n.ts`, `lib/store.ts`'s `uiLang`) switches
-  the app chrome: nav, onboarding, dashboard, settings/feedback/delete-progress, and the
-  practice/vocab/interaction/exam-MC/speaking-practice session UIs (buttons, labels, status text).
+  the learner-facing app chrome across navigation, onboarding, dashboard, settings, every learning
+  module, writing feedback, reading/listening sessions, and all exam runners (buttons, labels, status text).
   Pedagogical content — every `explanationRu` in `lib/content/*` — stays Russian regardless of
   `uiLang`, on purpose: it's Russian-L1-contrastive by design (§5), explaining specifically Russian
-  speakers' traps, so translating it to English would remove the thing it exists to explain. A few
-  session components (`WritingTask`, the Schrijven/Luisteren/Spreken exam runners, `ReadingRoom`)
-  still have Russian-only chrome text — not yet wired into `lib/i18n.ts`.
+  speakers' traps, so translating it to English would remove the thing it exists to explain.
 - **Randomized MC answer position** (`lib/shuffle.ts`) — multiple-choice content is authored with the
   correct answer clustered at a predictable index, which lets a learner game position instead of
   actually knowing the answer. `shuffleOptions()` runs a Fisher-Yates shuffle once per question (or
@@ -425,11 +423,8 @@ Releases follow the documented [release process](./RELEASING.md), with user-visi
 Whisper-NL/GOP pronunciation scoring (needs a fine-tuned ASR model and audio infra this environment
 doesn't have), a live LiNT API integration (coverage above is a local approximation, not the real
 service), full-length timed exam simulations, offline sync, and CNaVT/Flemish/teacher-dashboard work.
-The English UI toggle also still has gaps: `WritingTask`, the Schrijven/Luisteren/Spreken exam runners,
-and `ReadingRoom` have Russian-only chrome text, not yet wired into `lib/i18n.ts`. Content in
-`lib/content/` is a seed slice, not the full ~2,000–5,000 lemma target — swap in a
-real content pipeline before shipping to learners, and clear the `[VERIFY]` items in the scope doc's
-§12 backlog first.
+Content in `lib/content/` still needs qualified editorial review and a real provenance-aware import
+pipeline before shipping to learners; clear the `[VERIFY]` items in the scope doc's §12 backlog first.
 
 State currently persists to `localStorage` (`lib/store.ts`, Zustand) — swap the storage adapter for
 a real backend before multi-device sync or teacher dashboards are needed.

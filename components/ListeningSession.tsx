@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_ITEMS } from "@/lib/content/listeningItems";
 import { shuffleOptions } from "@/lib/shuffle";
+import { useT } from "@/lib/i18n";
 import NextExercise from "@/components/NextExercise";
 
 type Stage = "preread" | "playing" | "answer" | "result";
@@ -15,6 +16,7 @@ const WORDS_PER_SECOND_FLASH = 2.1; // reading-aloud pace for the no-TTS fallbac
 const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window;
 
 export default function ListeningSession() {
+  const t = useT();
   // Shuffled once per mount so the correct answer's position isn't
   // memorizable/predictable.
   const items = useMemo(
@@ -101,10 +103,8 @@ export default function ListeningSession() {
   if (done) {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-8 text-center">
-        <p className="text-lg font-medium mb-2">Сессия завершена!</p>
-        <p className="text-zinc-500">
-          Правильно: {correctCount} / {items.length}
-        </p>
+        <p className="text-lg font-medium mb-2">{t("session_done")}</p>
+        <p className="text-zinc-500">{t("listening_score", { correct: correctCount, total: items.length })}</p>
         <NextExercise currentHref="/listening" />
       </div>
     );
@@ -121,10 +121,7 @@ export default function ListeningSession() {
 
       {stage === "preread" && (
         <div className="space-y-3">
-          <p className="text-sm text-zinc-500">
-            Прочитайте вопрос заранее — текст ещё не звучал. Прослушивание начнётся через{" "}
-            <strong>{preReadLeft}</strong> сек.
-          </p>
+          <p className="text-sm text-zinc-500">{t("listening_preread", { n: preReadLeft })}</p>
           <p className="text-lg font-medium">{item.question.prompt}</p>
           <ul className="text-sm text-zinc-500 list-disc list-inside">
             {item.question.options.map((o) => (
@@ -132,27 +129,22 @@ export default function ListeningSession() {
             ))}
           </ul>
           <button onClick={() => setStage("playing")} className="text-sm underline text-blue-600">
-            Начать прослушивание сейчас
+            {t("listening_start_now")}
           </button>
         </div>
       )}
 
       {stage === "playing" && (
         <div className="space-y-3">
-          <p className="text-lg font-medium">🔊 Прослушивание… (только один раз, без повтора)</p>
+          <p className="text-lg font-medium">{t("listening_playing")}</p>
           {playbackMode === "flash" && (
             <>
-              <p className="text-xs text-amber-600">
-                В этом браузере не поддерживается синтез речи — текст показывается один раз, как альтернатива аудио.
-              </p>
+              <p className="text-xs text-amber-600">{t("listening_flash_fallback")}</p>
               <p className="text-lg leading-relaxed">{item.transcript}</p>
             </>
           )}
           {playbackMode === "tts" && (
-            <p className="text-xs text-zinc-400">
-              Если звука не слышно, в браузере может не быть установлен нидерландский голос — воспроизведение всё
-              равно засчитывается как единственная попытка, повтора не будет.
-            </p>
+            <p className="text-xs text-zinc-400">{t("listening_tts_missing_voice")}</p>
           )}
         </div>
       )}
@@ -188,7 +180,7 @@ export default function ListeningSession() {
           disabled={selected === null}
           className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
         >
-          Ответить
+          {t("listening_answer")}
         </button>
       )}
 
@@ -200,10 +192,10 @@ export default function ListeningSession() {
               : "bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-200"
           }`}
         >
-          <p className="font-medium mb-1">{correct ? "Правильно!" : "Не совсем."}</p>
+          <p className="font-medium mb-1">{correct ? t("answer_correct") : t("answer_incorrect")}</p>
           <p>{item.question.explanationRu}</p>
           <button onClick={next} className="mt-3 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-            Следующее задание
+            {t("listening_next")}
           </button>
         </div>
       )}

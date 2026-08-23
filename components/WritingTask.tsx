@@ -5,11 +5,13 @@ import Link from "next/link";
 import { ShortWriteItem } from "@/lib/types";
 import { checkAdequacy, detectErrorsCombined, DetectedError } from "@/lib/writingCheck";
 import { getErrorEntry } from "@/lib/errorTaxonomy";
+import { useT } from "@/lib/i18n";
 import NextExercise from "@/components/NextExercise";
 
 type Stage = "writing" | "adequacy_fail" | "checking" | "detect" | "hint" | "reveal" | "repair";
 
 export default function WritingTask({ item, examMode = false }: { item: ShortWriteItem; examMode?: boolean }) {
+  const t = useT();
   const [text, setText] = useState("");
   const [stage, setStage] = useState<Stage>("writing");
   const [missing, setMissing] = useState<string[]>([]);
@@ -80,7 +82,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
       </div>
 
       {expired && stage === "writing" && (
-        <p className="text-sm text-red-600">Время вышло — ответ отправлен автоматически, как на настоящем экзамене.</p>
+        <p className="text-sm text-red-600">{t("writing_expired")}</p>
       )}
 
       <textarea
@@ -101,11 +103,9 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
             className="mt-0.5"
           />
           <span>
-            Добавить внешнюю проверку орфографии и грамматики через LanguageTool. При включении текст ответа
-            отправляется в публичный сервис LanguageTool вместе с обычными сетевыми данными; без этой опции
-            проверка остаётся только в браузере.{" "}
+            {t("writing_lt_disclosure")} {" "}
             <Link className="text-blue-700 underline underline-offset-2 dark:text-blue-400" href="/privacy">
-              Подробнее о конфиденциальности
+              {t("writing_privacy_link")}
             </Link>
             .
           </span>
@@ -118,34 +118,34 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
           disabled={text.trim().length === 0}
           className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
         >
-          Проверить
+          {t("action_check")}
         </button>
       )}
 
       {stage === "adequacy_fail" && (
         <div className="rounded-md bg-red-50 dark:bg-red-950 p-4 text-sm text-red-900 dark:text-red-200">
-          <p className="font-medium mb-1">Сначала выполните задание — грамматика проверяется только после этого.</p>
-          <p className="mb-2">Не хватает:</p>
+          <p className="font-medium mb-1">{t("writing_adequacy_fail")}</p>
+          <p className="mb-2">{t("writing_missing")}</p>
           <ul className="list-disc list-inside">
             {missing.map((m) => (
               <li key={m}>{m}</li>
             ))}
           </ul>
           <button onClick={() => setStage("writing")} className="mt-3 text-sm underline">
-            Исправить ответ
+            {t("writing_fix_answer")}
           </button>
         </div>
       )}
 
       {stage === "checking" && (
         <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-4 text-sm text-zinc-500">
-          Проверяем текст{useLanguageTool ? " (локальные правила + LanguageTool)" : " локальными правилами"}…
+          {t(useLanguageTool ? "writing_checking_external" : "writing_checking_local")}
         </div>
       )}
 
       {stage === "detect" && (
         <div className="rounded-md bg-emerald-50 dark:bg-emerald-950 p-4 text-sm text-emerald-900 dark:text-emerald-200">
-          Задание выполнено, явных ошибок из отслеживаемых категорий не найдено. Отличная работа!
+          {t("writing_no_errors")}
         </div>
       )}
 
@@ -154,12 +154,12 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
       {stage === "hint" && currentError && (
         <div className="rounded-md bg-amber-50 dark:bg-amber-950 p-4 text-sm text-amber-900 dark:text-amber-200 space-y-2">
           <p className="font-medium">
-            Найден фрагмент: <span className="font-mono">&quot;{currentError.span}&quot;</span>
+            {t("writing_found_span")} <span className="font-mono">&quot;{currentError.span}&quot;</span>
           </p>
           <p>{currentError.hintRu}</p>
-          <p className="text-xs opacity-80">Попробуйте исправить самостоятельно, прежде чем смотреть ответ.</p>
+          <p className="text-xs opacity-80">{t("writing_try_first")}</p>
           <button onClick={() => setStage("reveal")} className="text-sm underline">
-            Показать разбор
+            {t("writing_show_analysis")}
           </button>
         </div>
       )}
@@ -167,20 +167,18 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
       {stage === "reveal" && currentError && (
         <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-4 text-sm space-y-2">
           <p>
-            <strong>Код ошибки:</strong> {currentError.code}
+            <strong>{t("writing_error_code")}</strong> {currentError.code}
           </p>
           <p>{getErrorEntry(currentError.code)?.l1Note}</p>
           <button onClick={() => setStage("repair")} className="text-sm underline">
-            Далее: напишите новое предложение с этой конструкцией
+            {t("writing_repair_action")}
           </button>
         </div>
       )}
 
       {stage === "repair" && (
         <div className="space-y-2">
-          <label className="block text-sm font-medium">
-            Напишите новое предложение, используя ту же конструкцию правильно:
-          </label>
+          <label className="block text-sm font-medium">{t("writing_repair_label")}</label>
           <input
             value={repairText}
             onChange={(e) => setRepairText(e.target.value)}
@@ -199,7 +197,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
             disabled={repairText.trim().length === 0}
             className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
           >
-            {activeErrorIdx + 1 < errors.length ? "Следующая ошибка" : "Готово"}
+            {activeErrorIdx + 1 < errors.length ? t("writing_next_error") : t("writing_done")}
           </button>
         </div>
       )}

@@ -5,12 +5,14 @@ import { useAppStore } from "@/lib/store";
 import { computeCoverage, knownLemmas, tokenize } from "@/lib/coverage";
 import { READING_TEXTS } from "@/lib/content/readingTexts";
 import { NOUN_BUNDLES } from "@/lib/content/nouns";
+import { useT } from "@/lib/i18n";
+import type { I18nKey } from "@/lib/i18n";
 import Link from "next/link";
 
-const MODE_LABEL: Record<string, string> = {
-  intensive: "Интенсивный режим (глоссы + предобучение)",
-  extensive: "Экстенсивное чтение (без глосс)",
-  confidence: "Режим уверенности (без глосс, свободный темп)",
+const MODE_LABEL_KEY: Record<string, I18nKey> = {
+  intensive: "reading_mode_intensive",
+  extensive: "reading_mode_extensive",
+  confidence: "reading_mode_confidence",
 };
 
 const MODE_COLOR: Record<string, string> = {
@@ -20,6 +22,7 @@ const MODE_COLOR: Record<string, string> = {
 };
 
 export default function ReadingRoom() {
+  const t = useT();
   const cards = useAppStore((s) => s.cards);
   const known = useMemo(() => knownLemmas(cards), [cards]);
   const [textId, setTextId] = useState(READING_TEXTS[0].id);
@@ -55,11 +58,11 @@ export default function ReadingRoom() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">{text.title}</h2>
           <span className={`px-2 py-0.5 rounded-full text-xs ${MODE_COLOR[result.mode]}`}>
-            {Math.round(result.coverage * 100)}% известного текста
+            {t("reading_known_coverage", { n: Math.round(result.coverage * 100) })}
           </span>
         </div>
 
-        <p className="text-sm text-zinc-500 mb-4">{MODE_LABEL[result.mode]}</p>
+        <p className="text-sm text-zinc-500 mb-4">{t(MODE_LABEL_KEY[result.mode])}</p>
 
         <p className="text-lg leading-relaxed">
           {tokenize(text.body).length > 0 &&
@@ -73,7 +76,7 @@ export default function ReadingRoom() {
                   <span
                     key={i}
                     className="underline decoration-dotted decoration-amber-500 cursor-help"
-                    title={lemma ? `Незнакомое слово — изучите в разделе «Словарь» (${lemma})` : "Незнакомое слово"}
+                    title={lemma ? t("reading_unknown_word_lemma", { lemma }) : t("reading_unknown_word")}
                   >
                     {chunk}
                   </span>
@@ -85,9 +88,9 @@ export default function ReadingRoom() {
 
         {result.mode === "intensive" && (
           <div className="mt-4 rounded-md bg-amber-50 dark:bg-amber-950 p-3 text-sm text-amber-900 dark:text-amber-200">
-            Покрытие ниже 95% — этот текст не подходит для экстенсивного чтения. Сначала выучите отмеченные слова в{" "}
+            {t("reading_below_gate")} {" "}
             <Link href="/vocab" className="underline">
-              разделе «Словарь»
+              {t("reading_vocab_link")}
             </Link>
             .
           </div>

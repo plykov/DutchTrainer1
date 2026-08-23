@@ -5,6 +5,12 @@ for releases and remains a public beta while its version is below `1.0.0`.
 
 ## Unreleased
 
+### Changed
+
+- Completed English learner-facing chrome across navigation, learning modules, writing feedback,
+  reading/listening sessions, and the KNM/Lezen/Luisteren/Schrijven/Spreken exam flows. Russian
+  L1-specific teaching explanations remain intentionally Russian.
+
 ## 0.2.0-beta.1 - 2026-08-23
 
 ### Added

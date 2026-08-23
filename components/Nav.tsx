@@ -5,18 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAppStore } from "@/lib/store";
 import { useT } from "@/lib/i18n";
+import type { I18nKey } from "@/lib/i18n";
 import LanguageToggle from "@/components/LanguageToggle";
 
-const LINKS = [
-  { href: "/dashboard", nl: "Overzicht" },
-  { href: "/practice", nl: "Oefenen" },
-  { href: "/vocab", nl: "Woordenschat" },
-  { href: "/reading", nl: "Lezen" },
-  { href: "/listening", nl: "Luisteren" },
-  { href: "/write", nl: "Schrijven" },
-  { href: "/speaking", nl: "Spreken" },
-  { href: "/interaction", nl: "Interactie" },
-  { href: "/exam", nl: "Examensimulatie" },
+const LINKS: { href: string; labelKey: I18nKey }[] = [
+  { href: "/dashboard", labelKey: "nav_overview" },
+  { href: "/practice", labelKey: "nav_practice" },
+  { href: "/vocab", labelKey: "nav_vocab" },
+  { href: "/reading", labelKey: "nav_reading" },
+  { href: "/listening", labelKey: "nav_listening" },
+  { href: "/write", labelKey: "nav_writing" },
+  { href: "/speaking", labelKey: "nav_speaking" },
+  { href: "/interaction", labelKey: "nav_interaction" },
+  { href: "/exam", labelKey: "nav_exam" },
 ];
 
 export default function Nav() {
@@ -29,7 +30,7 @@ export default function Nav() {
   return (
     <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 backdrop-blur sticky top-0 z-40">
       <nav
-        aria-label="Hoofdnavigatie"
+        aria-label={t("nav_primary")}
         className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4"
       >
         <Link href="/" className="font-semibold tracking-tight shrink-0">
@@ -51,7 +52,7 @@ export default function Nav() {
                         : "text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
                     }`}
                   >
-                    {l.nl}
+                    {t(l.labelKey)}
                   </Link>
                 </li>
               );
@@ -113,7 +114,7 @@ export default function Nav() {
                       : "text-zinc-700 hover:bg-zinc-100 dark:text-zinc-300 dark:hover:bg-zinc-800"
                   }`}
                 >
-                  {l.nl}
+                  {t(l.labelKey)}
                 </Link>
               </li>
             );
