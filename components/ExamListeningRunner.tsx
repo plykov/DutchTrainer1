@@ -4,6 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_EXAM_ITEMS } from "@/lib/content/listeningExamItems";
 import { shuffleArray, shuffleOptions } from "@/lib/shuffle";
 import { useT } from "@/lib/i18n";
+import { useAppStore } from "@/lib/store";
+import { instructionFor } from "@/lib/contentLanguage";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -14,6 +16,7 @@ const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window
 
 export default function ExamListeningRunner({ onExit }: { onExit: () => void }) {
   const t = useT();
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   // Shuffled once per mount: item order, plus each question's MC option
   // order, so neither position is memorizable/predictable.
   const items = useMemo(
@@ -110,7 +113,9 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
                 {t("correct_answer")}:{" "}
                 {it.question.options[it.question.correctIndex]}
               </p>
-              <p className="text-zinc-500 mt-1">{it.question.explanationRu}</p>
+              <p className="text-zinc-500 mt-1">
+                {instructionFor(explanationLanguage, it.question.explanationRu, it.question.explanationEn)}
+              </p>
             </div>
           ))}
         </div>

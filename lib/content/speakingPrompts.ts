@@ -6,6 +6,7 @@ export interface SpeakingPrompt {
   topic: string;
   level: TargetLevel;
   focusHintRu: string;
+  focusHintEn?: string;
 }
 
 // §8 — elicited imitation as the cheap speaking proxy for placement and
@@ -18,6 +19,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts' — это не русское [х].",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts' - it's not Russian [x].",
   },
   {
     id: "sp-2",
@@ -25,6 +27,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на интонацию вежливого вопроса и позицию глагола 'kunt' в начале.",
+    focusHintEn: "Notice the tone of the polite question and the position of the verb 'kunt' at the beginning.",
   },
   {
     id: "sp-3",
@@ -32,6 +35,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "'er' здесь заменяет место — потренируйте его слитное произношение с предыдущим словом.",
+    focusHintEn: "The 'er' here replaces the place - practice its merged pronunciation with the previous word.",
   },
   {
     id: "sp-4",
@@ -39,6 +43,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gesprek",
     level: "A2",
     focusHintRu: "Частица 'maar' произносится безударно и быстро — не выделяйте её как отдельное слово.",
+    focusHintEn: "The 'maar' particle is pronounced shocklessly and quickly - don't single it out as a separate word.",
   },
   {
     id: "sp-5",
@@ -46,6 +51,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Долгота гласных: 'baan' с долгим [aː], в отличие от короткого 'ban'.",
+    focusHintEn: "The length of vowels is 'baan' with a long [a ], as opposed to the short 'ban'.",
   },
   {
     id: "sp-6",
@@ -53,6 +59,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Разделяемый глагол 'openmaken' — в устной речи оба элемента произносятся отдельно и чётко.",
+    focusHintEn: "Shared verb 'openmaken' - in spoken language, both elements are pronounced separately and clearly.",
   },
   {
     id: "sp-7",
@@ -60,6 +67,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "'wachten op' — устойчивый предлог, произносите как единый смысловой блок.",
+    focusHintEn: "\"wachten op\" is a stable preposition, pronounced as a single semantic block.",
   },
   {
     id: "sp-8",
@@ -67,6 +75,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Финальное оглушение в 'rekening' — звучит на конце глухо, но пишется через -g.",
+    focusHintEn: "The final stunning in 'rekening' sounds deaf at the end, but is written in -g.",
   },
   {
     id: "sp-9",
@@ -74,6 +83,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gesprek",
     level: "A2",
     focusHintRu: "Вежливая вводная фраза — интонация должна звучать мягко, не как требование.",
+    focusHintEn: "Polite introductory phrase - intonation should sound soft, not as a requirement.",
   },
   {
     id: "sp-10",
@@ -81,6 +91,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "/x/ в 'cursus' звучит иначе, чем в 'gemeente' — сравните позицию звука в слове.",
+    focusHintEn: "/x/ in 'cursus' sounds different than in 'gemeente' - compare the position of the sound in the word.",
   },
   {
     id: "sp-11",
@@ -88,6 +99,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Долгий кластер согласных в 'invullen' — не глотайте средние звуки при быстрой речи.",
+    focusHintEn: "Long consonant cluster in 'invullen' - do not swallow medium sounds when speaking quickly.",
   },
   {
     id: "sp-12",
@@ -95,6 +107,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Огублённый гласный в 'buurman' — не путайте с русским [у].",
+    focusHintEn: "The ruined vowel in 'buurman' is not to be confused with Russian.",
   },
   {
     id: "sp-13",
@@ -102,6 +115,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Разделяемый глагол 'doorgeven' — 'geven' спрягается, 'door' остаётся в конце.",
+    focusHintEn: "The split verb 'doorgeven' - 'geven' conjugates, 'door' remains at the end.",
   },
   {
     id: "sp-14",
@@ -109,6 +123,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Причастие 'afgesloten' — приставка 'ge-' встраивается внутрь разделяемого глагола.",
+    focusHintEn: "Communion 'afgesloten' - the prefix 'ge-' is built into the shared verb.",
   },
   {
     id: "sp-15",
@@ -116,6 +131,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Долгий гласный в 'tandarts' vs короткий в похожих словах — следите за длительностью.",
+    focusHintEn: "The long vowel in 'tandarts' vs is short in similar words - watch the duration.",
   },
 
   // --- +100 batch: 10 sentences per topic (health, rescheduling, housing,
@@ -128,6 +144,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-2",
@@ -135,6 +152,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-3",
@@ -142,6 +160,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-4",
@@ -149,6 +168,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-5",
@@ -156,6 +176,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-6",
@@ -163,6 +184,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-7",
@@ -170,6 +192,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-8",
@@ -177,6 +200,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-9",
@@ -184,6 +208,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-10",
@@ -191,6 +216,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
+    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
   },
   {
     id: "sp-gen-11",
@@ -198,6 +224,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "B1",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-12",
@@ -205,6 +232,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-13",
@@ -212,6 +240,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-14",
@@ -219,6 +248,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-15",
@@ -226,6 +256,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "B1",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-16",
@@ -233,6 +264,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-17",
@@ -240,6 +272,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-18",
@@ -247,6 +280,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-19",
@@ -254,6 +288,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "B1",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-20",
@@ -261,6 +296,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
+    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
   },
   {
     id: "sp-gen-21",
@@ -268,6 +304,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-22",
@@ -275,6 +312,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-23",
@@ -282,6 +320,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-24",
@@ -289,6 +328,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-25",
@@ -296,6 +336,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-26",
@@ -303,6 +344,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-27",
@@ -310,6 +352,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-28",
@@ -317,6 +360,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-29",
@@ -324,6 +368,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-30",
@@ -331,6 +376,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Тренируйте дифтонг /œy/ в 'huis' и 'sleutel' — губы округлены сильнее, чем в русском 'ой'.",
+    focusHintEn: "Exercise diphthong /œy/ in 'huis' and 'sleutel' - the lips are rounded more than in Russian 'oh'.",
   },
   {
     id: "sp-gen-31",
@@ -338,6 +384,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-32",
@@ -345,6 +392,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-33",
@@ -352,6 +400,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-34",
@@ -359,6 +408,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-35",
@@ -366,6 +416,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-36",
@@ -373,6 +424,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-37",
@@ -380,6 +432,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-38",
@@ -387,6 +440,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-39",
@@ -394,6 +448,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-40",
@@ -401,6 +456,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Звук /sx/ в 'sollicitatie' и 'gesprek' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The /sx/ sound in 'sollicitatie' and 'gesprek' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen-41",
@@ -408,6 +464,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-42",
@@ -415,6 +472,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-43",
@@ -422,6 +480,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-44",
@@ -429,6 +488,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-45",
@@ -436,6 +496,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-46",
@@ -443,6 +504,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-47",
@@ -450,6 +512,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-48",
@@ -457,6 +520,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-49",
@@ -464,6 +528,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-50",
@@ -471,6 +536,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Тренируйте твёрдый начальный 'g' в 'gemeente' — гортанный звук, не русское [г].",
+    focusHintEn: "Train the hard initial 'g' in 'gemeente' - guttural sound, not Russian.",
   },
   {
     id: "sp-gen-51",
@@ -478,6 +544,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-52",
@@ -485,6 +552,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-53",
@@ -492,6 +560,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-54",
@@ -499,6 +568,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-55",
@@ -506,6 +576,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-56",
@@ -513,6 +584,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-57",
@@ -520,6 +592,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-58",
@@ -527,6 +600,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-59",
@@ -534,6 +608,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-60",
@@ -541,6 +616,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /eː/ в 'les' и 'school' произносится длиннее, чем русское 'е'.",
+    focusHintEn: "Diphthong /e,/ in 'les' and 'school' is pronounced longer than the Russian 'e'.",
   },
   {
     id: "sp-gen-61",
@@ -548,6 +624,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-62",
@@ -555,6 +632,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-63",
@@ -562,6 +640,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-64",
@@ -569,6 +648,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-65",
@@ -576,6 +656,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-66",
@@ -583,6 +664,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-67",
@@ -590,6 +672,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-68",
@@ -597,6 +680,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-69",
@@ -604,6 +688,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-70",
@@ -611,6 +696,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Звук /r/ в 'rekening' — раскатистый, произносится ближе к горлу, не как русское 'р'.",
+    focusHintEn: "The /r/ sound in 'rekening' is rolling, pronounced closer to the throat, not like the Russian 'r'.",
   },
   {
     id: "sp-gen-71",
@@ -618,6 +704,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-72",
@@ -625,6 +712,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-73",
@@ -632,6 +720,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-74",
@@ -639,6 +728,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-75",
@@ -646,6 +736,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-76",
@@ -653,6 +744,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-77",
@@ -660,6 +752,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-78",
@@ -667,6 +760,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-79",
@@ -674,6 +768,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-80",
@@ -681,6 +776,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Тренируйте начальный 'f' в 'fiets' — чёткий, без озвончения, как в 'фото'.",
+    focusHintEn: "Train the initial 'f' in 'fiets' - clear, non-verbal as in 'photo'.",
   },
   {
     id: "sp-gen-81",
@@ -688,6 +784,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-82",
@@ -695,6 +792,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-83",
@@ -702,6 +800,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-84",
@@ -709,6 +808,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-85",
@@ -716,6 +816,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-86",
@@ -723,6 +824,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-87",
@@ -730,6 +832,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-88",
@@ -737,6 +840,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-89",
@@ -744,6 +848,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-90",
@@ -751,6 +856,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
   },
   {
     id: "sp-gen-91",
@@ -758,6 +864,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-92",
@@ -765,6 +872,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-93",
@@ -772,6 +880,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-94",
@@ -779,6 +888,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-95",
@@ -786,6 +896,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-96",
@@ -793,6 +904,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-97",
@@ -800,6 +912,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-98",
@@ -807,6 +920,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-99",
@@ -814,6 +928,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen-100",
@@ -821,6 +936,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
+    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
   },
   {
     id: "sp-gen3-1",
@@ -828,6 +944,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Звук /x/ в 'huisarts' образуется в глубине рта — не в горле, как русское [х], и не как немецкое [ch].",
+    focusHintEn: "The /x/ sound in 'huisarts' is formed in the back of the mouth - not in the throat, like Russian [x], and not like German [ch].",
   },
   {
     id: "sp-gen3-2",
@@ -835,6 +952,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "В 'dochter' звук /x/ следует сразу после короткой 'o' — не смягчайте его.",
+    focusHintEn: "In the 'dochter' sound /x/ follows immediately after the short 'o' - don't soften it.",
   },
   {
     id: "sp-gen3-3",
@@ -842,6 +960,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Долгий гласный /iː/ в 'ziekenhuis' — тяните звук дольше, чем в русском 'и'.",
+    focusHintEn: "Long vowel /i / in 'ziekenhuis' - pull the sound longer than in Russian 'i'.",
   },
   {
     id: "sp-gen3-4",
@@ -849,6 +968,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Двойная 'd' в 'bloeddruk' произносится как один долгий звук, не как два отдельных.",
+    focusHintEn: "The double 'd' in 'bloeddruk' is pronounced as one long sound, not as two separate ones.",
   },
   {
     id: "sp-gen3-5",
@@ -856,6 +976,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Короткая 'i' в 'pil' — звук напряжённее и короче русского 'и'.",
+    focusHintEn: "The short 'i' in 'pil' is a more intense and shorter sound than the Russian 'i'.",
   },
   {
     id: "sp-gen3-6",
@@ -863,6 +984,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Основное ударение в 'verpleegkundige' падает на третий слог — 'kun', а не на первый.",
+    focusHintEn: "The main emphasis in verpleegkundige falls on the third syllable, kun, not the first.",
   },
   {
     id: "sp-gen3-7",
@@ -870,6 +992,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Дифтонг /œy/ в 'duizelig' — губы округлены сильнее, чем в русском 'уй'.",
+    focusHintEn: "Diphthong /œy/ in 'duizelig' - the lips are rounded more than in Russian 'uy'.",
   },
   {
     id: "sp-gen3-8",
@@ -877,6 +1000,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Безударное 'e' в 'gisteren' сводится к нейтральному звуку [ə], не проговаривайте его чётко.",
+    focusHintEn: "The unstressed 'e' in 'gisteren' is reduced to a neutral sound [ə], do not pronounce it clearly.",
   },
   {
     id: "sp-gen3-9",
@@ -884,6 +1008,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Ударение в 'paspoort' на первом слоге, а долгий 'oo' произносится отчётливо на втором.",
+    focusHintEn: "The stress in \"paspoort\" is on the first syllable, and the long \"oo\" is pronounced clearly on the second.",
   },
   {
     id: "sp-gen3-10",
@@ -891,6 +1016,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Согласный кластер 'rkeervergunning' — проговаривайте каждый звук чётко, не сокращайте.",
+    focusHintEn: "According to the 'rkeervergunning' cluster, say each sound clearly, don't cut it.",
   },
   {
     id: "sp-gen3-11",
@@ -898,6 +1024,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Дифтонг /œy/ в 'verhuisd' — губы округляются, звук отличается от русского 'уй'.",
+    focusHintEn: "Diphthong /œy/ in 'verhuisd' - the lips are rounded, the sound is different from the Russian 'yu'.",
   },
   {
     id: "sp-gen3-12",
@@ -905,6 +1032,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Кластер 'mbt' в 'ambtenaar' — 'b' произносится очень слабо, почти неслышно.",
+    focusHintEn: "The cluster 'mbt' in 'ambtenaar' - 'b' is pronounced very faintly, almost inaudible.",
   },
   {
     id: "sp-gen3-13",
@@ -912,6 +1040,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "Ударение в 'loket' падает на второй слог — lo-KET, а не на первый.",
+    focusHintEn: "The emphasis in 'loket' falls on the second syllable, lo-KET, not the first.",
   },
   {
     id: "sp-gen3-14",
@@ -919,6 +1048,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "В 'rijbewijs' дифтонг /ɛi/ встречается дважды — следите, чтобы оба звучали одинаково.",
+    focusHintEn: "In 'rijbewijs' diphthong /ɛi/ occurs twice - make sure both sound the same.",
   },
   {
     id: "sp-gen3-15",
@@ -926,6 +1056,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Звук /x/ в 'klacht' стоит после долгой 'a' — не забывайте про гортанное произношение.",
+    focusHintEn: "The /x/ sound in 'klacht' comes after a long 'a' - don't forget the guttural pronunciation.",
   },
   {
     id: "sp-gen3-16",
@@ -933,6 +1064,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "A2",
     focusHintRu: "В 'huisvuil' дифтонг /œy/ повторяется дважды — тренируйте одинаковое округление губ.",
+    focusHintEn: "In 'huisvuil' diphthong /œy/ is repeated twice - exercise the same rounding of the lips.",
   },
   {
     id: "sp-gen3-17",
@@ -940,6 +1072,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Ударение в 'beginnen' на втором слоге — be-GIN-nen.",
+    focusHintEn: "The emphasis in 'beginnen' on the second syllable is be-GIN-nen.",
   },
   {
     id: "sp-gen3-18",
@@ -947,6 +1080,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Длинное слово 'leidinggevende' имеет главное ударение на первом слоге, остальные — слабее.",
+    focusHintEn: "The long word \"leidinggevende\" has the main emphasis on the first syllable, the others are weaker.",
   },
   {
     id: "sp-gen3-19",
@@ -954,6 +1088,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Английское заимствование 'parttime' произносится на голландский манер, с твёрдым 't'.",
+    focusHintEn: "The English borrowing \"parttime\" is pronounced in the Dutch manner, with a hard \"t\".",
   },
   {
     id: "sp-gen3-20",
@@ -961,6 +1096,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Дифтонг /œy/ в 'uitzendbureau' плюс французское ударение на 'bureau' — на последний слог.",
+    focusHintEn: "Diphthong /œy/ in 'uitzendbureau' plus the French accent on 'bureau' - on the last syllable.",
   },
   {
     id: "sp-gen3-21",
@@ -968,6 +1104,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'reiskosten' — начинайте с открытого 'э' и скользите к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'reiskosten' - start with an open 'e' and slide to an 'e'.",
   },
   {
     id: "sp-gen3-22",
@@ -975,6 +1112,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "B1",
     focusHintRu: "Заимствование 'deadline' сохраняет английское произношение — не читайте его по голландским правилам.",
+    focusHintEn: "Borrowing 'deadline' retains the English pronunciation - don't read it by Dutch rules.",
   },
   {
     id: "sp-gen3-23",
@@ -982,6 +1120,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Долгий дифтонг /ɛi/ в 'vrij' — растягивайте звук чуть дольше обычного.",
+    focusHintEn: "Long diphthong /ɛi/ in 'vrij' - stretch the sound a little longer than usual.",
   },
   {
     id: "sp-gen3-24",
@@ -989,6 +1128,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "werk",
     level: "A2",
     focusHintRu: "Кластер согласных 'rkpl' в 'werkplek' — проговаривайте все звуки, не сливайте их.",
+    focusHintEn: "Consonant cluster 'rkpl' in 'werkplek' - pronounce all sounds, do not merge them.",
   },
   {
     id: "sp-gen3-25",
@@ -996,6 +1136,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Сочетание /sx/ в 'geschilderd' — сначала мягкий 's', потом гортанный 'ch'.",
+    focusHintEn: "The combination /sx/ in 'geschilderd' is first a soft 's', then a guttural 'ch'.",
   },
   {
     id: "sp-gen3-26",
@@ -1003,6 +1144,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Долгая огублённая 'uu' в 'huurcontract' — не путайте с русским 'у'.",
+    focusHintEn: "The long ruined 'uu' in 'huurcontract' is not to be confused with the Russian 'u'.",
   },
   {
     id: "sp-gen3-27",
@@ -1010,6 +1152,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Долгая 'uu' в 'buren' и безударное 'e' в 'avonds' звучат по-разному — не смешивайте их.",
+    focusHintEn: "The long 'uu' in 'buren' and the unstressed 'e' in 'avonds' sound different - don't mix them up.",
   },
   {
     id: "sp-gen3-28",
@@ -1017,6 +1160,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Дифтонг /œy/ повторяется в 'vuilnisbak' и 'buiten' — тренируйте одинаковое произношение.",
+    focusHintEn: "Diphthong /œy/ is repeated in 'vuilnisbak' and 'buiten' - practice the same pronunciation.",
   },
   {
     id: "sp-gen3-29",
@@ -1024,6 +1168,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Долгая 'aa' в 'slaapkamer' — звук длиннее, чем в коротком 'a'.",
+    focusHintEn: "The long 'aa' in 'slaapkamer' is longer than the short 'a'.",
   },
   {
     id: "sp-gen3-30",
@@ -1031,6 +1176,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "A2",
     focusHintRu: "Долгий гласный /iː/ в 'verdieping' — тяните звук отчётливо.",
+    focusHintEn: "Long vowel /i / in 'verdieping' - pull the sound clearly.",
   },
   {
     id: "sp-gen3-31",
@@ -1038,6 +1184,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Длинный кластер согласных в 'verwarmingsketel' — не глотайте средние слоги.",
+    focusHintEn: "Long consonant cluster in 'verwarmingsketel' - do not swallow the middle syllables.",
   },
   {
     id: "sp-gen3-32",
@@ -1045,6 +1192,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "wonen",
     level: "B1",
     focusHintRu: "Двойная 'kk' в 'lekkage' делает предыдущую 'e' короткой — не растягивайте её.",
+    focusHintEn: "The double 'kk' in 'lekkage' makes the previous 'e' short - don't stretch it.",
   },
   {
     id: "sp-gen3-33",
@@ -1052,6 +1200,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Короткая 'e' в 'belt' — звук короче и напряжённее русского 'э'.",
+    focusHintEn: "The short ‘e’ in ‘belt’ is shorter and more intense than the Russian ‘e’.",
   },
   {
     id: "sp-gen3-34",
@@ -1059,6 +1208,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Кластер 'sch' в 'schoonouders' произносится как /sx/, а не как русское 'ш'.",
+    focusHintEn: "The 'sch' cluster in 'schoonouders' is pronounced /sx/ rather than Russian 'sh'.",
   },
   {
     id: "sp-gen3-35",
@@ -1066,6 +1216,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Звук /x/ в 'ochtend' стоит после короткой 'o' — произносите его глубоко в горле.",
+    focusHintEn: "The /x/ sound in 'ochtend' comes after the short 'o' - pronounce it deep in the throat.",
   },
   {
     id: "sp-gen3-36",
@@ -1073,6 +1224,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Ударение в 'studeert' падает на второй слог — stu-DEERT.",
+    focusHintEn: "The stress in 'studeert' falls on the second syllable - stu-DEERT.",
   },
   {
     id: "sp-gen3-37",
@@ -1080,6 +1232,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Носовой звук в 'zondag' — 'n' перед 'd' произносится слитно с гласной.",
+    focusHintEn: "The nasal sound in 'zondag' - 'n' before 'd' is pronounced in conjunction with the vowel.",
   },
   {
     id: "sp-gen3-38",
@@ -1087,6 +1240,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /œy/ в 'buitenland' — губы округлены сильнее, чем при русском 'уй'.",
+    focusHintEn: "Diphthong /œy/ in 'buitenland' - the lips are rounded more than in the Russian 'uy'.",
   },
   {
     id: "sp-gen3-39",
@@ -1094,6 +1248,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Уменьшительный суффикс '-je' в 'neefje' произносится как отдельный слог с приглушённым звуком.",
+    focusHintEn: "The diminutive suffix '-je' in 'neefje' is pronounced as a separate syllable with a muted sound.",
   },
   {
     id: "sp-gen3-40",
@@ -1101,6 +1256,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "A2",
     focusHintRu: "Долгая 'oo' и сочетание /sx/ в 'boodschappen' — не сокращайте гласную перед 'sch'.",
+    focusHintEn: "Long 'oo' and /sx/ in 'boodschappen' - do not shorten the vowel before 'sch'.",
   },
   {
     id: "sp-gen3-41",
@@ -1108,6 +1264,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "A2",
     focusHintRu: "Короткая 'e' в 'zeggen' — звук отличается от долгого 'ee', не растягивайте его.",
+    focusHintEn: "The short 'e' in 'zeggen' is different from the long 'ee', don't stretch it.",
   },
   {
     id: "sp-gen3-42",
@@ -1115,6 +1272,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "B1",
     focusHintRu: "В длинном слове 'boodschappenlijstje' главное ударение падает на первый слог.",
+    focusHintEn: "In the long word 'boodschappenlijstje' the main emphasis falls on the first syllable.",
   },
   {
     id: "sp-gen3-43",
@@ -1122,6 +1280,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "A2",
     focusHintRu: "Долгая 'o' в 'gesloten' — звук более закрытый и долгий, чем русское 'о'.",
+    focusHintEn: "The long 'o' in 'gesloten' is a more closed and longer sound than the Russian 'o'.",
   },
   {
     id: "sp-gen3-44",
@@ -1129,6 +1288,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "B1",
     focusHintRu: "Короткая 'o' в 'korting' — звук более открытый, чем русское 'о'.",
+    focusHintEn: "The short ‘o’ in ‘korting’ is a more open sound than the Russian ‘o’.",
   },
   {
     id: "sp-gen3-45",
@@ -1136,6 +1296,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "A2",
     focusHintRu: "Короткая 'i' в 'pinpas' — звук напряжённее и короче русского 'и'.",
+    focusHintEn: "The short 'i' in 'pinpas' is a more intense and shorter sound than the Russian 'i'.",
   },
   {
     id: "sp-gen3-46",
@@ -1143,6 +1304,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "A2",
     focusHintRu: "Гласная 'oe' в 'groente' произносится как звук, близкий к русскому 'у', но короче.",
+    focusHintEn: "Vowel 'oe' in 'groente' is pronounced as a sound close to the Russian 'y', but shorter.",
   },
   {
     id: "sp-gen3-47",
@@ -1150,6 +1312,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "boodschappen",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'rij' и короткая 'a' в 'kassa' — не путайте длительность этих гласных.",
+    focusHintEn: "Diphthong /ɛi/ in 'rij' and short 'a' in 'kassa' - do not confuse the duration of these vowels.",
   },
   {
     id: "sp-gen3-48",
@@ -1157,6 +1320,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Короткая 'u' в 'bus' произносится иначе, чем долгая 'uu' в похожих словах.",
+    focusHintEn: "The short 'u' in 'bus' is pronounced differently than the long 'uu' in similar words.",
   },
   {
     id: "sp-gen3-49",
@@ -1164,6 +1328,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Заимствованное 'chip' произносится с английским звуком, не как голландское /sx/.",
+    focusHintEn: "The borrowed 'chip' is pronounced with an English sound, not like the Dutch /sx/.",
   },
   {
     id: "sp-gen3-50",
@@ -1171,6 +1336,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trein' — скользите от открытого 'э' к 'и'.",
+    focusHintEn: "Diphthong /ɛi/ in 'trein' - slide from open 'e' to 'e'.",
   },
   {
     id: "sp-gen3-51",
@@ -1178,6 +1344,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Слово 'garage' — французское заимствование, ударение на последнем слоге.",
+    focusHintEn: "The word \"garage\" is a French borrowing, accent on the last syllable.",
   },
   {
     id: "sp-gen3-52",
@@ -1185,6 +1352,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Долгий гласный /iː/ в 'fietsen' — тяните звук дольше обычного.",
+    focusHintEn: "Long vowel /i / in 'fietsen' - pull the sound longer than usual.",
   },
   {
     id: "sp-gen3-53",
@@ -1192,6 +1360,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "A2",
     focusHintRu: "Безударное 'me' в конце фразы редуцируется до нейтрального звука.",
+    focusHintEn: "The unstressed 'me' at the end of the sentence is reduced to a neutral sound.",
   },
   {
     id: "sp-gen3-54",
@@ -1199,6 +1368,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Приставка 'af-' в 'afgesloten' встраивается перед корнем причастия — произносите её отдельно.",
+    focusHintEn: "The prefix 'af-' in 'afgesloten' is built in front of the root of the communion - pronounce it separately.",
   },
   {
     id: "sp-gen3-55",
@@ -1206,6 +1376,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Долгая огублённая 'uu' в 'buurtsuper' отличается от русского 'у'.",
+    focusHintEn: "The long ruined 'uu' in 'buurtsuper' differs from the Russian 'u'.",
   },
   {
     id: "sp-gen3-56",
@@ -1213,6 +1384,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Долгая 'uu' в 'buren' — звук образуется с округлёнными губами, как немецкое ü.",
+    focusHintEn: "Long 'uu' in 'buren' - the sound is formed with rounded lips, like the German ü.",
   },
   {
     id: "sp-gen3-57",
@@ -1220,6 +1392,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Долгая /iː/ в 'brievenbus' контрастирует с короткой 'u' во втором слове.",
+    focusHintEn: "The long /iː/ in 'brievenbus' contrasts with the short 'u' in the second word.",
   },
   {
     id: "sp-gen3-58",
@@ -1227,6 +1400,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Составное слово 'straatverlichting' — основное ударение на первом элементе.",
+    focusHintEn: "The compound word 'straatverlichting' is the main emphasis on the first element.",
   },
   {
     id: "sp-gen3-59",
@@ -1234,6 +1408,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Дифтонг /œy/ в 'opruimactie' — тренируйте округление губ.",
+    focusHintEn: "Diphthong /œy/ in 'opruimactie' - practice rounding your lips.",
   },
   {
     id: "sp-gen3-60",
@@ -1241,6 +1416,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Уменьшительный суффикс '-tje' в 'speeltuintje' произносится отдельно, с глухим 't'.",
+    focusHintEn: "The diminutive suffix '-tje' in 'speeltuintje' is pronounced separately, with a deaf 't'.",
   },
   {
     id: "sp-gen3-61",
@@ -1248,6 +1424,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Длинное слово 'buurtbewoners' — долгая 'uu' в начале, ударение на первом слоге.",
+    focusHintEn: "The long word 'buurtbewoners' is the long 'uu' at the beginning, accent on the first syllable.",
   },
   {
     id: "sp-gen3-62",
@@ -1255,6 +1432,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "A2",
     focusHintRu: "Составной глагол 'hardlopen' — оба элемента произносятся с равным весом.",
+    focusHintEn: "Composite verb 'hardlopen' - both elements are pronounced with equal weight.",
   },
   {
     id: "sp-gen3-63",
@@ -1262,6 +1440,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "B1",
     focusHintRu: "Сочетание /sx/ в 'schilderen' — 's' мягкий, за ним следует гортанный 'ch'.",
+    focusHintEn: "The combination /sx/ in 'schilderen' is 's' soft, followed by the laryngeal 'ch'.",
   },
   {
     id: "sp-gen3-64",
@@ -1269,6 +1448,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "A2",
     focusHintRu: "Короткая 'o' в 'potje' произносится более открыто, чем русское 'о'.",
+    focusHintEn: "The short ‘o’ in potje is pronounced more openly than the Russian ‘o’.",
   },
   {
     id: "sp-gen3-65",
@@ -1276,6 +1456,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "A2",
     focusHintRu: "Долгий гласный 'oe' в 'boek' — звук ближе к русскому 'у', но более закрытый.",
+    focusHintEn: "The long vowel \"oe\" in \"boek\" is closer to the Russian \"y\" but more closed.",
   },
   {
     id: "sp-gen3-66",
@@ -1283,6 +1464,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "B1",
     focusHintRu: "Долгая 'oo' в 'bioscoop' — произносите её отчётливо на последнем слоге.",
+    focusHintEn: "Long 'oo' in 'bioscoop' - pronounce it clearly on the last syllable.",
   },
   {
     id: "sp-gen3-67",
@@ -1290,6 +1472,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "B1",
     focusHintRu: "Долгая огублённая 'uu' в 'buurtbad' — не сокращайте её до короткого звука.",
+    focusHintEn: "The long, ruined 'uu' in 'buurtbad' - don't shorten it to a short sound.",
   },
   {
     id: "sp-gen3-68",
@@ -1297,6 +1480,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "A2",
     focusHintRu: "Заимствованное 'kamperen' произносится с голландским ударением на первом слоге.",
+    focusHintEn: "The borrowed 'kamperen' is pronounced with Dutch accent on the first syllable.",
   },
   {
     id: "sp-gen3-69",
@@ -1304,6 +1488,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vrije_tijd",
     level: "A2",
     focusHintRu: "Ударение в 'gitaar' падает на последний слог — gi-TAAR, с долгой 'aa'.",
+    focusHintEn: "The emphasis in 'gitaar' falls on the last syllable, gi-TAAR, with the long 'aa'.",
   },
   {
     id: "sp-gen3-70",
@@ -1311,6 +1496,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Долгая 'aa' в 'aangifte' — звук значительно длиннее короткой 'a'.",
+    focusHintEn: "The long 'aa' in 'aangifte' is a sound much longer than the short 'a'.",
   },
   {
     id: "sp-gen3-71",
@@ -1318,6 +1504,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Короткая 'e' в 'geld' — не путайте с долгим 'ee' в похожих словах.",
+    focusHintEn: "The short 'e' in 'geld' is not to be confused with the long 'ee' in similar words.",
   },
   {
     id: "sp-gen3-72",
@@ -1325,6 +1512,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Долгая 'aa' в 'spaarrekening' контрастирует с короткой 'e' далее в слове.",
+    focusHintEn: "The long 'aa' in 'spaarrekening' contrasts with the short 'e' later in the word.",
   },
   {
     id: "sp-gen3-73",
@@ -1332,6 +1520,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Долгая огублённая 'uu' в 'huur' — губы округлены, звук близок к немецкому ü.",
+    focusHintEn: "Long ruined 'uu' in 'huur' - lips rounded, sound close to German ü.",
   },
   {
     id: "sp-gen3-74",
@@ -1339,6 +1528,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Причастие 'geblokkeerd' — ударение на предпоследнем слоге, долгая 'ee'.",
+    focusHintEn: "Communion \"geblokkeerd\" - accent on the penultimate syllable, long \"ee\".",
   },
   {
     id: "sp-gen3-75",
@@ -1346,6 +1536,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Долгая 'e' в 'lening' — звук более закрытый, чем в коротком 'e'.",
+    focusHintEn: "The long 'e' in 'lening' is more closed than the short 'e'.",
   },
   {
     id: "sp-gen3-76",
@@ -1353,6 +1544,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "B1",
     focusHintRu: "Составное слово 'energierekening' — главное ударение на первом элементе.",
+    focusHintEn: "The compound word 'energierekening' is the main emphasis on the first element.",
   },
   {
     id: "sp-gen3-77",
@@ -1360,6 +1552,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "geld",
     level: "A2",
     focusHintRu: "Слово 'abonnement' — французское заимствование, ударение на последнем слоге.",
+    focusHintEn: "The word 'abonnement' is a French borrowing, accent on the last syllable.",
   },
   {
     id: "sp-gen3-78",
@@ -1367,6 +1560,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Сочетание /sx/ в 'basisschool' — не смягчайте 'ch' до русского 'ш'.",
+    focusHintEn: "Combination /sx/ in 'basisschool' - do not soften 'ch' to Russian 'sh'.",
   },
   {
     id: "sp-gen3-79",
@@ -1374,6 +1568,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Долгая 'aa' в 'taalcursus' — звук длиннее, чем в коротком 'a'.",
+    focusHintEn: "The long 'aa' in 'taalcursus' is longer than the short 'a'.",
   },
   {
     id: "sp-gen3-80",
@@ -1381,6 +1576,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Дифтонг /œy/ в 'uitleg' — тренируйте округление губ, как в 'huis'.",
+    focusHintEn: "Diphthong /œy/ in 'uitleg' - practice rounding your lips as in 'huis'.",
   },
   {
     id: "sp-gen3-81",
@@ -1388,6 +1584,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Ударение в 'examen' падает на второй слог — ex-A-men.",
+    focusHintEn: "The emphasis in 'examen' falls on the second syllable, ex-A-men.",
   },
   {
     id: "sp-gen3-82",
@@ -1395,6 +1592,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Длинное составное слово 'grammaticaregels' — не глотайте средние слоги при произношении.",
+    focusHintEn: "The long compound word 'grammaticaregels' - do not swallow the middle syllables when pronouncing.",
   },
   {
     id: "sp-gen3-83",
@@ -1402,6 +1600,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Дифтонг /œy/ в 'uitspraak' и долгая 'aa' в том же слове — тренируйте оба звука.",
+    focusHintEn: "Diphthong /œy/ in 'uitspraak' and long 'aa' in the same word - practice both sounds.",
   },
   {
     id: "sp-gen3-84",
@@ -1409,6 +1608,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "A2",
     focusHintRu: "Сочетание /sx/ в 'school' и дифтонг /ɛi/ в 'vrijdag' — два разных звука в одной фразе.",
+    focusHintEn: "The combination /sx/ in 'school' and diphthong /ɛi/ in 'vrijdag' are two different sounds in the same phrase.",
   },
   {
     id: "sp-gen3-85",
@@ -1416,5 +1616,6 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "onderwijs",
     level: "B1",
     focusHintRu: "Долгая 'o' в 'diploma' — ударение падает на второй слог, di-PLO-ma.",
+    focusHintEn: "The long 'o' in 'diploma' - the stress falls on the second syllable, di-PLO-ma.",
   },
 ];

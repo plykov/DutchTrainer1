@@ -31,6 +31,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "В нидерландском спрягаемый глагол всегда на втором месте (правило V2), даже если предложение начинается не с подлежащего. 'Morgen' занимает первое место → глагол 'ga' сразу после него.",
+    explanationEn: "In Dutch, the conjugated verb always comes second (rule V2), even if the sentence does not start with the subject. 'Morgen' takes the first place in the verb 'ga' immediately after it.",
   } as PracticeItem),
   base({
     id: "sub-end-mc-1",
@@ -47,6 +48,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "После omdat спрягаемый глагол уходит в конец придаточного предложения: 'omdat ik ziek ben', а не 'omdat ik ben ziek'.",
+    explanationEn: "After omdat, the conjugated verb goes to the end of the appendage sentence: 'omdat ik ziek ben', not 'omdat ik ben ziek'.",
   } as PracticeItem),
   base({
     id: "sep-split-cloze-1",
@@ -59,6 +61,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     acceptableVariants: ["bel"],
     explanationRu:
       "Разделяемый глагол opbellen: приставка 'op' уходит в конец предложения, спрягается только основа: 'Ik bel ... op'.",
+    explanationEn: "Shared verb opbellen: the prefix 'op' goes to the end of the sentence, conjugated only the basis: 'Ik bel ... op'.",
   } as PracticeItem),
   base({
     id: "aux-sel-mc-1",
@@ -71,6 +74,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Глаголы движения/изменения состояния (gaan, komen, worden) образуют перфект со вспомогательным zijn, а не hebben.",
+    explanationEn: "Motion/state change verbs (gaan, komen, worden) form a perfect with auxiliary zijn rather than hebben.",
   } as PracticeItem),
   base({
     id: "aspect-map-mc-1",
@@ -83,6 +87,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Внимание: это НЕ русский вид! 'heb geschreven' (perfectum) — завершённое единичное событие, о котором сообщается как о факте. 'schreef' (imperfectum) подошло бы для фона/повторяющегося действия. Не переводите по виду глагола в русском — определяйте по функции в контексте.",
+    explanationEn: "Warning: This is NOT a Russian species! 'heb geschreven' (perfectum) is a completed single event reported as fact. 'schreef' (imperfectum) would be suitable for background/repeat action. Don’t translate a verb in Russian – define by function in context.",
   } as PracticeItem),
   base({
     id: "er-exist-mc-1",
@@ -95,6 +100,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Экзистенциальное 'er' используется, когда подлежащее неопределённое и стоит не в начале: 'Er staat een boom...'. Прямого аналога в русском нет.",
+    explanationEn: "The existential er is used when the subject is indefinite and does not stand at the beginning: Er staat een boom. . There is no direct analogue in Russian.",
   } as PracticeItem),
   base({
     id: "er-quant-mc-1",
@@ -107,6 +113,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Количественное 'er' обязательно при ответе числом/количеством без существительного: 'Ik heb er twee' (= 'у меня их два').",
+    explanationEn: "Quantitative 'er' must be answered with a number/quantity without a noun: 'Ik heb er twee' (= 'I have two of them').",
   } as PracticeItem),
   base({
     id: "er-prep-mc-1",
@@ -119,6 +126,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Для неодушевлённых предметов после предлога используется 'er' + предлог слитно: 'eraan', а не 'aan het'.",
+    explanationEn: "For inanimate objects, after the preposition, the 'er' + preposition is used together: 'eraan', not 'aan het'.",
   } as PracticeItem),
   base({
     id: "er-loc-mc-1",
@@ -130,6 +138,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ja, ik woon er sinds 2020.", "Ja, ik woon in het sinds 2020.", "Ja, ik woon daar het sinds 2020."],
     correctIndex: 0,
     explanationRu: "Локативное 'er' заменяет уже упомянутое место вместо повторения названия города.",
+    explanationEn: "The locative er replaces the already mentioned place instead of repeating the name of the city.",
   } as PracticeItem),
   base({
     id: "particle-mc-1",
@@ -143,6 +152,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Частица 'maar' смягчает приглашение и звучит естественно в разговорной речи. В русском такой категории частиц почти нет — учите в контексте диалога, не переводите дословно.",
+    explanationEn: "The 'maar' particle softens the invitation and sounds natural when spoken. In Russian, there is almost no such category of particles - learn in the context of a dialogue, do not translate verbatim.",
   } as PracticeItem),
   base({
     id: "art-dehet-mc-1",
@@ -155,6 +165,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'huis' — het-слово. Надёжного правила нет (кроме уменьшительных на -je, которые всегда het) — het-слова запоминайте как меньший, отдельно заучиваемый набор.",
+    explanationEn: "'huis' is a het word. There is no reliable rule (except for diminutives in -je, which are always het) - remember het words as a smaller, separately memorized set.",
   } as PracticeItem),
   base({
     id: "adj-infl-mc-1",
@@ -167,6 +178,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Перед het-словом в неопределённой форме единственного числа прилагательное без окончания -e: 'een groot huis'. Учите это вместе с артиклем как единый блок.",
+    explanationEn: "Before the het word in indefinite singular form, the adjective without ending is -e: 'een groot huis'. Learn it together with the article as a single block.",
   } as PracticeItem),
   base({
     id: "cluster-mc-1",
@@ -183,6 +195,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 2,
     explanationRu:
       "В группе глаголов в конце предложения (verb cluster) порядок фиксированный: 'moeten lezen', а не 'lezen moeten'. Прямого правила в русском нет — учите цепочку целиком.",
+    explanationEn: "In the verb cluster, the order is fixed: moeten lezen, not lezen moeten. There is no direct rule in Russian – learn the whole chain.",
   } as PracticeItem),
   base({
     id: "sep-part-mc-1",
@@ -195,6 +208,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "У разделяемых глаголов приставка 'ge-' вставляется между приставкой и основой: op + ge + beld = 'opgebeld', а не 'geopbeld'.",
+    explanationEn: "In shared verbs, the prefix 'ge-' is inserted between the prefix and the base: op + ge + beld = 'opgebeld', not 'geopbeld'.",
   } as PracticeItem),
   base({
     id: "neg-pos-mc-1",
@@ -207,6 +221,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'niet' обычно стоит в конце предложения или перед тем, что отрицается, но не сразу перед личным глаголом. Здесь 'niet' идёт после дополнения 'het formulier'.",
+    explanationEn: "\"niet\" usually stands at the end of a sentence or before what is denied, but not immediately before the personal verb. Here \"niet\" comes after the addition of \"het formulier\".",
   } as PracticeItem),
   base({
     id: "plur-mc-1",
@@ -219,6 +234,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Множественное число 'huis' образуется с изменением s→z и окончанием -en: 'huizen'. Выбор -en/-s не всегда предсказуем — запоминайте форму вместе со словом (см. раздел «Словарь»).",
+    explanationEn: "The plural 'huis' is formed with the change s→z and the ending -en: 'huizen'. The choice of -en/-s is not always predictable - remember the form along with the word (see \"Dictionary\").",
   } as PracticeItem),
   base({
     id: "dim-art-mc-1",
@@ -231,6 +247,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Все уменьшительные формы на -je берут артикль het, даже если исходное слово — de-слово ('de afspraak' → 'het afspraakje'). Это одно из немногих надёжных правил артиклей.",
+    explanationEn: "All diminutive forms on -je take the article het, even if the original word is de-word ('de afspraak' → 'het afspraakje'). This is one of the few reliable rules of the articles.",
   } as PracticeItem),
   base({
     id: "prep-fixed-mc-1",
@@ -243,6 +260,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'wachten op' — устойчивый предлог (vast voorzetsel), его нельзя вывести логически из значения. Учите такие сочетания как готовый блок, а не переводите по смыслу.",
+    explanationEn: "\"wachten op\" is a stable preposition (vast voorzetsel), it cannot be deduced logically from meaning. Learn such combinations as a ready-made block rather than translating into meaning.",
   } as PracticeItem),
   base({
     id: "colloc-mc-1",
@@ -255,6 +273,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Устойчивое сочетание — 'een afspraak maken' (буквально «делать» в смысле 'maken'), а не 'doen' или 'nemen'. Это коллокация, а не свободное сочетание слов.",
+    explanationEn: "The stable combination is 'een afspraak maken' (literally 'do' in the sense of 'maken'), not 'doen' or 'nemen'. It is a collection, not a loose combination of words.",
   } as PracticeItem),
   base({
     id: "v2-mc-2",
@@ -267,6 +286,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Снова правило V2: 'volgende week' на первом месте → глагол 'begin' сразу после него, на втором месте.",
+    explanationEn: "Again, rule V2: 'volgende week' in first place → the verb 'begin' immediately after it, in second place.",
   } as PracticeItem),
   base({
     id: "aux-sel-mc-2",
@@ -279,6 +299,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'worden' (изменение состояния) тоже образует перфект с zijn: 'ben geworden', а не 'heb geworden'.",
+    explanationEn: "\"worden\" (change of state) also forms a perfection with zijn: \"ben geworden\" rather than \"heb geworden\".",
   } as PracticeItem),
   base({
     id: "aspect-map-mc-2",
@@ -291,6 +312,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Здесь imperfectum ('woonde'), потому что это фон/повторяющаяся ситуация в прошлом, а не единичное завершённое событие. Снова: ориентируйтесь на функцию, а не на русский вид.",
+    explanationEn: "It is imperfectum ('woonde') because it is a background/repeated situation in the past, not a single completed event. Again: focus on the function, not the Russian look.",
   } as PracticeItem),
   base({
     id: "particle-mc-2",
@@ -304,6 +326,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 0,
     explanationRu:
       "Частица 'even' смягчает просьбу и делает её более естественной и менее требовательной — типичное употребление в разговорной речи.",
+    explanationEn: "The 'even' particle softens the request and makes it more natural and less demanding - a typical use in colloquial speech.",
   } as PracticeItem),
   base({
     id: "er-exist-mc-2",
@@ -315,6 +338,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["In de buurt is een school.", "Er is een school in de buurt.", "Een school is er in de buurt."],
     correctIndex: 1,
     explanationRu: "Ещё один пример экзистенциального 'er': неопределённое подлежащее 'een school' требует 'er' в начале.",
+    explanationEn: "Another example of the existential er: the indefinite subject of een school requires an er at the beginning.",
   } as PracticeItem),
   base({
     id: "phon-vlength-mc-1",
@@ -327,6 +351,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'maan' (луна) с долгим гласным [aː], 'man' (мужчина) с коротким [ɑ]. В русском долгота гласных не различает слова — уделите этому отдельное внимание, желательно на слух в разделе «Говорение».",
+    explanationEn: "The moon with a long vowel, the man with a short vowel. In Russian, vowel longitude does not distinguish between words - pay special attention to this, preferably by ear in the section \"Speaking\".",
   } as PracticeItem),
   base({
     id: "phon-frontround-mc-1",
@@ -339,6 +364,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 0,
     explanationRu:
       "'horen' (слышать) vs 'huren' (снимать/арендовать) — разные огублённые гласные. В русском таких гласных нет, поэтому пара звучит обманчиво похоже для новичка.",
+    explanationEn: "\"Horen\" vs. \"huren\" (to film/rent) are different broken vowels. There are no such vowels in Russian, so the pair sounds deceptively similar to a beginner.",
   } as PracticeItem),
   base({
     id: "phon-devoice-mc-1",
@@ -351,6 +377,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "В конце слова 'hond' звучит оглушённо, почти как /t/, но пишется по основе множественного числа: 'honden'. Не пишите так, как слышите на конце слова.",
+    explanationEn: "At the end of the word 'hond' sounds deafening, almost like /t/, but is written on a plural basis: 'honden'. Do not write as you hear at the end of the word.",
   } as PracticeItem),
   base({
     id: "phon-xg-mc-1",
@@ -363,6 +390,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 0,
     explanationRu:
       "В начале слова 'g' обычно звонкая /ɣ/, а сочетание 'ch' — глухая /x/. Обе отличаются от русского [х] — приоритетная пара для тренировки произношения (см. раздел «Говорение»).",
+    explanationEn: "At the beginning of a word, 'g' is usually voiced /ɣ/, while 'ch' is voiceless /x/. Both differ from Russian [x]—a priority contrast for pronunciation practice (see Speaking).",
   } as PracticeItem),
   base({
     id: "prep-fixed-mc-2",
@@ -375,6 +403,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 0,
     explanationRu:
       "'houden van' — устойчивый предлог для 'любить что-то'. Ещё один пример vast voorzetsel, который нужно запоминать целиком.",
+    explanationEn: "'houden van' is a strong pretext for 'love something'. Another example of a vast voorzetsel that you need to remember in its entirety.",
   } as PracticeItem),
   base({
     id: "sentence-transform-1",
@@ -386,6 +415,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik ga naar de huisarts. Ik ben ziek.",
     answer: "Ik ga naar de huisarts, omdat ik ziek ben.",
     explanationRu: "После 'omdat' спрягаемый глагол в самом конце придаточного.",
+    explanationEn: "After 'omdat', the conjugated verb is at the very end of the appendage.",
   } as PracticeItem),
   base({
     id: "short-write-1",
@@ -424,6 +454,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Правило V2: спрягаемый глагол всегда на втором месте. 'Vandaag' занимает первое место, поэтому 'werk' сразу следует за ним.",
+    explanationEn: "Rule V2: The conjugated verb always comes second. \"Vandaag\" takes first place, so \"werk\" immediately follows him.",
   } as PracticeItem),
   base({
     id: "v2-gen-2",
@@ -436,6 +467,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 0,
     explanationRu:
       "После 'straks' на первом месте сразу идёт спрягаемый глагол 'ga', а не подлежащее.",
+    explanationEn: "After 'straks' comes the conjugated verb 'ga', not the subject.",
   } as PracticeItem),
   base({
     id: "v2-gen-3",
@@ -448,6 +480,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     acceptableVariants: ["ga"],
     explanationRu:
       "Наречие 'morgen' стоит на первом месте, поэтому спрягаемый глагол 'ga' идёт вторым, перед подлежащим 'ik'.",
+    explanationEn: "The adverb 'morgen' comes first, so the conjugated verb 'ga' comes second, before the subject 'ik'.",
   } as PracticeItem),
   base({
     id: "v2-gen-4",
@@ -460,6 +493,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 0,
     explanationRu:
       "'Elke dag' открывает предложение, значит глагол 'drink' сразу занимает второе место.",
+    explanationEn: "'Elke dag' opens the sentence, so the verb 'drink' immediately takes second place.",
   } as PracticeItem),
   base({
     id: "v2-gen-5",
@@ -472,6 +506,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "Volgende week begin ik met mijn nieuwe baan.",
     explanationRu:
       "Когда 'volgende week' выносится в начало, глагол 'begin' остаётся на втором месте, а подлежащее 'ik' сдвигается после него.",
+    explanationEn: "When \"volgende week\" is placed at the beginning, the verb \"begin\" remains in second place, and the subject \"ik\" is moved after it.",
   } as PracticeItem),
 
   base({
@@ -488,6 +523,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "После 'dat' спрягаемый глагол уходит в конец придаточного: 'dat hij morgen komt'.",
+    explanationEn: "After ‘dat’, the conjugated verb goes to the end of the appendage: ‘dat hij morgen komt’.",
   } as PracticeItem),
   base({
     id: "sub-end-gen-2",
@@ -503,6 +539,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "'Omdat' требует, чтобы глагол 'is' стоял в самом конце придаточного предложения.",
+    explanationEn: "'Omdat' requires the verb 'is' to be at the very end of the appendage sentence.",
   } as PracticeItem),
   base({
     id: "sub-end-gen-3",
@@ -514,6 +551,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "werkt",
     acceptableVariants: ["werkt"],
     explanationRu: "После 'of' глагол 'werkt' стоит в конце придаточного предложения.",
+    explanationEn: "After 'of', the verb 'werkt' stands at the end of the appendage sentence.",
   } as PracticeItem),
   base({
     id: "sub-end-gen-4",
@@ -530,6 +568,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "'Als het regent' — придаточное с глаголом в конце ('regent'); в главном предложении, идущем после запятой, — инверсия ('blijf ik').",
+    explanationEn: "'Als het regent' is a subdivision with a verb at the end ('regent'); in the main sentence after the semicolon, inversion ('blijf ik').",
   } as PracticeItem),
   base({
     id: "sub-end-gen-5",
@@ -541,6 +580,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik kook. Mijn man dekt de tafel.",
     answer: "Ik kook, terwijl mijn man de tafel dekt.",
     explanationRu: "После 'terwijl' спрягаемый глагол 'dekt' уходит в конец придаточного предложения.",
+    explanationEn: "After 'terwijl' the conjugated verb 'dekt' goes to the end of the appendage sentence.",
   } as PracticeItem),
 
   base({
@@ -553,6 +593,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "zet",
     acceptableVariants: ["zet"],
     explanationRu: "Разделяемый глагол 'aanzetten': основа 'zet' спрягается, приставка 'aan' уходит в конец.",
+    explanationEn: "Shared verb 'aanzetten': the base 'zet' conjugates, the prefix 'aan' goes to the end.",
   } as PracticeItem),
   base({
     id: "sep-split-gen-2",
@@ -564,6 +605,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ruim mijn kamer op.", "Ik opruim mijn kamer.", "Ik ruim op mijn kamer."],
     correctIndex: 0,
     explanationRu: "'Opruimen': приставка 'op' идёт в конец предложения, а не перед дополнением.",
+    explanationEn: "Opruimen: The prefix 'op' comes at the end of a sentence, not before the addition.",
   } as PracticeItem),
   base({
     id: "sep-split-gen-3",
@@ -575,6 +617,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "staat",
     acceptableVariants: ["staat"],
     explanationRu: "'Opstaan': основа 'staat' спрягается, приставка 'op' остаётся в конце предложения.",
+    explanationEn: "Opstaan: the base of 'staat' is conjugated, the prefix 'op' remains at the end of the sentence.",
   } as PracticeItem),
   base({
     id: "sep-split-gen-4",
@@ -586,6 +629,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Hij belt zijn moeder op.", "Hij opbelt zijn moeder.", "Hij belt op zijn moeder."],
     correctIndex: 0,
     explanationRu: "'Opbellen' в главном предложении разделяется: 'belt ... op' — приставка в самом конце.",
+    explanationEn: "Opbellen in the main sentence is divided: 'belt ... op' is the console at the very end.",
   } as PracticeItem),
 
   base({
@@ -598,6 +642,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb naar de winkel gelopen.", "Ik ben naar de winkel gelopen.", "Ik ben naar de winkel gehad."],
     correctIndex: 1,
     explanationRu: "'Lopen' с указанием направления передаёт перемещение — перфект образуется с 'zijn'.",
+    explanationEn: "'Lopen' with direction indicates movement - the perfect is formed with 'zijn'.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen-2",
@@ -609,6 +654,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Zij heeft het boek gelezen.", "Zij is het boek gelezen.", "Zij heeft het boek geleesd."],
     correctIndex: 0,
     explanationRu: "'Lezen' — переходный глагол без изменения места/состояния, перфект образуется с 'hebben'.",
+    explanationEn: "'Lezen' is a transitional verb without changing place/state, the perfect is formed with 'hebben'.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen-3",
@@ -620,6 +666,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Wij zijn vroeg opgestaan.", "Wij hebben vroeg opgestaan.", "Wij zijn vroeg opgestaand."],
     correctIndex: 0,
     explanationRu: "'Opstaan' обозначает изменение состояния (встать), перфект образуется с 'zijn'.",
+    explanationEn: "'Opstaan' denotes a change of state (to stand), the perfect is formed with 'zijn'.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen-4",
@@ -631,6 +678,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "is",
     acceptableVariants: ["is"],
     explanationRu: "'Zijn' в перфекте от 'zijn' (быть) образуется с 'is' — 'is geweest'.",
+    explanationEn: "\"Zijn\" in the perfection of \"zijn\" (to be) is formed with \"is\" - \"is geweest\".",
   } as PracticeItem),
 
   base({
@@ -643,6 +691,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["speelde", "heb gespeeld", "speel"],
     correctIndex: 0,
     explanationRu: "Привычное повторяющееся действие в прошлом ('раньше я играл каждый день') — imperfectum.",
+    explanationEn: "The habitual repetitive action in the past (\"I used to play every day\") is imperfectum.",
   } as PracticeItem),
   base({
     id: "aspect-map-gen-2",
@@ -654,6 +703,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["las", "heb gelezen", "heb gelesen"],
     correctIndex: 1,
     explanationRu: "Одиночное завершённое действие с результатом в настоящем ('я уже прочитал') — perfectum в разговорной речи.",
+    explanationEn: "Single completed action with the result in the present (\"I have already read\") - perfectum in colloquial speech.",
   } as PracticeItem),
   base({
     id: "aspect-map-gen-3",
@@ -665,6 +715,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "woonde",
     acceptableVariants: ["woonde"],
     explanationRu: "Длительное состояние в прошлом ('в прошлом году я жил') — imperfectum.",
+    explanationEn: "A long-term condition in the past (\"last year I lived\") is imperfectum.",
   } as PracticeItem),
   base({
     id: "aspect-map-gen-4",
@@ -676,6 +727,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["ontmoette", "heb ontmoet", "ontmoet"],
     correctIndex: 1,
     explanationRu: "Однократное завершённое событие вчера, о котором сообщается как о новости — perfectum.",
+    explanationEn: "The one-time completed event yesterday reported as news is perfectum.",
   } as PracticeItem),
 
   base({
@@ -688,6 +740,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Er staat een kast in de kamer.", "Staat een kast in de kamer.", "Een kast staat er in de kamer."],
     correctIndex: 0,
     explanationRu: "Экзистенциальное 'er' обязательно, когда подлежащее неопределённое и стоит не в начале предложения.",
+    explanationEn: "Existential 'er' is necessary when the subject is uncertain and does not stand at the beginning of a sentence.",
   } as PracticeItem),
   base({
     id: "er-exist-gen-2",
@@ -699,6 +752,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "Er",
     acceptableVariants: ["Er"],
     explanationRu: "'Er is een winkel' — вводное 'er' перед неопределённым подлежащим 'een winkel'.",
+    explanationEn: "'Er is een winkel' is the introductory 'er' before the indefinite subject 'een winkel'.",
   } as PracticeItem),
   base({
     id: "er-exist-gen-3",
@@ -710,6 +764,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Er wachten twee mensen bij de balie.", "Wachten twee mensen bij de balie.", "Twee mensen er wachten bij de balie."],
     correctIndex: 0,
     explanationRu: "Неопределённое множественное подлежащее 'twee mensen' требует вводного 'er' в начале.",
+    explanationEn: "The indefinite plural subject 'twee mensen' requires an introductory 'er' at the beginning.",
   } as PracticeItem),
   base({
     id: "er-exist-gen-4",
@@ -721,6 +776,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Er zit een fout in het formulier.", "Zit een fout in het formulier.", "Een fout zit er in het formulier."],
     correctIndex: 0,
     explanationRu: "'Er zit een fout' — стандартная конструкция с экзистенциальным 'er' для неопределённого подлежащего.",
+    explanationEn: "Er zit een fout is a standard construction with an existential 'er' for an indefinite subject.",
   } as PracticeItem),
 
   base({
@@ -733,6 +789,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "het", "die"],
     correctIndex: 0,
     explanationRu: "Количественное 'er' обязательно перед числительным без существительного: 'Ik heb er twee'.",
+    explanationEn: "The quantitative 'er' is obligatory before the numeral without the noun: 'Ik heb er twee'.",
   } as PracticeItem),
   base({
     id: "er-quant-gen-2",
@@ -744,6 +801,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "er",
     acceptableVariants: ["er"],
     explanationRu: "После числительного без существительного нужно вводное 'er': 'ik heb er vijf'.",
+    explanationEn: "After a numeral without a noun, you need the introductory 'er': 'ik heb er vijf'.",
   } as PracticeItem),
   base({
     id: "er-quant-gen-3",
@@ -755,6 +813,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb er drie.", "Ik heb drie.", "Ik heb het drie."],
     correctIndex: 0,
     explanationRu: "Когда существительное опущено, а осталось только числительное, перед ним ставится 'er'.",
+    explanationEn: "When the noun is omitted, and only the numeral remains, \"er\" is placed before it.",
   } as PracticeItem),
   base({
     id: "er-quant-gen-4",
@@ -766,6 +825,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "die", "ze"],
     correctIndex: 0,
     explanationRu: "'Er' используется и с наречиями количества ('veel', 'weinig') без прямого существительного.",
+    explanationEn: "'Er' is also used with adverbs of quantity ('veel', 'weinig') without a direct noun.",
   } as PracticeItem),
 
   base({
@@ -778,6 +838,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik denk er vaak aan.", "Ik denk vaak aan het.", "Ik denk vaak aan er."],
     correctIndex: 0,
     explanationRu: "Предложное 'er' заменяет неодушевлённый объект: 'eraan denken' → 'er ... aan denken'.",
+    explanationEn: "The proposed 'er' replaces the inanimate object: 'eraan denken' → 'er ... aan denken'.",
   } as PracticeItem),
   base({
     id: "er-prep-gen-2",
@@ -789,6 +850,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "er",
     acceptableVariants: ["er"],
     explanationRu: "'Ergens blij mee zijn' → 'er ... mee zijn' для неодушевлённого объекта.",
+    explanationEn: "'Ergens blij mee zijn' → 'er ... mee zijn' for an inanimate object.",
   } as PracticeItem),
   base({
     id: "er-prep-gen-3",
@@ -800,6 +862,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik wacht er nog op.", "Ik wacht nog op het.", "Ik wacht op er nog."],
     correctIndex: 0,
     explanationRu: "'Wachten op iets' → предложное 'er' заменяет 'het': 'er ... op wachten'.",
+    explanationEn: "'Wachten op iets' → the sentence 'er' replaces 'het': 'er ... op wachten'.",
   } as PracticeItem),
   base({
     id: "er-prep-gen-4",
@@ -811,6 +874,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ben er niet bang voor.", "Ik ben niet bang voor het.", "Ik ben bang voor er niet."],
     correctIndex: 0,
     explanationRu: "'Bang zijn voor iets' → 'er ... voor' заменяет неодушевлённое дополнение.",
+    explanationEn: "'Bang zijn voor iets' → 'er ... voor' replaces the inanimate addition.",
   } as PracticeItem),
 
   base({
@@ -823,6 +887,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "daar", "het"],
     correctIndex: 0,
     explanationRu: "Локативное 'er' заменяет ранее упомянутое место в безударной позиции: 'ik woon er nog'.",
+    explanationEn: "The locative 'er' replaces the previously mentioned place in the non-impact position: 'ik woon er nog'.",
   } as PracticeItem),
   base({
     id: "er-loc-gen-2",
@@ -834,6 +899,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "er",
     acceptableVariants: ["er"],
     explanationRu: "Место работы, уже упомянутое ранее, заменяется безударным 'er'.",
+    explanationEn: "The place of work mentioned above is replaced by an unstressed 'er'.",
   } as PracticeItem),
   base({
     id: "er-loc-gen-3",
@@ -845,6 +911,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ben er nog nooit geweest.", "Ik ben daar nog nooit er geweest.", "Ik ben nooit geweest er."],
     correctIndex: 0,
     explanationRu: "'Er' стоит сразу после спрягаемого глагола, заменяя ранее упомянутое место.",
+    explanationEn: "\"Er\" stands immediately after the conjugated verb, replacing the previously mentioned place.",
   } as PracticeItem),
   base({
     id: "er-loc-gen-4",
@@ -856,6 +923,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Zij komt er net vandaan.", "Zij komt daar net er vandaan.", "Zij komt vandaan er net."],
     correctIndex: 0,
     explanationRu: "'Er ... vandaan' — стандартная локативная конструкция для 'оттуда'.",
+    explanationEn: "Er... vandaan is the standard locative design for ‘from there’.",
   } as PracticeItem),
 
   base({
@@ -868,6 +936,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Kunt u mij helpen?", "Kunt u mij even helpen?", "Kunt u mij helpen nu?"],
     correctIndex: 1,
     explanationRu: "Модальная частица 'even' смягчает просьбу и звучит более вежливо/естественно.",
+    explanationEn: "The modal 'even' particle softens the request and sounds more polite/natural.",
   } as PracticeItem),
   base({
     id: "particle-gen-2",
@@ -879,6 +948,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Kom binnen.", "Kom maar binnen.", "Kom nu binnen."],
     correctIndex: 1,
     explanationRu: "'Maar' здесь смягчает приглашение, делает его более дружелюбным, а не приказным.",
+    explanationEn: "'Maar' here softens the invitation, making it friendlier rather than commanding.",
   } as PracticeItem),
   base({
     id: "particle-gen-3",
@@ -890,6 +960,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Wat doe je hier?", "Wat doe je hier toch?", "Wat doe je hier gewoon?"],
     correctIndex: 1,
     explanationRu: "'Toch' в вопросе выражает лёгкое удивление, характерную для разговорной речи частицу.",
+    explanationEn: "\"Toch\" in the question expresses a slight surprise, characteristic of colloquial speech particle.",
   } as PracticeItem),
   base({
     id: "particle-gen-4",
@@ -901,6 +972,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Het komt goed.", "Het komt wel goed.", "Het komt zeker goed."],
     correctIndex: 1,
     explanationRu: "'Wel' смягчает утверждение и звучит как естественное успокоение, типичное для разговорной речи.",
+    explanationEn: "'Wel' softens the statement and sounds like the natural calm typical of spoken language.",
   } as PracticeItem),
 
   base({
@@ -913,6 +985,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de raam", "het raam", "een raam die"],
     correctIndex: 1,
     explanationRu: "'Raam' (окно) — het-слово; артикль 'het raam'.",
+    explanationEn: "\"Raam\" (window) - het-word; the article \"het raam\".",
   } as PracticeItem),
   base({
     id: "art-dehet-gen-2",
@@ -924,6 +997,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de medicijn", "het medicijn", "een medicijn deze"],
     correctIndex: 1,
     explanationRu: "'Medicijn' (лекарство) — het-слово; артикль 'het medicijn'.",
+    explanationEn: "\"Medicijn\" (medicine) - het-word; article \"het medicijn\".",
   } as PracticeItem),
   base({
     id: "art-dehet-gen-3",
@@ -935,6 +1009,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["het contract", "de contract", "een contract die"],
     correctIndex: 0,
     explanationRu: "'Contract' — het-слово; артикль 'het contract'.",
+    explanationEn: "\"Contract\" is a het-word; the article is \"het contract\".",
   } as PracticeItem),
   base({
     id: "art-dehet-gen-4",
@@ -946,6 +1021,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de formulier", "het formulier", "een formulier deze"],
     correctIndex: 1,
     explanationRu: "'Formulier' — het-слово; артикль 'het formulier'.",
+    explanationEn: "\"Formulier\" is the het word; the article is \"het formulier\".",
   } as PracticeItem),
   base({
     id: "art-dehet-gen-5",
@@ -957,6 +1033,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["het sleutel", "de sleutel", "een sleutel dat"],
     correctIndex: 1,
     explanationRu: "'Sleutel' (ключ) — de-слово; артикль 'de sleutel'.",
+    explanationEn: "\"Sleutel\" (key) - de-word; article \"de sleutel\".",
   } as PracticeItem),
 
   base({
@@ -969,6 +1046,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een groot huis", "een grote huis", "het groot huis"],
     correctIndex: 0,
     explanationRu: "Перед het-словом в неопределённой форме единственного числа прилагательное без -e: 'een groot huis'.",
+    explanationEn: "Before the het word in indefinite singular form, the adjective without -e: 'een groot huis'.",
   } as PracticeItem),
   base({
     id: "adj-infl-gen-2",
@@ -980,6 +1058,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de nieuwe auto", "de nieuw auto", "een nieuw de auto"],
     correctIndex: 0,
     explanationRu: "Перед de-словом (и в определённой форме перед het-словом) прилагательное всегда с -e: 'de nieuwe auto'.",
+    explanationEn: "Before the de-word (and in a certain form before the het word), the adjective is always with -e: 'de nieuwe auto'.",
   } as PracticeItem),
   base({
     id: "adj-infl-gen-3",
@@ -991,6 +1070,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["het grote ziekenhuis", "het groot ziekenhuis", "de grote ziekenhuis"],
     correctIndex: 0,
     explanationRu: "С определённым артиклем 'het' прилагательное всегда получает -e: 'het grote ziekenhuis'.",
+    explanationEn: "With the definite article \"het\", the adjective always receives -e: \"het grote ziekenhuis\".",
   } as PracticeItem),
   base({
     id: "adj-infl-gen-4",
@@ -1002,6 +1082,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "vast",
     acceptableVariants: ["vast"],
     explanationRu: "Перед het-словом ('contract') в неопределённой форме прилагательное без -e: 'een vast contract'.",
+    explanationEn: "Before the het word ('contract') in indefinite form, the adjective without -e: 'een vast contract'.",
   } as PracticeItem),
   base({
     id: "adj-infl-gen-5",
@@ -1013,6 +1094,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["mijn oudere broer", "mijn ouder broer", "mijn oud broer"],
     correctIndex: 0,
     explanationRu: "После bezitten (bezittelijk voornaamwoord) 'mijn' прилагательное перед de-словом получает -e: 'oudere broer'.",
+    explanationEn: "After bezitten (bezittelijk voornaamwoord), the 'mijn' adjective before the de-word gets -e: 'oudere broer'.",
   } as PracticeItem),
 
   base({
@@ -1029,6 +1111,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "В кластере глаголов в конце: сначала объект, потом 'moeten schrijven' (модальный + инфинитив).",
+    explanationEn: "In the verb cluster at the end: first the object, then 'moeten schrijven' (modal + infinitive).",
   } as PracticeItem),
   base({
     id: "cluster-gen-2",
@@ -1044,6 +1127,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "'Zal' (спрягаемый глагол) на втором месте, инфинитив 'afmaken' — в конце предложения.",
+    explanationEn: "'Zal' (conjugated verb) is in second place, the infinitive 'afmaken' is at the end of the sentence.",
   } as PracticeItem),
   base({
     id: "cluster-gen-3",
@@ -1059,6 +1143,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Кластер из трёх глаголов в конце: объект перед кластером, затем 'willen maken'.",
+    explanationEn: "A cluster of three verbs at the end: the object in front of the cluster, then 'willen maken'.",
   } as PracticeItem),
   base({
     id: "cluster-gen-4",
@@ -1070,6 +1155,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik wil dit vandaag afmaken.",
     answer: "Ik wil dit vandaag kunnen afmaken.",
     explanationRu: "Дополнительный модальный глагол 'kunnen' вставляется перед инфинитивом в конце кластера.",
+    explanationEn: "The additional modal verb 'kunnen' is inserted before the infinitive at the end of the cluster.",
   } as PracticeItem),
 
   base({
@@ -1082,6 +1168,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb de tv aangezet.", "Ik heb aangezet de tv.", "Ik heb de tv gezetaan."],
     correctIndex: 0,
     explanationRu: "В причастии разделяемого глагола 'ge-' встаёт между приставкой и основой: 'aan-ge-zet'.",
+    explanationEn: "In the participle of the shared verb \"ge-\" stands between the prefix and the base: \"aan-ge-zet\".",
   } as PracticeItem),
   base({
     id: "sep-part-gen-2",
@@ -1093,6 +1180,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb mijn kamer opgeruimd.", "Ik heb mijn kamer geopruimd.", "Ik heb opgeruimd mijn kamer."],
     correctIndex: 0,
     explanationRu: "'Opruimen' → причастие 'opgeruimd' — 'ge-' между 'op' и основой 'ruim'.",
+    explanationEn: "Opruimen: The participle of opgeruimd is the ge- between op and the basis of ruim.",
   } as PracticeItem),
   base({
     id: "sep-part-gen-3",
@@ -1104,6 +1192,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "opgebeld",
     acceptableVariants: ["opgebeld"],
     explanationRu: "'Opbellen' → причастие 'opgebeld', 'ge-' стоит после приставки 'op'.",
+    explanationEn: "'Opbellen' → the participle 'opgebeld', 'ge-' stands after the prefix 'op'.",
   } as PracticeItem),
   base({
     id: "sep-part-gen-4",
@@ -1115,6 +1204,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Zij heeft het formulier ingevuld.", "Zij heeft het formulier geinvuld.", "Zij heeft ingevuld het formulier."],
     correctIndex: 0,
     explanationRu: "'Invullen' → причастие 'ingevuld' — 'ge-' между приставкой 'in' и основой 'vuld'.",
+    explanationEn: "'Invullen' - the participle 'ingevuld' - 'ge-' between the prefix 'in' and the base 'vuld'.",
   } as PracticeItem),
 
   base({
@@ -1127,6 +1217,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ga niet naar de markt.", "Ik ga naar de markt niet.", "Ik niet ga naar de markt."],
     correctIndex: 0,
     explanationRu: "'Niet' обычно стоит перед предложной группой места ('naar de markt'), а не в конце.",
+    explanationEn: "The Niet usually stands in front of the proposed group of seats (naar de markt) rather than at the end.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-2",
@@ -1138,6 +1229,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik werk niet vandaag.", "Ik werk vandaag niet.", "Niet ik werk vandaag."],
     correctIndex: 1,
     explanationRu: "Отрицание всей ситуации в конкретный день: 'niet' ставится после обстоятельства времени 'vandaag'.",
+    explanationEn: "Denial of the whole situation on a particular day: \"niet\" is put after the circumstance of the time \"vandaag\".",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-3",
@@ -1149,6 +1241,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "niet",
     acceptableVariants: ["niet"],
     explanationRu: "'Niet' стоит перед прилагательным/предикативом 'nodig', который оно отрицает.",
+    explanationEn: "'Niet' stands before the adjective/predicative 'nodig', which it denies.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-4",
@@ -1160,6 +1253,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik begrijp deze les niet.", "Ik begrijp niet deze les.", "Niet ik begrijp deze les."],
     correctIndex: 0,
     explanationRu: "'Niet' стоит после определённого прямого дополнения 'deze les', перед которым его ставить нельзя.",
+    explanationEn: "\"Niet\" stands after a certain direct addition \"deze les\", before which it can not be put.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-5",
@@ -1171,6 +1265,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["De verwarming werkt niet.", "De verwarming niet werkt.", "Niet de verwarming werkt."],
     correctIndex: 0,
     explanationRu: "При отсутствии дополнения 'niet' ставится сразу после глагола, в конце предложения.",
+    explanationEn: "In the absence of a supplement, \"niet\" is placed immediately after the verb, at the end of the sentence.",
   } as PracticeItem),
 
   base({
@@ -1183,6 +1278,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["tafels", "tafelen", "tafeles"],
     correctIndex: 0,
     explanationRu: "'Tafel' образует множественное число на -s: 'tafels'.",
+    explanationEn: "'Tafel' forms the plural on -s: 'tafels'.",
   } as PracticeItem),
   base({
     id: "plur-gen-2",
@@ -1194,6 +1290,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["dokters", "dokteren", "doktoren"],
     correctIndex: 0,
     explanationRu: "'Dokter' образует множественное число на -s: 'dokters'.",
+    explanationEn: "'Dokter' forms the plural on -s: 'dokters'.",
   } as PracticeItem),
   base({
     id: "plur-gen-3",
@@ -1205,6 +1302,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["banen", "baans", "baanen"],
     correctIndex: 0,
     explanationRu: "'Baan' образует множественное число на -en с удлинением гласной: 'banen'.",
+    explanationEn: "'Baan' forms the plural on -en with the vowel lengthening: 'banen'.",
   } as PracticeItem),
   base({
     id: "plur-gen-4",
@@ -1216,6 +1314,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "broers",
     acceptableVariants: ["broers"],
     explanationRu: "'Broer' образует множественное число на -s: 'broers'.",
+    explanationEn: "'Broer' forms the plural on -s: 'broers'.",
   } as PracticeItem),
 
   base({
@@ -1228,6 +1327,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de huisje", "het huisje", "een huisje die"],
     correctIndex: 1,
     explanationRu: "Все уменьшительные существительные среднего рода — используем 'het': 'het huisje'.",
+    explanationEn: "All diminutive nouns of the middle kind - use 'het': 'het huisje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen-2",
@@ -1239,6 +1339,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de tabletje", "het tabletje", "een tabletje deze"],
     correctIndex: 1,
     explanationRu: "Даже если основа слова 'de'-рода, уменьшительная форма всегда 'het': 'het tabletje'.",
+    explanationEn: "Even if the basis of the word de' genus, the diminutive form is always het: het tabletje.",
   } as PracticeItem),
   base({
     id: "dim-art-gen-3",
@@ -1250,6 +1351,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["het tafeltje", "de tafeltje", "een tafeltje die"],
     correctIndex: 0,
     explanationRu: "'Tafel' — de-слово, но уменьшительное 'tafeltje' всегда среднего рода: 'het tafeltje'.",
+    explanationEn: "'Tafel' is a de-word, but the diminutive 'tafeltje' is always of the middle kind: 'het tafeltje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen-4",
@@ -1261,6 +1363,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "Het",
     acceptableVariants: ["Het"],
     explanationRu: "Уменьшительное 'kopje' всегда с артиклем 'het', независимо от рода основы 'kop'.",
+    explanationEn: "The diminutive 'kopje' always has the article 'het', regardless of the kind of basis 'kop'.",
   } as PracticeItem),
 
   base({
@@ -1273,6 +1376,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik wacht op de trein.", "Ik wacht voor de trein.", "Ik wacht aan de trein."],
     correctIndex: 0,
     explanationRu: "Фиксированное сочетание 'wachten op' (ждать что-то/кого-то) — не 'voor' и не 'aan'.",
+    explanationEn: "A fixed combination of ‘wachten op’ is neither ‘voor’ nor ‘aan’.",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen-2",
@@ -1284,6 +1388,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik denk aan mijn familie.", "Ik denk op mijn familie.", "Ik denk voor mijn familie."],
     correctIndex: 0,
     explanationRu: "Фиксированное сочетание 'denken aan' (думать о ком-то/чём-то).",
+    explanationEn: "A fixed combination of 'denken aan' (thinking of someone or something).",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen-3",
@@ -1295,6 +1400,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "in",
     acceptableVariants: ["in"],
     explanationRu: "Фиксированное сочетание 'geïnteresseerd in' (заинтересован в чём-то).",
+    explanationEn: "A fixed combination of 'geïnteresseerd in' (interested in something).",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen-4",
@@ -1306,6 +1412,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ben blij met het resultaat.", "Ik ben blij voor het resultaat.", "Ik ben blij op het resultaat."],
     correctIndex: 0,
     explanationRu: "Фиксированное сочетание 'blij met' (рад чему-то).",
+    explanationEn: "A fixed combination of 'blij met'.",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen-5",
@@ -1317,6 +1424,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik solliciteer naar een baan.", "Ik solliciteer op een baan.", "Ik solliciteer voor een baan."],
     correctIndex: 1,
     explanationRu: "Фиксированное сочетание 'solliciteren op' (претендовать на должность).",
+    explanationEn: "A fixed combination of 'solliciteren op' (to apply for office).",
   } as PracticeItem),
 
   base({
@@ -1329,6 +1437,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een afspraak maken", "een afspraak doen", "een afspraak nemen"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'een afspraak maken' (назначить встречу), не 'doen' или 'nemen'.",
+    explanationEn: "The standard collocation is 'een afspraak maken', not 'doen' or 'nemen'.",
   } as PracticeItem),
   base({
     id: "colloc-gen-2",
@@ -1340,6 +1449,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een beslissing nemen", "een beslissing maken", "een beslissing doen"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'een beslissing nemen' (принять решение).",
+    explanationEn: "The standard collocation is 'een beslissing nemen'.",
   } as PracticeItem),
   base({
     id: "colloc-gen-3",
@@ -1351,6 +1461,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "volgen",
     acceptableVariants: ["volgen"],
     explanationRu: "Стандартная коллокация — 'een cursus volgen' (проходить курс).",
+    explanationEn: "The standard collocation is 'een cursus volgen'.",
   } as PracticeItem),
   base({
     id: "colloc-gen-4",
@@ -1362,6 +1473,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een rekening betalen", "een rekening maken", "een rekening geven"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'een rekening betalen' (оплатить счёт).",
+    explanationEn: "The standard collocation is 'een rekening betalen'.",
   } as PracticeItem),
   base({
     id: "colloc-gen-5",
@@ -1373,6 +1485,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["aandacht besteden aan", "aandacht maken aan", "aandacht doen aan"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'aandacht besteden aan' (уделять внимание чему-то).",
+    explanationEn: "The standard collocation is ‘aandacht besteden aan’.",
   } as PracticeItem),
 
   base({
@@ -1385,6 +1498,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["kat", "kaas", "kast"],
     correctIndex: 1,
     explanationRu: "'Kaas' с двойной 'aa' — долгий гласный, в отличие от 'kat' и 'kast' с кратким 'a'.",
+    explanationEn: "The ‘kaas’ with the double ‘aa’ is a long vowel, unlike the ‘kat’ and the ‘kast’ with the short ‘a’.",
   } as PracticeItem),
   base({
     id: "vlength-gen-2",
@@ -1396,6 +1510,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["huren", "hun", "huur"],
     correctIndex: 1,
     explanationRu: "'Hun' с одиночной гласной в закрытом слоге — краткий звук, в отличие от 'huren'/'huur'.",
+    explanationEn: "\"Hun\" with a single vowel in a closed syllable is a short sound, unlike \"huren\"/\"huur\".",
   } as PracticeItem),
   base({
     id: "vlength-gen-3",
@@ -1407,6 +1522,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["pen", "peen", "pet"],
     correctIndex: 1,
     explanationRu: "'Peen' с двойной 'ee' — долгий гласный, в отличие от кратких 'pen'/'pet'.",
+    explanationEn: "\"Peen\" with a double \"ee\" is a long vowel, unlike the short \"pen\" / \"pet\".",
   } as PracticeItem),
   base({
     id: "vlength-gen-4",
@@ -1418,6 +1534,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["bonen", "bon", "boon"],
     correctIndex: 1,
     explanationRu: "'Bon' с одиночной гласной в закрытом слоге — краткий звук.",
+    explanationEn: "'Bon' with a single vowel in a closed syllable is a brief sound.",
   } as PracticeItem),
 
   base({
@@ -1430,6 +1547,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["huur", "hoor", "haar"],
     correctIndex: 0,
     explanationRu: "'Huur' содержит округлённый передний гласный /y/ — губы округлены, язык впереди, как во французском 'u'.",
+    explanationEn: "'Huur' contains a rounded front vowel /y/ - the lips are rounded, the tongue in front, as in the French 'u'.",
   } as PracticeItem),
   base({
     id: "frontround-gen-2",
@@ -1441,6 +1559,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["deur", "door", "daar"],
     correctIndex: 0,
     explanationRu: "'Deur' содержит округлённый передний гласный /ø/ — похож на немецкое 'ö'.",
+    explanationEn: "'Deur' contains a rounded front vowel /ø/ - similar to the German 'ö'.",
   } as PracticeItem),
   base({
     id: "frontround-gen-3",
@@ -1452,6 +1571,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["duur", "door", "daar"],
     correctIndex: 0,
     explanationRu: "'Duur' содержит округлённый передний гласный /y/, отсутствующий в русском языке.",
+    explanationEn: "'Duur' contains a rounded front vowel /y/, absent in Russian.",
   } as PracticeItem),
   base({
     id: "frontround-gen-4",
@@ -1463,6 +1583,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["kleur", "klaar", "kloor"],
     correctIndex: 0,
     explanationRu: "'Kleur' содержит округлённый передний гласный /ø/ — типичная трудность для русскоговорящих.",
+    explanationEn: "The 'Kleur' contains a rounded front vowel /ø/, a typical difficulty for Russian speakers.",
   } as PracticeItem),
 
   base({
@@ -1475,6 +1596,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [z]", "stemloos [s]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "В конце слова звонкие согласные оглушаются: 'huis' произносится с глухим [s], хотя во множественном числе 'huizen' звучит [z].",
+    explanationEn: "At the end of the word, the voiced consonants are stunned: 'huis' is pronounced with a deaf [s], although in the plural 'huizen' sounds [z].",
   } as PracticeItem),
   base({
     id: "devoice-gen-2",
@@ -1486,6 +1608,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "stemhebbend [b]"],
     correctIndex: 1,
     explanationRu: "Финальное оглушение: если бы 'baan' оканчивалось на 'd' (как в 'goed'), оно бы звучало как глухое [t].",
+    explanationEn: "Final stunning: If 'baan' ended in 'd' (as in 'goed'), it would sound deaf [t].",
   } as PracticeItem),
   base({
     id: "devoice-gen-3",
@@ -1497,6 +1620,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "stil, niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "'Goed' оканчивается на глухой [t], хотя пишется 'd' — сравните форму 'goede' со звонким [d].",
+    explanationEn: "'Goed' ends in deaf [t], although it is written 'd' - compare the form 'goede' with the voiced [d].",
   } as PracticeItem),
   base({
     id: "devoice-gen-4",
@@ -1508,6 +1632,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [z]", "stemloos [s]", "stemhebbend [zj]"],
     correctIndex: 1,
     explanationRu: "'Prijs' оканчивается на глухой [s], сравните со звонким [z] в форме множественного числа 'prijzen'.",
+    explanationEn: "'Prijs' ends in deaf [s], compared to the ringing [z] in the plural form 'prijzen'.",
   } as PracticeItem),
 
   base({
@@ -1520,6 +1645,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["gemeente", "kamer", "tafel"],
     correctIndex: 0,
     explanationRu: "Нидерландское 'g' — гортанный щелевой звук, глубже русского [х] и не такой, как [г].",
+    explanationEn: "The Dutch 'g' is a laryngeal slit sound deeper than the Russian [x] and not like [d].",
   } as PracticeItem),
   base({
     id: "xg-gen-2",
@@ -1531,6 +1657,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["nacht", "tafel", "deur"],
     correctIndex: 0,
     explanationRu: "'Ch' в 'nacht' произносится глубже в горле, чем русское [х] — как гортанный щелевой звук.",
+    explanationEn: "'Ch' in 'nacht' is pronounced deeper in the throat than Russian [x] - like a guttural slit sound.",
   } as PracticeItem),
   base({
     id: "xg-gen-3",
@@ -1542,6 +1669,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["gesprek", "salaris", "kantoor"],
     correctIndex: 0,
     explanationRu: "Нидерландское 'g' в 'gesprek' — не русское [г] и не [х], а глубокий гортанный щелевой звук.",
+    explanationEn: "The Dutch 'g' in 'gesprek' is not Russian [g] or [x], but a deep guttural slit sound.",
   } as PracticeItem),
   base({
     id: "xg-gen-4",
@@ -1553,6 +1681,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["recht", "recept", "tandarts"],
     correctIndex: 0,
     explanationRu: "'Ch' в 'recht' — глубокий гортанный щелевой звук, а не русское [х].",
+    explanationEn: "'Ch' in 'recht' is a deep guttural slit sound, not Russian.",
   } as PracticeItem),
   base({
     id: "plur-gen-5",
@@ -1564,6 +1693,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["lessen", "lesen", "lessies"],
     correctIndex: 0,
     explanationRu: "'Les' образует множественное число с удвоением 's' перед -en: 'lessen'.",
+    explanationEn: "Les forms the plural with the doubling of 's' before -en: 'lessen'.",
   } as PracticeItem),
 
   // --- +70 batch: 3 more items per each of the 23 practice-generatable
@@ -1579,6 +1709,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Nu ga ik naar mijn werk.", "Nu ik ga naar mijn werk.", "Ik nu ga naar mijn werk."],
     correctIndex: 0,
     explanationRu: "'Nu' занимает первое место, поэтому спрягаемый глагол 'ga' сразу идёт вторым.",
+    explanationEn: "'Nu' comes first, so the conjugated verb 'ga' comes second.",
   } as PracticeItem),
   base({
     id: "v2-gen3-2",
@@ -1590,6 +1721,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "gaan",
     acceptableVariants: ["gaan"],
     explanationRu: "После 'straks' на первом месте сразу идёт спрягаемый глагол 'gaan', перед подлежащим 'we'.",
+    explanationEn: "After 'straks' in the first place immediately comes the conjugated verb 'gaan', before the subject 'we'.",
   } as PracticeItem),
   base({
     id: "v2-gen3-3",
@@ -1601,6 +1733,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik drink elke ochtend koffie.",
     answer: "Elke ochtend drink ik koffie.",
     explanationRu: "Когда 'elke ochtend' выносится в начало, глагол 'drink' остаётся на втором месте, 'ik' сдвигается после него.",
+    explanationEn: "When 'elke ochtend' is placed in the beginning, the verb 'drink' remains in second place, 'ik' is moved after it.",
   } as PracticeItem),
   base({
     id: "v2-gen3-4",
@@ -1612,6 +1745,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Vandaag voel ik me beter.", "Vandaag ik voel me beter.", "Ik vandaag voel me beter."],
     correctIndex: 0,
     explanationRu: "'Vandaag' стоит первым, значит спрягаемый глагол 'voel' — сразу вторым.",
+    explanationEn: "\"Vandaag\" is the first, so the conjugated verb \"voel\" is the second.",
   } as PracticeItem),
   base({
     id: "sub-end-gen3-1",
@@ -1623,6 +1757,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik weet dat ze morgen komt.", "Ik weet dat ze komt morgen.", "Ik weet dat komt ze morgen."],
     correctIndex: 0,
     explanationRu: "После 'dat' спрягаемый глагол уходит в конец придаточного: 'dat ze morgen komt'.",
+    explanationEn: "After 'dat', the conjugated verb goes to the end of the appendage: 'dat ze morgen komt'.",
   } as PracticeItem),
   base({
     id: "sub-end-gen3-2",
@@ -1634,6 +1769,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "ben",
     acceptableVariants: ["ben"],
     explanationRu: "В придаточном с 'omdat' спрягаемый глагол 'ben' уходит в конец предложения.",
+    explanationEn: "In the adjunct to 'omdat', the conjugated verb 'ben' goes to the end of the sentence.",
   } as PracticeItem),
   base({
     id: "sub-end-gen3-3",
@@ -1645,6 +1781,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     source: "Ik kom later. Ik moet werken.",
     answer: "Ik kom later omdat ik moet werken.",
     explanationRu: "После 'omdat' спрягаемый глагол 'moet' уходит в конец придаточного предложения.",
+    explanationEn: "After 'omdat', the conjugated verb 'moet' goes to the end of the appendage sentence.",
   } as PracticeItem),
   base({
     id: "cluster-gen3-1",
@@ -1656,6 +1793,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb de test moeten maken.", "Ik heb moeten de test maken.", "Ik moeten heb de test maken."],
     correctIndex: 0,
     explanationRu: "В кластере глаголов модальный 'moeten' идёт перед смысловым 'maken', оба в конце.",
+    explanationEn: "In a cluster of verbs, the modal 'moeten' comes before the semantic 'maken', both at the end.",
   } as PracticeItem),
   base({
     id: "cluster-gen3-2",
@@ -1667,6 +1805,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ze had het huis willen kopen.", "Ze had willen het huis kopen.", "Ze willen had het huis kopen."],
     correctIndex: 0,
     explanationRu: "Модальный 'willen' + инфинитив 'kopen' образуют кластер в конце предложения.",
+    explanationEn: "The modal 'willen' + infinitive 'kopen' form a cluster at the end of the sentence.",
   } as PracticeItem),
   base({
     id: "cluster-gen3-3",
@@ -1678,6 +1817,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "moeten",
     acceptableVariants: ["moeten"],
     explanationRu: "В кластере глаголов модальный 'moeten' стоит перед смысловым 'schrijven', оба в конце предложения.",
+    explanationEn: "In a cluster of verbs, the modal 'moeten' stands before the semantic 'schrijven', both at the end of the sentence.",
   } as PracticeItem),
   base({
     id: "sep-split-gen3-1",
@@ -1689,6 +1829,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "bel",
     acceptableVariants: ["bel"],
     explanationRu: "'Opbellen': основа 'bel' спрягается, приставка 'op' уходит в конец предложения.",
+    explanationEn: "Opbellen: the base of 'bel' is conjugated, the prefix 'op' goes to the end of the sentence.",
   } as PracticeItem),
   base({
     id: "sep-split-gen3-2",
@@ -1700,6 +1841,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ruim mijn kamer op.", "Ik opruim mijn kamer.", "Ik ruim op mijn kamer."],
     correctIndex: 0,
     explanationRu: "'Opruimen': основа 'ruim' спрягается, приставка 'op' уходит в самый конец предложения.",
+    explanationEn: "'Opruimen': the basis of 'ruim' conjugates, the prefix 'op' goes to the very end of the sentence.",
   } as PracticeItem),
   base({
     id: "sep-split-gen3-3",
@@ -1711,6 +1853,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "bereidt",
     acceptableVariants: ["bereidt"],
     explanationRu: "'Voorbereiden': основа 'bereidt' спрягается (3-е л. ед. ч. на -t), приставка 'voor' уходит в конец.",
+    explanationEn: "'Voorbereiden': the base of 'bereidt' conjugates (3 hp on -t), the prefix 'voor' goes to the end.",
   } as PracticeItem),
   base({
     id: "sep-part-gen3-1",
@@ -1722,6 +1865,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb mijn moeder opgebeld.", "Ik heb opgebeld mijn moeder.", "Ik heb mijn moeder gebeldop."],
     correctIndex: 0,
     explanationRu: "В причастии 'ge-' встаёт между приставкой и основой: 'op-ge-beld'.",
+    explanationEn: "In the participle, \"ge-\" stands between the prefix and the base: \"op-ge-beld.\"",
   } as PracticeItem),
   base({
     id: "sep-part-gen3-2",
@@ -1733,6 +1877,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Hij heeft de vergadering voorbereid.", "Hij heeft voorbereid de vergadering.", "Hij heeft de vergadering bereidvoor."],
     correctIndex: 0,
     explanationRu: "'Voorbereiden' — неотделяемое сочетание с 'be-' внутри, причастие 'voorbereid' без дополнительного 'ge-'.",
+    explanationEn: "Voorbereiden is an inseparable combination with the be- inside, the participle of the voorbereid without the additional ge-.",
   } as PracticeItem),
   base({
     id: "sep-part-gen3-3",
@@ -1744,6 +1889,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "dichtgedaan",
     acceptableVariants: ["dichtgedaan"],
     explanationRu: "'Ge-' встаёт между приставкой 'dicht' и основой 'gedaan': 'dicht-ge-daan'.",
+    explanationEn: "\"Ge-\" stands between the prefix \"dicht\" and the basis \"gedaan\": \"dicht-ge-daan\".",
   } as PracticeItem),
   base({
     id: "neg-pos-gen3-1",
@@ -1755,6 +1901,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik voel me niet goed.", "Ik voel me goed niet.", "Ik niet voel me goed."],
     correctIndex: 0,
     explanationRu: "'Niet' стоит сразу перед словом, которое отрицается — здесь перед 'goed'.",
+    explanationEn: "'Niet' stands right before the word that is denied - here before 'goed'.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen3-2",
@@ -1766,6 +1913,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ga niet naar kantoor vandaag.", "Ik ga naar kantoor niet vandaag.", "Ik niet ga naar kantoor vandaag."],
     correctIndex: 0,
     explanationRu: "'Niet' обычно стоит перед предложной группой места 'naar kantoor', а не после неё.",
+    explanationEn: "\"Niet\" usually stands in front of the proposed group of places \"naar kantoor\" and not after it.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen3-3",
@@ -1777,6 +1925,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "niet",
     acceptableVariants: ["niet"],
     explanationRu: "'Niet' стоит перед частицей 'langs', ближе к концу предложения, но не в самом конце.",
+    explanationEn: "Niet stands in front of the langs particle, near the end of the sentence, but not at the end.",
   } as PracticeItem),
   base({
     id: "art-dehet-gen3-1",
@@ -1788,6 +1937,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de tafel", "het tafel", "een tafel die"],
     correctIndex: 0,
     explanationRu: "'Tafel' (стол) — de-слово: 'de tafel'.",
+    explanationEn: "\"Tafel\" (table) - de-word: \"de tafel\".",
   } as PracticeItem),
   base({
     id: "art-dehet-gen3-2",
@@ -1799,6 +1949,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de ziekenhuis", "het ziekenhuis", "een ziekenhuis die"],
     correctIndex: 1,
     explanationRu: "'Ziekenhuis' (больница) — het-слово: 'het ziekenhuis'.",
+    explanationEn: "\"Ziekenhuis\" (hospital) is the het word: \"het ziekenhuis.\"",
   } as PracticeItem),
   base({
     id: "art-dehet-gen3-3",
@@ -1810,6 +1961,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de kantoor", "het kantoor", "een kantoor die"],
     correctIndex: 1,
     explanationRu: "'Kantoor' (офис) — het-слово: 'het kantoor'.",
+    explanationEn: "\"Kantoor\" is the het word: \"het kantoor\".",
   } as PracticeItem),
   base({
     id: "adj-infl-gen3-1",
@@ -1821,6 +1973,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een grote tafel", "een groot tafel", "het grote tafel"],
     correctIndex: 0,
     explanationRu: "Перед de-словом прилагательное всегда с -e: 'een grote tafel'.",
+    explanationEn: "Before the de-word, the adjective is always with -e: 'een grote tafel'.",
   } as PracticeItem),
   base({
     id: "adj-infl-gen3-2",
@@ -1832,6 +1985,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een klein kantoor", "een kleine kantoor", "het klein kantoor"],
     correctIndex: 0,
     explanationRu: "Перед het-словом в неопределённой форме единственного числа прилагательное без -e: 'een klein kantoor'.",
+    explanationEn: "Before the het word in indefinite singular form, the adjective without -e: 'een klein kantoor'.",
   } as PracticeItem),
   base({
     id: "adj-infl-gen3-3",
@@ -1843,6 +1997,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de nieuwe dokter", "de nieuw dokter", "het nieuwe dokter"],
     correctIndex: 0,
     explanationRu: "С определённым артиклем 'de' прилагательное всегда с -e: 'de nieuwe dokter'.",
+    explanationEn: "With the definite article de, the adjective is always with -e: de nieuwe dokter.",
   } as PracticeItem),
   base({
     id: "dim-art-gen3-1",
@@ -1854,6 +2009,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de tafeltje", "het tafeltje", "een tafeltje die"],
     correctIndex: 1,
     explanationRu: "Все уменьшительные существительные среднего рода — используем 'het': 'het tafeltje'.",
+    explanationEn: "All diminutive nouns of the middle kind - use 'het': 'het tafeltje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen3-2",
@@ -1865,6 +2021,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de kindje", "het kindje", "een kindje die"],
     correctIndex: 1,
     explanationRu: "Уменьшительная форма всегда 'het', даже если lemma 'het kind' уже het-слово: 'het kindje'.",
+    explanationEn: "The diminutive form is always 'het', even if the lemma 'het kind' is already the het word: 'het kindje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen3-3",
@@ -1876,6 +2033,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de kantoortje", "het kantoortje", "een kantoortje die"],
     correctIndex: 1,
     explanationRu: "Уменьшительные формы всегда берут 'het': 'het kantoortje'.",
+    explanationEn: "The diminutive forms always take 'het': 'het kantoortje'.",
   } as PracticeItem),
   base({
     id: "plur-gen3-1",
@@ -1887,6 +2045,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stoelen", "stoels", "stoeles"],
     correctIndex: 0,
     explanationRu: "'Stoel' образует множественное число на -en: 'stoelen'.",
+    explanationEn: "'Stoel' forms the plural on -en: 'stoelen'.",
   } as PracticeItem),
   base({
     id: "plur-gen3-2",
@@ -1898,6 +2057,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["auto's", "autos", "autoen"],
     correctIndex: 0,
     explanationRu: "Слова, оканчивающиеся на гласную, во множественном числе получают апостроф + s: 'auto's'.",
+    explanationEn: "Words ending in vowels in the plural get the apostrophe + s: 'auto's'.",
   } as PracticeItem),
   base({
     id: "plur-gen3-3",
@@ -1909,6 +2069,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["kindjes", "kinderen", "kinden"],
     correctIndex: 1,
     explanationRu: "'Kind' образует нерегулярное множественное число: 'kinderen', а не по общему правилу на -en.",
+    explanationEn: "'Kind' forms an irregular plural: 'kinderen', not as a general rule in -en.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen3-1",
@@ -1920,6 +2081,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb naar school gefietst.", "Ik ben naar school gefietst.", "Ik ben naar school gehad."],
     correctIndex: 1,
     explanationRu: "'Fietsen' с указанием направления передаёт перемещение — перфект образуется с 'zijn'.",
+    explanationEn: "'Fietsen' indicating the direction transmits the movement - the perfect is formed with 'zijn'.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen3-2",
@@ -1931,6 +2093,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb het boek gelezen.", "Ik ben het boek gelezen.", "Ik heb het boek geweest."],
     correctIndex: 0,
     explanationRu: "'Lezen' — переходный глагол с прямым дополнением, перфект всегда с 'hebben'.",
+    explanationEn: "Lezen is a transitional verb with direct addition, perfect always with hebben.",
   } as PracticeItem),
   base({
     id: "aux-sel-gen3-3",
@@ -1942,6 +2105,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "ben",
     acceptableVariants: ["ben"],
     explanationRu: "'Vertrekken' — глагол перемещения/изменения состояния, перфект образуется с 'zijn'.",
+    explanationEn: "'Vertrekken' is the verb of state displacement/change, the perfect is formed with 'zijn'.",
   } as PracticeItem),
   base({
     id: "aspect-map-gen3-1",
@@ -1953,6 +2117,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["woonde", "heb gewoond", "woon"],
     correctIndex: 0,
     explanationRu: "Фоновое, длительное состояние в прошлом ('когда я был маленьким') — imperfectum 'woonde'.",
+    explanationEn: "A background, long-lasting state in the past (when I was little) is imperfectum 'woonde'.",
   } as PracticeItem),
   base({
     id: "aspect-map-gen3-2",
@@ -1964,6 +2129,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["las", "heb gelezen", "lees"],
     correctIndex: 1,
     explanationRu: "Завершённое действие с результатом, актуальным сейчас ('уже три раза') — perfectum 'heb gelezen'.",
+    explanationEn: "The completed action with the result that is relevant now (\"three times already\") is perfectum 'heb gelezen'.",
   } as PracticeItem),
   base({
     id: "aspect-map-gen3-3",
@@ -1975,6 +2141,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["gingen", "zijn gegaan", "gaan"],
     correctIndex: 0,
     explanationRu: "Повторяющаяся привычка в прошлом ('раньше мы каждые выходные ездили') — imperfectum 'gingen'.",
+    explanationEn: "A recurring habit in the past (\"we used to drive every weekend\") is imperfectum 'gingen'.",
   } as PracticeItem),
   base({
     id: "er-exist-gen3-1",
@@ -1986,6 +2153,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Er ligt een boek op tafel.", "Ligt een boek op tafel.", "Een boek ligt er op tafel."],
     correctIndex: 0,
     explanationRu: "Экзистенциальное 'er' обязательно, когда неопределённое подлежащее стоит не в начале предложения.",
+    explanationEn: "The existential 'er' is necessary when the indefinite subject is not at the beginning of a sentence.",
   } as PracticeItem),
   base({
     id: "er-exist-gen3-2",
@@ -1997,6 +2165,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "Er",
     acceptableVariants: ["Er", "er"],
     explanationRu: "Экзистенциальное 'er' открывает предложение с неопределённым подлежащим 'een probleem'.",
+    explanationEn: "The existential 'er' opens a sentence with the indefinite subject 'een probleem'.",
   } as PracticeItem),
   base({
     id: "er-exist-gen3-3",
@@ -2008,6 +2177,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Er werken tien mensen op kantoor.", "Werken tien mensen op kantoor.", "Tien mensen werken er op kantoor."],
     correctIndex: 0,
     explanationRu: "С неопределённым подлежащим 'tien mensen' в начале высказывания нужно вводное 'er'.",
+    explanationEn: "With the indefinite subject \"tien mensen\" at the beginning of the statement, an introductory \"er\" is needed.",
   } as PracticeItem),
   base({
     id: "er-quant-gen3-1",
@@ -2019,6 +2189,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "het", "die"],
     correctIndex: 0,
     explanationRu: "Количественное 'er' обязательно перед числительным без повторения существительного.",
+    explanationEn: "The quantitative 'er' is obligatory before the numeral without repetition of the noun.",
   } as PracticeItem),
   base({
     id: "er-quant-gen3-2",
@@ -2030,6 +2201,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "er",
     acceptableVariants: ["er"],
     explanationRu: "Если существительное после числительного опущено, перед числительным нужно 'er': 'Ik heb er vijf'.",
+    explanationEn: "If the noun is omitted after the numeral, the numeral must be preceded by 'er': 'Ik heb er vijf'.",
   } as PracticeItem),
   base({
     id: "er-quant-gen3-3",
@@ -2041,6 +2213,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "het", "die"],
     correctIndex: 0,
     explanationRu: "'Er' нужно и при отрицательном количестве: 'Ik heb er geen'.",
+    explanationEn: "“Er” is also needed for a negative amount: “Ik heb er geen”.",
   } as PracticeItem),
   base({
     id: "er-prep-gen3-1",
@@ -2052,6 +2225,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik denk er niet aan.", "Ik denk niet aan het.", "Ik denk niet aan er."],
     correctIndex: 0,
     explanationRu: "Предложное 'er' заменяет неодушевлённый объект и стоит перед 'niet': 'er niet aan'.",
+    explanationEn: "The proposed er replaces the inanimate object and stands before the niet: er niet aan.",
   } as PracticeItem),
   base({
     id: "er-prep-gen3-2",
@@ -2063,6 +2237,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "over",
     acceptableVariants: ["over"],
     explanationRu: "Предложное сочетание 'er...over' заменяет 'over de nieuwe baan'.",
+    explanationEn: "The proposed combination \"er...over\" replaces \"over de nieuwe baan\".",
   } as PracticeItem),
   base({
     id: "er-prep-gen3-3",
@@ -2074,6 +2249,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik kijk ernaar uit.", "Ik kijk naar het uit.", "Ik kijk uit naar er."],
     correctIndex: 0,
     explanationRu: "'Ernaar uitkijken' — предложное 'er' сливается с 'naar' в одно слово 'ernaar'.",
+    explanationEn: "'Ernaar uitkijken' - the sentence 'er' merges with 'naar' into one word 'ernaar'.",
   } as PracticeItem),
   base({
     id: "er-loc-gen3-1",
@@ -2085,6 +2261,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "daar", "het"],
     correctIndex: 0,
     explanationRu: "Локативное 'er' в безударной позиции заменяет ранее упомянутое место 'bij die winkel'.",
+    explanationEn: "The locative 'er' in the impactless position replaces the previously mentioned place 'bij die winkel'.",
   } as PracticeItem),
   base({
     id: "er-loc-gen3-2",
@@ -2096,6 +2273,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "er",
     acceptableVariants: ["er"],
     explanationRu: "Локативное 'er' заменяет 'in het park' в безударной позиции сразу после глагола.",
+    explanationEn: "The locative 'er' replaces 'in het park' in the unstressed position immediately after the verb.",
   } as PracticeItem),
   base({
     id: "er-loc-gen3-3",
@@ -2107,6 +2285,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["er", "daar", "het"],
     correctIndex: 0,
     explanationRu: "Локативное 'er' заменяет ранее упомянутое место, когда оно безударно и сразу после глагола.",
+    explanationEn: "The locative er replaces the previously mentioned place when it is unstressed and immediately after the verb.",
   } as PracticeItem),
   base({
     id: "particle-gen3-1",
@@ -2118,6 +2297,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Kom binnen.", "Kom maar binnen.", "Kom nu binnen."],
     correctIndex: 1,
     explanationRu: "Частица 'maar' смягчает приглашение и звучит естественнее.",
+    explanationEn: "The 'maar' particle softens the invitation and sounds more natural.",
   } as PracticeItem),
   base({
     id: "particle-gen3-2",
@@ -2129,6 +2309,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Probeer het.", "Probeer het eens.", "Probeer het snel."],
     correctIndex: 1,
     explanationRu: "Частица 'eens' смягчает побуждение и звучит естественнее, чем голое повелительное наклонение.",
+    explanationEn: "The 'eens' particle softens the urge and sounds more natural than a naked imperative.",
   } as PracticeItem),
   base({
     id: "particle-gen3-3",
@@ -2140,6 +2321,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Dat is toch niet zo moeilijk.", "Dat is niet zo moeilijk.", "Dat is zo niet moeilijk."],
     correctIndex: 0,
     explanationRu: "Частица 'toch' смягчает утверждение, придавая оттенок убеждения/поддержки.",
+    explanationEn: "The ‘toch’ particle softens the statement by giving a tinge of persuasion/support.",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen3-1",
@@ -2151,6 +2333,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik denk aan mijn familie.", "Ik denk op mijn familie.", "Ik denk voor mijn familie."],
     correctIndex: 0,
     explanationRu: "Фиксированное сочетание 'denken aan' (думать о ком-то) — не 'op' и не 'voor'.",
+    explanationEn: "The fixed combination of 'denken aan' is neither 'op' nor 'voor'.",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen3-2",
@@ -2162,6 +2345,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ben blij met het resultaat.", "Ik ben blij voor het resultaat.", "Ik ben blij aan het resultaat."],
     correctIndex: 0,
     explanationRu: "Фиксированное сочетание 'blij zijn met' — не 'voor' и не 'aan'.",
+    explanationEn: "The fixed combination of 'blij zijn met' is neither 'voor' nor 'aan'.",
   } as PracticeItem),
   base({
     id: "prep-fixed-gen3-3",
@@ -2173,6 +2357,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik vraag om hulp.", "Ik vraag voor hulp.", "Ik vraag aan hulp."],
     correctIndex: 0,
     explanationRu: "Фиксированное сочетание 'vragen om' (просить о чём-то) — не 'voor' и не 'aan'.",
+    explanationEn: "The fixed combination of ‘vragen om’ is neither ‘voor’ nor ‘aan’.",
   } as PracticeItem),
   base({
     id: "colloc-gen3-1",
@@ -2184,6 +2369,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een fout maken", "een fout doen", "een fout nemen"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'een fout maken' (сделать ошибку), не 'doen' и не 'nemen'.",
+    explanationEn: "The standard collocation is 'een fout maken', not 'doen' or 'nemen'.",
   } as PracticeItem),
   base({
     id: "colloc-gen3-2",
@@ -2195,6 +2381,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de was doen", "de was maken", "de was nemen"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'de was doen' (стирать бельё), не 'maken' и не 'nemen'.",
+    explanationEn: "The standard collocation is 'de was doen', not 'maken' or 'nemen'.",
   } as PracticeItem),
   base({
     id: "colloc-gen3-3",
@@ -2206,6 +2393,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["een cursus volgen", "een cursus doen", "een cursus nemen"],
     correctIndex: 0,
     explanationRu: "Стандартная коллокация — 'een cursus volgen' (проходить курс), не 'doen' и не 'nemen'.",
+    explanationEn: "The standard collocation is 'een cursus volgen', not 'doen' or 'nemen'.",
   } as PracticeItem),
   base({
     id: "vlength-gen3-1",
@@ -2217,6 +2405,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["pen", "peen", "pet"],
     correctIndex: 1,
     explanationRu: "'Peen' с двойной 'ee' — долгий гласный, в отличие от 'pen' и 'pet' с кратким 'e'.",
+    explanationEn: "The ‘Peen’ with the double ‘ee’ is a long vowel, unlike the ‘pen’ and ‘pet’ with the short ‘e’.",
   } as PracticeItem),
   base({
     id: "vlength-gen3-2",
@@ -2228,6 +2417,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["man", "maan", "mat"],
     correctIndex: 1,
     explanationRu: "'Maan' с двойной 'aa' — долгий гласный, в отличие от 'man' и 'mat' с кратким 'a'.",
+    explanationEn: "The 'Maan' with the double 'aa' is a long vowel, unlike the 'man' and 'mat' with the short 'a'.",
   } as PracticeItem),
   base({
     id: "vlength-gen3-3",
@@ -2239,6 +2429,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["bom", "boom", "bok"],
     correctIndex: 1,
     explanationRu: "'Boom' с двойной 'oo' — долгий гласный, в отличие от 'bom' и 'bok' с кратким 'o'.",
+    explanationEn: "‘Boom’ with double ‘oo’ is a long vowel, unlike ‘bom’ and ‘bok’ with short ‘o’.",
   } as PracticeItem),
   base({
     id: "frontround-gen3-1",
@@ -2250,6 +2441,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["deur", "door", "daar"],
     correctIndex: 0,
     explanationRu: "'Deur' содержит округлённый передний гласный /ø/ — аналога в русском нет.",
+    explanationEn: "'Deur' contains a rounded front vowel /ø/ - there is no analogue in Russian.",
   } as PracticeItem),
   base({
     id: "frontround-gen3-2",
@@ -2261,6 +2453,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["moor", "muur", "maar"],
     correctIndex: 1,
     explanationRu: "'Muur' содержит округлённый передний гласный /y/ — губы округлены, язык впереди.",
+    explanationEn: "'Muur' contains a rounded front vowel /y/ - the lips are rounded, the tongue is in front.",
   } as PracticeItem),
   base({
     id: "frontround-gen3-3",
@@ -2272,6 +2465,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["keuken", "koken", "kaken"],
     correctIndex: 0,
     explanationRu: "'Keuken' содержит округлённый передний гласный /ø/ (написание 'eu').",
+    explanationEn: "'Keuken' contains a rounded front vowel /ø/ (writing 'eu').",
   } as PracticeItem),
   base({
     id: "devoice-gen3-1",
@@ -2283,6 +2477,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "В конце слова звонкие согласные оглушаются: 'hond' произносится с глухим [t], хотя во множественном числе 'honden' звучит [d].",
+    explanationEn: "At the end of the word, the voiced consonants are stunned: 'hond' is pronounced with a deaf [t], although in the plural 'honden' sounds [d].",
   } as PracticeItem),
   base({
     id: "devoice-gen3-2",
@@ -2294,6 +2489,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [d]", "stemloos [t]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "'Brood' в конце произносится с глухим [t], хотя во множественном числе 'broden' звучит [d].",
+    explanationEn: "'Brood' is pronounced deaf at the end [t], although plural 'broden' sounds [d].",
   } as PracticeItem),
   base({
     id: "devoice-gen3-3",
@@ -2305,6 +2501,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["stemhebbend [b]", "stemloos [p]", "helemaal niet uitgesproken"],
     correctIndex: 1,
     explanationRu: "В конце слова звонкий [b] оглушается до [p]: 'heb' звучит как [hɛp].",
+    explanationEn: "At the end of the word [b] is stunned to [p]: 'heb' sounds like [hɛp].",
   } as PracticeItem),
   base({
     id: "xg-gen3-1",
@@ -2316,6 +2513,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["groente", "kamer", "stoel"],
     correctIndex: 0,
     explanationRu: "Нидерландское 'g' — гортанный щелевой звук, глубже русского [х] и не такой, как [г].",
+    explanationEn: "The Dutch 'g' is a laryngeal slit sound deeper than the Russian [x] and not like [d].",
   } as PracticeItem),
   base({
     id: "xg-gen3-2",
@@ -2327,6 +2525,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["geld", "tijd", "huis"],
     correctIndex: 0,
     explanationRu: "'Geld' начинается с гортанного щелевого 'g' — приоритетный контраст для русскоговорящих.",
+    explanationEn: "'Geld' begins with a laryngeal slit 'g' - a priority contrast for Russian speakers.",
   } as PracticeItem),
   base({
     id: "xg-gen3-3",
@@ -2338,6 +2537,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["acht", "aap", "oor"],
     correctIndex: 0,
     explanationRu: "'Acht' содержит глухой щелевой /x/ (написание 'ch') — отличается от звонкого /ɣ/ в 'g'.",
+    explanationEn: "'Acht' contains the voiceless fricative /x/ (written 'ch'), unlike the voiced /ɣ/ in 'g'.",
   } as PracticeItem),
 
   // --- +100 batch: free-practice short-write tasks across 10 civic-life

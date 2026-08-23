@@ -54,7 +54,10 @@ describe("checkAdequacy", () => {
 
 describe("error detection", () => {
   it("detects local word-order errors without any network service", async () => {
-    expect(detectErrors("Morgen ik ga naar school.").map((error) => error.code)).toContain("ERR_V2_POS");
+    const localErrors = detectErrors("Morgen ik ga naar school.");
+    expect(localErrors.map((error) => error.code)).toContain("ERR_V2_POS");
+    expect(localErrors[0].hintEn).toBeTruthy();
+    expect(localErrors[0].hintEn).not.toMatch(/[А-Яа-яЁё]/);
 
     const combined = await detectErrorsCombined("Morgen ik ga naar school.");
     expect(combined.map((error) => error.code)).toContain("ERR_V2_POS");

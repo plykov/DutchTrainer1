@@ -5,6 +5,7 @@ export interface ListeningQuestion {
   options: string[];
   correctIndex: number;
   explanationRu: string;
+  explanationEn?: string;
 }
 
 export interface ListeningItem {
@@ -29,6 +30,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar morgen", "Naar vrijdag", "Naar maandag"],
       correctIndex: 1,
       explanationRu: "В сообщении сказано: 'verzet naar vrijdag om tien uur' — приём перенесён на пятницу.",
+      explanationEn: "The message said: 'verzet naar vrijdag om tien uur' - reception moved to Friday.",
     },
   },
   {
@@ -42,6 +44,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een pasfoto laten maken", "Online een afspraak maken", "Naar de huisarts gaan"],
       correctIndex: 1,
       explanationRu: "Ключевое слово 'eerst' (сначала) — сначала нужно записаться онлайн на приём в мэрии.",
+      explanationEn: "The key word 'eerst' (first) is to make an online appointment at City Hall.",
     },
   },
   {
@@ -55,6 +58,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Voor een cursus", "Voor een gesprek", "Voor een medische controle"],
       correctIndex: 1,
       explanationRu: "'nodigen u uit voor een gesprek' — приглашают на собеседование.",
+      explanationEn: "“Nodigen u uit voor een gesprek” is an interview.",
     },
   },
   {
@@ -68,6 +72,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot vier uur", "Tot zes uur", "Tot acht uur"],
       correctIndex: 1,
       explanationRu: "'open tot zes uur vanavond' — открыто до шести часов вечера.",
+      explanationEn: "'open tot zes uur vanavond' is open until six p.m.",
     },
   },
   {
@@ -81,6 +86,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op maandag", "Op vrijdag", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'op maandag komt de monteur langs' — мастер придёт в понедельник.",
+      explanationEn: "'op maandag komt de monteur langs' - the master will come on Monday.",
     },
   },
   {
@@ -94,6 +100,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Om negen uur", "Om tien uur", "Om elf uur"],
       correctIndex: 0,
       explanationRu: "'de les begint om negen uur, niet om tien uur' — время изменилось на девять часов.",
+      explanationEn: "'de les begint om negen uur, niet om tien uur' - the time changed by nine hours.",
     },
   },
   {
@@ -107,6 +114,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Meer stroom gebruikt", "Een fout van het bedrijf", "Een nieuwe woning"],
       correctIndex: 0,
       explanationRu: "'omdat u meer stroom heeft gebruikt' — счёт выше из-за большего потребления электроэнергии.",
+      explanationEn: "'omdat u meer stroom heeft gebruikt' - the score is higher due to greater electricity consumption.",
     },
   },
   {
@@ -120,6 +128,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een keer", "Twee keer", "Drie keer"],
       correctIndex: 2,
       explanationRu: "'Neem het drie keer per dag in' — принимать три раза в день.",
+      explanationEn: "'Neem het drie keer per dag in' - take three times a day",
     },
   },
   {
@@ -133,6 +142,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Over twee weken", "Over twee maanden", "Volgend jaar"],
       correctIndex: 1,
       explanationRu: "'Uw contract loopt over twee maanden af' — контракт заканчивается через два месяца.",
+      explanationEn: "'Uw contract loopt over twee maanden af' - contract ends in two months",
     },
   },
   {
@@ -146,6 +156,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen een pasfoto", "De oude pas en een pasfoto", "Niets"],
       correctIndex: 1,
       explanationRu: "'met uw oude pas en een pasfoto' — нужно принести старую карту и фото.",
+      explanationEn: "'met uw oude pas en een pasfoto' - bring an old map and a photo.",
     },
   },
   {
@@ -159,6 +170,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ze gaat omlaag", "Ze blijft gelijk", "Ze gaat omhoog"],
       correctIndex: 2,
       explanationRu: "'De huur ... gaat ... iets omhoog' — арендная плата немного повысится.",
+      explanationEn: "'De huur ... gaat ... iets omhoog' - rents will go up a bit.",
     },
   },
   {
@@ -172,6 +184,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ze is verzet naar vrijdag", "Ze is geannuleerd", "Ze blijft hetzelfde"],
       correctIndex: 1,
       explanationRu: "'is helaas geannuleerd' — приём отменён.",
+      explanationEn: "'is helaas geannuleerd' - revoked.",
     },
   },
   {
@@ -185,6 +198,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een polis en uw inkomen", "Alleen een adres", "Een nieuw paspoort"],
       correctIndex: 0,
       explanationRu: "'een polis en uw inkomen nodig' — для оформления страховки нужны полис и данные о доходе.",
+      explanationEn: "'een polis en uw inkomen nodig' - you need a policy and income data to apply for insurance.",
     },
   },
   {
@@ -198,6 +212,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen volwassenen", "Voor de hele buurt", "Alleen voor kinderen"],
       correctIndex: 1,
       explanationRu: "'Iedereen is welkom, ook kinderen' — собрание для всех жителей района.",
+      explanationEn: "\"Iedereen is welkom, ook kinderen\" is a meeting for all residents of the district.",
     },
   },
 
@@ -216,6 +231,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar maandag om negen uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar maandag om negen uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar maandag om negen uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -229,6 +245,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar dinsdag om tien uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar dinsdag om tien uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar dinsdag om tien uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -242,6 +259,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar woensdag om elf uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar woensdag om elf uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar woensdag om elf uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -255,6 +273,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar donderdag om twaalf uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar donderdag om twaalf uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar donderdag om twaalf uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -268,6 +287,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar vrijdag om één uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar vrijdag om één uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar vrijdag om één uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -281,6 +301,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar zaterdag om twee uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar zaterdag om twee uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar zaterdag om twee uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -294,6 +315,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar zondag om drie uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar zondag om drie uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar zondag om drie uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -307,6 +329,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar volgende maandag om vier uur", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar volgende maandag om vier uur' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar volgende maandag om vier uur\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -320,6 +343,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar volgende dinsdag om half tien", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar volgende dinsdag om half tien' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar volgende dinsdag om half tien\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -333,6 +357,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar volgende woensdag om half elf", "Naar morgen om negen uur", "De afspraak is geannuleerd"],
       correctIndex: 0,
       explanationRu: "'verzet naar volgende woensdag om half elf' — приём перенесён на указанные день и время.",
+      explanationEn: "\"verzet naar volgende woensdag om half elf\" - the reception is postponed to the specified day and time.",
     },
   },
   {
@@ -346,6 +371,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -359,6 +385,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -372,6 +399,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -385,6 +413,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -398,6 +427,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -411,6 +441,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -424,6 +455,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -437,6 +469,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -450,6 +483,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -463,6 +497,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
     },
   },
   {
@@ -476,6 +511,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot negen uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot negen uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot negen uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -489,6 +525,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot tien uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot tien uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot tien uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -502,6 +539,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot elf uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot elf uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot elf uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -515,6 +553,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot twaalf uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot twaalf uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot twaalf uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -528,6 +567,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot één uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot één uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot één uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -541,6 +581,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot twee uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot twee uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot twee uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -554,6 +595,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot drie uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot drie uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot drie uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -567,6 +609,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot vier uur vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot vier uur vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot vier uur vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -580,6 +623,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot half tien vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot half tien vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot half tien vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -593,6 +637,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot half elf vanmiddag", "Alleen 's ochtends vroeg", "De hele week"],
       correctIndex: 0,
       explanationRu: "'kunnen worden opgehaald tot half elf vanmiddag' — лекарства можно забрать до указанного времени сегодня.",
+      explanationEn: "'kunnen worden opgehaald tot half elf vanmiddag' - medicines can be picked up before the specified time today.",
     },
   },
   {
@@ -606,6 +651,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Maandag om negen uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor maandag om negen uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor maandag om negen uur' - the interview is confirmed on the specified day and time.",
     },
   },
   {
@@ -619,6 +665,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Dinsdag om tien uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor dinsdag om tien uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor dinsdag om tien uur' - the interview is confirmed on the specified day and time.",
     },
   },
   {
@@ -632,6 +679,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Woensdag om elf uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor woensdag om elf uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor woensdag om elf uur' - interview confirmed for the specified day and time.",
     },
   },
   {
@@ -645,6 +693,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Donderdag om twaalf uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor donderdag om twaalf uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor donderdag om twaalf uur' - interview confirmed for the specified day and time.",
     },
   },
   {
@@ -658,6 +707,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vrijdag om één uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor vrijdag om één uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor vrijdag om één uur' - interview confirmed for the specified day and time.",
     },
   },
   {
@@ -671,6 +721,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Zaterdag om twee uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor zaterdag om twee uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor zaterdag om twee uur' - interview confirmed for the specified day and time.",
     },
   },
   {
@@ -684,6 +735,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Zondag om drie uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor zondag om drie uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor zondag om drie uur' - the interview is confirmed on the specified day and time.",
     },
   },
   {
@@ -697,6 +749,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Volgende maandag om vier uur", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor volgende maandag om vier uur' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor volgende maandag om vier uur' - interview confirmed on the specified day and time.",
     },
   },
   {
@@ -710,6 +763,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Volgende dinsdag om half tien", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor volgende dinsdag om half tien' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor volgende dinsdag om half tien' - the interview is confirmed on the specified day and time.",
     },
   },
   {
@@ -723,6 +777,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Volgende woensdag om half elf", "Volgende maand", "Vandaag"],
       correctIndex: 0,
       explanationRu: "'bevestigd voor volgende woensdag om half elf' — собеседование подтверждено на указанный день и время.",
+      explanationEn: "'bevestigd voor volgende woensdag om half elf' - interview confirmed at the specified date and time.",
     },
   },
   {
@@ -736,6 +791,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op maandag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op maandag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op maandag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -749,6 +805,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op dinsdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op dinsdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op dinsdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -762,6 +819,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op woensdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op woensdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op woensdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -775,6 +833,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op donderdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op donderdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op donderdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -788,6 +847,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op vrijdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op vrijdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op vrijdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -801,6 +861,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op zaterdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op zaterdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op zaterdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -814,6 +875,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op zondag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op zondag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op zondag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -827,6 +889,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op volgende maandag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op volgende maandag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op volgende maandag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -840,6 +903,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op volgende dinsdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op volgende dinsdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op volgende dinsdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -853,6 +917,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op volgende woensdag tussen negen en twaalf uur", "Vandaag om vijf uur", "Hij komt niet meer"],
       correctIndex: 0,
       explanationRu: "'komt langs op volgende woensdag tussen negen en twaalf uur' — мастер приедет в указанный день в промежутке между 9 и 12.",
+      explanationEn: "'komt langs op volgende woensdag tussen negen en twaalf uur' - the master will arrive on the specified day between 9 and 12.",
     },
   },
   {
@@ -866,6 +931,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -879,6 +945,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -892,6 +959,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -905,6 +973,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -918,6 +987,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -931,6 +1001,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -944,6 +1015,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -957,6 +1029,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -970,6 +1043,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -983,6 +1057,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
+      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
     },
   },
   {
@@ -996,6 +1071,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar negen uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar negen uur\" - only the time of the lesson changes, the study remains the same.",
     },
   },
   {
@@ -1009,6 +1085,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar tien uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar tien uur\" - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1022,6 +1099,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar elf uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar elf uur\" - only the time of the lesson changes, the study remains the same.",
     },
   },
   {
@@ -1035,6 +1113,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar twaalf uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "'verschuift naar twaalf uur' - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1048,6 +1127,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar één uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar éen uur\" - only the time of the lesson changes, the study remains the same.",
     },
   },
   {
@@ -1061,6 +1141,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar twee uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar twee uur\" - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1074,6 +1155,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar drie uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar drie uur\" - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1087,6 +1169,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar vier uur' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar vier uur\" - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1100,6 +1183,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar half tien' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar half tien\" - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1113,6 +1197,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Alleen het tijdstip", "Alleen het lokaal", "De les gaat niet door"],
       correctIndex: 0,
       explanationRu: "'verschuift naar half elf' — меняется только время урока, кабинет остаётся тем же.",
+      explanationEn: "\"verschuift naar half elf\" - only the lesson time changes, the study remains the same.",
     },
   },
   {
@@ -1126,6 +1211,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1139,6 +1225,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1152,6 +1239,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1165,6 +1253,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1178,6 +1267,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1191,6 +1281,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1204,6 +1295,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1217,6 +1309,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1230,6 +1323,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1243,6 +1337,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
+      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
     },
   },
   {
@@ -1256,6 +1351,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met maandag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met maandag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met maandag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1269,6 +1365,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met dinsdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met dinsdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met dinsdag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1282,6 +1379,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met woensdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met woensdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met woensdag' - you can pick up the parcel at the point of issue until the specified day inclusive.",
     },
   },
   {
@@ -1295,6 +1393,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met donderdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met donderdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met donderdag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1308,6 +1407,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met vrijdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met vrijdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met vrijdag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1321,6 +1421,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met zaterdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met zaterdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met zaterdag' - you can pick up the parcel at the point of issue until the specified day inclusive.",
     },
   },
   {
@@ -1334,6 +1435,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met zondag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met zondag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met zondag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1347,6 +1449,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met volgende maandag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met volgende maandag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met volgende maandag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1360,6 +1463,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met volgende dinsdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met volgende dinsdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met volgende dinsdag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1373,6 +1477,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met volgende woensdag", "Er is geen deadline", "Alleen vandaag"],
       correctIndex: 0,
       explanationRu: "'ophalen bij het afhaalpunt tot en met volgende woensdag' — забрать посылку можно в пункте выдачи до указанного дня включительно.",
+      explanationEn: "'ophalen bij het afhaalpunt tot en met volgende woensdag' - you can pick up the parcel at the point of issue before the specified day inclusive.",
     },
   },
   {
@@ -1386,6 +1491,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1399,6 +1505,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1412,6 +1519,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1425,6 +1533,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1438,6 +1547,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1451,6 +1561,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1464,6 +1575,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1477,6 +1589,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1490,6 +1603,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1503,6 +1617,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
+      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
     },
   },
   {
@@ -1516,6 +1631,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De tandarts is ziek", "De praktijk is verhuisd", "U heeft afgezegd"],
       correctIndex: 0,
       explanationRu: "'de tandarts is ziek' — приём отменён, потому что заболел сам стоматолог.",
+      explanationEn: "'de tandarts is ziek' is cancelled because the dentist is sick.",
     },
   },
   {
@@ -1529,6 +1645,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vijf dagen", "Vijf weken", "Vijf maanden"],
       correctIndex: 1,
       explanationRu: "'de aanvraag duurt ongeveer vijf weken' — оформление занимает около пяти недель.",
+      explanationEn: "'de aanvraag duurt ongeveer vijf weken' - the design takes about five weeks.",
     },
   },
   {
@@ -1542,6 +1659,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een afspraak maken voor de griepprik", "De prik zelf kopen", "Naar het ziekenhuis gaan"],
       correctIndex: 0,
       explanationRu: "'Maak hiervoor een afspraak vóór half november' — записаться на прививку от гриппа нужно до середины ноября.",
+      explanationEn: "'Maak hiervoor een afspraak vór half november' - sign up for the flu shot before mid-November",
     },
   },
   {
@@ -1555,6 +1673,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De gang vrijhouden van spullen", "Het gebouw verlaten", "Zelf het water opruimen"],
       correctIndex: 0,
       explanationRu: "'houd de gang daarom vrij van spullen' — просят освободить коридор от вещей для слесаря.",
+      explanationEn: "'houd de gang daarom vrij van spullen' - asked to clear the corridor of things for the locksmith.",
     },
   },
   {
@@ -1568,6 +1687,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Dat hij op vakantie gaat", "Dat hij zich ziek meldt", "Dat hij later komt"],
       correctIndex: 1,
       explanationRu: "'ik voel me niet goed en kan vandaag niet komen werken' — это сообщение о болезни (больничный).",
+      explanationEn: "'ik voel me niet goed en kan vandaag niet komen werken' is a message of illness.",
     },
   },
   {
@@ -1581,6 +1701,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["1 januari", "1 mei", "1 december"],
       correctIndex: 1,
       explanationRu: "'vóór 1 mei uw belastingaangifte moet indienen' — декларацию нужно подать до 1 мая.",
+      explanationEn: "'vór 1 mei uw belastingaangifte moet indien' - the declaration must be filed before May 1.",
     },
   },
   {
@@ -1594,6 +1715,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Door werkzaamheden aan het spoor", "Door een storm", "Door een staking"],
       correctIndex: 0,
       explanationRu: "'door werkzaamheden aan het spoor' — задержка вызвана ремонтными работами на путях.",
+      explanationEn: "'door werkzaamheden aan het spoor' - delay caused by repair work on tracks",
     },
   },
   {
@@ -1607,6 +1729,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Pas na het slagen voor lezen", "Op elk moment", "Alleen op zaterdag"],
       correctIndex: 0,
       explanationRu: "'pas nadat u voor lezen bent geslaagd' — часть «говорение» доступна только после сдачи «чтения».",
+      explanationEn: "'pas nadat u voor lezen bent geslaagd' - part of the 'speaking' is available only after passing the 'reading'.",
     },
   },
   {
@@ -1620,6 +1743,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Handschoenen", "Vuilniszakken", "Fietsen"],
       correctIndex: 0,
       explanationRu: "'handschoenen worden uitgedeeld' — участникам раздают перчатки для уборки.",
+      explanationEn: "Handschoen worden uitgedeeld – participants are given gloves to clean.",
     },
   },
   {
@@ -1633,6 +1757,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig legitimatiebewijs", "Het oude poststuk", "Contant geld"],
       correctIndex: 0,
       explanationRu: "'Neem een geldig legitimatiebewijs mee' — для получения письма нужно удостоверение личности.",
+      explanationEn: "'Neem een geldig legitimatiebewijs mee' - an ID card is required to receive a letter.",
     },
   },
   {
@@ -1646,6 +1771,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Eén werkdag", "Twee werkdagen", "Een week"],
       correctIndex: 1,
       explanationRu: "'meestal binnen twee werkdagen' — повторный рецепт обычно оформляют за два рабочих дня.",
+      explanationEn: "'meestal binnen twee werkdagen' - a repeated recipe is usually drawn up in two working days.",
     },
   },
   {
@@ -1659,6 +1785,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een te hoge schatting op de jaarafrekening", "Een boete", "Afsluiting van gas"],
       correctIndex: 0,
       explanationRu: "'voorkomt u een te hoge schatting' — вовремя переданные показания счётчика предотвращают завышенный расчёт.",
+      explanationEn: "'voorkomt u een te hoge schatting' - Timely transmitted meter readings prevent overestimation.",
     },
   },
   {
@@ -1672,6 +1799,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["In september", "Volgend jaar", "Deze week"],
       correctIndex: 0,
       explanationRu: "'in september een plek vrij te hebben' — место ожидается свободным в сентябре.",
+      explanationEn: "'in september een plek vrij te hebben' - the venue is expected to be vacant on Sept.",
     },
   },
   {
@@ -1685,6 +1813,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die groep is vol", "Die groep is afgeschaft", "Het zwembad is dicht"],
       correctIndex: 0,
       explanationRu: "'is helaas vol' — группа по четвергам заполнена, предлагают субботу.",
+      explanationEn: "'is helaas vol' - Thursday group full, offer Saturday",
     },
   },
   {
@@ -1698,6 +1827,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met zaterdag", "Alleen vandaag", "Tot en met maandag"],
       correctIndex: 0,
       explanationRu: "'ophalen tot en met zaterdag' — книгу можно забрать включительно до субботы.",
+      explanationEn: "'ophalen tot en met zaterdag' is a book that can be picked up until Saturday.",
     },
   },
   {
@@ -1711,6 +1841,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die loopt automatisch door", "Die stopt automatisch", "U krijgt een boete"],
       correctIndex: 0,
       explanationRu: "'anders loopt deze automatisch door' — без своевременного отказа старый полис продлевается автоматически.",
+      explanationEn: "Anders loopt deze automatisch door - without timely refusal, the old policy is renewed automatically.",
     },
   },
   {
@@ -1724,6 +1855,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Inkomen en huurcontract", "Alleen een paspoort", "Een medische verklaring"],
       correctIndex: 0,
       explanationRu: "'uw inkomen en het huurcontract nodig' — для заявки на жилищную субсидию нужны доход и договор аренды.",
+      explanationEn: "'uw inkomen en het huurcontract nodig' - an income and lease agreement are required to apply for a housing subsidy.",
     },
   },
   {
@@ -1737,6 +1869,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vanwege een feestdag", "Vanwege slecht weer", "Vanwege een staking"],
       correctIndex: 0,
       explanationRu: "'vanwege een feestdag' — вывоз крупногабаритного мусора сдвинут из-за праздничного дня.",
+      explanationEn: "'vanwege een feestdag' - the removal of bulky garbage shifted due to the holiday day.",
     },
   },
   {
@@ -1750,6 +1883,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een maand", "Een jaar", "Vijf jaar"],
       correctIndex: 1,
       explanationRu: "'De vergunning is een jaar geldig' — разрешение на парковку действует один год.",
+      explanationEn: "'De vergunning is een jaar geldig' is a one-year parking permit.",
     },
   },
   {
@@ -1763,6 +1897,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De fietssleutel", "Een aankoopbon", "Een verzekeringspapier"],
       correctIndex: 0,
       explanationRu: "'neem uw fietssleutel mee' — для получения велосипеда нужно взять ключ от него.",
+      explanationEn: "'neem uw fietssleutel mee' - to get a bicycle you need to take the key to it.",
     },
   },
   {
@@ -1776,6 +1911,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Elke ochtend tussen negen en tien uur", "Alleen op vrijdag", "In het weekend"],
       correctIndex: 0,
       explanationRu: "'zonder afspraak, elke ochtend tussen negen en tien uur' — можно прийти без записи по утрам в это время.",
+      explanationEn: "'zonder afspraak, elke ochtend tussen negen en tien uur' - you can come without a record in the morning at this time.",
     },
   },
   {
@@ -1789,6 +1925,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Geluidsoverlast na tien uur 's avonds", "Een lekkage", "Een vuilnisprobleem"],
       correctIndex: 0,
       explanationRu: "'een klacht ... over geluidsoverlast ... na tien uur' — жалоба на шум после десяти вечера.",
+      explanationEn: "'een klacht ... over geluidsoverlast ... na tien uur' is a noise complaint after ten p.m.",
     },
   },
   {
@@ -1802,6 +1939,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["In het online account", "Op papier thuis", "Bij de manager"],
       correctIndex: 0,
       explanationRu: "'staat vanaf vandaag klaar in uw online account' — расчётный лист доступен в личном кабинете онлайн.",
+      explanationEn: "'staat vanaf vandaag klaar in uw online account' is available online.",
     },
   },
   {
@@ -1815,6 +1953,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Het altijd zonder kosten opnemen", "Het alleen na een jaar opnemen", "Het niet opnemen"],
       correctIndex: 0,
       explanationRu: "'Het geld opnemen kan altijd, zonder extra kosten' — снять деньги можно в любое время без дополнительных затрат.",
+      explanationEn: "'Het geld opnemen kan altijd, zonder extra kosten' - you can withdraw money at any time at no additional cost.",
     },
   },
   {
@@ -1828,6 +1967,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een nieuwe ov-chipkaart aanvragen", "Geld overmaken", "Een boete betalen"],
       correctIndex: 0,
       explanationRu: "'Vraag op tijd een nieuwe kaart aan' — нужно вовремя заказать новую транспортную карту.",
+      explanationEn: "'Vraag op tijd een nieuwe kaart aan' - you need to order a new transport card on time.",
     },
   },
   {
@@ -1841,6 +1981,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Twintig minuten", "Een uur", "Vijf minuten"],
       correctIndex: 0,
       explanationRu: "'Het gesprek duurt ongeveer twintig minuten' — беседа с родителями длится примерно двадцать минут.",
+      explanationEn: "\"Het gesprek duurt ongeveer twintig minuten\" - a conversation with parents lasts about twenty minutes.",
     },
   },
   {
@@ -1854,6 +1995,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Via de telefoon bij de coördinator", "Via een brief", "Alleen persoonlijk"],
       correctIndex: 0,
       explanationRu: "'meld u dan aan bij de coördinator via de telefoon' — записаться можно по телефону у координатора.",
+      explanationEn: "'meld u dan aan bij de coördinator via de telefoon' - you can call the coordinator.",
     },
   },
   {
@@ -1867,6 +2009,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Bij de buren op nummer twaalf", "Op het postkantoor", "Terug naar de afzender"],
       correctIndex: 0,
       explanationRu: "'bezorgd bij de buren op nummer twaalf' — посылку оставили у соседей в доме номер 12.",
+      explanationEn: "'bezorgd bij de buren op nummer twaalf' - parcel left at the neighbours' house number 12.",
     },
   },
   {
@@ -1880,6 +2023,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Bij de dienstapotheek in het centrum", "Bij de huisarts", "Nergens"],
       correctIndex: 0,
       explanationRu: "'terecht bij de dienstapotheek in het centrum' — в это время работает дежурная аптека в центре.",
+      explanationEn: "'terecht bij de dienstapotheek in het centrum' is the time when the on-duty pharmacy in the centre operates.",
     },
   },
   {
@@ -1893,6 +2037,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Overstappen naar een andere leverancier", "De meterstand doorgeven", "Een storing melden"],
       correctIndex: 0,
       explanationRu: "'overstappen kan vaak zonder opzegtermijn' — сменить поставщика энергии часто можно без срока уведомления.",
+      explanationEn: "'overstappen kan vaak zonder opzegtermijn' - change of energy supplier is often possible without notice.",
     },
   },
   {
@@ -1906,6 +2051,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Van het inkomen", "Van de leeftijd van het kind", "Van het aantal kinderen"],
       correctIndex: 0,
       explanationRu: "'afhankelijk van uw inkomen' — родительский взнос зависит от дохода семьи.",
+      explanationEn: "'afhankelijk van uw inkomen' - Parental contribution depends on family income.",
     },
   },
   {
@@ -1919,6 +2065,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Schriftelijk", "Alleen telefonisch", "Via een app"],
       correctIndex: 0,
       explanationRu: "'Stuur uw opzegging schriftelijk' — отказ от контракта нужно оформить письменно.",
+      explanationEn: "‘Stuur uw opzegging schriftelijk’ – a contract waiver must be written.",
     },
   },
   {
@@ -1932,6 +2079,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Dertig cent", "Een euro", "Tien euro"],
       correctIndex: 0,
       explanationRu: "'De boete is dertig cent per dag' — штраф за просрочку составляет тридцать центов в день.",
+      explanationEn: "'De boete is dertig cent per dag' - the penalty for delay is thirty cents a day.",
     },
   },
   {
@@ -1945,6 +2093,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Foto's en het kenteken van de andere auto", "Alleen een politieverslag", "Een nieuw rijbewijs"],
       correctIndex: 0,
       explanationRu: "'foto's van de schade en het kenteken ... nodig' — для заявки о повреждении нужны фото и номер другой машины.",
+      explanationEn: "'foto's van de schade en het kenteken ... nodig' - a photo and license plate of another car are required to claim damage.",
     },
   },
   {
@@ -1958,6 +2107,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Binnen drie maanden na de aangifte", "Binnen een week", "Na een jaar"],
       correctIndex: 0,
       explanationRu: "'meestal binnen drie maanden na uw aangifte' — окончательное решение по налогу приходит обычно в течение трёх месяцев.",
+      explanationEn: "\"meestal binnen drie maanden na uw aangifte\" - the final decision on the tax usually comes within three months.",
     },
   },
   {
@@ -1971,6 +2121,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die is vol", "Die is kapot", "Die is verwijderd"],
       correctIndex: 0,
       explanationRu: "'de glasbak op de hoek van de straat is vol' — контейнер для стекла на углу переполнен.",
+      explanationEn: "'de glasbak op de hoek van de straat is vol' - the glass container on the corner is crowded.",
     },
   },
   {
@@ -1984,6 +2135,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Twee weken", "Zes weken", "Zes maanden"],
       correctIndex: 1,
       explanationRu: "'Bezwaar maken kan binnen zes weken' — обжаловать штраф можно в течение шести недель.",
+      explanationEn: "'Bezwaar maken kan binnen zes weken' - the fine can be appealed within six weeks.",
     },
   },
   {
@@ -1997,6 +2149,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vanwege werkzaamheden aan de betaalautomaten", "Vanwege een feestdag", "De stalling is nieuw"],
       correctIndex: 0,
       explanationRu: "'vanwege werkzaamheden aan de betaalautomaten' — стоянка бесплатна из-за ремонта платёжных автоматов.",
+      explanationEn: "'vanwege werkzaamheden aan de betaalautomaten' - parking is free due to the repair of payment machines.",
     },
   },
   {
@@ -2010,6 +2163,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er was een spoedgeval", "De dierenarts is met vakantie", "De praktijk is verhuisd"],
       correctIndex: 0,
       explanationRu: "'want er was een spoedgeval' — приём перенесли из-за срочного случая.",
+      explanationEn: "'want er was een spoedgeval' was postponed due to an emergency.",
     },
   },
   {
@@ -2023,6 +2177,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De monteur", "De verhuurder", "De buurman"],
       correctIndex: 0,
       explanationRu: "'De monteur belt u om een geschikte datum af te spreken' — мастер сам позвонит, чтобы согласовать дату.",
+      explanationEn: "'De monteur belt u om een geschikte datum af te spreken' - the master himself will call to agree on the date.",
     },
   },
   {
@@ -2036,6 +2191,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ze worden bij het volgende salaris opgeteld", "Ze vervallen", "Ze worden vrije dagen"],
       correctIndex: 0,
       explanationRu: "'worden automatisch bij uw volgende salaris opgeteld' — переработанные часы добавят к следующей зарплате.",
+      explanationEn: "'worden automatisch bij uw volgende salaris opgeteld' - recycled watches will be added to the next paycheck.",
     },
   },
   {
@@ -2049,6 +2205,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Over de financiën van de klant", "Over een nieuwe pas", "Over een verhuizing"],
       correctIndex: 0,
       explanationRu: "'een gesprek over uw financiën' — банк предлагает обсудить финансовое положение клиента.",
+      explanationEn: "'een gesprek over uw financien' - the bank offers to discuss the financial situation of the client.",
     },
   },
   {
@@ -2062,6 +2219,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De gele borden", "De blauwe lijnen", "Hun navigatie-app"],
       correctIndex: 0,
       explanationRu: "'Volg de gele borden' — во время объезда нужно следовать жёлтым указателям.",
+      explanationEn: "\"Volg de gele borden\" - during the detour you need to follow the yellow signs.",
     },
   },
   {
@@ -2075,6 +2233,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vanaf donderdag tussen half vier en vijf uur", "Alleen op vrijdagochtend", "Elke dag"],
       correctIndex: 0,
       explanationRu: "'vanaf donderdag ... tussen half vier en vijf uur' — табель можно забрать с четверга в указанное время.",
+      explanationEn: "'vanaf donderdag ... tussen half vier en vijf uur' - the card can be picked up from Thursday at the specified time.",
     },
   },
   {
@@ -2088,6 +2247,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Iets lekkers meenemen om te delen", "Geld betalen voor een kaartje", "Zich van tevoren aanmelden"],
       correctIndex: 0,
       explanationRu: "'Iedereen mag iets lekkers meenemen om te delen' — каждый может принести что-то вкусное для общего стола.",
+      explanationEn: "'Iedereen mag iets lekkers meenemen om te delen' - anyone can bring something tasty to the common table.",
     },
   },
   {
@@ -2101,6 +2261,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Binnen vijf dagen", "Binnen een maand", "Binnen een jaar"],
       correctIndex: 0,
       explanationRu: "'binnen vijf dagen uw nieuwe adres doorgeven' — новый адрес нужно сообщить в течение пяти дней.",
+      explanationEn: "'binnen vijf dagen uw nieuwe adres doorgeven' - a new address must be reported within five days.",
     },
   },
   {
@@ -2114,6 +2275,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op de website", "Op de deur van de apotheek", "In de krant"],
       correctIndex: 0,
       explanationRu: "'Het adres staat op onze website' — адрес дежурной аптеки указан на сайте.",
+      explanationEn: "'Het adres staat op onze website' - the address of the on-duty pharmacy is listed on the website.",
     },
   },
   {
@@ -2127,6 +2289,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vóór het einde van het jaar", "Binnen een week", "Alleen in de zomer"],
       correctIndex: 0,
       explanationRu: "'Dien uw aanvraag in vóór het einde van het jaar' — заявку на субсидию нужно подать до конца года.",
+      explanationEn: "'Dien uw aanvraag in vór het einde van het jaar' - the application for the grant must be submitted before the end of the year.",
     },
   },
   {
@@ -2140,6 +2303,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Dinsdag en donderdag", "Maandag en woensdag", "Alleen zaterdag"],
       correctIndex: 0,
       explanationRu: "'op dinsdag- en donderdagavond' — тренировки проходят по вторникам и четвергам.",
+      explanationEn: "'op dinsdag- en donderdagavond' - training sessions are held on Tuesdays and Thursdays.",
     },
   },
   {
@@ -2153,6 +2317,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Voor kinderen tot achttien jaar", "Voor iedereen", "Voor gepensioneerden"],
       correctIndex: 0,
       explanationRu: "'Voor kinderen tot achttien jaar is een lidmaatschap ... gratis' — для детей до 18 лет членство бесплатное.",
+      explanationEn: "Voor kinderen tot achttien jaar is een lidmaatschap ... gratis - for children under 18 years of age membership is free.",
     },
   },
   {
@@ -2166,6 +2331,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Schade die u per ongeluk bij een ander veroorzaakt", "Schade aan uw eigen huis", "Diefstal van uw fiets"],
       correctIndex: 0,
       explanationRu: "'dekt schade die u per ongeluk bij een ander veroorzaakt' — страхование ответственности покрывает случайный вред, причинённый другим.",
+      explanationEn: "'dekt schade die u per ongeluk bij een ander veroorzaakt' - liability insurance covers accidental harm caused to others.",
     },
   },
   {
@@ -2179,6 +2345,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ieder kwartaal", "Alleen als er winst is", "Eén keer per jaar"],
       correctIndex: 0,
       explanationRu: "'moet u ieder kwartaal btw-aangifte doen' — декларацию по НДС подают каждый квартал, даже без дохода.",
+      explanationEn: "'moet u ieder kwartaal btw-aangifte doen' - VAT returns are filed every quarter, even without income.",
     },
   },
   {
@@ -2192,6 +2359,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot en met 15 januari", "Tot en met 1 januari", "Het hele jaar"],
       correctIndex: 0,
       explanationRu: "'tot en met 15 januari' — рождественскую ёлку можно сдать до 15 января включительно.",
+      explanationEn: "'Tot en met 15 januari' - Christmas tree can be rented until January 15 inclusive.",
     },
   },
   {
@@ -2205,6 +2373,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ongeveer een week", "Ongeveer een dag", "Ongeveer een maand"],
       correctIndex: 0,
       explanationRu: "'De werkzaamheden duren ongeveer een week' — установка займёт примерно неделю.",
+      explanationEn: "'De werkzaamheden duren ongeveer een week' - installation will take about a week.",
     },
   },
   {
@@ -2218,6 +2387,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ongeveer tien dagen", "Ongeveer twee dagen", "Een maand"],
       correctIndex: 0,
       explanationRu: "'De steigers blijven ongeveer tien dagen staan' — леса простоят примерно десять дней.",
+      explanationEn: "\"De steigers blijven ongeveer tien dagen staan\" - the forests stand for about ten days.",
     },
   },
   {
@@ -2231,6 +2401,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Ze gaat iets omhoog", "Ze wordt afgeschaft", "Ze blijft gelijk"],
       correctIndex: 0,
       explanationRu: "'gaat de hondenbelasting iets omhoog' — налог на собак немного повысится.",
+      explanationEn: "'gaat de hondenbelasting iets omhoog' - dog tax will rise slightly",
     },
   },
   {
@@ -2244,6 +2415,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De verwijsbrief", "Een röntgenfoto", "Uw verzekeringspas alleen"],
       correctIndex: 0,
       explanationRu: "'Neem de verwijsbrief mee' — на первый приём нужно взять направление от врача.",
+      explanationEn: "'Neem de verwijsbrief mee' - for the first appointment you need to take a referral from a doctor.",
     },
   },
   {
@@ -2257,6 +2429,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Het is afgesloten", "Het wordt gratis toegankelijk", "Het blijft precies hetzelfde"],
       correctIndex: 0,
       explanationRu: "'is een deel van het park afgesloten' — часть парка закрыта до завершения обновления.",
+      explanationEn: "'is een deel van het park afgesloten' - part of the park is closed until renovation is completed.",
     },
   },
   {
@@ -2270,6 +2443,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Half acht 's ochtends", "Negen uur 's ochtends", "Tien uur 's ochtends"],
       correctIndex: 0,
       explanationRu: "'open van half acht 's ochtends' — избирательные участки открываются в семь тридцать утра.",
+      explanationEn: "'open van half acht's ochtends' - polling stations open at seven thirty in the morning.",
     },
   },
   {
@@ -2283,6 +2457,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een nieuwe simkaart", "Een pincode van de bank"],
       correctIndex: 0,
       explanationRu: "'met een geldig identiteitsbewijs bij de hand' — для сброса пароля нужно удостоверение личности.",
+      explanationEn: "'met een geldig identiteitsbewijs bij de hand' - an ID card is required to reset the password.",
     },
   },
   {
@@ -2296,6 +2471,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vier keer", "Eén keer", "Tien keer"],
       correctIndex: 0,
       explanationRu: "'minstens vier keer solliciteren' — для сохранения пособия нужно откликаться минимум четыре раза в месяц.",
+      explanationEn: "'minstens vier keer solliciteren' - you need to respond at least four times a month to save the allowance.",
     },
   },
   {
@@ -2309,6 +2485,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Het groeiboekje", "Een geboorteakte", "Een medicijnlijst"],
       correctIndex: 0,
       explanationRu: "'Neem het groeiboekje mee' — на приём в консультационном бюро нужно взять книжку роста ребёнка.",
+      explanationEn: "'Neem het groeiboekje mee' - you need to take a child's growth book to the consulting office.",
     },
   },
   {
@@ -2322,6 +2499,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De rookmelders", "De verwarming", "De brievenbussen"],
       correctIndex: 0,
       explanationRu: "'controleert ... gratis de rookmelders' — пожарная служба бесплатно проверяет дымовые извещатели.",
+      explanationEn: "'controleert ... gratis de rookmelders' - the fire service checks smoke detectors free of charge.",
     },
   },
   {
@@ -2335,6 +2513,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Online of bij het politiebureau", "Alleen telefonisch", "Alleen via de post"],
       correctIndex: 0,
       explanationRu: "'online een formulier invullen of langsgaan bij het politiebureau' — заявление можно подать онлайн или лично.",
+      explanationEn: "'Online een formulier invullen of langsgaan bij het politiebureau' - application can be made online or in person.",
     },
   },
   {
@@ -2348,6 +2527,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Voor alle inwoners van de gemeente", "Alleen voor kinderen", "Alleen voor studenten"],
       correctIndex: 0,
       explanationRu: "'gratis voor alle inwoners van de gemeente' — вход бесплатный для всех жителей муниципалитета.",
+      explanationEn: "Gratis voor alle inwoners van de gemeente is free of charge for all residents of the municipality.",
     },
   },
   {
@@ -2361,6 +2541,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Om acht uur 's avonds", "Om negen uur 's avonds", "Om zeven uur 's avonds"],
       correctIndex: 0,
       explanationRu: "'gaat een uur eerder dicht, om acht uur 's avonds' — бассейн будет закрываться на час раньше, в восемь вечера.",
+      explanationEn: "'gaat een uur eerder dicht, om acht uur's avonds' - the pool will close an hour earlier, at eight in the evening.",
     },
   },
   {
@@ -2374,6 +2555,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vanwege wegwerkzaamheden", "Vanwege een ongeluk", "Vanwege minder reizigers"],
       correctIndex: 0,
       explanationRu: "'vanwege wegwerkzaamheden' — маршрут изменён из-за дорожных работ.",
+      explanationEn: "'vanwege wegwerkzaamheden' - the route changed due to road works",
     },
   },
   {
@@ -2387,6 +2569,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op het meest recente inkomen", "Op het aantal kinderen", "Op de woonplaats"],
       correctIndex: 0,
       explanationRu: "'berekend op basis van uw meest recente inkomen' — субсидия рассчитывается по последнему доходу.",
+      explanationEn: "'berekend op basis van uw meest recente inkomen' - the subsidy is calculated on the latest income.",
     },
   },
   {
@@ -2400,6 +2583,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Eén maand", "Eén week", "Zes maanden"],
       correctIndex: 0,
       explanationRu: "'met een opzegtermijn van één maand' — срок уведомления при расторжении договора — один месяц.",
+      explanationEn: "'met een opzegtermijn van één maand' - notice period on termination of the contract is one month.",
     },
   },
   {
@@ -2413,6 +2597,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vanavond", "Morgenvroeg", "Volgende week"],
       correctIndex: 0,
       explanationRu: "'de storing wordt vanavond verholpen' — сбой планируют устранить сегодня вечером.",
+      explanationEn: "'de storing wordt vanavond verholpen' is scheduled to be fixed tonight",
     },
   },
   {
@@ -2426,6 +2611,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Bij de makelaar", "Bij de gemeente", "Bij de bank"],
       correctIndex: 0,
       explanationRu: "'de sleuteloverdracht ... bij de makelaar' — передача ключей состоится у риелтора.",
+      explanationEn: "'de sleuteloverdracht ... bij de makelaar' - the transfer of keys will take place at the realtor.",
     },
   },
   {
@@ -2439,6 +2625,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De kinderopvang", "De school", "De bibliotheek voor kinderen"],
       correctIndex: 0,
       explanationRu: "'de kinderopvang blijft wel gewoon open' — детский сад продолжает работать, в отличие от школы.",
+      explanationEn: "'de kinderopvang blijft wel gewoon open' - kindergarten continues to operate, unlike school.",
     },
   },
   {
@@ -2452,6 +2639,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Twee uur", "Een half uur", "Vier uur"],
       correctIndex: 0,
       explanationRu: "'twee uur van tevoren op het vliegveld aanwezig te zijn' — в аэропорт советуют приезжать за два часа.",
+      explanationEn: "'twee uur van tevoren op het vliegveld aanwezig te zijn' - the airport is advised to arrive two hours in advance.",
     },
   },
   {
@@ -2465,6 +2653,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Om oude documenten in te zien", "Om een paspoort aan te vragen", "Om belasting te betalen"],
       correctIndex: 0,
       explanationRu: "'een afspraak maken als u oude documenten wilt inzien' — записаться нужно для просмотра старых документов, например свидетельства о рождении.",
+      explanationEn: "'een afspraak maken als u oude documenten wilt inzien' - sign up to view old documents, such as birth certificates.",
     },
   },
   {
@@ -2478,6 +2667,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Het adres", "De openingstijden", "De prijzen"],
       correctIndex: 0,
       explanationRu: "'is verhuisd naar het adres naast de bakker' — изменился именно адрес парикмахерской, время работы прежнее.",
+      explanationEn: "'is verhuisd naar het adres naast de bakker' - it was the address of the barbershop that changed.",
     },
   },
   {
@@ -2491,6 +2681,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Tot de nieuwe kaart aankomt", "Vanaf vandaag niet meer", "Nog een maand"],
       correctIndex: 0,
       explanationRu: "'Uw oude kaart blijft tot die tijd actief' — старая сим-карта работает, пока не придёт новая.",
+      explanationEn: "'Uw oude kaart blijft tot die tijd actief' - the old SIM card works until a new one arrives.",
     },
   },
   {
@@ -2504,6 +2695,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Dat er iemand thuis is", "Dat u het modem zelf koopt", "Dat u naar de winkel gaat"],
       correctIndex: 0,
       explanationRu: "'Zorg dat er iemand thuis is' — просят обеспечить присутствие кого-то дома для замены модема.",
+      explanationEn: "'Zorg dat er iemand thuis is' is asked to ensure the presence of someone at home to replace the modem.",
     },
   },
   {
@@ -2517,6 +2709,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Naar uw huisadres", "Naar de bank zelf", "U moet hem ophalen"],
       correctIndex: 0,
       explanationRu: "'wordt automatisch naar uw huisadres gestuurd' — новая карта автоматически придёт на домашний адрес.",
+      explanationEn: "'wordt automatisch naar uw huisadres gestuurd' - a new card will automatically arrive at your home address.",
     },
   },
   {
@@ -2530,6 +2723,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Gratis boeken lenen", "Examens maken", "Sporten"],
       correctIndex: 0,
       explanationRu: "'U kunt daar gratis boeken lenen' — в школьной библиотеке можно бесплатно брать книги.",
+      explanationEn: "'U kunt daar gratis boeken lenen' - books are available for free in the school library.",
     },
   },
   {
@@ -2543,6 +2737,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vanwege een lekkage in de hoofdleiding", "Vanwege onderhoud aan de weg", "Vanwege vorst"],
       correctIndex: 0,
       explanationRu: "'Vanwege een lekkage in de hoofdleiding' — воду отключили из-за протечки в главном трубопроводе.",
+      explanationEn: "'Vanwege een lekkage in de hoofdleiding' - water cut off due to leakage in the main pipeline",
     },
   },
   {
@@ -2556,6 +2751,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Bij de balie of online", "Alleen telefonisch", "Alleen per post"],
       correctIndex: 0,
       explanationRu: "'bij de balie of het online doen' — выписку можно заказать в окошке или онлайн.",
+      explanationEn: "'bij de balie of het online doen' - an extract can be ordered in the window or online.",
     },
   },
   {
@@ -2569,6 +2765,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Volgende week", "Over een jaar", "Morgen"],
       correctIndex: 0,
       explanationRu: "'Uw proeftijd van twee maanden loopt volgende week af' — испытательный срок заканчивается на следующей неделе.",
+      explanationEn: "'Uw proeftijd van twee maanden loopt volgende week af' - probation ends next week.",
     },
   },
   {
@@ -2582,6 +2779,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["U hoeft niet nuchter te zijn", "U mag niet eten", "U moet water drinken"],
       correctIndex: 0,
       explanationRu: "'hoeft u niet nuchter te zijn' — перед анализом крови можно завтракать, голодание не требуется.",
+      explanationEn: "'hoeft u niet nuchter te zijn' - breakfast is allowed before the blood test, no fasting is required.",
     },
   },
   {
@@ -2595,6 +2793,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Pendelbussen", "Extra treinen", "Taxi's voor iedereen"],
       correctIndex: 0,
       explanationRu: "'Er zijn pendelbussen ingezet' — вместо метро запустили автобусы-шаттлы.",
+      explanationEn: "'Er zijn pendelbussen ingezet' - shuttle buses were launched instead of the metro.",
     },
   },
   {
@@ -2608,6 +2807,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Zodat het rustig kan wennen", "Omdat de opvang later opengaat", "Omdat er te veel kinderen zijn"],
       correctIndex: 0,
       explanationRu: "'zodat het rustig kan wennen' — дополнительное время дают, чтобы ребёнок спокойно привык к садику.",
+      explanationEn: "\"zodat het rustig kan wennen\" - extra time is given so that the child calmly gets used to the kindergarten.",
     },
   },
   {
@@ -2621,6 +2821,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Zes weken", "Twee weken", "Twaalf weken"],
       correctIndex: 0,
       explanationRu: "'binnen zes weken na de brief bezwaar indienen' — возразить против кадастровой оценки можно в течение шести недель после письма.",
+      explanationEn: "'binnen zes weken na de brief bezwaar indienen' - you can object to the cadastral valuation within six weeks of the letter.",
     },
   },
 ];

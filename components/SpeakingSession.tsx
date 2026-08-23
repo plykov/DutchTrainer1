@@ -6,11 +6,13 @@ import { useT } from "@/lib/i18n";
 import { SPEAKING_PROMPTS } from "@/lib/content/speakingPrompts";
 import { Grade } from "@/lib/fsrs";
 import NextExercise from "@/components/NextExercise";
+import { instructionFor } from "@/lib/contentLanguage";
 
 type RecState = "idle" | "recording" | "recorded" | "denied" | "unsupported";
 
 export default function SpeakingSession() {
   const review = useAppStore((s) => s.review);
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   const t = useT();
 
   const [index, setIndex] = useState(0);
@@ -100,7 +102,9 @@ export default function SpeakingSession() {
       </div>
 
       <p className="text-2xl font-medium">{prompt.text}</p>
-      <p className="text-sm text-zinc-500">{prompt.focusHintRu}</p>
+      <p className="text-sm text-zinc-500">
+        {instructionFor(explanationLanguage, prompt.focusHintRu, prompt.focusHintEn)}
+      </p>
 
       <p className="text-xs text-zinc-400 rounded-md bg-zinc-100 dark:bg-zinc-900 p-3">{t("sp_privacy_note")}</p>
 

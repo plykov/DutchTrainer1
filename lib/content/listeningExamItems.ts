@@ -3,6 +3,7 @@ export interface ListeningExamQuestion {
   options: string[];
   correctIndex: number;
   explanationRu: string;
+  explanationEn?: string;
 }
 
 export interface ListeningExamItem {
@@ -27,6 +28,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Eén", "Twee", "Drie"],
       correctIndex: 1,
       explanationRu: "'voor uittreksels toetst u twee' — для выписок нажимаете два.",
+      explanationEn: "'voor uittreksels toetst u twee' - press two for statements.",
     },
   },
   {
@@ -38,6 +40,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Niemand was thuis", "Het adres was fout", "Het pakket was kapot"],
       correctIndex: 0,
       explanationRu: "'omdat er niemand thuis was' — потому что дома никого не было.",
+      explanationEn: "Omdat er niemand thuis was because there was no one at home.",
     },
   },
   {
@@ -49,6 +52,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Spoor 3", "Spoor 5", "Spoor 7"],
       correctIndex: 1,
       explanationRu: "'vertrekt vandaag van spoor 5' — сегодня отправление с пятой платформы.",
+      explanationEn: "'vertrekt vandaag van spoor 5' is today departing from platform five.",
     },
   },
   {
@@ -60,6 +64,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["In het weekend", "Op maandag", "Nooit"],
       correctIndex: 0,
       explanationRu: "'In het weekend zijn wij gesloten' — по выходным закрыто.",
+      explanationEn: "'In het weekend zijn wij gesloten' - closed on weekends",
     },
   },
   {
@@ -71,6 +76,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Voorkennis van het onderwerp", "Elke week huiswerk maken", "Een diploma meenemen"],
       correctIndex: 1,
       explanationRu: "'gevraagd om elke week het huiswerk te maken' — просят каждую неделю делать домашнее задание.",
+      explanationEn: "'gevraagd om elke week het huiswerk te maken' - asked to do homework every week",
     },
   },
   {
@@ -82,6 +88,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Contant", "Alleen met pin", "Helemaal niet"],
       correctIndex: 0,
       explanationRu: "'Contant betalen is wel mogelijk' — можно оплатить наличными.",
+      explanationEn: "'Contant betalen is wel mogelijk' can be paid in cash.",
     },
   },
   {
@@ -93,6 +100,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Wegens ziekte", "Wegens vakantie", "Wegens een vergadering"],
       correctIndex: 0,
       explanationRu: "'is vandaag afwezig wegens ziekte' — отсутствует по болезни.",
+      explanationEn: "'is vandaag afwezig wegens ziekte' - absent due to illness.",
     },
   },
   {
@@ -104,6 +112,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Afgewezen", "Aangenomen", "Uitgesteld"],
       correctIndex: 0,
       explanationRu: "'is helaas niet doorgegaan naar de volgende ronde' — отказ, кандидат не прошёл дальше.",
+      explanationEn: "'is helaas niet doorgegaan naar de volgende ronde' - rejection, candidate did not go further.",
     },
   },
   {
@@ -115,6 +124,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Twee uur", "De hele dag", "Tien minuten"],
       correctIndex: 0,
       explanationRu: "'wordt het water ... voor twee uur afgesloten' — воду отключат на два часа.",
+      explanationEn: "Wordt het water ... voor twee uur afgesloten - the water will be turned off for two hours.",
     },
   },
   {
@@ -126,6 +136,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Per post", "Per telefoon", "U moet zelf bellen"],
       correctIndex: 0,
       explanationRu: "'U ontvangt hierover per post bericht' — ответ придёт по почте.",
+      explanationEn: "'U ontvangt hierover per post bericht' - the answer will come in the mail.",
     },
   },
   {
@@ -137,6 +148,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Om vier uur", "Om acht uur", "Om zes uur"],
       correctIndex: 0,
       explanationRu: "'eerder dicht, om vier uur' — сегодня закрывается раньше, в четыре часа.",
+      explanationEn: "'eerder dicht, om vier uur' - closes earlier today, at four o'clock.",
     },
   },
   {
@@ -148,6 +160,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Alle velden en de handtekening", "Alleen de datum", "Niets, het is niet nodig"],
       correctIndex: 0,
       explanationRu: "'controleert u of alle velden zijn ingevuld en of uw handtekening eronder staat' — проверьте поля и подпись.",
+      explanationEn: "'controleert u of alle velden zijn ingevuld en of uw handtekening eronder staat' - check the fields and signature.",
     },
   },
   {
@@ -159,6 +172,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Schade aan de auto", "Schade aan de woning", "Alles"],
       correctIndex: 0,
       explanationRu: "'niet aan uw auto' — страховка не покрывает ущерб автомобилю.",
+      explanationEn: "‘niet aan uw auto’ insurance does not cover damage to the vehicle.",
     },
   },
   {
@@ -170,6 +184,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Een enthousiaste houding", "Werkervaring", "Een diploma"],
       correctIndex: 0,
       explanationRu: "'een enthousiaste houding wel' — нужен только энтузиазм, а не опыт.",
+      explanationEn: "'een enthousiaste houding wel' - you only need enthusiasm, not experience.",
     },
   },
   {
@@ -181,6 +196,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Het contract wordt automatisch verlengd", "Het contract stopt automatisch", "U moet opnieuw solliciteren"],
       correctIndex: 0,
       explanationRu: "'wordt automatisch verlengd, tenzij u ... opzegt' — контракт продлевается автоматически, если не отменить письменно.",
+      explanationEn: "'wordt automatisch verlengd, tenzij u ... opzegt' - the contract is renewed automatically unless cancelled in writing.",
     },
   },
   {
@@ -192,6 +208,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Marktplein", "Stationsplein", "Er rijdt geen bus"],
       correctIndex: 1,
       explanationRu: "'rijdt vandaag niet van halte Marktplein, maar van halte Stationsplein' — сегодня отправление с другой остановки.",
+      explanationEn: "'rijdt vandaag niet van stope Marktplein, maar van stope Stationsplein' - departure today from another stop.",
     },
   },
   {
@@ -203,6 +220,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["112", "Het gewone nummer van de gemeente", "De politie"],
       correctIndex: 1,
       explanationRu: "'Voor een kapotte lantaarnpaal ... belt u het gewone nummer van de gemeente' — для мелких проблем обычный номер мэрии.",
+      explanationEn: "'Voor een kapotte lantaarnpaal ... belt u het gewone nummer van de gemeente' is a regular City Hall number for small problems.",
     },
   },
   {
@@ -214,6 +232,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Automatisch per post", "Ze moeten er zelf om vragen", "Via een app"],
       correctIndex: 0,
       explanationRu: "'ontvangen automatisch een uitnodiging per post' — приглашение приходит автоматически по почте.",
+      explanationEn: "'ontvangen automatisch een uitnodiging per post' - the invitation comes automatically by mail.",
     },
   },
   {
@@ -225,6 +244,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Ja, voorlopig wel", "Nee, alleen de app", "Alleen voor nieuwe klanten"],
       correctIndex: 0,
       explanationRu: "'Papieren rekeningen blijven voorlopig ook beschikbaar' — бумажные счета пока остаются доступны.",
+      explanationEn: "'Papieren rekeningen blijven voorlopig ook beschikbaar' - paper accounts are still available.",
     },
   },
   {
@@ -236,6 +256,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Mensen ouder dan 75 jaar", "Iedereen", "Alleen nieuwe bestuurders"],
       correctIndex: 0,
       explanationRu: "'na uw vijfenzeventigste verjaardag heeft u een medische keuring nodig' — только для людей старше 75 лет.",
+      explanationEn: "'na uw vijfenzeventigste verjaardag heeft u een medische keuring nodig' - only for people over 75.",
     },
   },
   {
@@ -247,6 +268,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Online aanmelden, minstens twee werkdagen van tevoren", "Niets", "Contant betalen bij ophalen"],
       correctIndex: 0,
       explanationRu: "'Meld dit minstens twee werkdagen van tevoren online aan' — крупный мусор нужно заранее заказать онлайн.",
+      explanationEn: "'Meld dit minstens twee werkdagen van tevoren online aan' - large garbage must be ordered online in advance.",
     },
   },
   {
@@ -258,6 +280,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Wegens ziekte van de docent", "Te weinig cursisten", "Het gebouw is dicht"],
       correctIndex: 0,
       explanationRu: "'wegens ziekte van de docent' — курс отменён из-за болезни преподавателя.",
+      explanationEn: "'wegens ziekte van de docent' - the course is cancelled due to illness of the teacher.",
     },
   },
   {
@@ -269,6 +292,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Een vriendelijke herinnering", "Direct een aanmaning met kosten", "Een bezoek van de deurwaarder"],
       correctIndex: 0,
       explanationRu: "'ontvangt u eerst een vriendelijke herinnering' — сначала присылают мягкое напоминание.",
+      explanationEn: "'ontvangt u eerst een vriendelijke herinnering' - first send a mild reminder.",
     },
   },
   {
@@ -280,6 +304,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Na de proeftijd", "Nooit", "Na één week"],
       correctIndex: 0,
       explanationRu: "'Na de proeftijd ... stopt deze begeleiding automatisch' — наставничество заканчивается вместе с испытательным сроком.",
+      explanationEn: "'Na de proeftijd ... stop deze begeleiding automatisch' - mentorship ends with probation.",
     },
   },
   {
@@ -291,6 +316,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Het hoogste bedrag wordt afgeschreven", "Er wordt niets afgeschreven", "U krijgt een boete per post"],
       correctIndex: 0,
       explanationRu: "'wordt automatisch het hoogste bedrag ... afgeschreven' — при неотметке спишут максимальную сумму.",
+      explanationEn: "Wordt automatisch het hoogste bedrag ... afgeschreven.",
     },
   },
   {
@@ -302,6 +328,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["De huurder", "De verhuurder", "De gemeente"],
       correctIndex: 0,
       explanationRu: "'is de huurder verantwoordelijk' — за мелкий ремонт отвечает арендатор.",
+      explanationEn: "'is de huurder verantwoordelijk' - the tenant is responsible for minor repairs.",
     },
   },
   {
@@ -313,6 +340,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Bij elke supermarkt met een automaat", "Alleen waar u kocht", "Nergens"],
       correctIndex: 0,
       explanationRu: "'bij elke supermarkt met een inleverautomaat' — залог можно вернуть в любом магазине с автоматом.",
+      explanationEn: "'bij elke supermarkt met een inleverautomaat' - deposit can be returned at any store with a vending machine.",
     },
   },
   {
@@ -324,6 +352,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Minstens tien weken voor de vierde verjaardag", "Op de vierde verjaardag zelf", "Er is geen deadline"],
       correctIndex: 0,
       explanationRu: "'minstens tien weken voor de vierde verjaardag' — запись минимум за десять недель.",
+      explanationEn: "'minstens tien weken voor de vierde verjaardag' is a record at least ten weeks in advance.",
     },
   },
   {
@@ -335,6 +364,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Telefonisch, vóór negen uur", "Per e-mail", "Via een collega"],
       correctIndex: 0,
       explanationRu: "'telefonisch ziek ... niet per e-mail' — больничный только по телефону.",
+      explanationEn: "'telefonisch ziek ... niet per e-mail' is a hospital call only.",
     },
   },
   {
@@ -346,6 +376,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Zes weken", "Zes maanden", "Er is geen termijn"],
       correctIndex: 0,
       explanationRu: "'binnen zes weken na de datum van het besluit' — возражение в течение шести недель.",
+      explanationEn: "'binnen zes weken na de datum van het besluit' - objection for six weeks",
     },
   },
   {
@@ -357,6 +388,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Onverwachte, noodzakelijke kosten", "Vakantiegeld", "Dagelijkse boodschappen"],
       correctIndex: 0,
       explanationRu: "'voor onverwachte kosten, zoals een kapotte wasmachine' — целевая помощь на непредвиденные расходы.",
+      explanationEn: "'voor onverwachte kosten, zoals een kapotte wasmachine' - targeted contingency assistance.",
     },
   },
   {
@@ -368,6 +400,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Bij annulering minstens twee weken van tevoren", "Altijd", "Nooit"],
       correctIndex: 0,
       explanationRu: "'als dit minstens twee weken voor de startdatum wordt doorgegeven' — возврат при отмене минимум за две недели.",
+      explanationEn: "'als dit minstens twee weken voor de startdatum wordt doorgegeven' - refund if cancelled at least two weeks in advance.",
     },
   },
   {
@@ -379,6 +412,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["De huisartsenpost", "De spoedeisende hulp", "De politie"],
       correctIndex: 0,
       explanationRu: "'belt u de huisartsenpost, niet de spoedeisende hulp' — для несрочной помощи звонить в дежурную практику.",
+      explanationEn: "'belt u de huisartsenpost, niet de spoedeisende hulp' - for non-urgent assistance to call on duty practice.",
     },
   },
   {
@@ -390,6 +424,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Om vijf uur", "Om half vijf", "Om zes uur"],
       correctIndex: 0,
       explanationRu: "'een half uur later ... om vijf uur in plaats van half vijf' — урок плавания начинается позже.",
+      explanationEn: "'een half uur later ... om vijf uur in plaats van half vijf' - swimming lesson begins later.",
     },
   },
   {
@@ -401,6 +436,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Een foto maken en binnen 48 uur melden", "Het pakket weggooien", "Niets doen"],
       correctIndex: 0,
       explanationRu: "'maakt u een foto en meldt u dit binnen 48 uur' — сфотографировать и сообщить в течение 48 часов.",
+      explanationEn: "'maakt u een foto en meldt u dit binnen 48 uur' - photograph and report within 48 hours",
     },
   },
   {
@@ -412,6 +448,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Het wordt om de week opgehaald", "Het wordt vaker opgehaald", "Het stopt helemaal"],
       correctIndex: 0,
       explanationRu: "'gft wordt voortaan om de week opgehaald in plaats van elke week' — органические отходы будут забирать реже.",
+      explanationEn: "'gft wordt voortaan om de week opgehaald in plaats van elke week' - organic waste will be collected less frequently.",
     },
   },
   {
@@ -423,6 +460,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["DUO", "De gemeente", "De werkgever"],
       correctIndex: 0,
       explanationRu: "'een lening aanvragen bij DUO' — заём на курс интеграции оформляется через DUO.",
+      explanationEn: "‘een lening aanvragen bij DUO’ – a loan for an integration course is issued through the DUO.",
     },
   },
   {
@@ -434,6 +472,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Vanaf maandag", "Nooit meer", "Over een maand"],
       correctIndex: 0,
       explanationRu: "'Vanaf maandag zijn de normale openingstijden weer van kracht' — с понедельника снова обычный график.",
+      explanationEn: "'Vanaf maandag zijn de normale openingstijden weer van kracht' - from Monday again a regular schedule.",
     },
   },
   {
@@ -445,6 +484,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Deze direct blokkeren via de app", "Niets, ze wordt automatisch geblokkeerd", "Een nieuwe kopen zonder de oude te blokkeren"],
       correctIndex: 0,
       explanationRu: "'blokkeert u deze direct via de app' — потерянную карту нужно сразу заблокировать через приложение.",
+      explanationEn: "‘blokkeert u deze direct via de app’ – a lost card must be immediately blocked via the app.",
     },
   },
   {
@@ -456,6 +496,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Buiten maart", "Alleen in maart", "Er is geen verschil"],
       correctIndex: 0,
       explanationRu: "'liefst buiten de drukke periode in maart' — лучше звонить не в загруженный март.",
+      explanationEn: "'liefst buiten de drukke periode in maart' - better not to call in busy March",
     },
   },
   {
@@ -467,6 +508,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Spoor 5", "Spoor 3", "Spoor 7"],
       correctIndex: 0,
       explanationRu: "'vertrekt vandaag van spoor 5 in plaats van spoor 3' — сегодня поезд отправляется с 5-й платформы вместо 3-й.",
+      explanationEn: "'vertrekt vandaag van spoor 5 in plaats van spoor 3' - today the train departs from platform 5 instead of platform 3.",
     },
   },
   {
@@ -478,6 +520,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Kentekenbewijs en adresbewijs", "Alleen een rijbewijs", "Een werkgeversverklaring"],
       correctIndex: 0,
       explanationRu: "'kentekenbewijs en een bewijs van uw adres' — нужны техпаспорт машины и подтверждение адреса.",
+      explanationEn: "'kentekenbewijs en een bewijs van uw adres' - you need a car ID and proof of address.",
     },
   },
   {
@@ -489,6 +532,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Om vier uur", "Om acht uur", "Om zes uur"],
       correctIndex: 0,
       explanationRu: "'eerder gesloten, om vier uur' — сегодня закрывается раньше, в четыре.",
+      explanationEn: "'eerder gesloten, om vier uur' - closes earlier today, at four.",
     },
   },
   {
@@ -500,6 +544,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Volgende maandag om tien uur", "Deze vrijdag", "Volgende week vrijdag"],
       correctIndex: 0,
       explanationRu: "'verzet naar volgende maandag om tien uur' — собеседование перенесено на следующий понедельник.",
+      explanationEn: "'verzet naar volgende maandag om tien uur' - interview postponed to next Monday",
     },
   },
   {
@@ -511,6 +556,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Op zondag", "Op maandag", "Nooit"],
       correctIndex: 0,
       explanationRu: "'behalve op zondag, dan is de apotheek gesloten' — аптека закрыта по воскресеньям.",
+      explanationEn: "'behalve op zondag, dan is de apotheek gesloten' - the pharmacy is closed on Sundays.",
     },
   },
   {
@@ -522,6 +568,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Uiterlijk één week voor de startdatum", "Op de eerste cursusdag zelf", "Er is geen deadline"],
       correctIndex: 0,
       explanationRu: "'uiterlijk één week voor de startdatum' — записаться нужно не позднее чем за неделю до начала.",
+      explanationEn: "'uiterlijk éen week voor de startdatum' - you must sign up at least one week before the start.",
     },
   },
   {
@@ -533,6 +580,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Zaterdagochtend", "Zondagavond", "Elke dag"],
       correctIndex: 0,
       explanationRu: "'gratis zwemles voor kinderen op zaterdagochtend' — бесплатный урок плавания для детей по субботам утром.",
+      explanationEn: "Gratis zwemles voor kinderen op zaterdagochtend is a free swimming lesson for children on Saturday mornings.",
     },
   },
   {
@@ -544,6 +592,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Nee, u moet persoonlijk langskomen", "Ja, altijd online", "Alleen via de post"],
       correctIndex: 0,
       explanationRu: "'dit kan niet online' — продлить паспорт нельзя онлайн, нужно приходить лично.",
+      explanationEn: "'dit kan niet online' - you can not renew your passport online, you need to come in person.",
     },
   },
   {
@@ -555,6 +604,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["De storingsdienst van de woningcorporatie", "Altijd de brandweer", "De politie"],
       correctIndex: 0,
       explanationRu: "'belt u eerst de storingsdienst van de woningcorporatie' — при протечке сначала звонят в аварийную службу жилищной корпорации, не в пожарную.",
+      explanationEn: "'belt u eerst de storingsdienst van de woningcorporatie' - when a leak first calls the emergency service of the housing corporation, not the fire department.",
     },
   },
   {
@@ -566,6 +616,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["In het buurthuis", "Bij de gemeente zelf", "Online"],
       correctIndex: 0,
       explanationRu: "'elke dinsdag en donderdag in het buurthuis' — бесплатные языковые уроки проходят в общественном центре.",
+      explanationEn: "'elke dinsdag en donderdag in het buurthuis' - free language lessons are held in the community centre.",
     },
   },
   {
@@ -577,6 +628,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Onderhoud aan de filterinstallatie", "Er is een feest", "Het personeel is ziek"],
       correctIndex: 0,
       explanationRu: "'onderhoud aan de filterinstallatie' — техобслуживание фильтрационной установки.",
+      explanationEn: "'onderhoud aan de filterinstallatie' - maintenance of the filtration unit.",
     },
   },
   {
@@ -588,6 +640,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["De toegang wordt stopgezet", "Er verandert niets", "U krijgt een boete"],
       correctIndex: 0,
       explanationRu: "'wordt de toegang automatisch stopgezet' — доступ автоматически прекращается.",
+      explanationEn: "‘wordt de toegang automatisch stopgezet’ is automatically terminated.",
     },
   },
   {
@@ -599,6 +652,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Vanwege een marathon", "Vanwege sneeuw", "Vanwege een ongeluk"],
       correctIndex: 0,
       explanationRu: "'vanwege een marathon' — из-за марафона.",
+      explanationEn: "Vanwege een marathon - because of the marathon.",
     },
   },
   {
@@ -610,6 +664,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Tot en met vrijdag", "Tot het einde van de maand", "Er is geen deadline"],
       correctIndex: 0,
       explanationRu: "'tot en met vrijdag' — запись открыта до пятницы включительно.",
+      explanationEn: "'Tot en met vrijdag' - recording open until Friday inclusive.",
     },
   },
   {
@@ -621,6 +676,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Probeer het over een uur nogmaals", "Kom langs op kantoor", "Bel de politie"],
       correctIndex: 0,
       explanationRu: "'probeert u het over een uur nogmaals' — попробуйте снова через час.",
+      explanationEn: "'probeert u het over een uur nogmaals' - try again in an hour.",
     },
   },
   {
@@ -632,6 +688,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Donderdag", "Dinsdag", "Zaterdag"],
       correctIndex: 0,
       explanationRu: "'verhuist... naar de donderdag' — приёмные часы переносятся на четверг.",
+      explanationEn: "'verhuist' Naar de donderdag' - Reception hours are moved to Thursday.",
     },
   },
   {
@@ -643,6 +700,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Een kopie van uw kentekenbewijs en huurcontract", "Alleen uw paspoort", "Een verklaring van uw werkgever"],
       correctIndex: 0,
       explanationRu: "Для парковочного разрешения нужны копия техпаспорта автомобиля и договор аренды жилья.",
+      explanationEn: "For parking permits, you need a copy of the car's technical passport and a rental agreement.",
     },
   },
   {
@@ -654,6 +712,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Om vier uur", "Om zes uur", "Om acht uur"],
       correctIndex: 0,
       explanationRu: "'om vier uur in plaats van zes uur' — сегодня аптека закрывается в четыре, а не в шесть.",
+      explanationEn: "'om vier uur in plaats van zes uur' - today the pharmacy closes at four instead of six.",
     },
   },
   {
@@ -665,6 +724,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Een intakegesprek voeren bij de gemeente", "Direct geld overmaken", "Een brief sturen naar de rechtbank"],
       correctIndex: 0,
       explanationRu: "Сначала нужно провести вводную беседу с муниципалитетом — по телефону или по записи.",
+      explanationEn: "First, you need to conduct an introductory conversation with the municipality – by phone or by appointment.",
     },
   },
   {
@@ -676,6 +736,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["De ingang aan de achterzijde", "De hoofdingang blijft open", "Er is geen andere ingang"],
       correctIndex: 0,
       explanationRu: "'gebruikt u tijdelijk de ingang aan de achterzijde' — временно нужно пользоваться входом с тыльной стороны здания.",
+      explanationEn: "'gebruikt u tijdelijk de ingang aan de achterzijde' - temporarily use the entrance from the back of the building.",
     },
   },
 ];

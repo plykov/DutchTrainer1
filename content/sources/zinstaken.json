@@ -1,6 +1,14 @@
 {
   "schemaVersion": 1,
   "bank": "zinstaken",
+  "translations": {
+    "en": {
+      "method": "machine-translation",
+      "engine": "Argos Translate ru-en 1.9",
+      "generatedAt": "2026-08-23",
+      "reviewStatus": "unreviewed"
+    }
+  },
   "sources": [
     {
       "id": "project-authored-zinstaken-v1",
@@ -34,7 +42,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "After 'want' comes the usual word order (not like 'omdat'), just the reason."
     },
     {
       "id": "zin-2",
@@ -50,7 +59,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Keywords to cancel are 'afzeggen', polite 'helaas'."
     },
     {
       "id": "zin-3",
@@ -66,7 +76,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "After the conditional 'als' sentence at the beginning - inversion: the verb before the subject ('blijf ik')."
     },
     {
       "id": "zin-4",
@@ -82,7 +93,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "A polite request for help begins with the modal verb 'kunt' at the beginning of the question."
     },
     {
       "id": "zin-5",
@@ -98,7 +110,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Nadat' introduces adjunctive precedence; in the main sentence, the ordinary inversion of V2."
     },
     {
       "id": "zin-6",
@@ -114,7 +127,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "A simple, natural formulation of the cause of absence."
     },
     {
       "id": "zin-7",
@@ -130,7 +144,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Hoewel' (although) requires an appendage with a verb at the end; in the main sentence, inversion again."
     },
     {
       "id": "zin-8",
@@ -146,7 +161,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Indirect question: the order of words as in a statement ('de winkel opengaat'), not as in a direct question."
     },
     {
       "id": "zin-9",
@@ -162,7 +178,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "After the appendage with \"voordat\" standing at the beginning, in the main sentence - inversion (verb before the subject)."
     },
     {
       "id": "zin-10",
@@ -178,7 +195,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Polite request via 'zou... The kunnen is a more polite design than the simple kan ik."
     },
     {
       "id": "zin-11",
@@ -194,7 +212,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "After 'omdat' at the beginning - the appendage with the verb at the end, then in the main sentence again inversion ('ging ik')."
     },
     {
       "id": "zin-12",
@@ -210,7 +229,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Exclamation constructs with 'wat' + adjective are a common way to express a compliment."
     },
     {
       "id": "zin-13",
@@ -226,7 +246,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Zodra' (as soon as) introduces the appendage time at the beginning; then in the main sentence - inversion."
     },
     {
       "id": "zin-14",
@@ -242,7 +263,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Simple negation with 'niet' at the end of a sentence in the absence of a supplement after the verb."
     },
     {
       "id": "zin-15",
@@ -258,7 +280,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Terwijl' introduces simultaneity of actions; the order of words in the main sentence is again inversion, since the appendage is first."
     },
     {
       "id": "zin-16",
@@ -274,7 +297,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The structure of the complaint: description of the problem + a clear requirement ('ik wil graag...')."
     },
     {
       "id": "zin-17",
@@ -290,7 +314,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "After the time at the beginning, the inversion in the main sentence (the verb 'controleert' before 'u')."
     },
     {
       "id": "zin-18",
@@ -306,7 +331,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The standard greeting formula is “Gefeliciteerd met” + noun."
     },
     {
       "id": "zin-19",
@@ -322,7 +348,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Zodra' (as soon as) introduces adjunct time; in the main sentence, inversion ('bel ik')."
     },
     {
       "id": "zin-20",
@@ -338,7 +365,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "The question without the question word begins immediately with the conjugated verb ('Is')."
     },
     {
       "id": "zin-21",
@@ -354,7 +382,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "After the proposed group at the beginning (\"Ondanks het slechte weer\"), an inversion in the main sentence follows."
     },
     {
       "id": "zin-22",
@@ -370,7 +399,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Bedankt voor' + noun is the standard construction of gratitude."
     },
     {
       "id": "zin-23",
@@ -386,7 +416,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Sinds' introduces an appendage with continued action from a certain point; the inversion in the main sentence is maintained."
     },
     {
       "id": "zin-24",
@@ -402,7 +433,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Ben vergeten + te-infinitief is a forgetting structure."
     },
     {
       "id": "zin-25",
@@ -418,7 +450,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "\"Voor ik het vergeet\" (until I forget) is a colloquial introductory appendage, followed by the usual order of words in the main sentence."
     },
     {
       "id": "zin-26",
@@ -434,7 +467,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Hierbij bevestig ik is a formal confirmation phrase often used in official correspondence."
     },
     {
       "id": "zin-27",
@@ -450,7 +484,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "'Zolang' (for now, as long as) introduces an appendage duration; the inversion is retained in the main sentence."
     },
     {
       "id": "zin-28",
@@ -466,7 +501,8 @@
         "reviewer": null,
         "reviewedAt": null,
         "notes": null
-      }
+      },
+      "explanationEn": "Polite query with the modal verb 'kunt u' at the beginning of the question."
     }
   ]
 }

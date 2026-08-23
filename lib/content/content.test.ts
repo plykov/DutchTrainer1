@@ -28,6 +28,13 @@ function assertMcItems(items: { id: string; options: string[]; correctIndex: num
   }
 }
 
+const CYRILLIC = /[А-Яа-яЁё]/;
+
+function assertEnglishInstruction(label: string, russian: string, english: string | undefined) {
+  if (russian.trim()) expect(english, `${label} needs English instructional copy`).toBeTruthy();
+  expect(english ?? "", `${label} English copy must not contain Cyrillic`).not.toMatch(CYRILLIC);
+}
+
 describe("content-bank invariants", () => {
   it("keeps IDs unique in each content bank", () => {
     const banks: [string, readonly { id: string }[]][] = [
@@ -114,5 +121,38 @@ describe("content-bank invariants", () => {
       if (!result.passed) failures.push({ id: item.id, missing: result.missing });
     }
     expect(failures).toEqual([]);
+  });
+
+  it("keeps English learner instructions complete and free of Cyrillic", () => {
+    for (const item of PRACTICE_ITEMS) {
+      if ("explanationRu" in item) {
+        assertEnglishInstruction(`practice/${item.id}`, item.explanationRu, item.explanationEn);
+      }
+    }
+    for (const item of INTERACTION_ITEMS) {
+      assertEnglishInstruction(`interaction/${item.id}/situation`, item.situationRu, item.situationEn);
+      assertEnglishInstruction(`interaction/${item.id}`, item.explanationRu, item.explanationEn);
+    }
+    for (const item of LISTENING_ITEMS) {
+      assertEnglishInstruction(`listening/${item.id}`, item.question.explanationRu, item.question.explanationEn);
+    }
+    for (const item of LISTENING_EXAM_ITEMS) {
+      assertEnglishInstruction(`exam-listening/${item.id}`, item.question.explanationRu, item.question.explanationEn);
+    }
+    for (const item of [...KNM_ITEMS, ...LEZEN_ITEMS]) {
+      assertEnglishInstruction(`mc/${item.id}`, item.explanationRu, item.explanationEn);
+    }
+    for (const item of SPEAKING_PROMPTS) {
+      assertEnglishInstruction(`speaking/${item.id}`, item.focusHintRu, item.focusHintEn);
+    }
+    for (const item of ZINSTAKEN_ITEMS) {
+      assertEnglishInstruction(`zinstaken/${item.id}`, item.explanationRu, item.explanationEn);
+    }
+    for (const item of DEELSCHRIJFTAKEN_ITEMS) {
+      assertEnglishInstruction(`deelschrijftaken/${item.id}`, item.instructionRu, item.instructionEn);
+    }
+    for (const entry of ERROR_TAXONOMY) {
+      assertEnglishInstruction(`taxonomy/${entry.code}`, entry.l1Note, entry.l1NoteEn);
+    }
   });
 });

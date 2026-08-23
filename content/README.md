@@ -32,3 +32,6 @@ is the durable record.
 
 This workflow records review; it does not claim that unreviewed content is validated. A bank is only
 qualified for production when its relevant items are approved by appropriately qualified reviewers.
+
+English instruction translations have a separate review status documented in `TRANSLATIONS.md`.
+They are currently machine-translated and unreviewed; Russian source copy remains the fallback.

@@ -7,6 +7,8 @@ import { WRITING_EXAM_ITEMS } from "@/lib/content/writingExamItems";
 import { shuffleArray } from "@/lib/shuffle";
 import { useT } from "@/lib/i18n";
 import WritingTask from "@/components/WritingTask";
+import { useAppStore } from "@/lib/store";
+import { instructionFor } from "@/lib/contentLanguage";
 
 // §7 — Schrijven's real structure: 8 zinstaken + 2 deelschrijftaken + 2
 // korte schrijftaken, all offered on one screen with the candidate
@@ -21,6 +23,7 @@ type Stage = "zinstaken" | "deelschrijftaken" | "kort" | "result";
 
 export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => void }) {
   const t = useT();
+  const explanationLanguage = useAppStore((s) => s.profile?.explanationLanguage);
   const zinItems = useMemo(() => shuffleArray(ZINSTAKEN_ITEMS).slice(0, 8), []);
   const deelItems = useMemo(() => shuffleArray(DEELSCHRIJFTAKEN_ITEMS).slice(0, 2), []);
   const kortItems = useMemo(() => shuffleArray(WRITING_EXAM_ITEMS).slice(0, 2), []);
@@ -104,7 +107,13 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
               <p>
                 <strong>{t("exam_sample_answer")}</strong> {zinItems[zinIndex].sampleAnswer}
               </p>
-              <p className="text-zinc-500">{zinItems[zinIndex].explanationRu}</p>
+              <p className="text-zinc-500">
+                {instructionFor(
+                  explanationLanguage,
+                  zinItems[zinIndex].explanationRu,
+                  zinItems[zinIndex].explanationEn,
+                )}
+              </p>
             </div>
           )}
           <div className="flex justify-end gap-2">
@@ -134,7 +143,13 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
 
       {stage === "deelschrijftaken" && (
         <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
-          <p className="text-sm text-zinc-500">{deelItems[deelIndex].instructionRu}</p>
+          <p className="text-sm text-zinc-500">
+            {instructionFor(
+              explanationLanguage,
+              deelItems[deelIndex].instructionRu,
+              deelItems[deelIndex].instructionEn,
+            )}
+          </p>
           <p className="text-lg">{deelItems[deelIndex].taskPrompt}</p>
           <div className="space-y-3">
             {deelItems[deelIndex].fields.map((f) => (
