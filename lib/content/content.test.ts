@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { computeCoverage } from "../coverage";
 import { ERROR_TAXONOMY } from "../errorTaxonomy";
+import { checkAdequacy } from "../writingCheck";
 import { DEELSCHRIJFTAKEN_ITEMS } from "./deelschrijftaken";
 import { INTERACTION_ITEMS } from "./interactionItems";
 import { KNM_ITEMS } from "./knmItems";
@@ -100,5 +101,18 @@ describe("content-bank invariants", () => {
       const coverage = computeCoverage(text.body, allKnown);
       expect(coverage.unknownTokens, `reading/${text.id} contains tokens outside the coverage vocabulary`).toEqual([]);
     }
+  });
+
+  it("keeps every writing model answer compatible with its adequacy gate", () => {
+    const failures: { id: string; missing: string[] }[] = [];
+    for (const item of PRACTICE_ITEMS) {
+      if (item.taskType !== "short_write") continue;
+      const result = checkAdequacy(item.modelAnswer, item.requirements, item.responseMinLen, {
+        taskPrompt: item.taskPrompt,
+        modelAnswer: item.modelAnswer,
+      });
+      if (!result.passed) failures.push({ id: item.id, missing: result.missing });
+    }
+    expect(failures).toEqual([]);
   });
 });

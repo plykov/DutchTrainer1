@@ -40,7 +40,10 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
   }, [expired]);
 
   async function submit() {
-    const adequacy = checkAdequacy(text, item.requirements, item.responseMinLen);
+    const adequacy = checkAdequacy(text, item.requirements, item.responseMinLen, {
+      taskPrompt: item.taskPrompt,
+      modelAnswer: item.modelAnswer,
+    });
     if (!adequacy.passed) {
       // §6 adequacy gate: a 0-on-adequacy response cannot score on grammar.
       // Grammar feedback is suppressed entirely until this passes.
