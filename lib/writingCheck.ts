@@ -237,9 +237,15 @@ export function detectErrors(text: string): DetectedError[] {
 // one-error-at-a-time review flow in WritingTask doesn't get overwhelming.
 const MAX_ERRORS_SHOWN = 6;
 
-export async function detectErrorsCombined(text: string): Promise<DetectedError[]> {
+export async function detectErrorsCombined(
+  text: string,
+  useLanguageTool = false
+): Promise<DetectedError[]> {
   const local = detectErrors(text);
-  const ltMatches = await fetchLanguageToolMatches(text);
+  // Learner text is personal data. The external check is deliberately
+  // opt-in at the call site; local feedback remains fully functional when
+  // consent is not given or the learner is offline.
+  const ltMatches = useLanguageTool ? await fetchLanguageToolMatches(text) : [];
   const nlp = ltMatchesToDetectedErrors(text, ltMatches);
 
   const combined: DetectedError[] = [...local];

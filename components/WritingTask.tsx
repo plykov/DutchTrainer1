@@ -15,6 +15,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
   const [errors, setErrors] = useState<DetectedError[]>([]);
   const [activeErrorIdx, setActiveErrorIdx] = useState(0);
   const [repairText, setRepairText] = useState("");
+  const [useLanguageTool, setUseLanguageTool] = useState(false);
   const [secondsLeft, setSecondsLeft] = useState(item.timeLimitS ?? 600);
   const [expired, setExpired] = useState(false);
 
@@ -48,7 +49,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
       return;
     }
     setStage("checking");
-    const detected = await detectErrorsCombined(text);
+    const detected = await detectErrorsCombined(text, useLanguageTool);
     setErrors(detected);
     setActiveErrorIdx(0);
     setStage(detected.length > 0 ? "hint" : "detect");
@@ -87,6 +88,21 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
         placeholder="Schrijf hier je antwoord…"
       />
 
+      {!examMode && stage === "writing" && (
+        <label className="flex gap-2 text-xs text-zinc-500">
+          <input
+            type="checkbox"
+            checked={useLanguageTool}
+            onChange={(e) => setUseLanguageTool(e.target.checked)}
+            className="mt-0.5"
+          />
+          <span>
+            Добавить внешнюю проверку орфографии и грамматики через LanguageTool. При включении текст ответа
+            отправляется в публичный сервис LanguageTool; без этой опции проверка остаётся только в браузере.
+          </span>
+        </label>
+      )}
+
       {stage === "writing" && (
         <button
           onClick={submit}
@@ -114,7 +130,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
 
       {stage === "checking" && (
         <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-4 text-sm text-zinc-500">
-          Проверяем текст (локальные правила + LanguageTool)…
+          Проверяем текст{useLanguageTool ? " (локальные правила + LanguageTool)" : " локальными правилами"}…
         </div>
       )}
 

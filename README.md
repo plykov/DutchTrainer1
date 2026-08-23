@@ -6,6 +6,10 @@ Exam-prep web app for Russian-speaking learners preparing for **DUO Inburgering 
 
 Live at **https://plykov.github.io/DutchTrainer1/**.
 
+For the current, prioritised development backlog and production-launch criteria, see
+[ROADMAP.md](./ROADMAP.md). The long history below records delivered work; it is not the source of
+truth for remaining scope.
+
 ## Phase 1 — exam-ready core
 
 - Learner profile onboarding (`/onboarding`) — legal track, target level, exam date, explanation
@@ -419,6 +423,13 @@ real content pipeline before shipping to learners, and clear the `[VERIFY]` item
 
 State currently persists to `localStorage` (`lib/store.ts`, Zustand) — swap the storage adapter for
 a real backend before multi-device sync or teacher dashboards are needed.
+
+## Data and external services
+
+Progress and recordings remain in the learner's browser. The optional LanguageTool writing check is
+**off by default**. When a learner explicitly enables it on `/write`, their submitted text is sent to
+LanguageTool's public checking service; local writing checks continue to work without it. A formal
+privacy policy and terms are still required before a production launch; see the roadmap.
 
 ## Getting started
 
