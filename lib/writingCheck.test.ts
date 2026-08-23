@@ -19,6 +19,37 @@ describe("checkAdequacy", () => {
 
     expect(result).toEqual({ passed: true, missing: [] });
   });
+
+  it("accepts an authored paraphrase through reference-vocabulary overlap", () => {
+    const modelAnswer =
+      "Beste klantenservice, ik kan niet meer inloggen omdat ik mijn wachtwoord ben vergeten. Hoe kan ik dit resetten? Met vriendelijke groet.";
+    const result = checkAdequacy(
+      modelAnswer,
+      ["vraagt om uitleg", "beschrijft het probleem", "beleefde aanhef en afsluiting"],
+      25,
+      {
+        taskPrompt: "Schrijf de klantenservice over het resetten van je wachtwoord.",
+        modelAnswer,
+      }
+    );
+
+    expect(result).toEqual({ passed: true, missing: [] });
+  });
+
+  it("still rejects sufficiently long but off-topic filler", () => {
+    const result = checkAdequacy(
+      "Vandaag is het mooi weer en ik wandel graag met vrienden door het park omdat de zon schijnt.",
+      ["vraagt om uitleg", "beschrijft het probleem"],
+      12,
+      {
+        taskPrompt: "Schrijf de klantenservice over het resetten van je wachtwoord.",
+        modelAnswer: "Ik kan niet inloggen en wil mijn wachtwoord resetten.",
+      }
+    );
+
+    expect(result.passed).toBe(false);
+    expect(result.missing).toEqual(["vraagt om uitleg", "beschrijft het probleem"]);
+  });
 });
 
 describe("error detection", () => {

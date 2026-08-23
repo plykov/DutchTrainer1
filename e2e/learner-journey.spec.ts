@@ -61,6 +61,7 @@ test("a learner can onboard, navigate, and choose the external writing check", a
   expect(languageToolRequests).toBe(0);
 
   await page.getByRole("link", { name: "Overzicht" }).click();
+  await expect(page).toHaveURL(/\/dashboard/);
   await page.evaluate(() => {
     Math.random = () => 0;
   });

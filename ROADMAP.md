@@ -13,8 +13,8 @@ learner-facing production launch.
 - [x] Add automated tests for deterministic scheduling and writing-feedback rules.
 - [x] Add automated content validation: unique IDs, answer-schema checks, coverage-token checks, and
   grammar-target/error-code consistency.
-- [ ] Validate that every authored writing model answer passes its own adequacy requirements; the current
-  keyword heuristic can reject semantically valid model answers that use different wording.
+- [x] Validate that every authored writing model answer passes its own adequacy gate, with task/reference
+  vocabulary supporting valid paraphrases instead of requiring exact wording from requirement labels.
 - [x] Add browser end-to-end smoke checks to CI. Expand these with dedicated keyboard and screen-reader
   checks as the UI grows.
 - [ ] Add a privacy policy, terms, and a release/versioning process.

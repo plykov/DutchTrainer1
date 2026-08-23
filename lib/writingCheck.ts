@@ -87,6 +87,11 @@ export interface AdequacyResult {
   missing: string[]; // requirement labels not satisfied
 }
 
+export interface AdequacyContext {
+  taskPrompt: string;
+  modelAnswer: string;
+}
+
 // Hand-tuned overrides for requirement phrasings where the generic
 // derivation below (stopword-stripping) would leave the wrong keyword —
 // e.g. "de afspraak te verzetten" strips down to "afspraak", which is too
@@ -152,17 +157,51 @@ function deriveKeywords(req: string): string[] | null {
   return words.length > 0 ? words : null;
 }
 
-export function checkAdequacy(text: string, requirements: string[], minLen: number | null): AdequacyResult {
+const TOPIC_STOPWORDS = new Set([
+  ...REQUIREMENT_STOPWORDS,
+  "schrijf", "bericht", "email", "mail", "kort", "graag", "beste", "vriendelijke", "groet",
+  "meneer", "mevrouw", "kunt", "willen", "moeten", "maken", "geven", "hebben", "worden",
+]);
+
+function contentStems(text: string): Set<string> {
+  return new Set(
+    text
+      .toLowerCase()
+      .match(/\p{L}+/gu)
+      ?.filter((word) => word.length >= 4 && !TOPIC_STOPWORDS.has(word))
+      .map((word) => word.slice(0, 6)) ?? []
+  );
+}
+
+function hasReferenceOverlap(text: string, context: AdequacyContext): boolean {
+  const response = contentStems(text);
+  const reference = contentStems(`${context.taskPrompt} ${context.modelAnswer}`);
+  let matches = 0;
+  for (const stem of response) {
+    if (reference.has(stem)) matches++;
+  }
+  return matches >= Math.min(2, reference.size);
+}
+
+export function checkAdequacy(
+  text: string,
+  requirements: string[],
+  minLen: number | null,
+  context?: AdequacyContext
+): AdequacyResult {
   const missing: string[] = [];
-  if (minLen && text.trim().split(/\s+/).filter(Boolean).length < minLen) {
-    missing.push(`ответ короче ${minLen} слов`);
+  const modelWordCount = context?.modelAnswer.trim().split(/\s+/).filter(Boolean).length;
+  const effectiveMinLen = minLen && modelWordCount ? Math.min(minLen, modelWordCount) : minLen;
+  if (effectiveMinLen && text.trim().split(/\s+/).filter(Boolean).length < effectiveMinLen) {
+    missing.push(`ответ короче ${effectiveMinLen} слов`);
   }
   // Heuristic keyword coverage per requirement — Phase 2 replaces this with
   // a proper NLP task-completion classifier.
   const lower = text.toLowerCase();
+  const referenceOverlap = context ? hasReferenceOverlap(text, context) : false;
   for (const req of requirements) {
     const keywords = deriveKeywords(req);
-    if (keywords && !keywords.some((k) => lower.includes(k))) missing.push(req);
+    if (keywords && !keywords.some((k) => lower.includes(k)) && !referenceOverlap) missing.push(req);
   }
   return { passed: missing.length === 0, missing };
 }
