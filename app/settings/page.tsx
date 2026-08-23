@@ -43,6 +43,10 @@ export default function SettingsPage() {
       <section>
         <h2 className="text-lg font-medium mb-3">{t("settings_data_title")}</h2>
         <p className="text-sm text-zinc-500 mb-3">{t("settings_data_note")}</p>
+        <p className="text-sm text-zinc-500 mb-3">
+          При проверке письма внешняя проверка LanguageTool выключена по умолчанию. Если вы включите её прямо
+          на странице письма, текст ответа будет отправлен в публичный сервис LanguageTool для проверки.
+        </p>
         <DeleteProgressButton />
       </section>
     </div>
