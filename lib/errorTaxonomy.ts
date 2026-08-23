@@ -9,7 +9,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     example: { wrong: "Morgen ik ga naar school.", correct: "Morgen ga ik naar school." },
     l1Note:
       "Русский порядок слов определяется информационной структурой, а не грамматическим правилом V2 — в нидерландском спрягаемый глагол всегда занимает вторую позицию.",
-    l1NoteEn: "The Russian word order is determined by the information structure, not the grammatical rule V2 - in the Dutch conjugated verb always takes the second position.",
+    l1NoteEn: "Russian word order is strongly influenced by information structure. Dutch main clauses instead follow the V2 rule: the conjugated verb takes the second position.",
     siblingGroup: SIBLING_GROUPS.WORD_ORDER,
   },
   {
@@ -18,7 +18,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Subordinate clause verb-final",
     example: { wrong: "...omdat ik ben ziek.", correct: "...omdat ik ziek ben." },
     l1Note: "Прямого аналога в русском нет — придаточное с omdat требует глагол в конце.",
-    l1NoteEn: "There is no direct analogue in Russian - the appendage with omdat requires a verb at the end.",
+    l1NoteEn: "Russian has no direct equivalent of this word-order rule: a Dutch subordinate clause with 'omdat' puts the conjugated verb at the end.",
     siblingGroup: SIBLING_GROUPS.WORD_ORDER,
   },
   {
@@ -61,7 +61,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     example: { wrong: "de huis", correct: "het huis" },
     l1Note:
       "В русском артиклей нет вообще — двойная нагрузка: и сама категория артикля, и присвоение рода конкретному слову.",
-    l1NoteEn: "There are no articles in Russian at all - a double load: the category of the article itself, and the assignment of the kind to a specific word.",
+    l1NoteEn: "Russian has no articles, so learners must acquire both the article system and whether each noun takes 'de' or 'het'.",
   },
   {
     code: "ERR_ADJ_INFL",
@@ -69,7 +69,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Adjective inflection",
     example: { wrong: "een grote huis", correct: "een groot huis" },
     l1Note: "Привязано к артиклю — учите как единый блок вместе с de/het.",
-    l1NoteEn: "Linked to the article – learn as a single block with de/het.",
+    l1NoteEn: "Learn the adjective ending together with the noun's 'de' or 'het' article.",
   },
   {
     code: "ERR_DIM_ART",
@@ -77,7 +77,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Diminutive article",
     example: { wrong: "de huisje", correct: "het huisje" },
     l1Note: "Все уменьшительные формы (-je) берут het — это одно из немногих надёжных правил.",
-    l1NoteEn: "All diminutive forms (-je) take het - this is one of the few reliable rules.",
+    l1NoteEn: "All diminutives ending in '-je' take 'het'; this is one of the few dependable article rules.",
   },
   {
     code: "ERR_PLUR",
@@ -103,7 +103,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     example: { wrong: "Ik las het boek (для завершённого действия)", correct: "Ik heb het boek gelezen." },
     l1Note:
       "Важная ловушка: в русском вид (совершенный/несовершенный) выражается морфологически и не соответствует напрямую нидерландскому imperfectum/perfectum. Это НЕ русский вид — выбирайте время по функции (завершённое событие vs фон/процесс), а не по переводу глагола.",
-    l1NoteEn: "Important trap: in Russian, the form (perfect/imperfect) is expressed morphologically and does not directly correspond to the Dutch imperfectum/perfectum. This is NOT a Russian form – choose the time by function (completed event vs background/process), not by verb translation.",
+    l1NoteEn: "Important: Russian verbal aspect does not map directly to Dutch imperfectum/perfectum. Choose the Dutch tense by function—completed event versus background or process—not by translating the Russian verb form.",
     siblingGroup: SIBLING_GROUPS.TENSE,
   },
   {
@@ -112,7 +112,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "er — existential",
     example: { wrong: "In de tuin is een boom.", correct: "Er staat een boom in de tuin." },
     l1Note: "Прямого эквивалента в русском нет ни для одной из функций er.",
-    l1NoteEn: "There is no direct equivalent for any of the functions er.",
+    l1NoteEn: "Russian has no single direct equivalent covering these uses of Dutch 'er'.",
     siblingGroup: SIBLING_GROUPS.ER_FUNCTIONS,
   },
   {
@@ -121,7 +121,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "er — quantitative",
     example: { wrong: "Ik heb twee.", correct: "Ik heb er twee." },
     l1Note: "Прямого эквивалента в русском нет ни для одной из функций er.",
-    l1NoteEn: "There is no direct equivalent for any of the functions er.",
+    l1NoteEn: "Russian has no single direct equivalent covering these uses of Dutch 'er'.",
     siblingGroup: SIBLING_GROUPS.ER_FUNCTIONS,
   },
   {
@@ -130,7 +130,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "er — prepositional (er + prep)",
     example: { wrong: "Ik denk aan het.", correct: "Ik denk eraan." },
     l1Note: "Прямого эквивалента в русском нет ни для одной из функций er.",
-    l1NoteEn: "There is no direct equivalent for any of the functions er.",
+    l1NoteEn: "Russian has no single direct equivalent covering these uses of Dutch 'er'.",
     siblingGroup: SIBLING_GROUPS.ER_FUNCTIONS,
   },
   {
@@ -139,7 +139,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "er — locative",
     example: { wrong: "Ik woon in Amsterdam sinds 2020, ik hou van het.", correct: "Ik woon er sinds 2020." },
     l1Note: "Прямого эквивалента в русском нет ни для одной из функций er.",
-    l1NoteEn: "There is no direct equivalent for any of the functions er.",
+    l1NoteEn: "Russian has no single direct equivalent covering these uses of Dutch 'er'.",
     siblingGroup: SIBLING_GROUPS.ER_FUNCTIONS,
   },
   {
@@ -149,7 +149,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     example: { wrong: "Kom binnen.", correct: "Kom maar binnen." },
     l1Note:
       "Такой категории почти нет в русском языке. Именно эти частицы делают речь естественной — это прямо влияет на оценку раздела Spreken. Учите в диалоге, никогда не переводите дословно.",
-    l1NoteEn: "There is almost no such category in Russian. It is these particles that make speech natural – this directly affects the evaluation of the Spreken partition. Learn in dialogue, never translate literally.",
+    l1NoteEn: "Russian has no closely matching category. These particles make Dutch speech sound natural and can affect speaking performance. Learn them in dialogue and do not translate them literally.",
   },
   {
     code: "ERR_PREP_FIXED",
@@ -157,7 +157,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Fixed preposition (vast voorzetsel)",
     example: { wrong: "wachten voor", correct: "wachten op" },
     l1Note: "Учите как цельный блок (chunk), не выводите по смыслу.",
-    l1NoteEn: "Learn as a whole block (chunk), do not infer the meaning.",
+    l1NoteEn: "Learn the complete fixed expression as a chunk rather than inferring it word by word.",
   },
   {
     code: "ERR_COLLOC",
@@ -173,7 +173,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Vowel length",
     example: { wrong: "man/maan confused" },
     l1Note: "Долгота гласных не является фонематической в русском — тренируйте пары man/maan, bom/boom.",
-    l1NoteEn: "The length of vowels is not phonematic in Russian - train pairs man/maan, bom/boom.",
+    l1NoteEn: "Russian does not use vowel length contrastively in the same way. Practise pairs such as 'man/maan' and 'bom/boom'.",
   },
   {
     code: "ERR_PHON_FRONTROUND",
@@ -181,7 +181,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Front-rounded vowels",
     example: { wrong: "huren/horen confused" },
     l1Note: "В русском нет огублённых передних гласных (u, eu) — уделите этому отдельное внимание.",
-    l1NoteEn: "In Russian there are no ruined front vowels (u, eu) – pay special attention to this.",
+    l1NoteEn: "Russian lacks the Dutch rounded front vowels written 'u' and 'eu', so they need focused practice.",
   },
   {
     code: "ERR_PHON_DEVOICE",
@@ -189,7 +189,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     label: "Final devoicing",
     example: { wrong: "spelling honten for hond /hɔnt/" },
     l1Note: "В русском тоже есть оглушение конечных согласных, но нидерландская орфография его не отражает — не пишите так, как слышите.",
-    l1NoteEn: "In Russian, too, there is a stunning of final consonants, but the Dutch spelling does not reflect it - do not write as you hear.",
+    l1NoteEn: "Russian also has final consonant devoicing, but Dutch spelling preserves the underlying consonant. Do not spell these words only by sound.",
   },
   {
     code: "ERR_PHON_XG",
@@ -206,7 +206,7 @@ export const ERROR_TAXONOMY: ErrorTaxonomyEntry[] = [
     example: { wrong: "varies — flagged by LanguageTool, not this app's curated patterns" },
     l1Note:
       "Эта ошибка не входит в основную таблицу §5, специфичную для русскоговорящих, — её нашла внешняя проверка LanguageTool. Подробности — в сообщении на нидерландском выше.",
-    l1NoteEn: "This error is not included in the main table §5, specific for Russian speakers, it was found by an external check LanguageTool. Details are in the report in Dutch above.",
+    l1NoteEn: "This error falls outside the main Russian-L1 taxonomy and was detected by LanguageTool. See the Dutch message above for details.",
   },
 ];
 

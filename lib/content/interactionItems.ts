@@ -27,7 +27,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы записаться к врачу.",
-    situationEn: "You call the registry office to see a doctor.",
+    situationEn: "You call the doctor's office to make an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk, waarmee kan ik u helpen?"],
     options: [
       "Ik wil graag een afspraak maken.",
@@ -524,7 +524,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor maandag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik moet werken. Kan het een andere dag?",
@@ -540,7 +540,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor dinsdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik ben ziek. Kan het een andere dag?",
@@ -556,7 +556,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor woensdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik heb een andere afspraak. Kan het een andere dag?",
@@ -572,7 +572,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor donderdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want mijn kind is ziek. Kan het een andere dag?",
@@ -588,7 +588,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor vrijdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik ben op vakantie. Kan het een andere dag?",
@@ -604,7 +604,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor zaterdag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want de auto is kapot. Kan het een andere dag?",
@@ -620,7 +620,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor zondag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik heb geen oppas. Kan het een andere dag?",
@@ -636,7 +636,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor volgende week. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want het komt slecht uit. Kan het een andere dag?",
@@ -652,7 +652,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor morgenochtend. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik ben er niet. Kan het een andere dag?",
@@ -668,7 +668,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "A2",
     situationRu: "Вы звоните в регистратуру, чтобы перенести приём у врача.",
-    situationEn: "You call the registry office to reschedule the doctor.",
+    situationEn: "You call the doctor's office to reschedule an appointment.",
     dialogue: ["Assistente: Goedemorgen, huisartsenpraktijk. Uw afspraak staat gepland voor vanmiddag. Komt dat nog uit?"],
     options: [
       "Nee, dat komt niet uit, want ik heb een sollicitatiegesprek. Kan het een andere dag?",
@@ -684,7 +684,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het inschrijfformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het inschrijfformulier niet helemaal. Kunt u het uitleggen?",
@@ -693,14 +693,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-12",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het aanvraagformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het aanvraagformulier niet helemaal. Kunt u het uitleggen?",
@@ -709,14 +709,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-13",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het uittrekselformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het uittrekselformulier niet helemaal. Kunt u het uitleggen?",
@@ -725,14 +725,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-14",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het vergunningsformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het vergunningsformulier niet helemaal. Kunt u het uitleggen?",
@@ -741,14 +741,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-15",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het verhuisformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het verhuisformulier niet helemaal. Kunt u het uitleggen?",
@@ -757,14 +757,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-16",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het belastingformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het belastingformulier niet helemaal. Kunt u het uitleggen?",
@@ -773,14 +773,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-17",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het kinderbijslagformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het kinderbijslagformulier niet helemaal. Kunt u het uitleggen?",
@@ -789,14 +789,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-18",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het paspoortformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het paspoortformulier niet helemaal. Kunt u het uitleggen?",
@@ -805,14 +805,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-19",
     topic: "gemeente",
     level: "B1",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het identiteitsformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het identiteitsformulier niet helemaal. Kunt u het uitleggen?",
@@ -821,14 +821,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-20",
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы на приёме в муниципалитете, но не понимаете часть формуляра.",
-    situationEn: "You're at a reception in the municipality, but you don't understand part of the form.",
+    situationEn: "You are at the municipal service desk and do not understand part of a form.",
     dialogue: ["Ambtenaar: Kunt u dit gedeelte van het adreswijzigingsformulier invullen?"],
     options: [
       "Sorry, ik begrijp dit gedeelte van het adreswijzigingsformulier niet helemaal. Kunt u het uitleggen?",
@@ -837,7 +837,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливая просьба объяснить непонятную часть — уместная реакция, а не отказ или грубость.",
-    explanationEn: "A polite request to explain the incomprehensible part is an appropriate response, not a refusal or rudeness.",
+    explanationEn: "Politely asking for clarification is appropriate when part of the form is unclear.",
   },
   {
     id: "int-gen-21",
@@ -853,7 +853,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-22",
@@ -869,7 +869,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-23",
@@ -885,7 +885,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-24",
@@ -901,7 +901,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-25",
@@ -917,7 +917,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-26",
@@ -933,7 +933,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-27",
@@ -949,7 +949,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-28",
@@ -965,7 +965,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-29",
@@ -981,7 +981,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-30",
@@ -997,14 +997,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ с объяснением и предложением альтернативы — более уместен, чем резкое 'нет'.",
-    explanationEn: "A polite refusal to explain and suggest an alternative is more appropriate than a sharp ‘no’.",
+    explanationEn: "A polite refusal with a brief explanation and an alternative is better than a blunt 'no'.",
   },
   {
     id: "int-gen-31",
     topic: "winkel",
     level: "B1",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze jas terugbrengen. Ik heb de bon nog.",
@@ -1013,14 +1013,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-32",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze schoenen terugbrengen. Ik heb de bon nog.",
@@ -1029,14 +1029,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-33",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag dit apparaat terugbrengen. Ik heb de bon nog.",
@@ -1045,14 +1045,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-34",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze broek terugbrengen. Ik heb de bon nog.",
@@ -1061,14 +1061,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-35",
     topic: "winkel",
     level: "B1",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag dit horloge terugbrengen. Ik heb de bon nog.",
@@ -1077,14 +1077,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-36",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze tas terugbrengen. Ik heb de bon nog.",
@@ -1093,14 +1093,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-37",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze trui terugbrengen. Ik heb de bon nog.",
@@ -1109,14 +1109,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-38",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze lamp terugbrengen. Ik heb de bon nog.",
@@ -1125,14 +1125,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-39",
     topic: "winkel",
     level: "B1",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag dit speelgoed terugbrengen. Ik heb de bon nog.",
@@ -1141,14 +1141,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-40",
     topic: "winkel",
     level: "A2",
     situationRu: "В магазине вы хотите вернуть товар, который не подошёл.",
-    situationEn: "In the store, you want to return a product that did not fit.",
+    situationEn: "You want to return an unsuitable product to a shop.",
     dialogue: ["Verkoper: Kan ik u helpen?"],
     options: [
       "Ja, ik wil graag deze fiets terugbrengen. Ik heb de bon nog.",
@@ -1157,7 +1157,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясно и вежливо объяснить цель визита — вернуть товар, показать чек.",
-    explanationEn: "Clearly and politely explain the purpose of the visit - to return the goods, show the check.",
+    explanationEn: "Clearly and politely explain that you want to return the item and show the receipt.",
   },
   {
     id: "int-gen-41",
@@ -1173,7 +1173,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-42",
@@ -1189,7 +1189,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-43",
@@ -1205,7 +1205,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-44",
@@ -1221,7 +1221,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-45",
@@ -1237,7 +1237,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-46",
@@ -1253,7 +1253,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-47",
@@ -1269,7 +1269,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-48",
@@ -1285,7 +1285,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-49",
@@ -1301,7 +1301,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-50",
@@ -1317,7 +1317,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться и пообещать учесть просьбу — вежливая реакция на замечание соседа.",
-    explanationEn: "Apologizing and promising to heed a request is a polite reaction to a neighbor's remark.",
+    explanationEn: "Apologising and agreeing to keep the noise down is a polite response to the neighbour.",
   },
   {
     id: "int-gen-51",
@@ -1333,7 +1333,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-52",
@@ -1349,7 +1349,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-53",
@@ -1365,7 +1365,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-54",
@@ -1381,7 +1381,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-55",
@@ -1397,7 +1397,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-56",
@@ -1413,7 +1413,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-57",
@@ -1429,7 +1429,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-58",
@@ -1445,7 +1445,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-59",
@@ -1461,7 +1461,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-60",
@@ -1477,7 +1477,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Извиниться, кратко объяснить причину — уместная и ответственная реакция родителя.",
-    explanationEn: "Apologizing, briefly explaining the reason is an appropriate and responsible reaction of the parent.",
+    explanationEn: "A brief apology and explanation is an appropriate, responsible response from the parent.",
   },
   {
     id: "int-gen-61",
@@ -1653,7 +1653,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-72",
@@ -1669,7 +1669,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-73",
@@ -1685,7 +1685,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-74",
@@ -1701,7 +1701,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-75",
@@ -1717,7 +1717,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-76",
@@ -1733,7 +1733,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-77",
@@ -1749,7 +1749,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-78",
@@ -1765,7 +1765,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-79",
@@ -1781,7 +1781,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-80",
@@ -1797,7 +1797,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Показать рецепт и объяснить цель визита — правильная, вежливая реакция.",
-    explanationEn: "Showing the recipe and explaining the purpose of the visit is the right, polite reaction.",
+    explanationEn: "Showing the prescription and explaining the purpose of the visit is the appropriate response.",
   },
   {
     id: "int-gen-81",
@@ -1973,7 +1973,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-92",
@@ -1989,7 +1989,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-93",
@@ -2005,7 +2005,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-94",
@@ -2021,7 +2021,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-95",
@@ -2037,7 +2037,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-96",
@@ -2053,7 +2053,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-97",
@@ -2069,7 +2069,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-98",
@@ -2085,7 +2085,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-99",
@@ -2101,7 +2101,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
   {
     id: "int-gen-100",
@@ -2117,7 +2117,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно и по делу задать вопрос о непонятном пункте полиса.",
-    explanationEn: "Calmly and on the case to ask a question about the incomprehensible point of the policy.",
+    explanationEn: "Calmly ask a specific question about the unclear part of the policy.",
   },
 
   // --- gen3 batch: 69 fresh, hand-varied scenarios spanning civic/everyday
@@ -2193,7 +2193,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "bank",
     level: "B1",
     situationRu: "Сотрудник банка предупреждает о комиссии, о которой вы не знали.",
-    situationEn: "An employee of the bank warns about a commission that you did not know about.",
+    situationEn: "A bank employee tells you about an unexpected fee.",
     dialogue: ["Medewerker: Voor deze overschrijving betaalt u helaas extra kosten."],
     options: [
       "Dat wist ik niet, kunt u uitleggen waarom die kosten er zijn?",
@@ -2202,14 +2202,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый запрос объяснения непонятной комиссии — разумная реакция вместо обвинений.",
-    explanationEn: "Politely asking for an explanation of an incomprehensible commission is a reasonable response instead of accusations.",
+    explanationEn: "Politely asking about an unexpected fee is more constructive than making accusations.",
   },
   {
     id: "int-gen3-6",
     topic: "station",
     level: "A2",
     situationRu: "На вокзале вы не знаете, с какой платформы отправляется поезд.",
-    situationEn: "At the station, you don’t know which platform the train is coming from.",
+    situationEn: "At the station, you do not know which platform the train departs from.",
     dialogue: ["Medewerker: Kan ik u helpen?"],
     options: [
       "Ja, van welk spoor vertrekt de trein naar Utrecht?",
@@ -2234,7 +2234,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное принятие факта и вопрос о следующем поезде — практичная реакция.",
-    explanationEn: "Calmly accepting the fact and questioning the next train is a practical reaction.",
+    explanationEn: "Calmly acknowledge the situation and ask about the next train.",
   },
   {
     id: "int-gen3-8",
@@ -2298,7 +2298,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойная просьба объяснить причину и размер повышения — разумная реакция арендатора.",
-    explanationEn: "Calmly asking to explain the reason and amount of the increase is a reasonable reaction of the tenant.",
+    explanationEn: "A tenant can reasonably ask for a calm explanation of the reason for and amount of the increase.",
   },
   {
     id: "int-gen3-12",
@@ -2353,7 +2353,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "onderwijs",
     level: "A2",
     situationRu: "Преподаватель предлагает дополнительный урок для отстающих.",
-    situationEn: "The teacher offers an additional lesson for the laggards.",
+    situationEn: "The teacher offers an extra lesson for learners who need more support.",
     dialogue: ["Docent: Wilt u een extra les volgen om bij te blijven?"],
     options: [
       "Ja, graag, wanneer is die les?",
@@ -2394,7 +2394,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное предложение решения (повторить попытку или заплатить наличными) — практичная реакция.",
-    explanationEn: "A calm offer of a solution (to try again or pay in cash) is a practical reaction.",
+    explanationEn: "Offering a practical solution—trying again or paying cash—is an appropriate response.",
   },
   {
     id: "int-gen3-18",
@@ -2490,7 +2490,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретное указание проблемы и просьба о другом размере — практичная реакция в магазине.",
-    explanationEn: "Specifically pointing out the problem and asking for a different size is a practical reaction in the store.",
+    explanationEn: "Clearly explain the problem and ask for a different size.",
   },
   {
     id: "int-gen3-24",
@@ -2506,7 +2506,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливый отказ от дополнительной услуги — стандартная и уместная реакция.",
-    explanationEn: "Polite refusal of an additional service is a standard and appropriate reaction.",
+    explanationEn: "Politely declining an unwanted additional service is appropriate.",
   },
   {
     id: "int-gen3-25",
@@ -2570,7 +2570,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойное принятие правила и вопрос о способе записи — практичная реакция.",
-    explanationEn: "Calmly accepting the rule and questioning how to record is a practical reaction.",
+    explanationEn: "Acknowledge the rule calmly and ask how to register.",
   },
   {
     id: "int-gen3-29",
@@ -2618,7 +2618,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Дружелюбное согласие с уточнением времени — уместная реакция на приглашение коллеги.",
-    explanationEn: "A friendly agreement with the clarification of time is an appropriate reaction to the invitation of a colleague.",
+    explanationEn: "Accepting warmly and confirming the time is an appropriate response to a colleague's invitation.",
   },
   {
     id: "int-gen3-32",
@@ -2714,7 +2714,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретный ответ + вопрос о цене — практичная реакция при заказе услуги перевода.",
-    explanationEn: "Specific answer + price question is a practical reaction when ordering a translation service.",
+    explanationEn: "Give the requested details and ask about the price when ordering a translation.",
   },
   {
     id: "int-gen3-38",
@@ -2730,7 +2730,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Признание, что документа нет, с предложением принести позже — уместная реакция.",
-    explanationEn: "Admitting that there is no document with an offer to bring later is an appropriate reaction.",
+    explanationEn: "Explain that you do not have the document and offer to bring it later.",
   },
   {
     id: "int-gen3-39",
@@ -2986,7 +2986,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Объяснение причины + просьба наверстать материал — конструктивная реакция ученика.",
-    explanationEn: "Explanation of the reason + request to catch up - constructive reaction of the student.",
+    explanationEn: "Explaining the reason and asking how to catch up is a constructive response from the student.",
   },
   {
     id: "int-gen3-55",
@@ -3002,7 +3002,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Осмысленное согласие с кратким пояснением — уместная реакция на предложение сотрудника почты.",
-    explanationEn: "A meaningful acceptance of a brief explanation is an appropriate response to a postal employee's proposal.",
+    explanationEn: "Acknowledging the explanation is an appropriate response to the postal employee's suggestion.",
   },
   {
     id: "int-gen3-56",
@@ -3130,7 +3130,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Честный ответ + вопрос о процедуре получения — конструктивная реакция новичка.",
-    explanationEn: "An honest answer + a question about the procedure of obtaining is a constructive reaction of the beginner.",
+    explanationEn: "Answer honestly and ask how to obtain the required document.",
   },
   {
     id: "int-gen3-64",
@@ -3178,7 +3178,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойная реакция на неудобство + практичный вопрос — уместное поведение при отмене рейса.",
-    explanationEn: "Calm reaction to inconvenience + practical question - appropriate behavior when canceling a flight.",
+    explanationEn: "Respond calmly to the inconvenience and ask a practical follow-up question about the cancelled flight.",
   },
   {
     id: "int-gen3-67",
@@ -3210,7 +3210,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Конкретный уточняющий вопрос по договору аренды — разумная реакция перед подписанием.",
-    explanationEn: "A specific clarifying question on the lease agreement is a reasonable reaction before signing.",
+    explanationEn: "Ask a specific clarifying question about the tenancy agreement before signing.",
   },
   {
     id: "int-gen3-69",

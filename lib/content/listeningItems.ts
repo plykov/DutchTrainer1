@@ -1211,7 +1211,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1225,7 +1225,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1239,7 +1239,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1253,7 +1253,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1267,7 +1267,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1281,7 +1281,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1295,7 +1295,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1309,7 +1309,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1323,7 +1323,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -1337,7 +1337,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Er volgen extra kosten", "Uw rekening wordt kwijtgescholden", "Er gebeurt niets"],
       correctIndex: 0,
       explanationRu: "'anders volgen extra kosten' — при просрочке начисляются дополнительные расходы.",
-      explanationEn: "'anders volgen extra kosten' - additional expenses are charged if the delay is delayed.",
+      explanationEn: "'anders volgen extra kosten' means that extra charges will apply if payment is late.",
     },
   },
   {
@@ -2625,7 +2625,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De kinderopvang", "De school", "De bibliotheek voor kinderen"],
       correctIndex: 0,
       explanationRu: "'de kinderopvang blijft wel gewoon open' — детский сад продолжает работать, в отличие от школы.",
-      explanationEn: "'de kinderopvang blijft wel gewoon open' - kindergarten continues to operate, unlike school.",
+      explanationEn: "'de kinderopvang blijft wel gewoon open' means that childcare remains open even though the school is closed.",
     },
   },
   {
@@ -2807,7 +2807,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Zodat het rustig kan wennen", "Omdat de opvang later opengaat", "Omdat er te veel kinderen zijn"],
       correctIndex: 0,
       explanationRu: "'zodat het rustig kan wennen' — дополнительное время дают, чтобы ребёнок спокойно привык к садику.",
-      explanationEn: "\"zodat het rustig kan wennen\" - extra time is given so that the child calmly gets used to the kindergarten.",
+      explanationEn: "'zodat het rustig kan wennen' means that the child is given time to settle into childcare gradually.",
     },
   },
   {

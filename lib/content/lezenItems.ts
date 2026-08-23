@@ -420,7 +420,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["De opvang moet geregistreerd zijn bij de gemeente", "U moet minstens drie kinderen hebben", "U moet in Amsterdam wonen"],
     correctIndex: 0,
     explanationRu: "Одно из условий — детский сад должен быть зарегистрирован в муниципалитете.",
-    explanationEn: "One of the conditions is that the kindergarten must be registered in the municipality.",
+    explanationEn: "One condition is that the childcare provider must be officially registered.",
   }),
   lezenItem({
     id: "lezen-40",
@@ -530,7 +530,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Uw kind staat ingeschreven bij een geregistreerde opvang", "U bent alleenstaand ouder", "Uw kind is ouder dan twaalf"],
     correctIndex: 0,
     explanationRu: "Одно из условий получения пособия на детский сад — регистрация ребёнка в лицензированном учреждении.",
-    explanationEn: "One of the conditions for obtaining a kindergarten allowance is the registration of the child in a licensed institution.",
+    explanationEn: "One condition for receiving childcare benefit is that the child attends a registered childcare provider.",
   }),
   lezenItem({
     id: "lezen-51",

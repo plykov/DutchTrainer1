@@ -441,7 +441,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "explanationEn": "A residence permit (basisregistratie personen) is issued at the City Hall at the new place of residence."
+      "explanationEn": "Register your new address in the Basisregistratie Personen (BRP) with your new municipality."
     },
     {
       "examTrack": "knm",
@@ -922,7 +922,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "explanationEn": "For benefits apply to UWV (unemployment) or municipality (social assistance)."
+      "explanationEn": "Apply to UWV for unemployment benefits or to the municipality for social assistance."
     },
     {
       "examTrack": "knm",
@@ -1514,7 +1514,7 @@
         "reviewedAt": null,
         "notes": null
       },
-      "explanationEn": "The new address must be reported to the municipality (BRP) within 5 days of the move, regardless of whether it is a rental or property."
+      "explanationEn": "Report a new address to the municipality for the BRP within five days of moving, whether the home is rented or owned."
     },
     {
       "examTrack": "knm",

@@ -16,6 +16,8 @@ for releases and remains a public beta while its version is below `1.0.0`.
   reading/listening sessions, and the KNM/Lezen/Luisteren/Schrijven/Spreken exam flows.
 - Added machine-translated, unreviewed English instructions and explanations selected through the
   learner's explanation language, while preserving Russian source copy and vocabulary glosses.
+- Corrected recurring English machine-translation defects in grammar terminology, pronunciation
+  terminology, civic-service wording, and structured-writing instructions; educator review is pending.
 
 ## 0.2.0-beta.1 - 2026-08-23
 
