@@ -98,7 +98,7 @@ Releases follow the documented [release process](./RELEASING.md), with user-visi
   `uiLang`, on purpose: it's Russian-L1-contrastive by design (§5), explaining specifically Russian
   speakers' traps, so translating it to English would remove the thing it exists to explain.
 - **Provenance-aware content workflow** (`content/`, `scripts/content-pipeline.mjs`) — the Spreken exam
-  bank, Schrijven zinstaken, and deelschrijftaken are migrated from hand-edited TypeScript to structured sources with
+  bank and all three Schrijven exam banks are migrated from hand-edited TypeScript to structured sources with
   source/license references and per-item educator-review state. The pipeline validates the source,
   generates the runtime TypeScript deterministically, detects generated-file drift in CI, and supports
   TSV review export/import. The remaining banks still need incremental migration through this workflow.
@@ -429,7 +429,7 @@ Whisper-NL/GOP pronunciation scoring (needs a fine-tuned ASR model and audio inf
 doesn't have), a live LiNT API integration (coverage above is a local approximation, not the real
 service), full-length timed exam simulations, offline sync, and CNaVT/Flemish/teacher-dashboard work.
 Content in `lib/content/` still needs qualified editorial review. The provenance-aware pipeline now has
-a Spreken and structured-Schrijven pilot, but all remaining banks need migration before shipping to learners; clear the
+a Spreken and complete Schrijven-exam pilot, but all remaining banks need migration before shipping to learners; clear the
 `[VERIFY]` items in the scope doc's §12 backlog first.
 
 State currently persists to `localStorage` (`lib/store.ts`, Zustand) — swap the storage adapter for

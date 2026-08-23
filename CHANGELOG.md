@@ -8,7 +8,7 @@ for releases and remains a public beta while its version is below `1.0.0`.
 ### Added
 
 - A provenance-aware source, generation, validation, and educator-review workflow, applied first to
-  Spreken exam prompts and the Schrijven zinstaken/deelschrijftaken banks, with CI drift enforcement.
+  Spreken exam prompts and all three Schrijven exam banks, with CI drift enforcement.
 
 ### Changed
 

@@ -2,7 +2,8 @@
 
 Learner content should enter the app through a structured source document, not by directly editing a
 generated TypeScript bank. Migrated banks currently include `sources/speaking-exam.json`,
-`sources/zinstaken.json`, and `sources/deelschrijftaken.json`; migrate the other banks incrementally.
+`sources/zinstaken.json`, `sources/deelschrijftaken.json`, and `sources/writing-exam.json`; migrate the
+other banks incrementally.
 
 Each source document records:
 
