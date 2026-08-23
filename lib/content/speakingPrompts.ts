@@ -144,7 +144,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-2",
@@ -152,7 +152,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-3",
@@ -160,7 +160,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-4",
@@ -168,7 +168,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-5",
@@ -176,7 +176,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-6",
@@ -184,7 +184,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-7",
@@ -192,7 +192,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-8",
@@ -200,7 +200,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-9",
@@ -208,7 +208,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-10",
@@ -216,7 +216,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "A2",
     focusHintRu: "Следите за /x/ в 'huisarts'/'gezondheid' — это не русское [х], звук образуется глубже, у корня языка.",
-    focusHintEn: "Keep an eye on /x/ in 'huisarts'/'gezondheid' - it's not Russian [x], the sound is formed deeper, at the root of the tongue.",
+    focusHintEn: "Practise the Dutch /x/ in words such as 'huisarts' and 'gezondheid'; it is articulated farther back than Russian [x].",
   },
   {
     id: "sp-gen-11",
@@ -224,7 +224,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "B1",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-12",
@@ -232,7 +232,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-13",
@@ -240,7 +240,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-14",
@@ -248,7 +248,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-15",
@@ -256,7 +256,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "B1",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-16",
@@ -264,7 +264,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-17",
@@ -272,7 +272,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-18",
@@ -280,7 +280,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-19",
@@ -288,7 +288,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "B1",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-20",
@@ -296,7 +296,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "afspraak_verzetten",
     level: "A2",
     focusHintRu: "Обратите внимание на порядок слов в вопросе — глагол 'kunt' стоит в самом начале.",
-    focusHintEn: "Pay attention to the order of the words in the question - the verb 'kunt' is at the beginning.",
+    focusHintEn: "In this polite question, place the conjugated verb 'kunt' at the beginning.",
   },
   {
     id: "sp-gen-21",
@@ -784,7 +784,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-82",
@@ -792,7 +792,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-83",
@@ -800,7 +800,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-84",
@@ -808,7 +808,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-85",
@@ -816,7 +816,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-86",
@@ -824,7 +824,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-87",
@@ -832,7 +832,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-88",
@@ -840,7 +840,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-89",
@@ -848,7 +848,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "B1",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-90",
@@ -856,7 +856,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "familie",
     level: "A2",
     focusHintRu: "Дифтонг /ɛi/ в 'trouwen' и 'klein' — начинается с открытого 'э', скользит к 'и'.",
-    focusHintEn: "Diphthong /ɛi/ in 'trouwen' and 'klein' - begins with an open 'e', slides to 'i'.",
+    focusHintEn: "Practise the diphthong /ɛi/ in words such as 'klein', moving smoothly from an open vowel toward /i/.",
   },
   {
     id: "sp-gen-91",
@@ -864,7 +864,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-92",
@@ -872,7 +872,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-93",
@@ -880,7 +880,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-94",
@@ -888,7 +888,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-95",
@@ -896,7 +896,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-96",
@@ -904,7 +904,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-97",
@@ -912,7 +912,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-98",
@@ -920,7 +920,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-99",
@@ -928,7 +928,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "B1",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen-100",
@@ -936,7 +936,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "buurt",
     level: "A2",
     focusHintRu: "Тренируйте безударное 'e' в 'buurt' и 'buurthuis' — короткий нейтральный звук [ə].",
-    focusHintEn: "Exercise the unstressed ‘e’ in ‘buurt’ and ‘buurthuis’ – a short neutral sound.",
+    focusHintEn: "Practise the long 'uu' in 'buurt' and keep unstressed vowels in longer compounds reduced.",
   },
   {
     id: "sp-gen3-1",
@@ -944,7 +944,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gezondheid",
     level: "B1",
     focusHintRu: "Звук /x/ в 'huisarts' образуется в глубине рта — не в горле, как русское [х], и не как немецкое [ch].",
-    focusHintEn: "The /x/ sound in 'huisarts' is formed in the back of the mouth - not in the throat, like Russian [x], and not like German [ch].",
+    focusHintEn: "Produce /x/ in 'huisarts' at the back of the mouth and distinguish it from Russian [x].",
   },
   {
     id: "sp-gen3-2",
@@ -1016,7 +1016,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "gemeente",
     level: "B1",
     focusHintRu: "Согласный кластер 'rkeervergunning' — проговаривайте каждый звук чётко, не сокращайте.",
-    focusHintEn: "According to the 'rkeervergunning' cluster, say each sound clearly, don't cut it.",
+    focusHintEn: "Keep every consonant clear in the cluster in 'parkeervergunning'.",
   },
   {
     id: "sp-gen3-11",
@@ -1328,7 +1328,7 @@ export const SPEAKING_PROMPTS: SpeakingPrompt[] = [
     topic: "vervoer",
     level: "B1",
     focusHintRu: "Заимствованное 'chip' произносится с английским звуком, не как голландское /sx/.",
-    focusHintEn: "The borrowed 'chip' is pronounced with an English sound, not like the Dutch /sx/.",
+    focusHintEn: "The loanword 'chip' begins with /tʃ/, not the Dutch cluster /sx/.",
   },
   {
     id: "sp-gen3-50",

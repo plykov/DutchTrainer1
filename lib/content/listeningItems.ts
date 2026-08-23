@@ -44,7 +44,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een pasfoto laten maken", "Online een afspraak maken", "Naar de huisarts gaan"],
       correctIndex: 1,
       explanationRu: "Ключевое слово 'eerst' (сначала) — сначала нужно записаться онлайн на приём в мэрии.",
-      explanationEn: "The key word 'eerst' (first) is to make an online appointment at City Hall.",
+      explanationEn: "The keyword 'eerst' shows that you must first make an online appointment with the municipality.",
     },
   },
   {
@@ -371,7 +371,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -385,7 +385,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -399,7 +399,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -413,7 +413,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -427,7 +427,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -441,7 +441,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -455,7 +455,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -469,7 +469,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -483,7 +483,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -497,7 +497,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Een geldig identiteitsbewijs", "Een bankpas", "Niets"],
       correctIndex: 0,
       explanationRu: "'Neemt u een geldig identiteitsbewijs mee' — на встречу нужно взять действительное удостоверение личности.",
-      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' - you need to take a valid ID card for a meeting.",
+      explanationEn: "'Neemt u een geldig identiteitsbewijs mee' means you must bring valid identification to the appointment.",
     },
   },
   {
@@ -931,7 +931,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -945,7 +945,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -959,7 +959,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -973,7 +973,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -987,7 +987,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -1001,7 +1001,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -1015,7 +1015,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -1029,7 +1029,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -1043,7 +1043,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -1057,7 +1057,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Die rijdt vandaag niet", "Die is te vroeg", "Die is dubbel zo vol"],
       correctIndex: 0,
       explanationRu: "'rijdt vandaag niet' — автобус в указанное время сегодня не ходит, следующий отправится на полчаса позже.",
-      explanationEn: "'rijdt vandaag niet' - the bus does not run at the specified time today, the next one will depart half an hour later.",
+      explanationEn: "'rijdt vandaag niet' means that service is not running today; the next bus leaves half an hour later.",
     },
   },
   {
@@ -1491,7 +1491,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1505,7 +1505,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1519,7 +1519,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1533,7 +1533,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1547,7 +1547,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1561,7 +1561,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1575,7 +1575,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1589,7 +1589,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1603,7 +1603,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1617,7 +1617,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["De zaal is deze week bezet", "Er zijn te weinig mensen", "Het buurthuis is dicht"],
       correctIndex: 0,
       explanationRu: "'omdat de zaal deze week bezet is' — встречу перенесли, потому что зал занят на этой неделе.",
-      explanationEn: "'omdat de zaal deze week bezet is' - the meeting was postponed because the hall is busy this week.",
+      explanationEn: "'omdat de zaal deze week bezet is' gives the reason for the change: the room is occupied this week.",
     },
   },
   {
@@ -1645,7 +1645,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vijf dagen", "Vijf weken", "Vijf maanden"],
       correctIndex: 1,
       explanationRu: "'de aanvraag duurt ongeveer vijf weken' — оформление занимает около пяти недель.",
-      explanationEn: "'de aanvraag duurt ongeveer vijf weken' - the design takes about five weeks.",
+      explanationEn: "'de aanvraag duurt ongeveer vijf weken' means the application takes about five weeks to process.",
     },
   },
   {
@@ -1771,7 +1771,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Eén werkdag", "Twee werkdagen", "Een week"],
       correctIndex: 1,
       explanationRu: "'meestal binnen twee werkdagen' — повторный рецепт обычно оформляют за два рабочих дня.",
-      explanationEn: "'meestal binnen twee werkdagen' - a repeated recipe is usually drawn up in two working days.",
+      explanationEn: "'meestal binnen twee werkdagen' means a repeat prescription is normally prepared within two working days.",
     },
   },
   {
@@ -1911,7 +1911,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Elke ochtend tussen negen en tien uur", "Alleen op vrijdag", "In het weekend"],
       correctIndex: 0,
       explanationRu: "'zonder afspraak, elke ochtend tussen negen en tien uur' — можно прийти без записи по утрам в это время.",
-      explanationEn: "'zonder afspraak, elke ochtend tussen negen en tien uur' - you can come without a record in the morning at this time.",
+      explanationEn: "'zonder afspraak, elke ochtend tussen negen en tien uur' means you can visit without an appointment during that morning hour.",
     },
   },
   {
@@ -2471,7 +2471,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Vier keer", "Eén keer", "Tien keer"],
       correctIndex: 0,
       explanationRu: "'minstens vier keer solliciteren' — для сохранения пособия нужно откликаться минимум четыре раза в месяц.",
-      explanationEn: "'minstens vier keer solliciteren' - you need to respond at least four times a month to save the allowance.",
+      explanationEn: "'minstens vier keer solliciteren' means you must apply for at least four jobs each month to retain the benefit.",
     },
   },
   {
@@ -2569,7 +2569,7 @@ export const LISTENING_ITEMS: ListeningItem[] = [
       options: ["Op het meest recente inkomen", "Op het aantal kinderen", "Op de woonplaats"],
       correctIndex: 0,
       explanationRu: "'berekend op basis van uw meest recente inkomen' — субсидия рассчитывается по последнему доходу.",
-      explanationEn: "'berekend op basis van uw meest recente inkomen' - the subsidy is calculated on the latest income.",
+      explanationEn: "'berekend op basis van uw meest recente inkomen' means the benefit is calculated using your most recently reported income.",
     },
   },
   {

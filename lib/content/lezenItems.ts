@@ -80,7 +80,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Tot en met vrijdag", "Tot het einde van de maand", "Er is geen deadline"],
     correctIndex: 0,
     explanationRu: "'Inschrijven kan ... tot en met komende vrijdag' — запись открыта до пятницы включительно.",
-    explanationEn: "'Inschrijven kan ... tot en met komende vrijdag' - recording open until Friday inclusive.",
+    explanationEn: "'Inschrijven kan ... tot en met komende vrijdag' means registration is open through Friday, including Friday itself.",
   }),
   lezenItem({
     id: "lezen-6",
@@ -200,7 +200,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Het gewone nummer van de gemeente", "112", "De politie"],
     correctIndex: 0,
     explanationRu: "'Voor niet-spoedeisende meldingen ... kunt u de gemeente bellen op het gewone nummer' — для несрочных случаев обычный номер мэрии.",
-    explanationEn: "'Voor niet-spoedeisende meldingen ... kunt u de gemeente bellen op het gewone nummer' - for non-urgent cases the usual number of the City Hall.",
+    explanationEn: "For non-urgent reports, call the municipality's regular telephone number.",
   }),
   lezenItem({
     id: "lezen-18",
@@ -340,7 +340,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Minstens tien weken voor de vierde verjaardag", "Op de dag van de vierde verjaardag", "Er is geen deadline"],
     correctIndex: 0,
     explanationRu: "'minstens tien weken voor de vierde verjaardag van het kind' — запись минимум за десять недель до четырёхлетия.",
-    explanationEn: "'minstens tien weken voor de vierde verjaardag van het kind' is a record at least ten weeks before the four-year anniversary.",
+    explanationEn: "Register the child at least ten weeks before their fourth birthday.",
   }),
   lezenItem({
     id: "lezen-32",
@@ -400,7 +400,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Een aanvullende verzekering afsluiten", "Niets, dit wordt altijd vergoed", "Contant betalen bij de gemeente"],
     correctIndex: 0,
     explanationRu: "Физиотерапия не входит в базовую страховку — нужна дополнительная (aanvullende) страховка.",
-    explanationEn: "Physical therapy is not included in the basic insurance - you need additional (aanvullende) insurance.",
+    explanationEn: "Physiotherapy is not covered by the basic policy in this example; supplementary ('aanvullende') insurance is needed.",
   }),
   lezenItem({
     id: "lezen-38",
@@ -510,7 +510,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Mensen met een inkomen onder een bepaalde grens", "Alle inwoners, ongeacht inkomen", "Alleen huiseigenaren"],
     correctIndex: 0,
     explanationRu: "Единовременную доплату на энергию можно получить, только если доход ниже определённого порога.",
-    explanationEn: "A one-time energy supplement can only be obtained if the income is below a certain threshold.",
+    explanationEn: "The one-off energy allowance is available only below the stated income threshold.",
   }),
   lezenItem({
     id: "lezen-49",
@@ -560,7 +560,7 @@ export const LEZEN_ITEMS: McItem[] = [
     options: ["Niets, het is gratis", "Een vast bedrag per maand", "Een percentage van uw schuld"],
     correctIndex: 0,
     explanationRu: "Помощь службы урегулирования долгов при муниципалитете — бесплатная.",
-    explanationEn: "Debt settlement service at the municipality is free of charge.",
+    explanationEn: "The municipality provides debt-counselling services free of charge.",
   }),
   lezenItem({
     id: "lezen-54",

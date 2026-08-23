@@ -247,7 +247,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     correctIndex: 1,
     explanationRu:
       "Все уменьшительные формы на -je берут артикль het, даже если исходное слово — de-слово ('de afspraak' → 'het afspraakje'). Это одно из немногих надёжных правил артиклей.",
-    explanationEn: "All diminutive forms on -je take the article het, even if the original word is de-word ('de afspraak' → 'het afspraakje'). This is one of the few reliable rules of the articles.",
+    explanationEn: "All diminutives ending in '-je' take 'het', even when the base noun takes 'de': 'de afspraak' → 'het afspraakje'.",
   } as PracticeItem),
   base({
     id: "prep-fixed-mc-1",
@@ -776,7 +776,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Er zit een fout in het formulier.", "Zit een fout in het formulier.", "Een fout zit er in het formulier."],
     correctIndex: 0,
     explanationRu: "'Er zit een fout' — стандартная конструкция с экзистенциальным 'er' для неопределённого подлежащего.",
-    explanationEn: "Er zit een fout is a standard construction with an existential 'er' for an indefinite subject.",
+    explanationEn: "'Er zit een fout ...' is a standard existential construction with an indefinite subject.",
   } as PracticeItem),
 
   base({
@@ -911,7 +911,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik ben er nog nooit geweest.", "Ik ben daar nog nooit er geweest.", "Ik ben nooit geweest er."],
     correctIndex: 0,
     explanationRu: "'Er' стоит сразу после спрягаемого глагола, заменяя ранее упомянутое место.",
-    explanationEn: "\"Er\" stands immediately after the conjugated verb, replacing the previously mentioned place.",
+    explanationEn: "'Er' follows the conjugated verb here and replaces the previously mentioned place.",
   } as PracticeItem),
   base({
     id: "er-loc-gen-4",
@@ -923,7 +923,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Zij komt er net vandaan.", "Zij komt daar net er vandaan.", "Zij komt vandaan er net."],
     correctIndex: 0,
     explanationRu: "'Er ... vandaan' — стандартная локативная конструкция для 'оттуда'.",
-    explanationEn: "Er... vandaan is the standard locative design for ‘from there’.",
+    explanationEn: "'Er ... vandaan' is the standard locative construction meaning 'from there'.",
   } as PracticeItem),
 
   base({
@@ -1192,7 +1192,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "opgebeld",
     acceptableVariants: ["opgebeld"],
     explanationRu: "'Opbellen' → причастие 'opgebeld', 'ge-' стоит после приставки 'op'.",
-    explanationEn: "'Opbellen' → the participle 'opgebeld', 'ge-' stands after the prefix 'op'.",
+    explanationEn: "The past participle of 'opbellen' is 'opgebeld': 'ge-' comes after the prefix 'op'.",
   } as PracticeItem),
   base({
     id: "sep-part-gen-4",
@@ -1229,7 +1229,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik werk niet vandaag.", "Ik werk vandaag niet.", "Niet ik werk vandaag."],
     correctIndex: 1,
     explanationRu: "Отрицание всей ситуации в конкретный день: 'niet' ставится после обстоятельства времени 'vandaag'.",
-    explanationEn: "Denial of the whole situation on a particular day: \"niet\" is put after the circumstance of the time \"vandaag\".",
+    explanationEn: "To negate the whole situation on that day, put 'niet' after the time expression 'vandaag'.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-3",
@@ -1241,7 +1241,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "niet",
     acceptableVariants: ["niet"],
     explanationRu: "'Niet' стоит перед прилагательным/предикативом 'nodig', который оно отрицает.",
-    explanationEn: "'Niet' stands before the adjective/predicative 'nodig', which it denies.",
+    explanationEn: "'Niet' comes before the predicative adjective 'nodig', the element being negated.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen-4",
@@ -1769,7 +1769,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "ben",
     acceptableVariants: ["ben"],
     explanationRu: "В придаточном с 'omdat' спрягаемый глагол 'ben' уходит в конец предложения.",
-    explanationEn: "In the adjunct to 'omdat', the conjugated verb 'ben' goes to the end of the sentence.",
+    explanationEn: "In a subordinate clause with 'omdat', the conjugated verb 'ben' goes to the end.",
   } as PracticeItem),
   base({
     id: "sub-end-gen3-3",
@@ -1817,7 +1817,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "moeten",
     acceptableVariants: ["moeten"],
     explanationRu: "В кластере глаголов модальный 'moeten' стоит перед смысловым 'schrijven', оба в конце предложения.",
-    explanationEn: "In a cluster of verbs, the modal 'moeten' stands before the semantic 'schrijven', both at the end of the sentence.",
+    explanationEn: "In this verb cluster, the modal 'moeten' comes before the main verb 'schrijven'; both are at the end of the clause.",
   } as PracticeItem),
   base({
     id: "sep-split-gen3-1",
@@ -1829,7 +1829,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "bel",
     acceptableVariants: ["bel"],
     explanationRu: "'Opbellen': основа 'bel' спрягается, приставка 'op' уходит в конец предложения.",
-    explanationEn: "Opbellen: the base of 'bel' is conjugated, the prefix 'op' goes to the end of the sentence.",
+    explanationEn: "With 'opbellen', conjugate the stem 'bel' and move the prefix 'op' to the end of the clause.",
   } as PracticeItem),
   base({
     id: "sep-split-gen3-2",
@@ -1853,7 +1853,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "bereidt",
     acceptableVariants: ["bereidt"],
     explanationRu: "'Voorbereiden': основа 'bereidt' спрягается (3-е л. ед. ч. на -t), приставка 'voor' уходит в конец.",
-    explanationEn: "'Voorbereiden': the base of 'bereidt' conjugates (3 hp on -t), the prefix 'voor' goes to the end.",
+    explanationEn: "With 'voorbereiden', conjugate the stem as 'bereidt' in the third-person singular and move 'voor' to the end.",
   } as PracticeItem),
   base({
     id: "sep-part-gen3-1",
@@ -1865,7 +1865,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik heb mijn moeder opgebeld.", "Ik heb opgebeld mijn moeder.", "Ik heb mijn moeder gebeldop."],
     correctIndex: 0,
     explanationRu: "В причастии 'ge-' встаёт между приставкой и основой: 'op-ge-beld'.",
-    explanationEn: "In the participle, \"ge-\" stands between the prefix and the base: \"op-ge-beld.\"",
+    explanationEn: "In the past participle, 'ge-' comes between the prefix and stem: 'op-ge-beld'.",
   } as PracticeItem),
   base({
     id: "sep-part-gen3-2",
@@ -1901,7 +1901,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik voel me niet goed.", "Ik voel me goed niet.", "Ik niet voel me goed."],
     correctIndex: 0,
     explanationRu: "'Niet' стоит сразу перед словом, которое отрицается — здесь перед 'goed'.",
-    explanationEn: "'Niet' stands right before the word that is denied - here before 'goed'.",
+    explanationEn: "'Niet' comes directly before the element being negated—here, 'goed'.",
   } as PracticeItem),
   base({
     id: "neg-pos-gen3-2",
@@ -1925,7 +1925,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     answer: "niet",
     acceptableVariants: ["niet"],
     explanationRu: "'Niet' стоит перед частицей 'langs', ближе к концу предложения, но не в самом конце.",
-    explanationEn: "Niet stands in front of the langs particle, near the end of the sentence, but not at the end.",
+    explanationEn: "With the separable verb 'langskomen', 'niet' comes before the particle 'langs', which remains at the end.",
   } as PracticeItem),
   base({
     id: "art-dehet-gen3-1",
@@ -2009,7 +2009,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de tafeltje", "het tafeltje", "een tafeltje die"],
     correctIndex: 1,
     explanationRu: "Все уменьшительные существительные среднего рода — используем 'het': 'het tafeltje'.",
-    explanationEn: "All diminutive nouns of the middle kind - use 'het': 'het tafeltje'.",
+    explanationEn: "All Dutch diminutives take 'het': 'het tafeltje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen3-2",
@@ -2021,7 +2021,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["de kindje", "het kindje", "een kindje die"],
     correctIndex: 1,
     explanationRu: "Уменьшительная форма всегда 'het', даже если lemma 'het kind' уже het-слово: 'het kindje'.",
-    explanationEn: "The diminutive form is always 'het', even if the lemma 'het kind' is already the het word: 'het kindje'.",
+    explanationEn: "A diminutive always takes 'het'; 'kind' already does, so it remains 'het kindje'.",
   } as PracticeItem),
   base({
     id: "dim-art-gen3-3",
@@ -2225,7 +2225,7 @@ export const PRACTICE_ITEMS: PracticeItem[] = [
     options: ["Ik denk er niet aan.", "Ik denk niet aan het.", "Ik denk niet aan er."],
     correctIndex: 0,
     explanationRu: "Предложное 'er' заменяет неодушевлённый объект и стоит перед 'niet': 'er niet aan'.",
-    explanationEn: "The proposed er replaces the inanimate object and stands before the niet: er niet aan.",
+    explanationEn: "Pronominal 'er' replaces the inanimate prepositional object and comes before 'niet': 'er niet aan'.",
   } as PracticeItem),
   base({
     id: "er-prep-gen3-2",
