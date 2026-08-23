@@ -13,7 +13,8 @@ learner-facing production launch.
 - [x] Add automated tests for deterministic scheduling and writing-feedback rules.
 - [x] Add automated content validation: unique IDs, answer-schema checks, coverage-token checks, and
   grammar-target/error-code consistency.
-- [ ] Add accessibility and browser end-to-end checks to CI.
+- [x] Add browser end-to-end smoke checks to CI. Expand these with dedicated keyboard and screen-reader
+  checks as the UI grows.
 - [ ] Add a privacy policy, terms, and a release/versioning process.
 
 ## Milestone 2 — validated learning content

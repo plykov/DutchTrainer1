@@ -9,6 +9,10 @@ const repoName = "DutchTrainer1";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // Playwright opens the dev server on 127.0.0.1 while Next starts on
+  // localhost by default. Allow that loopback origin for local browser tests
+  // without changing production behaviour.
+  allowedDevOrigins: ["127.0.0.1"],
   basePath: isGithubPages ? `/${repoName}` : undefined,
   images: { unoptimized: true },
   // Static export writes each route as <route>/index.html when this is on,
