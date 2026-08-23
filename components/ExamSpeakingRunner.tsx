@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SPEAKING_EXAM_ITEMS } from "@/lib/content/speakingExamItems";
 import { shuffleArray } from "@/lib/shuffle";
+import { useT } from "@/lib/i18n";
 
 type Phase = "requesting" | "denied" | "unsupported" | "ready" | "recording" | "done";
 
@@ -12,6 +13,7 @@ const supportsRecording =
   typeof window !== "undefined" && !!navigator.mediaDevices && !!window.MediaRecorder;
 
 export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
+  const t = useT();
   // The pool has more short/medium prompts than one run needs, so draw a
   // random 8 short + 8 medium per run — keeps the real 8/8 structure while
   // varying which prompts appear and in what order.
@@ -128,39 +130,39 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
         <p className="text-red-600 text-sm">
-          {phase === "unsupported" ? "Ваш браузер не поддерживает запись звука." : "Доступ к микрофону не разрешён."}
+          {phase === "unsupported" ? t("sp_unsupported") : t("sp_denied")}
         </p>
         <button onClick={onExit} className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          Вернуться
+          {t("action_return")}
         </button>
       </div>
     );
   }
 
   if (phase === "requesting") {
-    return <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 text-sm text-zinc-500">Запрос доступа к микрофону…</div>;
+    return (
+      <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 text-sm text-zinc-500">
+        {t("exam_speaking_requesting")}
+      </div>
+    );
   }
 
   if (phase === "done") {
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
-        <h3 className="text-lg font-medium">Результат симуляции Spreken</h3>
-        <p className="text-sm text-zinc-500">
-          Демо из {items.length} заданий (8 коротких по 20с + 8 средних по 30с — как на настоящем
-          экзамене). Без автоматической оценки произношения — прослушайте свои записи и сравните с текстом
-          самостоятельно.
-        </p>
+        <h3 className="text-lg font-medium">{t("exam_speaking_result")}</h3>
+        <p className="text-sm text-zinc-500">{t("exam_speaking_summary", { n: items.length })}</p>
         <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-3 text-xs text-zinc-600 dark:text-zinc-400">
-          <p className="font-medium mb-1">По каким критериям оценивают Spreken на реальном экзамене (Cito):</p>
+          <p className="font-medium mb-1">{t("exam_speaking_rubric")}</p>
           <ul className="list-disc list-inside space-y-0.5">
-            <li>Inhoud (содержание ответа) — 39 из 103 баллов</li>
-            <li>Woord- en zinsvorming (построение слов/предложений) — 33 балла</li>
-            <li>Woordenschat (словарный запас) — 12 баллов</li>
-            <li>Uitspraak (произношение) — 9 баллов</li>
-            <li>Woordkeus (выбор слов) — 6 баллов</li>
-            <li>Tempo (темп речи) — 4 балла</li>
+            <li>Inhoud ({t("exam_speaking_content")}) — 39 / 103</li>
+            <li>Woord- en zinsvorming ({t("exam_speaking_formation")}) — 33</li>
+            <li>Woordenschat ({t("exam_speaking_vocabulary")}) — 12</li>
+            <li>Uitspraak ({t("exam_speaking_pronunciation")}) — 9</li>
+            <li>Woordkeus ({t("exam_speaking_word_choice")}) — 6</li>
+            <li>Tempo ({t("exam_speaking_tempo")}) — 4</li>
           </ul>
-          <p className="mt-1">Проходной балл — 66 из 103 (без учёта обязательных условий).</p>
+          <p className="mt-1">{t("exam_speaking_pass")}</p>
         </div>
         <div className="space-y-3">
           {items.map((it, i) => (
@@ -171,7 +173,7 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
           ))}
         </div>
         <button onClick={onExit} className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          Вернуться
+          {t("action_return")}
         </button>
       </div>
     );
@@ -185,20 +187,22 @@ export default function ExamSpeakingRunner({ onExit }: { onExit: () => void }) {
         <span>
           {index + 1} / {items.length}
         </span>
-        <span className="font-mono tabular-nums px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900">{secondsLeft}с</span>
+        <span className="font-mono tabular-nums px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900">
+          {secondsLeft}{t("seconds_short")}
+        </span>
       </div>
 
       <p className="text-xl font-medium">{item.text}</p>
 
-      {phase === "ready" && <p className="text-sm text-zinc-500">Приготовьтесь, запись начнётся через {secondsLeft} сек…</p>}
+      {phase === "ready" && <p className="text-sm text-zinc-500">{t("exam_speaking_ready", { n: secondsLeft })}</p>}
       {phase === "recording" && (
         <p className="text-sm text-red-600 flex items-center gap-2">
-          <span className="inline-block h-2 w-2 rounded-full bg-red-600 animate-pulse" aria-hidden="true" /> Идёт
-          запись — говорите сейчас
+          <span className="inline-block h-2 w-2 rounded-full bg-red-600 animate-pulse" aria-hidden="true" />{" "}
+          {t("exam_speaking_recording")}
         </p>
       )}
 
-      <p className="text-xs text-zinc-400">Темп задаётся автоматически, без возврата назад — как на настоящем экзамене.</p>
+      <p className="text-xs text-zinc-400">{t("exam_speaking_pace")}</p>
     </div>
   );
 }

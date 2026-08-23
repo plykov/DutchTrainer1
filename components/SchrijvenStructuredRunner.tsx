@@ -5,6 +5,7 @@ import { ZINSTAKEN_ITEMS } from "@/lib/content/zinstaken";
 import { DEELSCHRIJFTAKEN_ITEMS } from "@/lib/content/deelschrijftaken";
 import { WRITING_EXAM_ITEMS } from "@/lib/content/writingExamItems";
 import { shuffleArray } from "@/lib/shuffle";
+import { useT } from "@/lib/i18n";
 import WritingTask from "@/components/WritingTask";
 
 // §7 — Schrijven's real structure: 8 zinstaken + 2 deelschrijftaken + 2
@@ -19,6 +20,7 @@ import WritingTask from "@/components/WritingTask";
 type Stage = "zinstaken" | "deelschrijftaken" | "kort" | "result";
 
 export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => void }) {
+  const t = useT();
   const zinItems = useMemo(() => shuffleArray(ZINSTAKEN_ITEMS).slice(0, 8), []);
   const deelItems = useMemo(() => shuffleArray(DEELSCHRIJFTAKEN_ITEMS).slice(0, 2), []);
   const kortItems = useMemo(() => shuffleArray(WRITING_EXAM_ITEMS).slice(0, 2), []);
@@ -59,14 +61,11 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
         <h3 className="text-lg font-medium">
-          {ended ? "Время вышло — сессия завершена автоматически" : "Schrijven завершён"}
+          {ended ? t("exam_schrijven_timeout") : t("exam_schrijven_done")}
         </h3>
-        <p className="text-sm text-zinc-500">
-          Демо структуры реального экзамена: 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken, единый таймер
-          100 минут (здесь — масштабированная демо-версия). Порядок заданий в реальном экзамене выбираете вы сами.
-        </p>
+        <p className="text-sm text-zinc-500">{t("exam_schrijven_summary")}</p>
         <button onClick={onExit} className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          Вернуться
+          {t("action_return")}
         </button>
       </div>
     );
@@ -103,7 +102,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
           {zinRevealed && (
             <div className="rounded-md bg-zinc-100 dark:bg-zinc-900 p-3 text-sm space-y-1">
               <p>
-                <strong>Пример ответа:</strong> {zinItems[zinIndex].sampleAnswer}
+                <strong>{t("exam_sample_answer")}</strong> {zinItems[zinIndex].sampleAnswer}
               </p>
               <p className="text-zinc-500">{zinItems[zinIndex].explanationRu}</p>
             </div>
@@ -115,7 +114,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
                 disabled={!zinAnswers[zinIndex].trim()}
                 className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
               >
-                Показать пример
+                {t("exam_show_sample")}
               </button>
             ) : (
               <button
@@ -126,7 +125,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
                 }}
                 className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
               >
-                Далее
+                {t("action_next")}
               </button>
             )}
           </div>
@@ -148,7 +147,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
                   className="w-full rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-3 py-2"
                 />
                 {deelRevealed && (
-                  <p className="text-xs text-zinc-500 mt-1">Пример: {f.sampleAnswer}</p>
+                  <p className="text-xs text-zinc-500 mt-1">{t("exam_sample")} {f.sampleAnswer}</p>
                 )}
               </div>
             ))}
@@ -159,7 +158,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
                 onClick={() => setDeelRevealed(true)}
                 className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
               >
-                Показать примеры
+                {t("exam_show_samples")}
               </button>
             ) : (
               <button
@@ -170,7 +169,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
                 }}
                 className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
               >
-                Далее
+                {t("action_next")}
               </button>
             )}
           </div>
@@ -188,7 +187,7 @@ export default function SchrijvenStructuredRunner({ onExit }: { onExit: () => vo
               }}
               className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium"
             >
-              {kortIndex + 1 >= kortItems.length ? "Завершить Schrijven" : "Далее"}
+              {kortIndex + 1 >= kortItems.length ? t("exam_finish_schrijven") : t("action_next")}
             </button>
           </div>
         </div>

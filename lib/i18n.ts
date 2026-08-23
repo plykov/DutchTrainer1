@@ -18,6 +18,7 @@ const DICT = {
   nav_interaction: { ru: "Взаимодействие", en: "Interaction" },
   nav_exam: { ru: "Симуляция экзамена", en: "Exam simulation" },
   nav_settings: { ru: "Настройки", en: "Settings" },
+  nav_primary: { ru: "Основная навигация", en: "Main navigation" },
   nav_menu_open: { ru: "Открыть меню разделов", en: "Open section menu" },
   nav_menu_close: { ru: "Закрыть меню разделов", en: "Close section menu" },
   loading: { ru: "Загрузка…", en: "Loading…" },
@@ -92,6 +93,119 @@ const DICT = {
   action_show: { ru: "Показать", en: "Show" },
   action_return: { ru: "Вернуться", en: "Return" },
   next_choose_title: { ru: "Выберите следующее упражнение:", en: "Choose the next exercise:" },
+
+  practice_intro: {
+    ru: "Новая грамматика сначала отрабатывается изолированно, затем смешивается с похожими темами.",
+    en: "New grammar is practised in isolation first, then mixed with related targets.",
+  },
+  vocab_intro: {
+    ru: "Каждое существительное хранится вместе с артиклем, множественным числом и словосочетаниями — никогда как отдельный перевод.",
+    en: "Every noun is learned with its article, plural, and collocations—never as an isolated translation pair.",
+  },
+  reading_intro: {
+    ru: "Текст открывается для свободного чтения только при известном покрытии слов ≥95% — это правило §4, самое важное правило по контенту в этом приложении.",
+    en: "A text opens for free extensive reading only when known-word coverage is ≥95%—the app's most important content rule (§4).",
+  },
+  listening_intro: {
+    ru: "Как на экзамене: сначала вопрос, затем один прогон без повтора (§7). Озвучка идёт через синтез речи браузера (Web Speech API); при его отсутствии текст показывается один раз вместо звука.",
+    en: "Exam-style flow: read the question first, then hear one playback with no replay (§7). The browser's Web Speech API provides audio; without it, the text appears once instead.",
+  },
+  speaking_intro: {
+    ru: "Elicited imitation: прочитайте предложение вслух, послушайте свою запись и оцените себя сами. Автоматической оценки произношения нет.",
+    en: "Elicited imitation: read the sentence aloud, listen to your recording, and assess yourself. There is no automatic pronunciation scoring.",
+  },
+  interaction_intro: {
+    ru: "Диалоговый навык отличается от монологического говорения: нужно уместно ответить внутри живого обмена репликами — попросить, уточнить, отказать или согласиться. Выбирайте самый естественный ответ.",
+    en: "Interaction differs from monologic speaking: respond appropriately inside a live exchange by requesting, clarifying, declining, or agreeing. Choose the most natural response.",
+  },
+  writing_intro: {
+    ru: "Сначала проверяется, выполнено ли задание; грамматика оценивается только после этого (правило адекватности).",
+    en: "Task completion is checked first; grammar is assessed only after the adequacy gate passes.",
+  },
+  writing_other_topic: { ru: "Другая тема ({n} доступно)", en: "Another topic ({n} available)" },
+  writing_empty: { ru: "Нет доступных заданий на письмо.", en: "No writing tasks are available." },
+
+  reading_mode_intensive: {
+    ru: "Интенсивный режим (глоссы + предобучение)",
+    en: "Intensive mode (glosses + pre-teaching)",
+  },
+  reading_mode_extensive: { ru: "Экстенсивное чтение (без глосс)", en: "Extensive reading (no glosses)" },
+  reading_mode_confidence: {
+    ru: "Режим уверенности (без глосс, свободный темп)",
+    en: "Confidence mode (no glosses, free pace)",
+  },
+  reading_known_coverage: { ru: "{n}% известного текста", en: "{n}% known-word coverage" },
+  reading_unknown_word: { ru: "Незнакомое слово", en: "Unknown word" },
+  reading_unknown_word_lemma: {
+    ru: "Незнакомое слово — изучите в разделе «Словарь» ({lemma})",
+    en: "Unknown word—study it in Vocabulary ({lemma})",
+  },
+  reading_below_gate: {
+    ru: "Покрытие ниже 95% — этот текст не подходит для экстенсивного чтения. Сначала выучите отмеченные слова в",
+    en: "Coverage is below 95%, so this text is not ready for extensive reading. First study the marked words in",
+  },
+  reading_vocab_link: { ru: "разделе «Словарь»", en: "Vocabulary" },
+
+  listening_score: { ru: "Правильно: {correct} / {total}", en: "Correct: {correct} / {total}" },
+  listening_preread: {
+    ru: "Прочитайте вопрос заранее — текст ещё не звучал. Прослушивание начнётся через {n} сек.",
+    en: "Read the question first—the text has not played yet. Playback starts in {n}s.",
+  },
+  listening_start_now: { ru: "Начать прослушивание сейчас", en: "Start playback now" },
+  listening_playing: { ru: "🔊 Прослушивание… (только один раз, без повтора)", en: "🔊 Playing… (once only, no replay)" },
+  listening_exam_playing: { ru: "🔊 Прослушивание… (только один раз)", en: "🔊 Playing… (once only)" },
+  listening_flash_fallback: {
+    ru: "В этом браузере не поддерживается синтез речи — текст показывается один раз вместо звука.",
+    en: "Speech synthesis is unavailable in this browser, so the text is shown once instead of audio.",
+  },
+  listening_tts_missing_voice: {
+    ru: "Если звука не слышно, нидерландский голос может быть не установлен. Это всё равно считается единственной попыткой; повтора не будет.",
+    en: "If you hear nothing, a Dutch voice may not be installed. This still counts as the single attempt; there is no replay.",
+  },
+  listening_answer: { ru: "Ответить", en: "Answer" },
+  listening_next: { ru: "Следующее задание", en: "Next item" },
+
+  writing_expired: {
+    ru: "Время вышло — ответ отправлен автоматически, как на настоящем экзамене.",
+    en: "Time is up—the answer was submitted automatically, as in the real exam.",
+  },
+  writing_lt_disclosure: {
+    ru: "Добавить внешнюю проверку орфографии и грамматики через LanguageTool. При включении текст ответа отправляется в публичный сервис LanguageTool вместе с обычными сетевыми данными; без этой опции проверка остаётся только в браузере.",
+    en: "Add the external LanguageTool spelling and grammar check. When enabled, the answer text and normal connection data are sent to LanguageTool's public service; without it, checking stays in the browser.",
+  },
+  writing_privacy_link: { ru: "Подробнее о конфиденциальности", en: "Privacy details" },
+  writing_adequacy_fail: {
+    ru: "Сначала выполните задание — грамматика проверяется только после этого.",
+    en: "Complete the task first—grammar is checked only after that.",
+  },
+  writing_missing: { ru: "Не хватает:", en: "Missing:" },
+  writing_fix_answer: { ru: "Исправить ответ", en: "Revise answer" },
+  writing_checking_local: { ru: "Проверяем текст локальными правилами…", en: "Checking with local rules…" },
+  writing_checking_external: {
+    ru: "Проверяем текст (локальные правила + LanguageTool)…",
+    en: "Checking (local rules + LanguageTool)…",
+  },
+  writing_no_errors: {
+    ru: "Задание выполнено, явных ошибок из отслеживаемых категорий не найдено. Отличная работа!",
+    en: "Task complete. No clear errors from the tracked categories were found. Great work!",
+  },
+  writing_found_span: { ru: "Найден фрагмент:", en: "Found passage:" },
+  writing_try_first: {
+    ru: "Попробуйте исправить самостоятельно, прежде чем смотреть ответ.",
+    en: "Try to correct it yourself before revealing the explanation.",
+  },
+  writing_show_analysis: { ru: "Показать разбор", en: "Show explanation" },
+  writing_error_code: { ru: "Код ошибки:", en: "Error code:" },
+  writing_repair_action: {
+    ru: "Далее: напишите новое предложение с этой конструкцией",
+    en: "Next: write a new sentence using this structure",
+  },
+  writing_repair_label: {
+    ru: "Напишите новое предложение, используя ту же конструкцию правильно:",
+    en: "Write a new sentence using the same structure correctly:",
+  },
+  writing_next_error: { ru: "Следующая ошибка", en: "Next error" },
+  writing_done: { ru: "Готово", en: "Done" },
 
   settings_title: { ru: "Настройки", en: "Settings" },
   settings_intro: { ru: "Профиль, обратная связь и управление данными.", en: "Profile, feedback, and data management." },
@@ -171,6 +285,119 @@ const DICT = {
   exam_result_title: { ru: "Результат симуляции", en: "Simulation result" },
   exam_no_answer: { ru: "нет ответа", en: "no answer" },
   exam_no_backtrack: { ru: "Без возврата назад — как на настоящем экзамене.", en: "No going back — same as the real exam." },
+  exam_constraints_title: { ru: "Экзаменационные ограничения", en: "Exam constraints" },
+  exam_constraints_intro: {
+    ru: "Ниже — подтверждённые ограничения по времени и формату и рабочие демо механики KNM, Lezen, Luisteren, Schrijven и Spreken. Lezen и Luisteren содержат больше тренировочных вопросов, Schrijven сохраняет структуру 8+2+2, а KNM и Spreken остаются уменьшенными демо.",
+    en: "Below are verified timing and format constraints plus working mechanics demos for KNM, Lezen, Luisteren, Schrijven, and Spreken. Lezen and Luisteren include extra practice questions, Schrijven preserves the 8+2+2 structure, and KNM and Spreken remain smaller demos.",
+  },
+  exam_question_count: { ru: "{n} вопросов", en: "{n} questions" },
+  exam_demo_knm: { ru: "Демо-симуляция KNM ({count})", en: "KNM demo simulation ({count})" },
+  exam_demo_lezen: { ru: "Демо-симуляция Lezen ({count})", en: "Lezen demo simulation ({count})" },
+  exam_demo_luisteren: { ru: "Демо-симуляция Luisteren ({count})", en: "Luisteren demo simulation ({count})" },
+  exam_demo_schrijven: {
+    ru: "Демо-симуляция Schrijven (реальная структура: 8+2+2)",
+    en: "Schrijven demo simulation (real 8+2+2 structure)",
+  },
+  exam_free_schrijven: {
+    ru: "Schrijven — свободная практика ({n} заданий)",
+    en: "Schrijven free practice ({n} tasks)",
+  },
+  exam_demo_spreken: {
+    ru: "Демо-симуляция Spreken (8 коротких + 8 средних, темп по сигналу)",
+    en: "Spreken demo simulation (8 short + 8 medium, signal-paced)",
+  },
+  exam_choose_other: { ru: "Выбрать другое задание", en: "Choose another task" },
+  exam_exit_simulation: { ru: "Выйти из симуляции", en: "Exit simulation" },
+  exam_choose_writing: { ru: "Выберите задание ({n} доступно):", en: "Choose a task ({n} available):" },
+  exam_knm_note_title: { ru: "Важно про KNM", en: "Important KNM update" },
+  exam_knm_note: {
+    ru: "Модуль KNM пересобран с 1 июля 2025 года: 45 вопросов, 45 минут, порог 27/45 (60%) и обновлённые eindtermen. Старые материалы KNM больше не соответствуют экзамену.",
+    en: "KNM was redesigned from 1 July 2025: 45 questions, 45 minutes, a 27/45 (60%) threshold, and updated eindtermen. Older KNM materials no longer match the exam.",
+  },
+  exam_p1_reference_title: {
+    ru: "Staatsexamen NT2 Programma I — справка по разделам",
+    en: "Staatsexamen NT2 Programma I—component reference",
+  },
+  exam_p1_reference_intro: {
+    ru: "Это не отдельный шестой тест: здесь собраны ограничения по времени и формату для всего экзамена. Разделы запускаются кнопками выше.",
+    en: "This is not a separate sixth test; it collects the timing and format constraints for the full exam. Launch its components with the buttons above.",
+  },
+  exam_p1_lezen_constraint: {
+    ru: "110 мин, 6 текстов, 36 вопросов MC. Разрешён только Van Dale Pocketwoordenboek Nederlands als tweede taal (NT2), любое издание; другие словари и электронные переводчики запрещены.",
+    en: "110 minutes, 6 texts, 36 multiple-choice questions. Only Van Dale Pocketwoordenboek Nederlands als tweede taal (NT2), any edition, is allowed; other dictionaries and electronic translators are prohibited.",
+  },
+  exam_p1_listening_constraint: {
+    ru: "90 мин, около 40 вопросов, 5+ фрагментов, по 5–10 вопросов на фрагмент. Один прогон без повтора; 25 сек на предварительное чтение вопроса.",
+    en: "90 minutes, about 40 questions, 5+ fragments, and 5–10 questions per fragment. One playback with no replay; 25 seconds to pre-read each question.",
+  },
+  exam_p1_writing_constraint: {
+    ru: "100 мин. 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken. Порядок выбирает кандидат. Van Dale разрешён; проверка орфографии запрещена.",
+    en: "100 minutes. 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken. The candidate chooses the order. Van Dale is allowed; spell-checking is prohibited.",
+  },
+  exam_p1_speaking_constraint: {
+    ru: "Около 25 мин. 8 коротких (20с) + 8 средних (30с) заданий, темп по сигналу, без возврата. Рубрика: 103 балла, порог 66.",
+    en: "About 25 minutes. 8 short (20s) + 8 medium (30s) tasks, signal-paced with no going back. Rubric: 103 points, threshold 66.",
+  },
+  exam_verified_note: {
+    ru: "Количество вопросов, длительность, структура и правила словаря подтверждены по staatsexamensnt2.nl и inburgeren.nl в августе 2026 года. Перепроверьте их перед выпуском производственного контента.",
+    en: "Question counts, timing, structure, and dictionary rules were verified against staatsexamensnt2.nl and inburgeren.nl in August 2026. Re-check them before releasing production content.",
+  },
+  exam_copyright_title: { ru: "Официальные материалы защищены законом", en: "Official materials are protected" },
+  exam_copyright_note: {
+    ru: "Все задания здесь авторские и смоделированы по открытому блуепринту, а не скопированы. Обязательно потренируйтесь в официальной среде FACET на oefenexamensnt2.nl; используйте компьютер.",
+    en: "All tasks here are original and modelled on the public blueprint, not copied. Practise at least once in the official FACET environment on oefenexamensnt2.nl; use a computer.",
+  },
+  exam_knm_pass_note: {
+    ru: "Демо из 41 вопроса. Настоящий KNM: 45 вопросов, порог 27/45 (60%), 45 минут.",
+    en: "41-question demo. The real KNM has 45 questions, a 27/45 (60%) threshold, and 45 minutes.",
+  },
+  exam_lezen_pass_note: {
+    ru: "Демо из 56 вопросов — больше, чем в реальном Lezen (36 вопросов, 110 минут, 6 текстов), для дополнительной тренировки.",
+    en: "This 56-question demo exceeds the real Lezen format (36 questions, 110 minutes, 6 texts) to provide extra practice.",
+  },
+  exam_listening_result: { ru: "Результат симуляции Luisteren", en: "Luisteren simulation result" },
+  exam_listening_summary: {
+    ru: "Демо из {n} вопросов. Настоящий Luisteren: около 40 вопросов (5+ фрагментов), 90 минут.",
+    en: "{n}-question demo. The real Luisteren has about 40 questions (5+ fragments) and lasts 90 minutes.",
+  },
+  exam_schrijven_timeout: {
+    ru: "Время вышло — сессия завершена автоматически",
+    en: "Time is up—the session ended automatically",
+  },
+  exam_schrijven_done: { ru: "Schrijven завершён", en: "Schrijven complete" },
+  exam_schrijven_summary: {
+    ru: "Демо реальной структуры: 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken под единым 100-минутным таймером (здесь время масштабировано). На реальном экзамене порядок выбираете вы.",
+    en: "Real-structure demo: 8 zinstaken + 2 deelschrijftaken + 2 korte schrijftaken under one 100-minute timer (scaled here). You choose the order in the real exam.",
+  },
+  exam_sample_answer: { ru: "Пример ответа:", en: "Sample answer:" },
+  exam_sample: { ru: "Пример:", en: "Example:" },
+  exam_show_sample: { ru: "Показать пример", en: "Show sample" },
+  exam_show_samples: { ru: "Показать примеры", en: "Show samples" },
+  exam_finish_schrijven: { ru: "Завершить Schrijven", en: "Finish Schrijven" },
+  exam_speaking_requesting: { ru: "Запрос доступа к микрофону…", en: "Requesting microphone access…" },
+  exam_speaking_result: { ru: "Результат симуляции Spreken", en: "Spreken simulation result" },
+  exam_speaking_summary: {
+    ru: "Демо из {n} заданий (8 коротких по 20с + 8 средних по 30с). Автоматической оценки нет: прослушайте записи и сравните их с текстом.",
+    en: "{n}-task demo (8 short at 20s + 8 medium at 30s). There is no automatic scoring; listen to your recordings and compare them with the text.",
+  },
+  exam_speaking_rubric: { ru: "Критерии реального Spreken (Cito):", en: "Real Spreken rubric (Cito):" },
+  exam_speaking_content: { ru: "содержание ответа", en: "response content" },
+  exam_speaking_formation: { ru: "построение слов и предложений", en: "word and sentence formation" },
+  exam_speaking_vocabulary: { ru: "словарный запас", en: "vocabulary" },
+  exam_speaking_pronunciation: { ru: "произношение", en: "pronunciation" },
+  exam_speaking_word_choice: { ru: "выбор слов", en: "word choice" },
+  exam_speaking_tempo: { ru: "темп речи", en: "speaking rate" },
+  exam_speaking_pass: {
+    ru: "Проходной балл — 66 из 103 (без учёта обязательных условий).",
+    en: "The passing score is 66/103, excluding mandatory conditions.",
+  },
+  seconds_short: { ru: "с", en: "s" },
+  exam_speaking_ready: { ru: "Приготовьтесь: запись начнётся через {n} сек.", en: "Get ready: recording starts in {n}s." },
+  exam_speaking_recording: { ru: "Идёт запись — говорите сейчас", en: "Recording—speak now" },
+  exam_speaking_pace: {
+    ru: "Темп задаётся автоматически, без возврата назад — как на настоящем экзамене.",
+    en: "The pace advances automatically with no going back, as in the real exam.",
+  },
 
   sp_privacy_note: {
     ru: "Запись обрабатывается только в вашем браузере, никуда не отправляется и не сохраняется — она исчезает, как только вы оцените попытку или уйдёте со страницы (принцип минимальной обработки голосовых данных, §9). Здесь нет автоматической оценки произношения (ASR) — сравнивайте свою запись с текстом сами.",

@@ -28,7 +28,7 @@ learner-facing production launch.
   banks directly in TypeScript.
 - [ ] Add high-frequency verbs, adjectives, fixed expressions, and productive-use activities alongside
   the current noun-first vocabulary bank.
-- [ ] Finish English UI chrome for reading, writing, and all exam runners. Russian L1-specific teaching
+- [x] Finish English UI chrome for reading, writing, and all exam runners. Russian L1-specific teaching
   explanations remain intentionally Russian unless a separately reviewed English pedagogy is added.
 
 ## Milestone 3 — assessment and exam realism

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LISTENING_EXAM_ITEMS } from "@/lib/content/listeningExamItems";
 import { shuffleArray, shuffleOptions } from "@/lib/shuffle";
+import { useT } from "@/lib/i18n";
 
 type Stage = "preread" | "playing" | "answer" | "result";
 
@@ -12,6 +13,7 @@ const WORDS_PER_SECOND_FLASH = 2.1;
 const supportsTts = typeof window !== "undefined" && "speechSynthesis" in window;
 
 export default function ExamListeningRunner({ onExit }: { onExit: () => void }) {
+  const t = useT();
   // Shuffled once per mount: item order, plus each question's MC option
   // order, so neither position is memorizable/predictable.
   const items = useMemo(
@@ -94,20 +96,18 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
     const correctCount = answers.filter((a, i) => a === items[i].question.correctIndex).length;
     return (
       <div className="rounded-lg border border-zinc-200 dark:border-zinc-800 p-6 space-y-4">
-        <h3 className="text-lg font-medium">Результат симуляции Luisteren</h3>
+        <h3 className="text-lg font-medium">{t("exam_listening_result")}</h3>
         <p className="text-2xl font-semibold">
           {correctCount} / {items.length}
         </p>
-        <p className="text-sm text-zinc-500">
-          Демо из {items.length} вопросов. Настоящий Luisteren: около 40 вопросов (5+ фрагментов), 90 минут —
-          staatsexamensnt2.nl сам формулирует это как &laquo;ongeveer 40 opdrachten&raquo;.
-        </p>
+        <p className="text-sm text-zinc-500">{t("exam_listening_summary", { n: items.length })}</p>
         <div className="space-y-2">
           {items.map((it, i) => (
             <div key={it.id} className="rounded-md border border-zinc-200 dark:border-zinc-800 p-3 text-sm">
               <p className="font-medium">{it.question.prompt}</p>
               <p className={answers[i] === it.question.correctIndex ? "text-emerald-600" : "text-red-600"}>
-                Ваш ответ: {answers[i] !== null ? it.question.options[answers[i]!] : "нет ответа"} · Правильно:{" "}
+                {t("your_answer")}: {answers[i] !== null ? it.question.options[answers[i]!] : t("exam_no_answer")} ·{" "}
+                {t("correct_answer")}:{" "}
                 {it.question.options[it.question.correctIndex]}
               </p>
               <p className="text-zinc-500 mt-1">{it.question.explanationRu}</p>
@@ -115,7 +115,7 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
           ))}
         </div>
         <button onClick={onExit} className="rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium">
-          Вернуться
+          {t("action_return")}
         </button>
       </div>
     );
@@ -127,14 +127,12 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
         <span>
           {index + 1} / {items.length}
         </span>
-        <span>без возврата назад</span>
+        <span>{t("exam_no_backtrack")}</span>
       </div>
 
       {stage === "preread" && (
         <div className="space-y-3">
-          <p className="text-sm text-zinc-500">
-            Прочитайте вопрос заранее. Прослушивание начнётся через <strong>{preReadLeft}</strong> сек.
-          </p>
+          <p className="text-sm text-zinc-500">{t("listening_preread", { n: preReadLeft })}</p>
           <p className="text-lg font-medium">{item.question.prompt}</p>
           <ul className="text-sm text-zinc-500 list-disc list-inside">
             {item.question.options.map((o) => (
@@ -146,10 +144,10 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
 
       {stage === "playing" && (
         <div className="space-y-3">
-          <p className="text-lg font-medium">🔊 Прослушивание… (только один раз)</p>
+          <p className="text-lg font-medium">{t("listening_exam_playing")}</p>
           {playbackMode === "flash" && (
             <>
-              <p className="text-xs text-amber-600">Синтез речи недоступен — текст показан один раз вместо звука.</p>
+              <p className="text-xs text-amber-600">{t("listening_flash_fallback")}</p>
               <p className="text-lg leading-relaxed">{item.transcript}</p>
             </>
           )}
@@ -177,7 +175,7 @@ export default function ExamListeningRunner({ onExit }: { onExit: () => void }) 
             disabled={selected === null}
             className="mt-4 rounded-md bg-blue-600 text-white px-4 py-2 text-sm font-medium disabled:opacity-40"
           >
-            {index + 1 >= items.length ? "Завершить" : "Далее"}
+            {index + 1 >= items.length ? t("action_finish") : t("action_next")}
           </button>
         </fieldset>
       )}

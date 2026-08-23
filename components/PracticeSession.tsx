@@ -137,7 +137,7 @@ export default function PracticeSession() {
           <p>{"explanationRu" in item ? item.explanationRu : ""}</p>
           {errorEntry?.l1Note && (
             <p className="mt-2 text-xs opacity-80">
-              <strong>Код ошибки {errorEntry.code}:</strong> {errorEntry.l1Note}
+              <strong>{t("writing_error_code")} {errorEntry.code}</strong> {errorEntry.l1Note}
             </p>
           )}
         </div>
