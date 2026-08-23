@@ -129,11 +129,13 @@ test("English explanation language renders English learning feedback", async ({ 
   });
   await page.goto("/practice");
 
-  const firstRadio = page.locator('input[type="radio"]').first();
+  const firstRadio = page.getByRole("radio").first();
+  const firstTextbox = page.getByRole("textbox").first();
+  await expect(firstRadio.or(firstTextbox)).toBeVisible();
   if (await firstRadio.isVisible()) {
     await firstRadio.check();
   } else {
-    await page.getByRole("textbox").first().fill("test");
+    await firstTextbox.fill("test");
   }
   await page.getByRole("button", { name: "Check" }).click();
 
