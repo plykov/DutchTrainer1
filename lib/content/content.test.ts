@@ -30,7 +30,7 @@ function assertMcItems(items: { id: string; options: string[]; correctIndex: num
 
 const CYRILLIC = /[А-Яа-яЁё]/;
 const KNOWN_MT_FAILURES =
-  /\b(?:appendage|communion|final stunning|laryngeal slit|proposed group|transitional verb|incomprehensible|laggards)\b|ruined vowel/i;
+  /\b(?:appendage|communion|final stunning|laryngeal slit|proposed group|proposed er|transitional verb|semantic verb|incomprehensible|laggards)\b|ruined vowel|recording open|without a record|repeated recipe|the design takes|3 hp/i;
 
 function assertEnglishInstruction(label: string, russian: string, english: string | undefined) {
   if (russian.trim()) expect(english, `${label} needs English instructional copy`).toBeTruthy();

@@ -20,3 +20,7 @@ An editorial QA pass on 2026-08-23 corrected recurring machine-translation defec
 pronunciation terminology and repaired malformed instructions. Automated content tests reject the
 known failure patterns found in that audit. This improves readability but does not change the English
 copy's `unreviewed` status or replace review by a qualified NT2 educator.
+
+A second editorial sweep corrected additional literal translations involving appointments,
+registration, prescriptions, benefits, municipal services, separable verbs, negation, and pronominal
+`er`. These remain high-confidence readability corrections, not educator validation.

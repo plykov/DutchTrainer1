@@ -18,6 +18,8 @@ for releases and remains a public beta while its version is below `1.0.0`.
   learner's explanation language, while preserving Russian source copy and vocabulary glosses.
 - Corrected recurring English machine-translation defects in grammar terminology, pronunciation
   terminology, civic-service wording, and structured-writing instructions; educator review is pending.
+- Expanded English editorial QA to appointment, registration, prescription, benefit, separable-verb,
+  negation, and pronominal-`er` explanations while retaining the unreviewed content status.
 
 ## 0.2.0-beta.1 - 2026-08-23
 

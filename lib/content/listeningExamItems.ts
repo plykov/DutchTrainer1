@@ -220,7 +220,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["112", "Het gewone nummer van de gemeente", "De politie"],
       correctIndex: 1,
       explanationRu: "'Voor een kapotte lantaarnpaal ... belt u het gewone nummer van de gemeente' — для мелких проблем обычный номер мэрии.",
-      explanationEn: "'Voor een kapotte lantaarnpaal ... belt u het gewone nummer van de gemeente' is a regular City Hall number for small problems.",
+      explanationEn: "For a broken streetlight, call the municipality's regular number rather than the emergency number.",
     },
   },
   {
@@ -352,7 +352,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Minstens tien weken voor de vierde verjaardag", "Op de vierde verjaardag zelf", "Er is geen deadline"],
       correctIndex: 0,
       explanationRu: "'minstens tien weken voor de vierde verjaardag' — запись минимум за десять недель.",
-      explanationEn: "'minstens tien weken voor de vierde verjaardag' is a record at least ten weeks in advance.",
+      explanationEn: "Register at least ten weeks before the child's fourth birthday.",
     },
   },
   {
@@ -664,7 +664,7 @@ export const LISTENING_EXAM_ITEMS: ListeningExamItem[] = [
       options: ["Tot en met vrijdag", "Tot het einde van de maand", "Er is geen deadline"],
       correctIndex: 0,
       explanationRu: "'tot en met vrijdag' — запись открыта до пятницы включительно.",
-      explanationEn: "'Tot en met vrijdag' - recording open until Friday inclusive.",
+      explanationEn: "'Tot en met vrijdag' means registration remains open through Friday, including Friday itself.",
     },
   },
   {

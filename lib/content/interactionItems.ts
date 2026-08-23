@@ -400,7 +400,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Благодарность + уточняющий вопрос — естественное продолжение диалога у врача.",
-    explanationEn: "Gratitude + clarifying question - a natural continuation of the dialogue with the doctor.",
+    explanationEn: "Thanking the doctor and asking a clarifying question is a natural continuation of the conversation.",
   },
   {
     id: "int-25",
@@ -1164,7 +1164,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na tien uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1180,7 +1180,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na elf uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1196,7 +1196,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na middernacht?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1212,7 +1212,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na negen uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1228,7 +1228,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na acht uur 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1244,7 +1244,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na half elf 's avonds?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1260,7 +1260,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na tien uur?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1276,7 +1276,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na elf uur?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1292,7 +1292,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "B1",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na twaalf uur 's nachts?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1308,7 +1308,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "buurt",
     level: "A2",
     situationRu: "Сосед жалуется на шум из вашей квартиры поздно вечером.",
-    situationEn: "Neighbor complains of noise from your apartment late at night.",
+    situationEn: "A neighbour complains about late-night noise from your apartment.",
     dialogue: ["Buurman: Kunt u wat rustiger zijn na negen uur?"],
     options: [
       "Sorry, dat wist ik niet. Ik zal er rekening mee houden.",
@@ -1324,7 +1324,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "B1",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was maandag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik moet werken. Ik had het moeten doorgeven.",
@@ -1340,7 +1340,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was dinsdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik ben ziek. Ik had het moeten doorgeven.",
@@ -1356,7 +1356,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was woensdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik heb een andere afspraak. Ik had het moeten doorgeven.",
@@ -1372,7 +1372,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was donderdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, mijn kind is ziek. Ik had het moeten doorgeven.",
@@ -1388,7 +1388,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "B1",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was vrijdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik ben op vakantie. Ik had het moeten doorgeven.",
@@ -1404,7 +1404,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was zaterdag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, de auto is kapot. Ik had het moeten doorgeven.",
@@ -1420,7 +1420,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was zondag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik heb geen oppas. Ik had het moeten doorgeven.",
@@ -1436,7 +1436,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was volgende week niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, het komt slecht uit. Ik had het moeten doorgeven.",
@@ -1452,7 +1452,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "B1",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was morgenochtend niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik ben er niet. Ik had het moeten doorgeven.",
@@ -1468,7 +1468,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "school",
     level: "A2",
     situationRu: "Учитель вашего ребёнка спрашивает о его отсутствии в школе.",
-    situationEn: "Your child’s teacher asks about his absence from school.",
+    situationEn: "Your child's teacher asks about the child's absence from school.",
     dialogue: ["Leraar: Uw kind was vanmiddag niet op school. Wat was er aan de hand?"],
     options: [
       "Het spijt me, ik heb een sollicitatiegesprek. Ik had het moeten doorgeven.",
@@ -1644,7 +1644,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "B1",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn medicijnen ophalen.",
@@ -1660,7 +1660,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn antibiotica ophalen.",
@@ -1676,7 +1676,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn pijnstillers ophalen.",
@@ -1692,7 +1692,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn hoestdrank ophalen.",
@@ -1708,7 +1708,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "B1",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn zalf ophalen.",
@@ -1724,7 +1724,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn tabletten ophalen.",
@@ -1740,7 +1740,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn drupjes ophalen.",
@@ -1756,7 +1756,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn recept voor mijn kind ophalen.",
@@ -1772,7 +1772,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "B1",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn nieuwe medicijnen ophalen.",
@@ -1788,7 +1788,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "apotheek",
     level: "A2",
     situationRu: "В аптеке вы хотите забрать лекарства по рецепту.",
-    situationEn: "At the pharmacy, you want to pick up prescription medications.",
+    situationEn: "At the pharmacy, you want to collect prescription medicine.",
     dialogue: ["Apotheker: Heeft u een recept van de huisarts?"],
     options: [
       "Ja, hier is mijn recept. Ik kom mijn herhaalrecept ophalen.",
@@ -1813,7 +1813,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-82",
@@ -1829,7 +1829,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-83",
@@ -1845,7 +1845,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-84",
@@ -1861,7 +1861,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-85",
@@ -1877,7 +1877,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-86",
@@ -1893,7 +1893,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-87",
@@ -1909,7 +1909,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-88",
@@ -1925,7 +1925,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-89",
@@ -1941,7 +1941,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-90",
@@ -1957,14 +1957,14 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойно объяснить ситуацию и спросить о следующем поезде — уместная реакция.",
-    explanationEn: "Quietly explaining the situation and asking about the next train is an appropriate response.",
+    explanationEn: "Calmly explain the situation and ask about the next train.",
   },
   {
     id: "int-gen-91",
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de eigen bijdrage in mijn polis. Dat is mij niet duidelijk.",
@@ -1980,7 +1980,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de dekking voor tandarts in mijn polis. Dat is mij niet duidelijk.",
@@ -1996,7 +1996,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de premie in mijn polis. Dat is mij niet duidelijk.",
@@ -2012,7 +2012,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de aanvullende verzekering in mijn polis. Dat is mij niet duidelijk.",
@@ -2028,7 +2028,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de vergoeding voor fysiotherapie in mijn polis. Dat is mij niet duidelijk.",
@@ -2044,7 +2044,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over het eigen risico in mijn polis. Dat is mij niet duidelijk.",
@@ -2060,7 +2060,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de dekking in het buitenland in mijn polis. Dat is mij niet duidelijk.",
@@ -2076,7 +2076,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de opzegtermijn in mijn polis. Dat is mij niet duidelijk.",
@@ -2092,7 +2092,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "B1",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de vergoeding voor medicijnen in mijn polis. Dat is mij niet duidelijk.",
@@ -2108,7 +2108,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "verzekering",
     level: "A2",
     situationRu: "Вы звоните в страховую компанию по поводу неясного пункта в полисе.",
-    situationEn: "You call the insurance company about an obscure item in the policy.",
+    situationEn: "You call the insurance company about an unclear clause in the policy.",
     dialogue: ["Medewerker: Waar kan ik u mee helpen?"],
     options: [
       "Ik heb een vraag over de vergoeding voor de bril in mijn polis. Dat is mij niet duidelijk.",
@@ -2250,7 +2250,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Вежливо обозначить бюджетные рамки и попросить альтернативы — уместная реакция на навязывание.",
-    explanationEn: "Politely designating a budget framework and asking for alternatives is an appropriate response to the imposition.",
+    explanationEn: "State your budget politely and ask whether there are suitable alternatives.",
   },
   {
     id: "int-gen3-9",
@@ -2545,7 +2545,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "gemeente",
     level: "A2",
     situationRu: "Вы пришли в муниципалитет, но забыли один нужный документ.",
-    situationEn: "You came to the city hall, but you forgot one document.",
+    situationEn: "You are at the municipal office but have forgotten one document.",
     dialogue: ["Ambtenaar: Heeft u ook uw huurcontract meegenomen?"],
     options: [
       "Nee, sorry, dat ben ik vergeten. Kan ik het later opsturen?",
@@ -2906,7 +2906,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Спокойный вопрос о причине отказа — разумная реакция, помогающая понять ситуацию.",
-    explanationEn: "Quietly asking about the reason for the refusal is a reasonable response to help understand the situation.",
+    explanationEn: "Calmly asking why the request was refused can help clarify the situation.",
   },
   {
     id: "int-gen3-50",
@@ -3105,7 +3105,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     topic: "huisarts",
     level: "B1",
     situationRu: "Вы просите врача выписать справку для работодателя.",
-    situationEn: "You ask the doctor to write out a certificate for the employer.",
+    situationEn: "You ask the doctor to issue a certificate for your employer.",
     dialogue: ["Dokter: Waarvoor heeft u de verklaring nodig?"],
     options: [
       "Mijn werkgever vraagt om een verklaring dat ik ziek ben geweest.",
@@ -3114,7 +3114,7 @@ export const INTERACTION_ITEMS: InteractionItem[] = [
     ],
     correctIndex: 0,
     explanationRu: "Ясное объяснение цели запроса справки — необходимая информация для врача.",
-    explanationEn: "A clear explanation of the purpose of the request for help is necessary information for the doctor.",
+    explanationEn: "Clearly explain why you need the certificate so the doctor has the necessary context.",
   },
   {
     id: "int-gen3-63",
