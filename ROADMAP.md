@@ -25,8 +25,8 @@ learner-facing production launch.
 - [ ] Have qualified NT2 educators review content, Russian explanations, answer keys, CEFR labels, and
   machine-translated vocabulary glosses.
 - [ ] Migrate all banks through the provenance-aware import-and-review pipeline rather than maintaining
-  them directly in TypeScript. Spreken exam prompts and all three Schrijven exam banks are migrated;
-  remaining banks are pending.
+  them directly in TypeScript. Spreken, KNM, and all three Schrijven exam banks are migrated; remaining
+  banks are pending.
 - [ ] Add high-frequency verbs, adjectives, fixed expressions, and productive-use activities alongside
   the current noun-first vocabulary bank.
 - [x] Finish English UI chrome for reading, writing, and all exam runners. Russian L1-specific teaching

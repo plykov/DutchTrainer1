@@ -98,7 +98,7 @@ Releases follow the documented [release process](./RELEASING.md), with user-visi
   `uiLang`, on purpose: it's Russian-L1-contrastive by design (§5), explaining specifically Russian
   speakers' traps, so translating it to English would remove the thing it exists to explain.
 - **Provenance-aware content workflow** (`content/`, `scripts/content-pipeline.mjs`) — the Spreken exam
-  bank and all three Schrijven exam banks are migrated from hand-edited TypeScript to structured sources with
+  Spreken, KNM, and all three Schrijven exam banks are migrated from hand-edited TypeScript to structured sources with
   source/license references and per-item educator-review state. The pipeline validates the source,
   generates the runtime TypeScript deterministically, detects generated-file drift in CI, and supports
   TSV review export/import. The remaining banks still need incremental migration through this workflow.
