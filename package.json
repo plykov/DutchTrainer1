@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "content:check": "node scripts/content-pipeline.mjs check",
+    "content:generate": "node scripts/content-pipeline.mjs generate",
+    "content:review-export": "node scripts/content-pipeline.mjs review-export",
+    "content:review-import": "node scripts/content-pipeline.mjs review-import"
   },
   "dependencies": {
     "next": "16.2.12",
