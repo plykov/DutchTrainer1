@@ -61,7 +61,7 @@ export default function WritingTask({ item, examMode = false }: { item: ShortWri
     <div className="space-y-4">
       <div className="rounded-md border border-zinc-200 dark:border-zinc-800 p-4">
         <div className="flex items-center justify-between mb-2">
-          <p className="font-medium">{item.taskPrompt}</p>
+          <p className="font-medium" data-testid="writing-task-prompt">{item.taskPrompt}</p>
           {examMode && stage === "writing" && (
             <span className="font-mono tabular-nums text-xs px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-900 shrink-0 ml-2">
               {Math.floor(secondsLeft / 60)}:{(secondsLeft % 60).toString().padStart(2, "0")}
