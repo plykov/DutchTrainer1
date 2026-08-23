@@ -7,8 +7,8 @@ for releases and remains a public beta while its version is below `1.0.0`.
 
 ### Added
 
-- A provenance-aware source, generation, validation, and educator-review workflow, initially applied
-  to the Spreken exam bank and enforced against generated-file drift in CI.
+- A provenance-aware source, generation, validation, and educator-review workflow, applied first to
+  the Spreken exam bank and Schrijven zinstaken and enforced against generated-file drift in CI.
 
 ### Changed
 

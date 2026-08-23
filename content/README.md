@@ -1,8 +1,8 @@
 # Content source and review workflow
 
 Learner content should enter the app through a structured source document, not by directly editing a
-generated TypeScript bank. The pilot bank is `sources/speaking-exam.json`; migrate the other banks to
-the same pattern incrementally.
+generated TypeScript bank. Migrated banks currently include `sources/speaking-exam.json` and
+`sources/zinstaken.json`; migrate the other banks to the same pattern incrementally.
 
 Each source document records:
 
