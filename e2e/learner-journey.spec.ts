@@ -78,3 +78,24 @@ test("a learner can onboard, navigate, and choose the external writing check", a
   expect(languageToolRequests).toBe(1);
   expect(submittedText).toBe(optedInItem.modelAnswer);
 });
+
+test("legal and version information is public before onboarding", async ({ page }) => {
+  await page.goto("/onboarding");
+
+  const privacyLink = page.getByRole("link", { name: /Privacy \/ Конфиденциальность/i });
+  await expect(privacyLink).toBeVisible();
+  await expect(page.getByRole("link", { name: "v0.2.0-beta.1" })).toBeVisible();
+  await privacyLink.click();
+
+  await expect(page).toHaveURL(/\/privacy\/?$/);
+  await expect(page.getByRole("heading", { name: /Privacy notice/i })).toBeVisible();
+  await expect(page.getByText(/GitHub Pages hosts the static site/i)).toBeVisible();
+  await expect(page.getByText(/checkbox is off on every new writing screen/i)).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Полная версия на русском/i })).toBeVisible();
+
+  await page.getByRole("link", { name: /Terms \/ Условия/i }).click();
+  await expect(page).toHaveURL(/\/terms\/?$/);
+  await expect(page.getByRole("heading", { name: /Terms of use/i })).toBeVisible();
+  await expect(page.getByText(/not affiliated with, approved by, or endorsed by DUO/i)).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Полная версия на русском/i })).toBeVisible();
+});

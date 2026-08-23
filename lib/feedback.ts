@@ -8,6 +8,7 @@ const CATEGORY_LABEL: Record<FeedbackCategory, string> = {
 
 const REPO_OWNER = "plykov";
 const REPO_NAME = "DutchTrainer1";
+const FEEDBACK_EMAIL = "plykov@gmail.com";
 
 // No backend on a static export, so feedback becomes a pre-filled GitHub
 // issue on the (public) repo — no server needed, and it's visible to the
@@ -35,5 +36,5 @@ export function buildFeedbackMailtoUrl(opts: { category: FeedbackCategory; messa
   const subject = `[Отзыв] ${CATEGORY_LABEL[opts.category]}`;
   const bodyLines = [opts.message, "", opts.page ? `Страница: ${opts.page}` : ""].filter(Boolean);
   const params = new URLSearchParams({ subject, body: bodyLines.join("\n") });
-  return `mailto:?${params.toString()}`;
+  return `mailto:${FEEDBACK_EMAIL}?${params.toString()}`;
 }

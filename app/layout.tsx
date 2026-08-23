@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import packageJson from "@/package.json";
 
 export const metadata: Metadata = {
   title: "Dutch A2/B1 — Examentrainer",
@@ -28,8 +30,26 @@ export default function RootLayout({
         <main id="main-content" className="flex-1 w-full max-w-5xl mx-auto px-4 py-8 sm:px-6">
           {children}
         </main>
-        <footer className="border-t border-zinc-200 dark:border-zinc-800 py-4 text-center text-xs text-zinc-500">
-          Formatieve inschatting — geen officiële DUO/Cito-uitslag. · Формативная оценка, не официальный результат DUO/Cito.
+        <footer className="border-t border-zinc-200 dark:border-zinc-800 px-4 py-4 text-center text-xs text-zinc-500">
+          <p>
+            Formatieve inschatting — geen officiële DUO/Cito-uitslag. · Формативная оценка, не официальный
+            результат DUO/Cito.
+          </p>
+          <nav aria-label="Legal and release information" className="mt-2 flex flex-wrap justify-center gap-x-3 gap-y-1">
+            <Link className="underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-100" href="/privacy">
+              Privacy / Конфиденциальность
+            </Link>
+            <Link className="underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-100" href="/terms">
+              Terms / Условия
+            </Link>
+            <a
+              className="underline underline-offset-2 hover:text-zinc-900 dark:hover:text-zinc-100"
+              href="https://github.com/plykov/DutchTrainer1/releases"
+              rel="noreferrer"
+            >
+              v{packageJson.version}
+            </a>
+          </nav>
         </footer>
       </body>
     </html>

@@ -22,15 +22,15 @@ export default function SpeakingSession() {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
+  const audioUrlRef = useRef<string | null>(null);
 
   const prompt = SPEAKING_PROMPTS[index];
 
   useEffect(() => {
     return () => {
-      if (audioUrl) URL.revokeObjectURL(audioUrl);
+      if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
       streamRef.current?.getTracks().forEach((t) => t.stop());
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function startRecording() {
@@ -48,7 +48,9 @@ export default function SpeakingSession() {
       };
       recorder.onstop = () => {
         const blob = new Blob(chunksRef.current, { type: "audio/webm" });
-        setAudioUrl(URL.createObjectURL(blob));
+        const url = URL.createObjectURL(blob);
+        audioUrlRef.current = url;
+        setAudioUrl(url);
         stream.getTracks().forEach((t) => t.stop());
         setRecState("recorded");
       };
@@ -67,7 +69,8 @@ export default function SpeakingSession() {
   function grade(g: Grade) {
     const latencyMs = Date.now() - startedAt;
     review({ itemId: `speaking:${prompt.id}`, mode: "productive" }, g, latencyMs);
-    if (audioUrl) URL.revokeObjectURL(audioUrl);
+    if (audioUrlRef.current) URL.revokeObjectURL(audioUrlRef.current);
+    audioUrlRef.current = null;
     setAudioUrl(null);
     setRecState("idle");
     setStartedAt(Date.now());

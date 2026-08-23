@@ -17,7 +17,8 @@ learner-facing production launch.
   vocabulary supporting valid paraphrases instead of requiring exact wording from requirement labels.
 - [x] Add browser end-to-end smoke checks to CI. Expand these with dedicated keyboard and screen-reader
   checks as the UI grows.
-- [ ] Add a privacy policy, terms, and a release/versioning process.
+- [x] Add a privacy policy, terms, and a release/versioning process. The beta notices are deliberately
+  plain-language and data-flow-specific; professional legal review remains part of production readiness.
 
 ## Milestone 2 — validated learning content
 
